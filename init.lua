@@ -1,5 +1,12 @@
 require("calvin")
 
+-- TODO L-149 bacground still opaque
+-- 	See primagens vid on how configure, might give answer
+--
+-- Curent line number is dark grey, would like it to pop in colour more
+--
+-- LSP is not where I want it to be for c++ / c
+--
 
 --[[
 
