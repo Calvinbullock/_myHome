@@ -13,5 +13,5 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- sets "(leader) y" to interface with system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set("n", "<leader>y", [["+Y]])
 
