@@ -7,11 +7,11 @@ vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
     noremap = true, silent = true 
 })
 
--- sets " p" to paste over a higlighted text with out 
+-- sets "(leader) p" to paste over a higlighted text with out 
 --      overwitng the buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- sets " y" to interface with system clipboard
+-- sets "(leader) y" to interface with system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
