@@ -13,6 +13,7 @@ filetype plugin indent on
 
 " Spell check
 set spell
+" change from red highlighting to red underline
 hi clear spellBad
 hi SpellBad cterm=underline ctermfg=red
 hi SpellBad gui=undercurl
