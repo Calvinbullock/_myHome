@@ -29,3 +29,6 @@ let mapleader = " "
 " prevent x key from overwriting clipboard
 noremap x "_x
 noremap X "_x
+
+" space f enters file explorer mode
+:map  f :Ex<enter>
