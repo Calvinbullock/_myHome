@@ -13,6 +13,9 @@ filetype plugin indent on
 
 " Spell check
 set spell
+hi clear spellBad
+hi SpellBad cterm=underline ctermfg=red
+hi SpellBad gui=undercurl
 
 " Changes the cursor shape between line (insert) bar normal
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
