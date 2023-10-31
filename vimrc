@@ -55,6 +55,9 @@ noremap X "_x
 " Appends typed cahricters to line start
 :map  / :s/^/
 
+" Clear all but current buffers
+:map  c :%bd|e#<enter>
+
 " ------------------------------------- +
 " FINDING FILES:			|
 " ------------------------------------- +
