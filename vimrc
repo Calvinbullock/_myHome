@@ -56,7 +56,7 @@ noremap X "_x
 :map  / :s/^/
 
 " Clear all but current buffers
-:map  c :%bd|e#<enter>
+":map  c :%bd|e#<enter>
 
 " ------------------------------------- +
 " FINDING FILES:			|
