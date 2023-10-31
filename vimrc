@@ -112,6 +112,7 @@ let g:currentmode={
 " Status Line layout
 " Source: https://stackoverflow.com/questions/5375240/a-more-useful-statusline-in-vim
 set statusline=
+set statusline +=%0*\ %{toupper(g:currentmode[mode()])}\ %* 	"The current mode
 set statusline +=%1*\ %n\ %*            			"buffer number
 set statusline +=%5*%{&ff}%*           				"file format
 set statusline +=%3*%y%*                			"file type
@@ -121,7 +122,6 @@ set statusline +=%1*\ %=ln:\ %2l%*             			"current line
 set statusline +=%2*/%L%*               			"total lines
 set statusline +=%1*\ col:\ %2v\ %*            			"virtual column number
 set statusline +=%2*\ %*         				"character under cursor
-set statusline +=%0*\ %{toupper(g:currentmode[mode()])}\ %* 	"The current mode
 
 " Colours 
 " Not Working:
@@ -130,7 +130,6 @@ set statusline +=%0*\ %{toupper(g:currentmode[mode()])}\ %* 	"The current mode
 " au InsertEnter * hi statusline guifg=black guibg=#d7afff ctermfg=black ctermbg=magenta
 " au InsertLeave * hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
 " hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
-" 
 " 
 " hi User1 ctermfg=007 ctermbg=239 guibg=#4e4e4e guifg=#adadad
 " hi User2 ctermfg=007 ctermbg=236 guibg=#303030 guifg=#adadad
