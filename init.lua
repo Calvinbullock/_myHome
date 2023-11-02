@@ -237,10 +237,9 @@ require('lazy').setup({
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
--- **NOT WORKING YET** 
 -- Search down into sub folders
 -- provide tab completion for all file related tasks
-vim.opt.path = vim.opt.path:append '**'
+vim.opt.path:append('**')
 
 -- Display all matching files when we tab complete
 vim.opt.wildmenu = true
@@ -254,7 +253,7 @@ vim.opt.wildmenu = true
 
 -- TODO might be redundent...... line 
 -- sets leader key to spacebar
-vim.cmd([[let mapleader=" "]])
+--vim.cmd([[let mapleader=" "]])
    
 -- sets " f" to open the vim fileNav in current directory
 vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
