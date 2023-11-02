@@ -1,3 +1,20 @@
+
+" Things To Add:
+" 1 better syntax highlighting / LSP
+" 2 ctrl+n auto complete (might tb conected to the above...)
+" 3 Git intagration
+
+
+" ------------------------------------- +
+" LSP					|
+" ------------------------------------- +
+" Install Pathogen
+"call pathogen#infect()
+
+" Enable vim-monokai
+"colorscheme monokai
+
+
 " ------------------------------------- +
 " Formatting:				|
 " ------------------------------------- +
@@ -37,6 +54,10 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 set ttimeout
 set ttimeoutlen=1
 set ttyfast
+
+" Not 100% sure what this does
+"updatetime = 250
+"timeoutlen = 300
 
 " ------------------------------------- +
 " Key Remaps: 				|
