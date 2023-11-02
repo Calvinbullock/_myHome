@@ -1,36 +1,30 @@
-require("calvin")
 
--- TODO L-149 bacground still opaque
+-- ==================================================== --
+--			 TODO List			-- 
+-- ==================================================== --
+--
+-- 1- L-149 bacground still opaque
 -- 	See primagens vid on how configure, might give answer
 --
--- Curent line number is dark grey, would like it to pop in colour more
+-- 2 - Curent line number is dark grey, would like it to pop in colour more
 --
--- LSP is not where I want it to be for c++ / c
+-- 3 - LSP is not where I want it to be for c++ / c 
+-- 	-- works by hiting ctrl + n
 --
+-- 4 - need to better 8understand this config / add better guide comments
+--
+-- 5 - line 48 might be redundent - leader key maping
 
+-- ==================================================== --
+--		 Note from Jumpstart Dev 		--
+-- ==================================================== --
 --[[
 
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-
-Kickstart.nvim is *not* a distribution.
-
-Kickstart.nvim is a template for your own configuration.
-  The goal is that you can read every line of code, top-to-bottom, understand
-  what your configuration is doing, and modify it to suit your needs.
-
-  Once you've done that, you should start exploring, configuring and tinkering to
-  explore Neovim!
-
-  If you don't know anything about Lua, I recommend taking some time to read through
-  a guide. One possible example:
-  - https://learnxinyminutes.com/docs/lua/
-
+ - Lua Help:
+ - https://learnxinyminutes.com/docs/lua/
 
   And then you can explore or search through `:help lua-guide`
   - https://neovim.io/doc/user/lua-guide.html
-
 
 Kickstart Guide:
 
@@ -44,9 +38,8 @@ are first encountering a few different constructs in your nvim config.
 
 I hope you enjoy your Neovim journey,
 - TJ
-
-P.S. You can delete this when you're done too. It's your config now :)
 --]]
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -237,9 +230,69 @@ require('lazy').setup({
   -- { import = 'custom.plugins' },
 }, {})
 
--- [[ Setting options ]]
+-- =====================================================
+--		[[ Setting options ]]			 --
+-- =====================================================
+--
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
+
+-- **NOT WORKING YET** 
+-- Search down into sub folders
+-- provide tab completion for all file related tasks
+vim.opt.path = vim.opt.path:append '**'
+
+-- Display all matching files when we tab complete
+vim.opt.wildmenu = true
+
+-- NOW WE CAN:
+-- Hit tab to :find by partial match
+-- Use * to make it fuzzy
+-- THINGS TO CONSIDER:
+-- :b lets you autocomplete any open buffer
+
+
+-- TODO might be redundent...... line 
+-- sets leader key to spacebar
+vim.cmd([[let mapleader=" "]])
+   
+-- sets " f" to open the vim fileNav in current directory
+vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
+    noremap = true, silent = true 
+})
+
+-- sets "(leader) p" to paste over a higlighted text with out 
+--      overwitng the buffer
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- sets "(leader) y" to interface with system clipboard
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>y", [["+Y]])
+
+vim.opt.nu = true
+vim.opt.relativenumber = true
+ 
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4 
+vim.opt.expandtab = true
+ 
+vim.opt.smartindent = true
+ 
+vim.opt.wrap = false
+ 
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+ 
+vim.opt.termguicolors = true
+ 
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.isfname:append("@-@")
+ 
+vim.opt.updatetime = 50
+ 
+vim.opt.colorcolumn = "80"
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -299,7 +352,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
--- [[ Configure Telescope ]]
+-- ==================================================== --
+-- 		[[ Configure Telescope ]]		--
+-- ==================================================== --
+-- 
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
   defaults = {
@@ -334,7 +390,12 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]resume' })
 
--- [[ Configure Treesitter ]]
+
+
+-- ==================================================== --
+--		 [[ Configure Treesitter ]]		--
+-- ==================================================== --
+--
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
