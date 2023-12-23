@@ -239,6 +239,12 @@ require('lazy').setup({
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
+-- sets "F" to open the vim fileNav in current directory
+vim.api.nvim_set_keymap("n", "<Space>F", ":Ex<CR>", {
+	noremap = true, silent = true 
+})
+
+--[
 -- Search down into sub folders
 -- provide tab completion for all file related tasks
 vim.opt.path:append('**')
@@ -252,18 +258,6 @@ vim.opt.wildmenu = true
 -- THINGS TO CONSIDER:
 -- :b lets you autocomplete any open buffer
 
-
--- TODO might be redundent...... line 
--- sets leader key to spacebar
---vim.cmd([[let mapleader=" "]])
-
--- sets " f" to open the vim fileNav in current directory
-vim.api.nvim_set_keymap("n", "<Space>F", ":Ex<CR>", {
-	noremap = true, silent = true 
-})
-
-
-
 -- sets "(leader) p" to paste over a higlighted text with out 
 --      overwitng the buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -275,6 +269,8 @@ vim.api.nvim_set_keymap("n", "<Space>b", ":b ", {
 vim.api.nvim_set_keymap("n", "<Space>f", ":find ", {
 	noremap = true, silent = true 
 })
+
+--]
 
 -- sets "(leader) y" to interface with system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
