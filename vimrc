@@ -76,6 +76,9 @@ noremap X "_x
 " sapce f enters file search
 :map <Space>f :find 
 
+" quick buffer switch
+:map <Space>b :b 
+
 " Appends typed cahricters to line start
 :map  / :s/^/
 
