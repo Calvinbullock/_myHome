@@ -70,8 +70,11 @@ let mapleader = " "
 noremap x "_x
 noremap X "_x
 
-" space f enters file explorer mode
-:map  f :Ex<enter>
+" space F enters file explorer mode
+:map <Space>F :Ex<enter>
+
+" sapce f enters file search
+:map <Space>f :find 
 
 " Appends typed cahricters to line start
 :map  / :s/^/
