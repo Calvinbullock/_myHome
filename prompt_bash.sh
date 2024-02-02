@@ -19,6 +19,8 @@ export PS1_CYAN="\[$(tput bold; tput setaf 6)\]"
 export PS1_WHITE="\[$(tput bold; tput setaf 7)\]"
 export PS1_RESET="\[$(tput sgr0)\]"
 
+export PS1_PINK="\[$(tput bold; tput setaf 216)\]"
+
 # TODO not working.....
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -39,9 +41,10 @@ function _bash_prompt(){
     fi
 
     # finally, set PS1
-    PS1="\n${debian_chroot:+($debian_chroot)}${PS1_MAGENTA}\u ${PS1_GREY}at${PS1_YELLOW} \h ${PS1_GREY}in${PS1_GREEN} \w ${GIT_INFO}\
+    PS1="\n${debian_chroot:+($debian_chroot)}${PS1_MAGENTA}\u ${PS1_GREY}at${PS1_YELLOW} \h ${PS1_GREY}in${PS1_PINK} \w ${GIT_INFO}\
         \n${SCREEN_ESC}${PS1_WHITE}\$${PS1_RESET} "
 }
 
 # call _bash_prompt() each time the prompt is refreshed
 export PROMPT_COMMAND=_bash_prompt
+
