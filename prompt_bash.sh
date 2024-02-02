@@ -19,6 +19,7 @@ export PS1_CYAN="\[$(tput bold; tput setaf 6)\]"
 export PS1_WHITE="\[$(tput bold; tput setaf 7)\]"
 export PS1_RESET="\[$(tput sgr0)\]"
 
+# TODO not working.....
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
