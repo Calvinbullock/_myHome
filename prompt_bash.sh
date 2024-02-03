@@ -12,19 +12,22 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWSTASHSTATE=true
 
 # colors
-export PS1_GREY="\[$(tput bold; tput setaf 0)\]"    # background text
-export PS1_GREEN="\[$(tput bold; tput setaf 2)\]"   # not used
-export PS1_YELLOW="\[$(tput bold; tput setaf 3)\]"  # Systeam name
-export PS1_MAGENTA="\[$(tput bold; tput setaf 5)\]" # User
-export PS1_CYAN="\[$(tput bold; tput setaf 6)\]"    # git branch
-export PS1_WHITE="\[$(tput bold; tput setaf 7)\]"   # prompt colour
-export PS1_RESET="\[$(tput sgr0)\]"                 # reset
+export PS1_USER="\[$(tput bold; tput setaf 5)\]"                    # magenta
+export PS1_SYSTEM="\[$(tput bold; tput setaf 3)\]"                  # yellow
+export PS1_BG_TEXT="\[$(tput bold; tput setaf 0)\]"                 # background text - grey
+export PS1_PWD="\[$(tput setaf 4; tput setaf 38; tput setaf 2)\]"   # Miku Green
+export PS1_GIT="\[$(tput setaf 4; tput setaf 4)\]"                  # Blue
+export PS1_WHITE="\[$(tput bold; tput setaf 7)\]"                   # white
+export PS1_RESET="\[$(tput sgr0)\]"                                 # reset - ??
 
-export PS1_PINK="\[$(tput bold; tput setaf 216)\]"  # current working directory path 
-export PS1_RED="\[$(tput setaf 1)\]"                # exit status
+# not used
+# export PS1_PWD="\[$(tput bold; tput setaf 216)\]"                 # current working directory path - pink
+# export PS1_GIT="\[$(tput bold; tput setaf 6)\]"                    # git branch - cyan
+# export PS1_GREEN="\[$(tput bold; tput setaf 2)\]"                   # not used - green
+# export PS1_EXIT_STAT="\[$(tput setaf 1)\]"                          # not used - red
 
 # set PS1
-PS1="\n${PS1_MAGENTA}\u ${PS1_GREY}at${PS1_YELLOW} \h ${PS1_GREY}in${PS1_PINK} \w ${PS1_CYAN}\${GIT_INFO}\
+PS1="\n${PS1_USER}\u ${PS1_BG_TEXT}at${PS1_SYSTEM} \h ${PS1_BG_TEXT}in${PS1_PWD} \w ${PS1_GIT}\${GIT_INFO}\
         \n\${EXIT_STAT}${PS1_WHITE}\$${PS1_RESET} "
 
 # function to set PS1
