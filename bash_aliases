@@ -1,36 +1,37 @@
 # All my bash aliases
 
 # ** Add this to ~/.bashrc
-# Bash alias file path
 # source ~/bash/.bash_aliases
 
-# Custom update alias
+# Custom system update alias
 alias upd="sudo apt update && sudo apt upgrade && flatpak update && snap refresh"
 
-# Custom tempature sensors
+# Tempature sensors
 alias temps="watch sensors"
 
+# VIM / NEOVIM
 alias nim="nvim"
 alias bashrc="vim ~/.bashrc"
 alias basha="vim ~/.bash/bash_aliases"
-
-alias winter24="cd ~/Documents/_winter-2024-school-docs/"
 
 alias govimcon="cd ~/.vim/"
 alias vimrc="vim ~/.vim/vimrc"
 alias gonimcon="cd ~/.config/nvim"
 alias nimrc="vim ~/.config/nvim/init.lua"
 
+# Universial directory movement
 alias ..="cd .."
 alias ...="cd ../.."
 
+# Document folder aliaes
 alias doc="cd ~/Documents"
+alias note="vim ~/Documents/note.txt"
 alias inscript="cd ~/Documents/install-scripts/"
 
-alias note="vim ~/Documents/note.txt"
+alias py="python3"
 
 #******** School winter 2024 alieas
-alias py="python3"
+alias winter24="cd ~/Documents/_winter-2024-school-docs/"
 alias datastr="cd ~/Documents/_winter-2024-school-docs/dataStruc/"
 alias appro="cd ~/Documents/_winter-2024-school-docs/appliedPrograming/"
 alias pac="cd ~/Documents/_winter-2024-school-docs/cse-251-student-version/"
