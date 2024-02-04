@@ -153,9 +153,14 @@ require('lazy').setup({
 		priority = 1000,
 		config = function()
 			vim.cmd.colorscheme 'onedark'
-			disable_background = true
+
+			--disable_background = true
+			--disable_foreground = true
+			--vim.cmd [[hi Normal guibg=NONE]]
+			--vim.cmd [[hi NormalFloat guibg=NONE]]
 			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+			--transparent = true
 		end,
 	},
 
@@ -241,7 +246,7 @@ require('lazy').setup({
 
 -- sets "F" to open the vim fileNav in current directory
 vim.api.nvim_set_keymap("n", "<Space>F", ":Ex<CR>", {
-	noremap = true, silent = true 
+	noremap = true, silent = true
 })
 
 --[
@@ -264,10 +269,10 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- maps :find and :b
 vim.api.nvim_set_keymap("n", "<Space>b", ":b ", {
-	noremap = true, silent = true 
+	noremap = true, silent = true
 })
 vim.api.nvim_set_keymap("n", "<Space>f", ":find ", {
-	noremap = true, silent = true 
+	noremap = true, silent = true
 })
 
 --]
@@ -282,7 +287,7 @@ vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4 
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
@@ -309,7 +314,7 @@ vim.o.hlsearch = false
 --* vim.wo.number = true
 
 -- Enable mouse mode
--- vim.o.mouse = 'a'
+vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
