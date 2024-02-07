@@ -55,6 +55,9 @@ set ttimeout
 set ttimeoutlen=1
 set ttyfast
 
+" keep curser 6 lines from screen bottom
+set scrolloff=6
+
 " Not 100% sure what this does
 "updatetime = 250
 "timeoutlen = 300
