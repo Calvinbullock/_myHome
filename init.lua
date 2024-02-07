@@ -280,7 +280,7 @@ vim.api.nvim_set_keymap("n", "<Space>f", ":find ", {
 -- sets "(leader) y" to interface with system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>y", [["+Y]])
-clipboard=unnamedplus
+--clipboard=unnamedplus
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
