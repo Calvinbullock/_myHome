@@ -4,7 +4,7 @@
 # source ~/bash/.bash_aliases
 
 # Custom system update alias
-alias upd="sudo apt update && sudo apt upgrade && flatpak update && snap refresh"
+alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap refresh"
 
 # Tempature sensors
 alias temps="watch sensors"
@@ -14,10 +14,10 @@ alias nim="nvim"
 alias bashrc="vim ~/.bashrc"
 alias basha="vim ~/.bash/bash_aliases"
 
-alias govimcon="cd ~/.vim/"
+alias govim="cd ~/.vim/"
 alias vimrc="vim ~/.vim/vimrc"
-alias gonimcon="cd ~/.config/nvim"
-alias nimrc="vim ~/.config/nvim/init.lua"
+alias gonim="cd ~/.config/nvim"
+alias nimrc="nvim ~/.config/nvim/init.lua"
 
 # Universial directory movement
 alias ..="cd .."
