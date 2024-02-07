@@ -12,3 +12,7 @@ and
 
 Effective Neovim: Instant IDE - by TJ DeVries
 https://www.youtube.com/watch?v=stqUbv-5u2s
+
+# init2.lua
+    My incoplete scratch re-write based off kick start.
+    not currently in use.
