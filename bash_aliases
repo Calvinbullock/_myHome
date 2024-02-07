@@ -9,14 +9,16 @@ alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap re
 # Tempature sensors
 alias temps="watch sensors"
 
-# VIM / NEOVIM
-alias nim="nvim"
+# BASHRC
 alias bashrc="vim ~/.bashrc"
+alias bashd="cd ~/.bash"
 alias basha="vim ~/.bash/bash_aliases"
 
-alias govim="cd ~/.vim/"
+# VIM / NEOVIM
+alias nim="nvim"
+alias vimd="cd ~/.vim/"
 alias vimrc="vim ~/.vim/vimrc"
-alias gonim="cd ~/.config/nvim"
+alias nimd="cd ~/.config/nvim"
 alias nimrc="nvim ~/.config/nvim/init.lua"
 
 # Universial directory movement
