@@ -3,19 +3,16 @@
 --			 TODO List			-- 
 -- ==================================================== --
 --
--- 1- L-149 bacground still opaque
--- 	See primagens vid on how configure, might give answer
+-- 1- L-149 transparency issues, gutter and other parts not transparent.
 --
--- 2 - Curent line number is dark grey, would like it to pop in colour more
---
--- 3 - LSP is not where I want it to be for c++ / c 
+-- 2 - LSP is not where I want it to be for c++ / c 
 -- 	-- works by hiting ctrl + n
 --
--- 4 - need to better 8understand this config / add better guide comments
+-- 3 - need to better understand this config / add better guide comments
 --
--- 5 - line 48 might be redundent - leader key maping
+-- 4 - line 48 might be redundent - leader key maping
 --
--- 6 - set a keybind to turn spell check on and off
+-- 5 - set a keybind to turn spell check on and off
 
 -- ==================================================== --
 --		 Note from Jumpstart Dev 		--
