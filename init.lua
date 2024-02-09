@@ -245,8 +245,8 @@ require('lazy').setup({
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
--- sets " e" to open the netrw (default file view) in root directory.
-vim.api.nvim_set_keymap("n", "<Space>e", ":Ex<CR>", {
+-- sets " F" to open the netrw (default file view) in root directory.
+vim.api.nvim_set_keymap("n", "<Space>F", ":Ex<CR>", {
 	noremap = true, silent = true
 })
 
