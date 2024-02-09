@@ -245,27 +245,32 @@ require('lazy').setup({
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
--- sets " F" to open the netrw (default file view) in root directory.
-vim.api.nvim_set_keymap("n", "<Space>F", ":Ex<CR>", {
+-- sets " e" to open the netrw (default file view) in root directory.
+vim.api.nvim_set_keymap("n", "<Space>e", ":Ex<CR>", {
 	noremap = true, silent = true
 })
 
--- st netrw to tree list by default.
+-- set netrw to tree list by default.
 vim.cmd("let g:netrw_liststyle = 3")
 
---[ SEARCHING FOLDERS
---    Search down into sub folders
+--[ SEARCHING FILES
+-- NOW WE CAN:
+--    Hit tab to :find by partial match
+--    Use * to make it fuzzy
+--    THINGS TO CONSIDER:
+--    :b lets you autocomplete any open buffer
+--
+-- Search down into sub folders
 --    provide tab completion for all file related tasks
 vim.opt.path:append('**')
 
 -- Display all matching files when we tab complete
 vim.opt.wildmenu = true
 
--- NOW WE CAN:
---    Hit tab to :find by partial match
---    Use * to make it fuzzy
---    THINGS TO CONSIDER:
---    :b lets you autocomplete any open buffer
+vim.api.nvim_set_keymap("n", "<Space>f", ":find ", {
+	noremap = true, silent = true
+})
+-- End file search]
 
 -- sets "(leader) p" to paste over a higlighted text with out 
 --      overwitng the buffer
@@ -275,11 +280,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 --vim.api.nvim_set_keymap("n", "<Space>b", ":b ", {
 --	noremap = true, silent = true
 --})
-vim.api.nvim_set_keymap("n", "<Space>f", ":find ", {
-	noremap = true, silent = true
-})
-
---]
 
 -- sets "(leader) y" to interface with system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
