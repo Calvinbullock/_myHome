@@ -174,6 +174,7 @@ require('lazy').setup({
 				theme = 'onedark',
 				component_separators = '|',
 				section_separators = '',
+
 			},
 		},
 	},
@@ -244,10 +245,13 @@ require('lazy').setup({
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
--- sets "F" to open the vim fileNav in current directory
+-- sets " F" to open the netrw (default file view) in root directory.
 vim.api.nvim_set_keymap("n", "<Space>F", ":Ex<CR>", {
 	noremap = true, silent = true
 })
+
+-- st netrw to tree list by default.
+vim.cmd("let g:netrw_liststyle = 3")
 
 --[ SEARCHING FOLDERS
 --    Search down into sub folders
@@ -268,9 +272,9 @@ vim.opt.wildmenu = true
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- maps :find and :b
-vim.api.nvim_set_keymap("n", "<Space>b", ":b ", {
-	noremap = true, silent = true
-})
+--vim.api.nvim_set_keymap("n", "<Space>b", ":b ", {
+--	noremap = true, silent = true
+--})
 vim.api.nvim_set_keymap("n", "<Space>f", ":find ", {
 	noremap = true, silent = true
 })
@@ -506,7 +510,7 @@ local on_attach = function(_, bufnr)
 	nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
 	nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
 	nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-	nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+	nmap('<leader>ws', require('telescope.builtin').lsp_dynabic_workspace_symbols, '[W]orkspace [S]ymbols')
 
 	-- See `:help K` for why this keymap
 	nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
