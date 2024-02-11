@@ -11,6 +11,8 @@
 -- 3 - line 48 might be redundent - leader key maping
 --
 -- 4 - set a keybind to turn spell check on and off
+--
+-- 5 - Brake init.lua up into smaller files, exstentions each in there own.
 
 -- ==================================================== --
 --		 Note from Jumpstart Dev 		--
