@@ -243,7 +243,7 @@ require('lazy').setup({
 --    NOTE: You can change these options as you wish!
 --
 -- sets " F" to open the netrw (default file view) in root directory.
-vim.api.nvim_set_keymap("n", "<Space>F", ":Ex<CR>", {
+vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
 	noremap = true, silent = true
 })
 
@@ -264,7 +264,7 @@ vim.opt.path:append('**')
 -- Display all matching files when we tab complete
 vim.opt.wildmenu = true
 
-vim.api.nvim_set_keymap("n", "<Space>f", ":find ", {
+vim.api.nvim_set_keymap("n", "<Space>F", ":find ", {
 	noremap = true, silent = true
 })
 -- End file search]
