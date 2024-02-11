@@ -3,16 +3,14 @@
 --			 TODO List			-- 
 -- ==================================================== --
 --
--- 1- L-149 transparency issues, gutter and other parts not transparent.
---
--- 2 - LSP is not where I want it to be for c++ / c 
+-- 1 - LSP is not where I want it to be for c++ / c 
 -- 	-- works by hiting ctrl + n
 --
--- 3 - need to better understand this config / add better guide comments
+-- 2 - need to better understand this config / add better guide comments
 --
--- 4 - line 48 might be redundent - leader key maping
+-- 3 - line 48 might be redundent - leader key maping
 --
--- 5 - set a keybind to turn spell check on and off
+-- 4 - set a keybind to turn spell check on and off
 
 -- ==================================================== --
 --		 Note from Jumpstart Dev 		--
@@ -168,7 +166,7 @@ require('lazy').setup({
 		opts = {
 			options = {
 				icons_enabled = false,
-				theme = 'onedark',
+				theme = 'catppuccin',
 				component_separators = '|',
 				section_separators = '',
 
@@ -241,7 +239,7 @@ require('lazy').setup({
 --
 -- See `:help vim.o`
 --    NOTE: You can change these options as you wish!
-
+--
 -- sets " F" to open the netrw (default file view) in root directory.
 vim.api.nvim_set_keymap("n", "<Space>F", ":Ex<CR>", {
 	noremap = true, silent = true
