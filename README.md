@@ -13,7 +13,10 @@ and
 Effective Neovim: Instant IDE - by TJ DeVries
 https://www.youtube.com/watch?v=stqUbv-5u2s
 
-# TC-init.lua
-    My incoplete scratch re-write based off kick start.
-    not currently in use.
-    forked from: https://github.com/cpow/neovim-for-newbs/tree/main
+and 
+
+NeoVim for noobs
+https://github.com/cpow/neovim-for-newbs/tree/main
+
+# notes
+everything under lua dir is from neovim for noobs and not curently in use.
