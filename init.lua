@@ -144,16 +144,22 @@ require('lazy').setup({
 		},
 	},
 
-	{
-		-- Theme inspired by Atom
-		'navarasu/onedark.nvim',
-		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme 'onedark'
+  {
+    "catppuccin/nvim",
+    lazy = false,
+    name = "catppuccin",
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme "catppuccin"
+
+      -- transparency
 			vim.cmd [[hi Normal guibg=NONE]]
-			vim.cmd [[hi NormalFloat guibg=NONE]]
-		end,
-	},
+      vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
+      vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
+      vim.g.highlight_Normal = { ctermbg='NONE', guibg='NONE'}
+
+    end
+  },
 
 	{
 		-- Set lualine as statusline
@@ -235,9 +241,6 @@ require('lazy').setup({
 --
 -- See `:help vim.o`
 --    NOTE: You can change these options as you wish!
-
--- transparency???
-vim.g.highlight_Normal = { ctermbg='NONE', guibg='NONE'}
 
 -- sets " F" to open the netrw (default file view) in root directory.
 vim.api.nvim_set_keymap("n", "<Space>F", ":Ex<CR>", {
