@@ -110,7 +110,7 @@ set wildmenu
 " ------------------------------------- +
 
 set number relativenumber
-
+let g:netrw_liststyle = 3
 " ------------------------------------- +
 " Status Line:				|
 " ------------------------------------- +
