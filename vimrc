@@ -73,11 +73,11 @@ let mapleader = " "
 noremap x "_x
 noremap X "_x
 
-" space F enters file explorer mode
-:map <Space>F :Ex<enter>
+" space f enters file explorer mode
+:map <Space>f :Ex<enter>
 
-" sapce f enters file search
-:map <Space>f :find 
+" sapce sf enters file search
+:map <Space>sf :find 
 
 " quick buffer switch
 :map <Space>b :b 
