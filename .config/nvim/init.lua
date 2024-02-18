@@ -161,7 +161,6 @@ require('lazy').setup({
       vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
       vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
       vim.g.highlight_Normal = { ctermbg='NONE', guibg='NONE'}
-      -- vim.opt.colorcolumn = "NONE" -- a reddit user thought this might fix my vertical bar issue
     end
   },
 
@@ -314,7 +313,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+--vim.opt.colorcolumn = "80"
 
 -- Set highlight on search
 vim.o.hlsearch = false
