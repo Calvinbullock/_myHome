@@ -28,9 +28,9 @@ This is where my custome bash prompt lives. It is based off of my-extravagant-zs
 after the redditer user linked below modifyed it for bash. I have made a lot of customizations
 to fit my needs and likes.
 
--Taken from a reddit post that forked it from stevelosh.
--       Source - https://www.reddit.com/r/commandline/comments/zt6x9/what_are_your_favorite_custom_prompts/
--       Source - http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
+Taken from a reddit post that forked it from stevelosh.
+- Source - https://www.reddit.com/r/commandline/comments/zt6x9/what_are_your_favorite_custom_prompts/
+- Source - http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 
 ### Alias
 -Just a file containing all my aliaes for easy back up
