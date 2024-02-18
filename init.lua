@@ -13,6 +13,10 @@
 -- 4 - set a keybind to turn spell check on and off
 --
 -- 5 - Brake init.lua up into smaller files, exstentions each in there own.
+--
+-- 6 - Chnage Line numbers to be more visable
+--
+-- 7 - Set macros for indentation, full doc formating, line commenting
 
 -- ==================================================== --
 --		 Note from Jumpstart Dev 		--
@@ -157,7 +161,7 @@ require('lazy').setup({
       vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
       vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
       vim.g.highlight_Normal = { ctermbg='NONE', guibg='NONE'}
-
+      -- vim.opt.colorcolumn = "NONE" -- a reddit user thought this might fix my vertical bar issue
     end
   },
 
@@ -239,6 +243,10 @@ require('lazy').setup({
 --		[[ Setting options ]]			 --
 -- =====================================================
 --
+
+-- Line number colour
+-- vim.api.nvim_set_hl(0, "LineNumber", { fg = "#F0F0F0" }) -- Change #00FF00 to your desired green hex code
+
 -- See `:help vim.o`
 --    NOTE: You can change these options as you wish!
 --
