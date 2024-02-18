@@ -10,13 +10,15 @@ alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap re
 alias temps="watch sensors"
 
 # BASHRC and shell 
-alias bashrc="nvim ~/.bashrc"
-alias bashd="cd ~/.bash"
 alias basha="nvim ~/.bash/bash_alias.sh"
+alias bashrc="nvim ~/.bashrc"
+alias bso="source ~/.bashrc"
+alias bashd="cd ~/.bash"
 alias e="exit"
 
 # git
 alias gc="git commit"
+alias gp="git push"
 
 # VIM / NEOVIM
 alias nim="nvim"
