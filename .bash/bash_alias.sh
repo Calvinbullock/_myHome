@@ -9,10 +9,10 @@ alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap re
 # Tempature sensors
 alias temps="watch sensors"
 
-# BASHRC
-alias bashrc="vim ~/.bashrc"
+# BASHRC and shell 
+alias bashrc="nvim ~/.bashrc"
 alias bashd="cd ~/.bash"
-alias basha="vim ~/.bash/bash_aliases"
+alias basha="nvim ~/.bash/bash_alias.sh"
 
 # git
 alias gc="git commit"
