@@ -1,9 +1,12 @@
-# my_nvim
+# This repo hold the .files for my tmux, nvim, vim and bashrc
+
+
+## my_nvim
 My neo vim config
 
 My litle trip into trying neo vim as my main code edditer.
 
-My starting point was
+My starting point was:
 
 The 0 to LSP : Neovim RC From Scratch - by the ThePrimeagen
 https://www.youtube.com/watch?v=w7i4amO_zaE&t=9s
@@ -18,23 +21,22 @@ and
 NeoVim for noobs
 https://github.com/cpow/neovim-for-newbs/tree/main
 
-# notes
+### Nvim notes
 everything under lua dir is from neovim for noobs and not curently in use.
 
 
+## BashRC
 
--# Overview
--
--    This is a folder containg files that extend my .bashrc.
--
--# Prompt:
--This is where my custome bash prompt lives. It is heavely based off of my-extravagant-zsh-prompt
--after the redditer user linked below modifyed it for bash. I have made a few customizations for
--it to fit my needs and likes.
--
+This is a folder containg files that extend my .bashrc.
+
+### Prompt_bash:
+This is where my custome bash prompt lives. It is based off of my-extravagant-zsh-prompt
+after the redditer user linked below modifyed it for bash. I have made a lot of customizations
+to fit my needs and likes.
+
 -Taken from a reddit post that forked it from stevelosh.
 -       Source - https://www.reddit.com/r/commandline/comments/zt6x9/what_are_your_favorite_custom_prompts/
 -       Source - http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
--
--# Alias
+
+### Alias
 -Just a file containing all my aliaes for easy back up
