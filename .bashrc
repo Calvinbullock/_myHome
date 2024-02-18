@@ -121,4 +121,4 @@ if ! shopt -oq posix; then
 fi
 
 # Bash alias File
-source ~/.bash/bash_aliases
+source ~/.bash/bash_alias.sh
