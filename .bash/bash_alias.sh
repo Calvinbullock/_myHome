@@ -13,6 +13,7 @@ alias temps="watch sensors"
 alias bashrc="nvim ~/.bashrc"
 alias bashd="cd ~/.bash"
 alias basha="nvim ~/.bash/bash_alias.sh"
+alias e="exit"
 
 # git
 alias gc="git commit"
