@@ -51,5 +51,5 @@ alias ta="tmux a -t"
 alias tl="tmux ls"
 alias tk="tmux kill-session -t"
 alias tm="tmux new -s"
-
+alias tso="tmux source-file ~/.tmux.conf"
 
