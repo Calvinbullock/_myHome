@@ -19,6 +19,7 @@ alias e="exit"
 # git
 alias gc="git commit"
 alias gp="git push"
+alias gd="git diff"
 
 # VIM / NEOVIM
 alias nim="nvim"
