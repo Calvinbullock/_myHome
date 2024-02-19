@@ -161,6 +161,7 @@ require('lazy').setup({
       vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
       vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
       vim.g.highlight_Normal = { ctermbg='NONE', guibg='NONE'}
+      --vim.api.nvim_set_hl(0, "LineNumber", { guifg = "#ffffff" }) -- Replace with your desired white hex code
     end
   },
 
@@ -241,14 +242,16 @@ require('lazy').setup({
 -- =====================================================
 --		[[ Setting options ]]			 --
 -- =====================================================
---
-
--- Line number colour
--- vim.api.nvim_set_hl(0, "LineNumber", { fg = "#F0F0F0" }) -- Change #00FF00 to your desired green hex code
-
 -- See `:help vim.o`
---    NOTE: You can change these options as you wish!
---
+
+-- Line num change
+function LineNumberColors()
+    --vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='gray', bold=false })
+    vim.api.nvim_set_hl(0, 'LineNr', { fg='#faa7e7', bold=false })
+    --vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='gray', bold=false })
+end
+LineNumberColors()
+
 -- sets " F" to open the netrw (default file view) in root directory.
 vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
 	noremap = true, silent = true
