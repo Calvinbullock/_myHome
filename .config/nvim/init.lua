@@ -4,7 +4,7 @@
 -- ==================================================== --
 --
 -- 1 - LSP is not where I want it to be for c++ / c 
--- 	-- works by hiting ctrl + n
+-- 	-- works by hiting ctrl + n insted of as i type, only suggest var names
 --
 -- 2 - need to better understand this config / add better guide comments
 --
@@ -14,9 +14,7 @@
 --
 -- 5 - Brake init.lua up into smaller files, exstentions each in there own.
 --
--- 6 - Chnage Line numbers to be more visable
---
--- 7 - Set macros for indentation, full doc formating, line commenting
+-- 6 - Set macros for indentation, full doc formating, line commenting
 
 -- ==================================================== --
 --		 Note from Jumpstart Dev 		--
