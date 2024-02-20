@@ -1,9 +1,11 @@
 # My bash Prompt
 # 	Taken from a reddit post that forked it from stevelosh.
-# 	look for PS1="...." in .bashrc and add source ~/.bash/prompt_bash.sh
+# 	SET UP look for PS1="...." in .bashrc and add source ~/.bash/prompt_bash.sh
 # 	Source - https://www.reddit.com/r/commandline/comments/zt6x9/what_are_your_favorite_custom_prompts/
 # 	Source - http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
-
+#        
+#       BUG curently history can bug out sometimes...
+#
 ### PS1 SETTINGS =======================================================
 
 # show more git info in PS1
