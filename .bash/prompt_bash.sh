@@ -4,8 +4,6 @@
 # 	Source - https://www.reddit.com/r/commandline/comments/zt6x9/what_are_your_favorite_custom_prompts/
 # 	Source - http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 #        
-#       BUG curently history can bug out sometimes...
-#
 ### PS1 SETTINGS =======================================================
 
 # show more git info in PS1
@@ -20,17 +18,10 @@ export PS1_BG_TEXT="\[$(tput bold; tput setaf 0)\]"                 # background
 export PS1_PWD="\[$(tput setaf 4; tput setaf 38; tput setaf 2)\]"   # Miku Green
 export PS1_GIT="\[$(tput setaf 4; tput setaf 4)\]"                  # Blue
 export PS1_WHITE="\[$(tput bold; tput setaf 7)\]"                   # white
-export PS1_RESET="\[$(tput sgr0)\]"                                 # reset - ??
+export PS1_RESET="\[$(tput sgr0)\]"                                 # reset to default
 
-# not used
-# export PS1_PWD="\[$(tput bold; tput setaf 216)\]"                 # current working directory path - pink
-# export PS1_GIT="\[$(tput bold; tput setaf 6)\]"                    # git branch - cyan
-# export PS1_GREEN="\[$(tput bold; tput setaf 2)\]"                   # not used - green
-# export PS1_EXIT_STAT="\[$(tput setaf 1)\]"                          # not used - red
 
-# set PS1
-PS1="\n${PS1_USER}\u ${PS1_BG_TEXT}at${PS1_SYSTEM} \h ${PS1_BG_TEXT}in${PS1_PWD} \w ${PS1_GIT}\${GIT_INFO}\
-        \n\${EXIT_STAT}${PS1_WHITE}\$${PS1_RESET} "
+PS1="\n${PS1_USER}\u ${PS1_BG_TEXT}at${PS1_SYSTEM} \h ${PS1_BG_TEXT}in${PS1_PWD} \w ${PS1_GIT}\${GIT_INFO}\n\${EXIT_STAT}${PS1_WHITE}\$ ${PS1_RESET}"
 
 # function to set PS1
 function _bash_prompt(){
@@ -38,9 +29,9 @@ function _bash_prompt(){
     #       in the script not the command propmt command
     # sets a command exit statues
     if [[ $? -eq 0 ]]; then
-        EXIT_STAT="✔️"  # Green "✔️" for success
+        EXIT_STAT="$(tput bold; tput setaf 2)P"  # Red "❌" for failure
     else
-        EXIT_STAT="❌"  # Red "❌" for failure
+        EXIT_STAT="$(tput setaf 1)F"  # Green "✔️" for success
     fi
 
     # git info
