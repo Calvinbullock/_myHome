@@ -24,7 +24,7 @@ everything under lua dir is from neovim for noobs and not curently in use.
 This is a folder containg files that extend my .bashrc.
 
 #### Prompt_bash:
-This is where my custome bash prompt lives. It is based off of my-extravagant-zsh-prompt
+This is where my custom bash prompt lives. It is based off of my-extravagant-zsh-prompt
 after the redditer user linked below modifyed it for bash. I have made a lot of customizations
 to fit my needs and likes.
 
