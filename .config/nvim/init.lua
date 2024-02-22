@@ -242,6 +242,9 @@ require('lazy').setup({
 -- =====================================================
 -- See `:help vim.o`
 
+-- Remap save 
+vim.cmd[[nnoremap <leader>w :w<cr>]]
+
 -- Line num change
 function LineNumberColors()
     --vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='gray', bold=false })
