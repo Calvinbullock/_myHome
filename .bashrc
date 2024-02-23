@@ -122,3 +122,8 @@ fi
 
 # Bash alias File
 source ~/.bash/bash_alias.sh
+
+# set shell to use vim mode
+set -o vi
+
+
