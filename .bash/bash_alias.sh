@@ -15,6 +15,7 @@ alias bashrc="nvim ~/.bashrc"
 alias bso="source ~/.bashrc"
 alias bashd="cd ~/.bash"
 alias e="exit"
+alias c="clear"
 
 # git
 alias gc="git commit"
