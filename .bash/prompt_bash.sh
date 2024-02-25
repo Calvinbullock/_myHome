@@ -30,7 +30,7 @@ export PS1_USER="\[$(tput bold; tput setaf 5)\]"                    # magenta
 export PS1_SYSTEM="\[$(tput bold; tput setaf 3)\]"                  # yellow
 export PS1_BG_TEXT="\[$(tput bold; tput setaf 0)\]"                 # background text - grey
 export PS1_PWD="\[$(tput setaf 4; tput setaf 38; tput setaf 2)\]"   # Miku Green
-export PS1_GIT="\[$(tput setaf 4; tput setaf 4)\]"                  # Blue
+export PS1_GIT="\[$(tput setaf 4; tput setaf 4)\]"                  # blue
 export PS1_WHITE="\[$(tput bold; tput setaf 7)\]"                   # white
 export PS1_RESET="\[$(tput sgr0)\]"                                 # reset to default
 
