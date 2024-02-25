@@ -21,7 +21,7 @@ alias c="clear"
 alias gc="git commit"
 alias gp="git push"
 alias gd="git diff"
-alias gstat="git status"
+alias gitstat="git status"
 
 # VIM / NEOVIM
 alias nim="nvim"
