@@ -6,6 +6,20 @@
 #        
 ### PS1 SETTINGS =======================================================
 
+# catppuccin based colour theme
+# TODO see if i can get these to work - curently this is all not valid
+#export PS1_USER="\[$(tput setaf 250;167;231)\]" # Light Pink (#faa7e7)
+#export PS1_PWD="\[$(tput bold; tput setaf 245;156;137)\]" # Matcha Latte (muted green) #a89c89
+#export PS1_SYSTEM="\[$(tput bold; tput setaf 208;198;195)\]" # Lavender Cream (soft purple) #d0c6c3
+#export ?="\[$(tput bold; tput setaf 232;192;201)\]" # Rose Quartz (light pink) #e8c0c9
+#export ?="\[$(tput bold; tput setaf 156;196;224)\]" # Sky Blue (calm blue) #9cc4e0
+#export ?="\[$(tput bold; tput setaf 229;192;153)\]" # Honey Latte (muted yellow) (#e5c099)
+#export ?="\[$(tput bold; tput setaf 242;166;119)\]" # Peach Nectar (soft orange) (#f2a677)
+#export ?="\[$(tput bold; tput setaf 152;202;220)\]" # Mint Ice Cream (pastel blue) (#98cadc)
+#export ?="\[$(tput bold; tput setaf 140;193;208)\]" # Ocean Waves (calm blue) (#8cc1d0)
+#export PS1_GIT="\[$(tput bold; tput setaf 241;226;210)\]" # Latte (cream) (#f1e2d2)
+#export ?="\[$(tput bold; tput setaf 30;30;30)\]"    # Mocha (dark brown) (#1e1e2e)
+
 # show more git info in PS1
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
