@@ -16,6 +16,7 @@ alias bso="source ~/.bashrc"
 alias bashd="cd ~/.bash"
 alias e="exit"
 alias c="clear"
+alias l="clear"
 
 # git
 alias gc="git commit"
