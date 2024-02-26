@@ -35,24 +35,10 @@ export PS1_WHITE="\[$(tput bold; tput setaf 7)\]"                   # white
 export PS1_RESET="\[$(tput sgr0)\]"                                 # reset to default
 
 
-PS1="\n${PS1_USER}\u ${PS1_BG_TEXT}at${PS1_SYSTEM} \h ${PS1_BG_TEXT}in${PS1_PWD} \w ${PS1_GIT}\${GIT_INFO}\n\${EXIT_STAT}${PS1_WHITE}\$ ${PS1_RESET}"
-
-# A way to add colour and make the if in line...
-#\`if [ \$? = 0 ]; then echo \[\e[33m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\`
+PS1="\n${PS1_USER}\u ${PS1_BG_TEXT}at${PS1_SYSTEM} \h ${PS1_BG_TEXT}in${PS1_PWD} \w ${PS1_GIT}\${GIT_INFO}\n\`if [ \$? = 0 ]; then echo \[\e[32m\]-\>\[\e[0m\]; else echo \[\e[31m\]-\>\[\e[0m\]; fi\` ${PS1_RESET}"
 
 # function to set PS1
 function _bash_prompt(){
-    # This check has to be the first thing in the function or the $? will check the last command 
-    #       in the script not the command propmt command
-    # sets a command exit statues
-    if [[ $? -eq 0 ]]; then
-        #EXIT_STAT="$(tput bold; tput setaf 2)P"    # NOTE testing if colour change is causing errors
-        EXIT_STAT="P" # Green "✔️" for success
-    else
-        #EXIT_STAT="$(tput setaf 1)F"               # NOTE testing if colour change is causing errors
-        EXIT_STAT="F" # Red "❌" for failure
-    fi
-
     # git info
     export GIT_INFO=$(git branch &>/dev/null && echo "$(__git_ps1 '%s')")
 }
