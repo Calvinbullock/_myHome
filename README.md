@@ -1,5 +1,13 @@
 # This repo hold the .files for my tmux, nvim, vim and bashrc
-Clone to get my dev set up.
+
+## set up.
+Clone this repo into whereever you like, I prefer home.
+
+Then you need to sim-link
+* .config/nvim  - link should be in you .config dir
+* .tmux.conf    - link should be in your home dir
+* .bashrc       - link should be in your home dir
+* .vim          - link should be in your home dir
 
 ## my_nvim
 My neo vim config
