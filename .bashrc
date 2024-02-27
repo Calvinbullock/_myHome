@@ -58,7 +58,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     # Custom Prompt
-    source ~/.bash/prompt_bash.sh
+    source ~/._myHome/bash/prompt_bash.sh
 
     # original prompt.
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -105,6 +105,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
+source ~/._myHome/bash/bash_alias.sh
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -119,9 +121,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Bash alias File
-source ~/.bash/bash_alias.sh
 
 # set shell to use vim mode
 # set -o vi
