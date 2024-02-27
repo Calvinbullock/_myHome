@@ -9,6 +9,9 @@ Then you need to sim-link
 * .bashrc       - link should be in your home dir
 * .vim          - link should be in your home dir
 
+sym-link command:
+$ ln -s target/location link/location
+
 ## my_nvim
 My neo vim config
 
