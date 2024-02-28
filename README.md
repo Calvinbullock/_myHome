@@ -27,12 +27,15 @@ https://www.youtube.com/watch?v=stqUbv-5u2s
 - NeoVim for noobs
 https://github.com/cpow/neovim-for-newbs/tree/main
 
-#### Nvim notes
-everything under lua dir is from neovim for noobs and not curently in use.
+Everything under lua dir is from neovim for noobs and not curently in use.
 
+## Vim
+A very basic set up that I don't use much anymore.
+- no plugins
+- no themes
+- mostly use NeoVim
 
 ## BashRC
-This is a folder containg files that extend my .bashrc.
 
 #### Prompt_bash:
 This is where my custom bash prompt lives. It is based off of my-extravagant-zsh-prompt
