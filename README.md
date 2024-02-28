@@ -1,4 +1,4 @@
-# This repo hold the .files for my tmux, nvim, vim and bashrc
+# This repo holds the .files for my tmux, nvim, vim and bashrc
 
 ## Set Up.
 Clone this repo into where ever you like, I prefer the home directory.
