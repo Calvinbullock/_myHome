@@ -11,12 +11,13 @@ alias temps="watch sensors"
 
 # MyHome alias
 alias basha="nvim ~/._myHome/bash/bash_alias.sh"
+alias alac="nvim ~/._myHome/.config/alacritty/alacritty.yml"
 alias homed="cd ~/._myHome"
 
 # BASHRC and shell 
 alias bashrc="nvim ~/.bashrc"
 alias bso="source ~/.bashrc"
-alias e="exit"
+alias E="exit"
 alias c="clear"
 alias l="clear"
 
@@ -39,17 +40,17 @@ alias ...="cd ../.."
 
 # Document folder aliaes
 alias doc="cd ~/Documents"
-alias note="vim ~/Documents/note.txt"
+alias note="nvim ~/Documents/note.txt"
 alias inscript="cd ~/Documents/install-scripts/"
 
 alias py="python3"
 
 #******** School winter 2024 alieas
 alias winter24="cd ~/Documents/_winter-2024-school-docs/"
-alias datastr="cd ~/Documents/_winter-2024-school-docs/dataStruc/"
-alias appro="cd ~/Documents/_winter-2024-school-docs/appliedPrograming/"
+alias data="cd ~/Documents/_winter-2024-school-docs/dataStruc/"
+alias ap="cd ~/Documents/_winter-2024-school-docs/appliedPrograming/"
 alias pac="cd ~/Documents/_winter-2024-school-docs/cse-251-student-version/"
-alias moddes="cd ~/Documents/_winter-2024-school-docs/modularDesign/"
+alias mod="cd ~/Documents/_winter-2024-school-docs/modularDesign/"
 alias venv="source ~/Documents/_winter-2024-school-docs/cse-251-student-version/.venv/bin/activate"
 alias djvenv="source ~/Documents/_winter-2024-school-docs/appliedPrograming/.venv/bin/activate"
 alias lsnote="nvim ~/Documents/_winter-2024-school-docs/lifeCycles/lifeCyclesNotes.txt"
