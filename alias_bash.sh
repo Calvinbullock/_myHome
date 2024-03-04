@@ -41,11 +41,11 @@ alias ...="cd ../.."
 # Tmux
 alias tmuxrc="nvim ~/.tmux.conf"
 alias ta="tmux a -t"
+alias ts="tmux switch -t"
 alias tl="tmux ls"
 alias tk="tmux kill-session -t"
 alias tm="tmux new -s"
 alias tso="tmux source-file ~/.tmux.conf"
-
 
 # Document folder aliaes
 alias doc="cd ~/Documents"
