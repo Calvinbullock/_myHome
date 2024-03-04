@@ -38,6 +38,15 @@ alias vimrc="vim ~/.vim/vimrc"
 alias ..="cd .."
 alias ...="cd ../.."
 
+# Tmux
+alias tmuxrc="nvim ~/.tmux.conf"
+alias ta="tmux a -t"
+alias tl="tmux ls"
+alias tk="tmux kill-session -t"
+alias tm="tmux new -s"
+alias tso="tmux source-file ~/.tmux.conf"
+
+
 # Document folder aliaes
 alias doc="cd ~/Documents"
 alias note="nvim ~/Documents/note.txt"
@@ -54,12 +63,4 @@ alias mod="cd ~/Documents/_winter-2024-school-docs/modularDesign/"
 alias venv="source ~/Documents/_winter-2024-school-docs/cse-251-student-version/.venv/bin/activate"
 alias djvenv="source ~/Documents/_winter-2024-school-docs/appliedPrograming/.venv/bin/activate"
 alias lsnote="nvim ~/Documents/_winter-2024-school-docs/lifeCycles/lifeCyclesNotes.txt"
-
-# Tmux
-alias tmuxrc="nvim ~/.tmux.conf"
-alias ta="tmux a -t"
-alias tl="tmux ls"
-alias tk="tmux kill-session -t"
-alias tm="tmux new -s"
-alias tso="tmux source-file ~/.tmux.conf"
 
