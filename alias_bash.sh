@@ -9,7 +9,7 @@ alias temps="watch sensors"
 # MyHome alias
 alias basha="nvim ~/._myHome/alias_bash.sh"
 alias alac="nvim ~/._myHome/.config/alacritty/alacritty.yml"
-alias homed="cd ~/._myHome"
+alias home="cd ~/._myHome"
 
 # BASHRC and shell 
 alias bashrc="nvim ~/.bashrc"
@@ -24,12 +24,15 @@ alias gp="git push"
 alias gd="git diff"
 alias gitstat="git status"
 
-# VIM / NEOVIM
+# NEOVIM
 alias nim="nvim"
-alias vimd="cd ~/.vim/"
-alias vimrc="vim ~/.vim/vimrc"
+alias n="nvim"
 alias nimd="cd ~/.config/nvim"
 alias nimrc="nvim ~/.config/nvim/init.lua"
+
+# vim
+alias vimd="cd ~/.vim/"
+alias vimrc="vim ~/.vim/vimrc"
 
 # Universial directory movement
 alias ..="cd .."
