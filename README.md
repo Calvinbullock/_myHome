@@ -1,7 +1,7 @@
 # This repo holds the .files for my tmux, nvim, vim and bashrc
 
 ## Set Up.
-Clone this repo into where ever you like, I prefer the home directory.
+Clone this repo into your desired directory, I prefer the home directory.
 
 Then you need to sim-link
 * .config/nvim      - link should be in you .config dir
@@ -13,7 +13,7 @@ Then you need to sim-link
 sym-link command:
 $ ln -s target/location link/location
 
-## my_nvim
+## NeoVim
 My neo vim config
 
 My litle trip into trying neo vim as my main code edditer.
@@ -33,10 +33,8 @@ Everything under lua dir is from neovim for noobs and not curently in use.
 A very basic set up that I don't use much anymore.
 - no plugins
 - no themes
-- mostly use NeoVim
 
 ## BashRC
-
 #### Prompt_bash:
 This is where my custom bash prompt lives. It is based off of my-extravagant-zsh-prompt
 after the redditer user linked below modifyed it for bash. I have made a lot of customizations
