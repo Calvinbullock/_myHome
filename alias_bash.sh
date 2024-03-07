@@ -49,7 +49,8 @@ alias tso="tmux source-file ~/.tmux.conf"
 
 # Document folder aliaes
 alias doc="cd ~/Documents"
-alias note="nvim ~/Documents/note.txt"
+alias note="nvim ~/Documents/notes/mainNote.md"
+alias noted="cd ~/Documents/notes"
 alias inscript="cd ~/Documents/install-scripts/"
 
 alias py="python3"
@@ -60,7 +61,7 @@ alias data="cd ~/Documents/_winter-2024-school-docs/dataStruc/"
 alias ap="cd ~/Documents/_winter-2024-school-docs/appliedPrograming/"
 alias pac="cd ~/Documents/_winter-2024-school-docs/cse-251-student-version/"
 alias mod="cd ~/Documents/_winter-2024-school-docs/modularDesign/"
-alias venv="source ~/Documents/_winter-2024-school-docs/cse-251-student-version/.venv/bin/activate"
+alias pvenv="source ~/Documents/_winter-2024-school-docs/cse-251-student-version/.venv/bin/activate"
 alias djvenv="source ~/Documents/_winter-2024-school-docs/appliedPrograming/.venv/bin/activate"
 alias lsnote="nvim ~/Documents/_winter-2024-school-docs/lifeCycles/lifeCyclesNotes.txt"
 
