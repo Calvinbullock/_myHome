@@ -4,8 +4,9 @@
 Clone this repo into your desired directory, I prefer the home directory.
 
 Then you need to sim-link
-* .config/nvim      - link should be in you .config dir
-* .config/alacritty - link should be in you .config dir
+* .config/nvim      - link should be in your .config dir
+* .config/alacritty - link should be in your .config dir
+* .config/ranger    - link should be in your .config dir
 * .tmux.conf        - link should be in your home dir
 * .bashrc           - link should be in your home dir
 * .vim              - link should be in your home dir
@@ -51,3 +52,4 @@ Taken from a reddit post that forked it from stevelosh.
 -My terminal try out, config was borrowed from:
 https://gitlab.com/dwt1/dotfiles
 
+## Ranger
