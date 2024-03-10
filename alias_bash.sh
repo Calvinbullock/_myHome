@@ -20,7 +20,8 @@ alias l="clear"
 
 # git
 alias gc="git commit"
-alias gp="git push"
+alias gps="git push"
+alias gpl="git push"
 alias gd="git diff"
 alias gitstat="git status"
 
