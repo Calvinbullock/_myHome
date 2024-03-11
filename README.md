@@ -1,7 +1,7 @@
 # This repo holds the .files for my tmux, nvim, vim and bashrc
 
 ## Set Up.
-Clone this repo into your desired directory, I prefer the home directory.
+Clone this repo into your desired directory, I prefer the home directory, then:
 
 #### op 1
 - run the install script in shScripts/install.sh
