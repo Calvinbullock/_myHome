@@ -21,7 +21,7 @@ alias l="clear"
 # git
 alias gc="git commit"
 alias gps="git push"
-alias gpl="git push"
+alias gpl="git pull"
 alias gd="git diff"
 alias gitstat="git status"
 
@@ -30,6 +30,9 @@ alias nim="nvim"
 alias n="nvim"
 alias nimd="cd ~/.config/nvim"
 alias nimrc="nvim ~/.config/nvim/init.lua"
+
+# Ranger
+alias ran="ranger"
 
 # vim
 alias vimd="cd ~/.vim/"
