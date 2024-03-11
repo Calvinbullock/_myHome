@@ -3,13 +3,17 @@
 ## Set Up.
 Clone this repo into your desired directory, I prefer the home directory.
 
-Then you need to sim-link
-* .config/nvim      - link should be in your .config dir
-* .config/alacritty - link should be in your .config dir
-* .config/ranger    - link should be in your .config dir
-* .tmux.conf        - link should be in your home dir
-* .bashrc           - link should be in your home dir
-* .vim              - link should be in your home dir
+#### op 1
+- run the install script in shScripts/install.sh
+
+#### op 2
+- Manuel sim-links
+    * .config/nvim      - link should be in your .config dir
+    * .config/alacritty - link should be in your .config dir
+    * .config/ranger    - link should be in your .config dir
+    * .tmux.conf        - link should be in your home dir
+    * .bashrc           - link should be in your home dir
+    * .vim              - link should be in your home dir
 
 sym-link command:
 $ ln -s target/location link/location
