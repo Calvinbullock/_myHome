@@ -51,11 +51,11 @@ read -p "Do you want link configs? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # Set up my dev repo
     rm ~/.bashrc
-    Ln -s ~/_myHome/.bashrc ~/.bashrc
-    ln -s ~/_myHome/.tmux.conf ~/.tmux.conf
-    ln -s ~/_myHome/.config/alacritty ~/.config/alacritty
-    ln -s ~/_myHome/.config/nvim ~/.config/nvim
-    ln -s ~/_myHome/.config/ranger ~/.config/ranger
+    Ln -s ~/._myHome/.bashrc ~/.bashrc
+    ln -s ~/._myHome/.tmux.conf ~/.tmux.conf
+    ln -s ~/._myHome/.config/alacritty ~/.config/alacritty
+    ln -s ~/._myHome/.config/nvim ~/.config/nvim
+    ln -s ~/._myHome/.config/ranger ~/.config/ranger
     # ln -s ~/_myHome/.vim ~/.vim
 fi
 
