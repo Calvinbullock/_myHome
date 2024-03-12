@@ -6,7 +6,7 @@
 -- 1 - LSP is not where I want it to be for c++ / c 
 -- 	-- works by hiting ctrl + n insted of as i type, only suggest var names
 --
--- 2 - need to better understand this config / add better guide comments
+-- 2 - need to better understand this config / add better guide comments 
 --
 -- 3 - line 48 might be redundent - leader key maping
 --
@@ -241,6 +241,10 @@ require('lazy').setup({
 --		[[ Setting options ]]			 --
 -- =====================================================
 -- See `:help vim.o`
+
+-- Spelling settings
+vim.opt.spell = true
+vim.opt.spelllang = 'en_us'
 
 -- Remap save 
 vim.cmd[[nnoremap <leader>w :w<cr>]]
