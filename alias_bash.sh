@@ -51,6 +51,11 @@ alias tk="tmux kill-session -t"
 alias tm="tmux new -s"
 alias tso="tmux source-file ~/.tmux.conf"
 
+# seting wallaper
+alias setbg="plasma-apply-wallpaperimage"
+alias pic="dolphin ~/Pictures/fav-imgs/"
+alias picd="cd ~/Pictures/fav-imgs/"
+
 # Document folder aliaes
 alias doc="cd ~/Documents"
 alias note="nvim ~/Documents/notes/mainNote.md"
