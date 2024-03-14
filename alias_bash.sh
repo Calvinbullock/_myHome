@@ -23,7 +23,7 @@ alias gc="git commit"
 alias gps="git push"
 alias gpl="git pull"
 alias gd="git diff"
-alias gitstat="git status"
+alias gst="git status"
 
 # NEOVIM
 alias nim="nvim"
