@@ -34,10 +34,11 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 
-echo "apt install btop, alacritty, tmux, ranger, lm-sensers"
+echo "apt install zsh, btop, alacritty, tmux, ranger, lm-sensers"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install btop
+    sudo apt install zsh
     # sudo apt install htop
     sudo apt install lm-sensors
     sudo apt install alacritty
