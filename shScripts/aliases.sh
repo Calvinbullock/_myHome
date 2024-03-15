@@ -7,13 +7,17 @@ alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap re
 alias temps="watch sensors"
 
 # MyHome alias
-alias basha="nvim ~/._myHome/alias_bash.sh"
+alias shella="nvim ~/._myHome/shScripts/aliases.sh"
 alias alac="nvim ~/._myHome/.config/alacritty/alacritty.yml"
 alias home="cd ~/._myHome"
 
-# BASHRC and shell 
+# shell 
 alias bashrc="nvim ~/.bashrc"
 alias bso="source ~/.bashrc"
+
+alias zrc="nvim ~/.zshrc"
+alias zso="source ~/.zshrc"
+
 alias E="exit"
 alias c="clear"
 alias l="clear"
