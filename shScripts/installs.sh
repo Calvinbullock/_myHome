@@ -52,6 +52,7 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # Set up my dev repo
     rm ~/.bashrc
     Ln -s ~/._myHome/.bashrc ~/.bashrc
+    Ln -s ~/._myHome/.zshrc ~/.zshrc
     ln -s ~/._myHome/.tmux.conf ~/.tmux.conf
     ln -s ~/._myHome/.config/alacritty ~/.config/alacritty
     ln -s ~/._myHome/.config/nvim ~/.config/nvim
