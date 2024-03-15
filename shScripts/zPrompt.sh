@@ -8,7 +8,7 @@ setopt PROMPT_SUBST
 
 # Build the prompt string
 NEWLINE=$'\n'
-PS1="${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[blue]%}$(parse_git_branch)${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}-> )%{$reset_color%} "
+PS1="${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[blue]%}$(parse_git_branch)${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} "
 
 # Call prompt function before displaying prompt
 precmd_functions+=(_zsh_prompt)
