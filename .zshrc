@@ -7,7 +7,7 @@ setopt PROMPT_SUBST
 autoload -Uz vcs_info
 precmd () { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b'
-newline=$'\n'
+NEWLINE=$'\n'
 PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[blue]%}$vcs_info_msg_0_%f ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
 
 # history
