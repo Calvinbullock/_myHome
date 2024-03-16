@@ -7,7 +7,7 @@ alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap re
 alias temps="watch sensors"
 
 # MyHome alias
-alias shella="nvim ~/._myHome/shScripts/aliases.sh"
+alias alia="nvim ~/._myHome/shScripts/aliases.sh"
 alias alac="nvim ~/._myHome/.config/alacritty/alacritty.yml"
 alias home="cd ~/._myHome"
 
@@ -70,11 +70,11 @@ alias py="python3"
 
 #******** School winter 2024 alieas
 alias winter24="cd ~/Documents/_winter-2024-school-docs/"
-alias data="cd ~/Documents/_winter-2024-school-docs/dataStruc/"
-alias ap="cd ~/Documents/_winter-2024-school-docs/appliedPrograming/"
-alias pac="cd ~/Documents/_winter-2024-school-docs/cse-251-student-version/"
-alias mod="cd ~/Documents/_winter-2024-school-docs/modularDesign/"
-alias pvenv="source ~/Documents/_winter-2024-school-docs/cse-251-student-version/.venv/bin/activate"
-alias djvenv="source ~/Documents/_winter-2024-school-docs/appliedPrograming/.venv/bin/activate"
-alias lsnote="nvim ~/Documents/_winter-2024-school-docs/lifeCycles/lifeCyclesNotes.txt"
+alias data="cd ~/Documents/_winter-2024/dataStruc/"
+alias ap="cd ~/Documents/_winter-2024/appliedPrograming/"
+alias pac="cd ~/Documents/_winter-2024/cse-251-student-version/"
+alias mod="cd ~/Documents/_winter-2024/modularDesign/"
+alias pvenv="source ~/Documents/_winter-2024/cse-251-student-version/.venv/bin/activate"
+alias djvenv="source ~/Documents/_winter-2024/appliedPrograming/.venv/bin/activate"
+alias lsnote="nvim ~/Documents/_winter-2024/lifeCycles/lifeCyclesNotes.txt"
 
