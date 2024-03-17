@@ -12,15 +12,20 @@ alias alac="nvim ~/._myHome/.config/alacritty/alacritty.yml"
 alias home="cd ~/._myHome"
 
 # shell 
-alias bashrc="nvim ~/.bashrc"
-alias bso="source ~/.bashrc"
+alias bashrc="nvim ~/._myHome/.bashrc"
+alias bso="source ~/._myHome/.bashrc"
 
-alias zrc="nvim ~/.zshrc"
-alias zso="source ~/.zshrc"
+alias zrc="nvim ~/._myHome/.zshrc"
+alias zso="source ~/._myHome/.zshrc"
 
 alias E="exit"
 alias c="clear"
 alias l="clear"
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # git
 alias gc="git commit"

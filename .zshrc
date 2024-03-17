@@ -11,9 +11,9 @@ NEWLINE=$'\n'
 PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[blue]%}$vcs_info_msg_0_%f ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
 
 # history
-HISTFILE=~/.histfile
 HISTSIZE=5000
 SAVEHIST=5000
+HISTFILE=~/.cache/zsh/history
 
 # Enable searching through history
 bindkey '^R' history-incremental-pattern-search-backward
@@ -68,11 +68,7 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# vim in tab complete
-#bindkey -M menuselect 'h' vi-backward-char
-#bindkey -M menuselect 'j' vi-down-line-or-history
-#bindkey -M menuselect 'k' vi-up-line-or-history
-#bindkey -M menuselect 'l' vi-forward-char
+export EDITOR="nvim"
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
