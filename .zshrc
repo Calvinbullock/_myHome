@@ -13,7 +13,7 @@ PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]
 # history
 HISTFILE=~/.histfile
 HISTSIZE=5000
-SAVEHIST=1000
+SAVEHIST=5000
 
 # Enable searching through history
 bindkey '^R' history-incremental-pattern-search-backward
@@ -21,9 +21,31 @@ bindkey '^R' history-incremental-pattern-search-backward
 # alert off
 unsetopt beep
 
+# Auto completion
+setopt auto_pushd
+autoload -U compinit && compinit -u
+zstyle ':completion:*' menu select
+# Auto complete with case insenstivity
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+# Auto compete for hidden files
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'left' vi-backward-char
+bindkey -M menuselect 'down' vi-down-line-or-history
+bindkey -M menuselect 'up' vi-up-line-or-history
+bindkey -M menuselect 'right' vi-forward-char
+
 # vi mode
 export KEYTIMEOUT=1
 bindkey -v
+bindkey "^?" backward-delete-char # fixes vi mode bug
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
