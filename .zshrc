@@ -13,7 +13,7 @@ PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]
 # history
 HISTSIZE=5000
 SAVEHIST=5000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=~/.histfile
 
 # Enable searching through history
 bindkey '^R' history-incremental-pattern-search-backward
