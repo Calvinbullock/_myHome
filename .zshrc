@@ -15,6 +15,9 @@ HISTFILE=~/.histfile
 HISTSIZE=5000
 SAVEHIST=1000
 
+# Enable searching through history
+bindkey '^R' history-incremental-pattern-search-backward
+
 # alert off
 unsetopt beep
 
