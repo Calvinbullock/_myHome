@@ -13,7 +13,8 @@ Clone this repo into your desired directory, I prefer the home directory, then:
     * .config/ranger    - link should be in your .config dir
     * .tmux.conf        - link should be in your home dir
     * .bashrc           - link should be in your home dir
-    * .vim              - link should be in your home dir
+    * .vimrc            - link should be in your home dir
+    * .zshrc            - link should be in your home dir
 
 sym-link command:
 $ ln -s target/location link/location
@@ -39,7 +40,10 @@ A very basic set up that I don't use much anymore.
 - no plugins
 - no themes
 
-## BashRC
+## zshrc
+A minimal zsh set up. vi mode enabled, auto complete with vi keys. Costume prompt.
+
+## Bashrc
 #### Prompt_bash:
 This is where my custom bash prompt lives. It is based off of my-extravagant-zsh-prompt
 after the redditer user linked below modifyed it for bash. I have made a lot of customizations
