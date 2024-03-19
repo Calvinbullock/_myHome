@@ -11,21 +11,8 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWSTASHSTATE=true
 
-# Function to get git branch information
-function _git_zsh_prompt() {
-  # Capture git branch output (if successful) and format using __git_ps1
-  local GIT_BRANCH=$(git branch 2>/dev/null)
-  if [[ $? -eq 0 ]]; then
-    # Use zsh parameter expansion for format string
-    GIT_INFO='%(__git_ps1 %s)'
-  fi
-}
-
-# Call the function before each prompt refresh
-precmd _git_zsh_prompt
-
 NEWLINE=$'\n'
-PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[blue]%}$GIT_INFO ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[blue]%}$(__git_ps1 "%s")  ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
 
 # history
 HISTSIZE=5000
