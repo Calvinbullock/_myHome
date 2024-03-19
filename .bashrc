@@ -56,9 +56,41 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# My bash Prompt
+# 	Taken from a reddit post that forked it from stevelosh.
+# 	SET UP look for PS1="...." in .bashrc and add source ~/.bash/prompt_bash.sh
+# 	Source - https://www.reddit.com/r/commandline/comments/zt6x9/what_are_your_favorite_custom_prompts/
+# 	Source - http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
+#        
+### PS1 SETTINGS =======================================================
+
+# show more git info in PS1
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWSTASHSTATE=true
+
+# colors
+export PS1_USER="\[$(tput bold; tput setaf 5)\]"                    # magenta
+export PS1_SYSTEM="\[$(tput bold; tput setaf 3)\]"                  # yellow
+export PS1_BG_TEXT="\[$(tput bold; tput setaf 0)\]"                 # background text - grey
+export PS1_PWD="\[$(tput setaf 4; tput setaf 38; tput setaf 2)\]"   # Miku Green
+export PS1_GIT="\[$(tput setaf 4; tput setaf 4)\]"                  # blue
+export PS1_WHITE="\[$(tput bold; tput setaf 7)\]"                   # white
+export PS1_RESET="\[$(tput sgr0)\]"                                 # reset to default
+
+# function to set PS1
+function _bash_prompt(){
+    # git info
+    export GIT_INFO=$(git branch &>/dev/null && echo "$(__git_ps1 '%s')")
+}
+
+# call _bash_prompt() each time the prompt is refreshed
+export PROMPT_COMMAND=_bash_prompt
+
+
 if [ "$color_prompt" = yes ]; then
     # Custom Prompt
-    source ~/._myHome/shScripts/bashPrompt.sh
+    PS1="\n${PS1_USER}\u ${PS1_BG_TEXT}at${PS1_SYSTEM} \h ${PS1_BG_TEXT}in${PS1_PWD} \w ${PS1_GIT}\${GIT_INFO}\n\`if [ \$? = 0 ]; then echo \[\e[32m\]-\>\[\e[0m\]; else echo \[\e[31m\]-\>\[\e[0m\]; fi\` ${PS1_RESET}"
 
     # original prompt.
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
