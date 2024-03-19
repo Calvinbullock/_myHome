@@ -2,13 +2,17 @@
 # Enable colors and change prompt:
 autoload -U colors && colors
 
-# git branch in prompt
+# Git status in prompt
+#   https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+#   more instructinos here.
 setopt PROMPT_SUBST
-autoload -Uz vcs_info
-precmd () { vcs_info }
-zstyle ':vcs_info:git:*' formats '%b'
+source ~/._myHome/shScripts/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWSTASHSTATE=true
+
 NEWLINE=$'\n'
-PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[blue]%}$vcs_info_msg_0_%f ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[blue]%}$(__git_ps1 "%s")  ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
 
 # history
 HISTSIZE=5000
