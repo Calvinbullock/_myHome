@@ -52,6 +52,9 @@ alias nimrc="nvim ~/.config/nvim/init.lua"
 # Ranger
 alias ran="ranger"
 
+# other
+alias dol="dolphin"
+
 # vim
 alias vimd="cd ~/.vim/"
 alias vimrc="vim ~/.vim/vimrc"
