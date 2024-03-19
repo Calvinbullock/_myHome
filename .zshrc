@@ -3,16 +3,31 @@
 autoload -U colors && colors
 
 # Git status in prompt
-#   https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
-#   more instructinos here.
+#   taken from parse_git_dirty / parse_git_branch
+#   https://github.com/jdpedersen1/dotfiles/blob/master/.config/bash/.bashrc
 setopt PROMPT_SUBST
-source ~/._myHome/shScripts/git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWUNTRACKEDFILES=true
-export GIT_PS1_SHOWSTASHSTATE=true
+
+function parse_git_dirty {
+  STATUS="$(git status 2> /dev/null)"
+  if [[ $? -ne 0 ]]; then printf ""; return; else printf " ["; fi
+  if echo ${STATUS} | grep -c "renamed:"         &> /dev/null; then printf " >"; else printf ""; fi
+  if echo ${STATUS} | grep -c "branch is ahead:" &> /dev/null; then printf " !"; else printf ""; fi
+  if echo ${STATUS} | grep -c "new file::"       &> /dev/null; then printf " +"; else printf ""; fi
+  if echo ${STATUS} | grep -c "Untracked files:" &> /dev/null; then printf " ?"; else printf ""; fi
+  if echo ${STATUS} | grep -c "modified:"        &> /dev/null; then printf " *"; else printf ""; fi
+  if echo ${STATUS} | grep -c "deleted:"         &> /dev/null; then printf " -"; else printf ""; fi
+  printf " ]"
+}
+
+parse_git_branch() {
+  # Long form
+  git rev-parse --abbrev-ref HEAD 2> /dev/null
+ # Short form
+  # git rev-parse --abbrev-ref HEAD 2> /dev/null | sed -e 's/.*\/\(.*\)/\1/'
+}
 
 NEWLINE=$'\n'
-PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[blue]%}$(__git_ps1 "%s")  ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)  ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
 
 # history
 HISTSIZE=5000
