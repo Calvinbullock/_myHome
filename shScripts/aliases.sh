@@ -11,13 +11,13 @@ alias alia="nvim ~/._myHome/shScripts/aliases.sh"
 alias alac="nvim ~/._myHome/.config/alacritty/alacritty.yml"
 alias home="cd ~/._myHome"
 
-# shell 
+# shellrc
 alias bashrc="nvim ~/._myHome/.bashrc"
 alias bso="source ~/._myHome/.bashrc"
-
 alias zrc="nvim ~/._myHome/.zshrc"
 alias zso="source ~/._myHome/.zshrc"
 
+# shell 
 alias E="exit"
 alias c="clear"
 alias l="clear"
@@ -33,6 +33,7 @@ alias gps="git push"
 alias gpl="git pull"
 alias gd="git diff"
 alias gst="git status"
+alias ga="git add"
 
 # NEOVIM
 alias nim="nvim"
