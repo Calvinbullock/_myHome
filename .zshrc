@@ -3,7 +3,7 @@
 autoload -U colors && colors
 
 # Git status in prompt
-#   taken from parse_git_dirty / parse_git_branch
+#   parse_git_dirty / parse_git_branch taken from
 #   https://github.com/jdpedersen1/dotfiles/blob/master/.config/bash/.bashrc
 setopt PROMPT_SUBST
 
