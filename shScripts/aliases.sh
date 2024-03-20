@@ -39,6 +39,7 @@ alias egrep='egrep --color=auto'
 alias gc="git commit"
 alias gps="git push"
 alias gpl="git pull"
+alias gco="git checkout"
 alias gd="git diff"
 alias gst="git status"
 alias ga="git add"
