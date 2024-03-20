@@ -93,5 +93,5 @@ alias pac="cd ~/Documents/_winter-2024/cse-251/"
 alias mod="cd ~/Documents/_winter-2024/modularDesign/"
 alias pvenv="source ~/Documents/_winter-2024/cse-251/.venv/bin/activate"
 alias djvenv="source ~/Documents/_winter-2024/appliedPrograming/.venv/bin/activate"
-alias lsnote="nvim ~/Documents/_winter-2024/lifeCycles/lifeCyclesNotes.txt"
+alias lsnote="nvim ~/Documents/_winter-2024/lifeCycles/lifeCyclesNotes.md"
 
