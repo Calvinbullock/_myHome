@@ -31,7 +31,6 @@ I have changed a lot to make this more mine, but I started here:
 ## Vim
 A very basic set up that I don't use much anymore.
 - no plugins
-- custom prompt with git statues 
 
 ## zshrc
 A minimal zsh set up. 
@@ -43,6 +42,7 @@ A minimal zsh set up.
 This is where my custom bash prompt lives. It is based off of my-extravagant-zsh-prompt
 after the redditer user linked below modifyed it for bash. I have made a lot of customizations
 to fit my needs and likes.
+- custom prompt with git statues 
 
 My prompt was taken from a reddit post that forked a zsh prompt from stevelosh, the redditer converted it to bash.
 - [reddit post](https://www.reddit.com/r/commandline/comments/zt6x9/what_are_your_favorite_custom_prompts/)
