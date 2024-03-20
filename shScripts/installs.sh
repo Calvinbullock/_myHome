@@ -7,16 +7,17 @@ sudo apt update && sudo apt upgrade
 
 # ####### Package installs ####### #
 
+echo
 echo "install and set up flatpak / flathub"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # -- Install flatpak and add flathub -- #
     sudo apt install flatpak
-    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-    fi
+    sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 fi
 
 
+echo
 echo "flatpak install krita, flatseal, discord, upscaler"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
@@ -27,6 +28,7 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 
+echo
 echo "install nvim snap"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
@@ -34,6 +36,7 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 
+echo
 echo "apt install zsh, btop, ncdu, alacritty, tmux, ranger, lm-sensers"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
@@ -48,14 +51,15 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 
+echo
 echo "link configs, tmux, nvim, alacritty, ranger, bashrc"
 read -p "Do you want link configs? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # Set up my dev repo
     rm ~/.bashrc
     rm ~/.zshrc
-    Ln -s ~/._myHome/.bashrc ~/.bashrc
-    Ln -s ~/._myHome/.zshrc ~/.zshrc
+    ln -s ~/._myHome/.bashrc ~/.bashrc
+    ln -s ~/._myHome/.zshrc ~/.zshrc
     ln -s ~/._myHome/.tmux.conf ~/.tmux.conf
     ln -s ~/._myHome/.config/alacritty ~/.config/alacritty
     ln -s ~/._myHome/.config/nvim ~/.config/nvim
@@ -64,6 +68,7 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 
+echo
 echo "** Manuel install needed **"
 echo "MineCraft, Steam, Nvim, Virtbox, Brave, Chrome, vs-Code, Discord"
 
