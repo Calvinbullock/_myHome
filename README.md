@@ -4,7 +4,7 @@
 Clone this repo into your desired directory, I prefer the home directory, then:
 
 #### op 1
-- run the install script in shScripts/install.sh -- **not tested yet**
+- run the install script in shScripts/install.sh
 
 #### op 2
 - Manuel sim-links
