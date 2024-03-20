@@ -4,7 +4,10 @@
 Clone this repo into your desired directory, I prefer the home directory, then:
 
 #### op 1
+- **This script is only compatible with apt based distros**
 - run the install script in shScripts/install.sh
+- `chmod -x install.sh` - This will set install.sh to be executable
+- `./install.sh`        - This will run the command 
 
 #### op 2
 - Manuel sim-links
