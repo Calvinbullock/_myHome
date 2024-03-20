@@ -4,7 +4,7 @@
 Clone this repo into your desired directory, I prefer the home directory, then:
 
 #### op 1
-- run the install script in shScripts/install.sh
+- run the install script in shScripts/install.sh -- **not tested yet**
 
 #### op 2
 - Manuel sim-links
@@ -38,13 +38,15 @@ Everything under lua dir is from neovim for noobs and not curently in use.
 ## Vim
 A very basic set up that I don't use much anymore.
 - no plugins
-- no themes
+- custom prompt with git statues 
 
 ## zshrc
-A minimal zsh set up. vi mode enabled, auto complete with vi keys. Costume prompt.
+A minimal zsh set up. 
+- vi mode enabled, with bar vs block cursor for insert vs normal modes
+- custom prompt with git statues (vanilla bash scripting)
+- auto complete with vi keys navigation
 
 ## Bashrc
-#### Prompt_bash:
 This is where my custom bash prompt lives. It is based off of my-extravagant-zsh-prompt
 after the redditer user linked below modifyed it for bash. I have made a lot of customizations
 to fit my needs and likes.
@@ -53,11 +55,32 @@ Taken from a reddit post that forked it from stevelosh.
 - Source - https://www.reddit.com/r/commandline/comments/zt6x9/what_are_your_favorite_custom_prompts/
 - Source - http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 
-#### Alias
--Just a file containing all my aliaes for easy back up
+## Aliases.sh
+This is a file that both my bash and zsh source.
+
+Notable alias
+- git
+    - `gc` - `git commit`
+    - `ga` - `git add`
+    - `gd` - `git diff `
+    - `gps` - `git push`
+    - `gpl` - `git pull`
+    - `gst` - `git status`
+    - `gco` - `git checkout`
+
+- Tmux
+    - `tmuxrc` - `~/.tmux.conf`
+    - `tso` - `tmux sourc e-file ~/.tmux.conf`
+    - `ta` - `tmux a -t`
+    - `ts` - `tmux switch -t`
+    - `tl` - `tmux ls`
+    - `tk` - `tmux kill-session -t`
+    - `tm` - ` tmux new -s`
 
 ## Alacritty
 -My terminal try out, config was borrowed from:
-https://gitlab.com/dwt1/dotfiles
+(DTs github dotfiles)[https://gitlab.com/dwt1/dotfiles]
 
 ## Ranger
+A terminal based file manager, with movement based on vim motions.
+
