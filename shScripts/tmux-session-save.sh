@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# NOTE - how to use
+# run with "save" argument passed in to save all tmux sessions
+# run with "restore" argument passed in to restore all tmux sessions
+
 # Script purpose: Save and restore tmux sessions and windows
 # TODO: Add persist and restore the state & position of PANES
 # script source:
