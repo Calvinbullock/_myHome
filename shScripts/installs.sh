@@ -38,16 +38,16 @@ echo
 echo "apt install zsh, vim, btop, ncdu, alacritty, tmux, ranger, lm-sensers, btop"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
-    sudo apt install vim
-    sudo apt install btop
-    sudo apt install zsh
-    sudo apt install ncdu
-    # sudo apt install htop
-    sudo apt install lm-sensors
-    sudo apt install alacritty
-    sudo apt install tmux
-    sudo apt install ranger
-    sudo apt install btop
+    sudo apt install vim -y
+    sudo apt install btop -y
+    sudo apt install zsh -y
+    sudo apt install ncdu -y
+    # sudo apt install htop -y
+    sudo apt install lm-sensors -y
+    sudo apt install alacritty -y
+    sudo apt install tmux -y
+    sudo apt install ranger -y
+    sudo apt install btop -y
 fi
 
 echo
