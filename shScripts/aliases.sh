@@ -1,10 +1,7 @@
-# All my bash aliases
+# My bash aliases
 
 # Custom system update alias
 alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap refresh"
-
-# Tempature sensors
-alias temps="watch sensors"
 
 # MyHome alias
 alias alia="nvim ~/._myHome/shScripts/aliases.sh"
@@ -22,11 +19,10 @@ alias E="exit"
 alias c="clear"
 alias l="clear"
 
-# some more ls aliases
+# Some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
 alias ls='ls --color=auto'
 #alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
@@ -35,7 +31,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# git
+# Git
 alias gc="git commit"
 alias gps="git push"
 alias gpl="git pull"
@@ -53,10 +49,12 @@ alias nimrc="nvim ~/.config/nvim/init.lua"
 # Ranger
 alias ran="ranger"
 
-# other
+# Other
 alias dol="dolphin"
+alias py="python3"
+alias temps="watch sensors"
 
-# vim
+# Vim
 alias vimd="cd ~/.vim/"
 alias vimrc="vim ~/.vim/vimrc"
 
@@ -72,8 +70,10 @@ alias tl="tmux ls"
 alias tk="tmux kill-session -t"
 alias tm="tmux new -s"
 alias tso="tmux source-file ~/.tmux.conf"
+#alias tms="./~/._myHome/shScripts/tmux-session-save save"
+#alias tmr="./~/._myHome/shScripts/tmux-session-save restore"
 
-# seting wallaper
+# Seting wallaper
 alias setbg="plasma-apply-wallpaperimage"
 alias pic="dolphin ~/Pictures/fav-imgs/"
 alias picd="cd ~/Pictures/fav-imgs/"
@@ -83,8 +83,6 @@ alias doc="cd ~/Documents"
 alias note="nvim ~/Documents/notes/mainNote.md"
 alias noted="cd ~/Documents/notes"
 alias inscript="cd ~/Documents/install-scripts/"
-
-alias py="python3"
 
 #******** School winter 2024 alieas
 alias winter24="cd ~/Documents/_winter-2024-school-docs/"
