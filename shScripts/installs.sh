@@ -35,9 +35,10 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 echo
-echo "apt install zsh, btop, ncdu, alacritty, tmux, ranger, lm-sensers, btop"
+echo "apt install zsh, vim, btop, ncdu, alacritty, tmux, ranger, lm-sensers, btop"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
+    sudo apt install vim
     sudo apt install btop
     sudo apt install zsh
     sudo apt install ncdu
@@ -64,7 +65,10 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     ln -s ~/._myHome/.config/alacritty ~/.config/alacritty
     ln -s ~/._myHome/.config/nvim ~/.config/nvim
     ln -s ~/._myHome/.config/ranger ~/.config/ranger
-    # ln -s ~/_myHome/.vim ~/.vim
+
+    rm ~/.vim
+    ln -s ~/._myHome/.vim ~/.vim
+
     sudo chsh -s /bin/zsh 
 fi
 
