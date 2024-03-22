@@ -29,10 +29,10 @@ parse_git_branch() {
 NEWLINE=$'\n'
 
 # two line prompt
-# PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)  ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+# PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty) ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
 
 # 3 line
-PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty) ${NEWLINE}%{$fg[grey]%}Path %{$fg[green]%}[ %~ ] ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty) ${NEWLINE}%{$fg[grey]%}in %{$fg[green]%}[ %~ ] ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
 
 # history
 HISTSIZE=5000
