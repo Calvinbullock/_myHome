@@ -18,7 +18,7 @@ newTmuxSesstion () {
                         
     # Create tmux session / set up panes how you like
     tmux new -d -s $sessionName || tmux attach -t $sessionName
-    tmux split-window -h -p 25
+    tmux split-window -h -p 20
 
     return 0
 }
