@@ -2,67 +2,30 @@
 
 # A script to restore my winter semester tmux sessions  
 
-# --------------------------- #
-#           sess me
-# --------------------------- #
-# Change to desired directory
-cd
-sess=$"me"
+# Create a new tmux session with two panes
+newTmuxSesstion () {
+    # function paramiters
+    local sessionName="$1"
+    local path="$2"
 
-# Create tmux session / set up panes how you like
-tmux new -d -s $sess || tmux attach -t $sess
-tmux split-window -h -p 25
+    # Check if directory exists and change directory (handling potential errors)
+    if [[ ! -d "$path" ]]; then
+        echo "Error: Directory '$path' does not exist."
+        return 1  # Return non-zero code to indicate error
+    else
+        cd "$path"
+    fi
+                        
+    # Create tmux session / set up panes how you like
+    tmux new -d -s $sessionName || tmux attach -t $sessionName
+    tmux split-window -h -p 25
 
+    return 0
+}
 
-# --------------------------- #
-#           sess pac
-# --------------------------- #
-# Change to desired directory
-cd ~/Documents/_winter-2024/cse-251/
-sess=$"pac"
-
-# Create tmux session / set up panes how you like
-tmux new -d -s $sess || tmux attach -t $sess
-tmux split-window -h -p 25
-
-
-# --------------------------- #
-#           sess dat
-# --------------------------- #
-# Change to desired directory
-cd ~/Documents/_winter-2024/dataStruc/
-sess=$"dat"
-
-# Create tmux session / set up panes how you like
-tmux new -d -s $sess || tmux attach -t $sess
-tmux split-window -h -p 25
-
-
-# --------------------------- #
-#           sess go
-# --------------------------- #
-# Change to desired directory
-cd ~/Documents/_winter-2024/appliedPrograming/goServer
-sess=$"go"
-
-# Create tmux session / set up panes how you like
-tmux new -d -s $sess || tmux attach -t $sess
-tmux split-window -h -p 25
-tmux select-pane -t 1
-tmux send-keys "nim main.go" Enter
-
-
-# --------------------------- #
-#           sess go
-# --------------------------- #
-# Change to desired directory
-cd ~/Documents/_winter-2024/appliedPrograming/ZombieSeige/
-sess=$"zom"
-
-# Create tmux session / set up panes how you like
-tmux new -d -s $sess || tmux attach -t $sess
-tmux split-window -h -p 25
-tmux select-pane -t 1
-tmux send-keys "nim ." Enter
-
+newTmuxSesstion "me" "$HOME/._myHome"
+newTmuxSesstion "go" "$HOME/Documents/_entser-2024/appliedPrograming/goServer"
+newTmuxSesstion "pac" "$HOME/Documents/_winter-2024/cse-251"
+newTmuxSesstion "dat" "$HOME/Documess=/_winter-20er-2ataStruc"
+newTmuxSesstion "zom" "$HOME/Documents/_wintwint024/appliedPrograming/ZombieSeige"
 
