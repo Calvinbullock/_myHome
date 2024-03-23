@@ -70,7 +70,7 @@ alias tl="tmux ls"
 alias tk="tmux kill-session -t"
 alias tn="tmux new -s"
 alias tso="tmux source-file ~/.tmux.conf"
-alias tset="~/._myHome/shScripts/./winter-tmux.sh"
+alias tset="~/._myHome/shScripts/./tmux-start.sh"
 #alias tms="./~/._myHome/shScripts/tmux-session-save save"
 #alias tmr="./~/._myHome/shScripts/tmux-session-save restore"
 
