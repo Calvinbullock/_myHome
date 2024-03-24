@@ -51,23 +51,26 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 echo
-echo "sym link configs, tmux, nvim, alacritty, ranger, bashrc. Change sh to zsh"
+echo "sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop. Change sh to zsh"
 read -p "Do you want link configs? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # Set up my dev repo
     rm $HOME/.bashrc
-    ln -s $HOME/._myHome/.bashrc ~/.bashrc
+    ln -s $HOME/._myHome/.bashrc $HOME/.bashrc
 
     rm $HOME/.zshrc
-    ln -s $HOME/._myHome/.zshrc ~/.zshrc
+    ln -s $HOME/._myHome/.zshrc $HOME/.zshrc
 
-    ln -s $HOME/._myHome/.tmux.conf ~/.tmux.conf
-    ln -s $HOME/._myHome/.config/alacritty ~/.config/alacritty
-    ln -s $HOME/._myHome/.config/nvim ~/.config/nvim
-    ln -s $HOME/._myHome/.config/ranger ~/.config/ranger
+    ln -s $HOME/._myHome/.tmux.conf $HOME/.tmux.conf
+    ln -s $HOME/._myHome/.config/alacritty $HOME/.config/alacritty
+    ln -s $HOME/._myHome/.config/nvim $HOME/.config/nvim
+    ln -s $HOME/._myHome/.config/ranger $HOME/.config/ranger
 
     rm $HOME/.vim
-    ln -s $HOME/._myHome/.vim ~/.vim
+    ln -s $HOME/._myHome/.vim $HOME/.vim
+    
+    rm -r $HOME/.config/btop
+    ln -s $HOME/._myHome/.config/btop $HOME/.config/btop
 
     sudo chsh -s /bin/zsh 
 fi
@@ -75,4 +78,5 @@ fi
 echo
 echo "** Manuel install needed **"
 echo "MineCraft, Steam, Nvim, Virtbox, Brave, Chrome, vs-Code, Discord"
-
+echo
+echo "Done"
