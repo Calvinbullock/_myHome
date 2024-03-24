@@ -1,7 +1,7 @@
 # This repo holds the .files for my tmux, nvim, vim and bashrc
 
 ## Set Up.
-Clone this repo into your desired directory, I prefer the home directory, then:
+Clone this repo into your home directory, then:
 
 #### op 1
 - **This script is only compatible with apt based distros**
@@ -10,17 +10,14 @@ Clone this repo into your desired directory, I prefer the home directory, then:
 - `./install.sh`        - This will run the command 
 
 #### op 2
-- Manuel sim-links
-    * .config/nvim      - link should be in your .config dir
-    * .config/alacritty - link should be in your .config dir
-    * .config/ranger    - link should be in your .config dir
-    * .tmux.conf        - link should be in your home dir
-    * .bashrc           - link should be in your home dir
-    * .vimrc            - link should be in your home dir
-    * .zshrc            - link should be in your home dir
+- Manuel sim-links what you like from:
+    - vim
+    - bashrc
+    - zshrc
+    - .config/...
 
-sym-link command:
-$ ln -s target/location link/location
+- sym-link command:
+    - $ ln -s target/location link/location
 
 ## NeoVim
 My neo vim config
@@ -30,10 +27,6 @@ I have changed a lot to make this more mine, but I started here:
 - The 0 to LSP : Neovim RC From Scratch - [by the ThePrimeagen](https://www.youtube.com/watch?v=w7i4amO_zaE&t=9s)
 - NeoVim for noobs [typeScript](https://github.com/cpow/neovim-for-newbs/tree/main)
     - Everything under lua dir is from neovim for noobs and not curently in use.
-
-## Vim
-A very basic set up that I don't use much anymore.
-- no plugins
 
 ## zshrc
 A minimal zsh set up. 
@@ -73,10 +66,4 @@ Notable alias
     - `tk` - `tmux kill-session -t`
     - `tm` - ` tmux new -s`
 
-## Alacritty
--My terminal try out, config was borrowed from:
-[DTs github dotfiles](https://gitlab.com/dwt1/dotfiles)
-
-## Ranger
-A terminal based file manager, with movement based on vim motions.
-
+## Sway WM - NOT DONE
