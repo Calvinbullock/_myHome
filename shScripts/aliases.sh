@@ -4,7 +4,7 @@
 alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap refresh"
 
 # MyHome alias
-alias alia="nvim ~/._myHome/shScripts/aliases.sh"
+alias ali="nvim ~/._myHome/shScripts/aliases.sh"
 alias alac="nvim ~/._myHome/.config/alacritty/alacritty.yml"
 alias home="cd ~/._myHome"
 
@@ -63,13 +63,13 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 # Tmux
-alias tmuxrc="nvim ~/.tmux.conf"
+alias tmuxrc="nvim ~/.config/tmux/tmux.conf"
 alias ta="tmux a -t"
 alias ts="tmux switch -t"
 alias tl="tmux ls"
 alias tk="tmux kill-session -t"
 alias tn="tmux new -s"
-alias tso="tmux source-file ~/.tmux.conf"
+alias tso="tmux source-file ~/.config/tmux/tmux.conf"
 alias tset="~/._myHome/shScripts/./tmux-start.sh"
 #alias tms="./~/._myHome/shScripts/tmux-session-save save"
 #alias tmr="./~/._myHome/shScripts/tmux-session-save restore"

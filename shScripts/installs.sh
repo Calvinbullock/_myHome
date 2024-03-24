@@ -1,7 +1,7 @@
 #!/bin/bash
-# A script to install and set up my programs and configs, at least the ones that are avalable in a pkg manager.
+# A script to install and set up my programs and configs, at least the ones that are available in a pkg manager.
 
-# update mirrirs and system
+# update mirrors and system
 echo "update with apt"
 sudo apt update && sudo apt upgrade
 
@@ -60,8 +60,10 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
     rm $HOME/.zshrc
     ln -s $HOME/._myHome/.zshrc $HOME/.zshrc
+    
+    rm $HOME/.tmux.conf
+    ln -s $HOME/._myHome/.config/tmux $HOME/.config/tmux
 
-    ln -s $HOME/._myHome/.tmux.conf $HOME/.tmux.conf
     ln -s $HOME/._myHome/.config/alacritty $HOME/.config/alacritty
     ln -s $HOME/._myHome/.config/nvim $HOME/.config/nvim
     ln -s $HOME/._myHome/.config/ranger $HOME/.config/ranger
@@ -73,6 +75,24 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     ln -s $HOME/._myHome/.config/btop $HOME/.config/btop
 
     sudo chsh -s /bin/zsh 
+fi
+
+echo
+echo "Sway, rofi, and waybar, install and set up."
+read -p "Do you want to set up sway as you Window Manager?" yn
+if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
+
+    sudo sudo apt install sway waybar brightnessctl pulseaudio-utils wofi -y
+
+    # set up sway config links
+    rm -r $HOME/.config/sway
+    ln -s $HOME/._myHome/.config/sway $HOME/.config/sway
+
+    rm -r $HOME/.config/waybar
+    ln -s $HOME/._myHome/.config/waybar $HOME/.config/waybar
+
+    rm -r $HOME/.config/rofi
+    ln -s $HOME/._myHome/.config/rofi $HOME/.config/rofi
 fi
 
 echo
