@@ -91,7 +91,7 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     rm -r $HOME/.config/waybar
     ln -s $HOME/._myHome/.config/waybar $HOME/.config/waybar
 
-    rm -r $HOME/.config/rofi
+    # No default config for rofi
     ln -s $HOME/._myHome/.config/rofi $HOME/.config/rofi
 fi
 
