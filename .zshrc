@@ -1,4 +1,7 @@
 
+# set default shell editor
+export EDITOR="nvim"
+
 # Enable colors and change prompt:
 autoload -U colors && colors
 
@@ -26,6 +29,7 @@ parse_git_branch() {
   # git rev-parse --abbrev-ref HEAD 2> /dev/null | sed -e 's/.*\/\(.*\)/\1/'
 }
 
+# \n was not working in the prompt so I had to make a variable
 NEWLINE=$'\n'
 
 # two line prompt
@@ -91,8 +95,6 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-
-export EDITOR="nvim"
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
