@@ -2,11 +2,11 @@
 # Enable colors and change prompt:
 autoload -U colors && colors
 
+setopt PROMPT_SUBST
+
 # Git status in prompt
 #   parse_git_dirty / parse_git_branch taken from
 #   https://github.com/jdpedersen1/dotfiles/blob/master/.config/bash/.bashrc
-setopt PROMPT_SUBST
-
 function parse_git_dirty {
   STATUS="$(git status 2> /dev/null)"
   if [[ $? -ne 0 ]]; then printf ""; return; else printf " ["; fi
