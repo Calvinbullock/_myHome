@@ -13,7 +13,7 @@ read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # -- Install flatpak and add flathub -- #
     sudo apt install flatpak
-    sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+    sudo "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
 fi
 
 echo
@@ -55,24 +55,24 @@ echo "sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop. Change sh t
 read -p "Do you want link configs? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # Set up my dev repo
-    rm $HOME/.bashrc
-    ln -s $HOME/._myHome/.bashrc $HOME/.bashrc
+    rm "$HOME/.bashrc"
+    ln -s "$HOME/._myHome/.bashrc" "$HOME/.bashrc"
 
-    rm $HOME/.zshrc
-    ln -s $HOME/._myHome/.zshrc $HOME/.zshrc
+    rm "$HOME/.zshrc"
+    ln -s "$HOME/._myHome/.zshrc" "$HOME/.zshrc"
     
-    rm $HOME/.tmux.conf
-    ln -s $HOME/._myHome/.config/tmux $HOME/.config/tmux
+    rm "$HOME/.tmux.conf"
+    ln -s "$HOME/._myHome/.config/tmux" "$HOME/.config/tmux"
 
-    ln -s $HOME/._myHome/.config/alacritty $HOME/.config/alacritty
-    ln -s $HOME/._myHome/.config/nvim $HOME/.config/nvim
-    ln -s $HOME/._myHome/.config/ranger $HOME/.config/ranger
+    ln -s "$HOME/._myHome/.config/alacritty" "$HOME/.config/alacritty"
+    ln -s "$HOME/._myHome/.config/nvim" "$HOME/.config/nvim"
+    ln -s "$HOME/._myHome/.config/ranger" "$HOME/.config/ranger"
 
-    rm $HOME/.vim
-    ln -s $HOME/._myHome/.vim $HOME/.vim
+    rm -r "$HOME/.vim"
+    ln -s "$HOME/._myHome/.vim" "$HOME/.vim"
     
-    rm -r $HOME/.config/btop
-    ln -s $HOME/._myHome/.config/btop $HOME/.config/btop
+    rm -r "$HOME/.config/btop"
+    ln -s "$HOME/._myHome/.config/btop" "$HOME/.config/btop"
 
     sudo chsh -s /bin/zsh 
 fi
@@ -85,14 +85,14 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo sudo apt install sway waybar brightnessctl pulseaudio-utils wofi -y
 
     # set up sway config links
-    rm -r $HOME/.config/sway
-    ln -s $HOME/._myHome/.config/sway $HOME/.config/sway
+    rm -r "$HOME/.config/sway"
+    ln -s "$HOME/._myHome/.config/sway" "$HOME/.config/sway"
 
-    rm -r $HOME/.config/waybar
-    ln -s $HOME/._myHome/.config/waybar $HOME/.config/waybar
+    rm -r "$HOME/.config/waybar"
+    ln -s "$HOME/._myHome/.config/waybar" "$HOME/.config/waybar"
 
     # No default config for rofi
-    ln -s $HOME/._myHome/.config/rofi $HOME/.config/rofi
+    ln -s "$HOME/._myHome/.config/rofi" "$HOME/.config/rofi"
 fi
 
 echo
