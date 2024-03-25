@@ -24,8 +24,9 @@ newTmuxSesstion () {
 }
 
 newTmuxSesstion "me" "$HOME/._myHome"
-newTmuxSesstion "go" "$HOME/Documents/_entser-2024/appliedPrograming/goServer"
+newTmuxSesstion "go" "$HOME/Documents/_winter-2024/appliedPrograming/goServer"
 newTmuxSesstion "pac" "$HOME/Documents/_winter-2024/cse-251"
 newTmuxSesstion "dat" "$HOME/Documests/_winter-2024/dataStruc/final-project"
-newTmuxSesstion "zom" "$HOME/Documents/_wintwint024/appliedPrograming/ZombieSeige"
+newTmuxSesstion "zom" "$HOME/Documents/_winter-2024/appliedPrograming/ZombieSeige"
+newTmuxSesstion "mod" "$HOME/Documents/_winter-2024/modularDesign"
 
