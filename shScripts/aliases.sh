@@ -8,7 +8,7 @@ alias ali="nvim ~/._myHome/shScripts/aliases.sh"
 alias alac="nvim ~/._myHome/.config/alacritty/alacritty.yml"
 alias home="cd ~/._myHome"
 
-# shellrc
+# Shellrc's
 alias bashrc="nvim ~/._myHome/.bashrc"
 alias bso="source ~/._myHome/.bashrc"
 alias zrc="nvim ~/._myHome/.zshrc"
@@ -27,6 +27,7 @@ alias ls='ls --color=auto'
 #alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
 
+# Grep
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -74,8 +75,7 @@ alias tset="~/._myHome/shScripts/./tmux-start.sh"
 #alias tms="./~/._myHome/shScripts/tmux-session-save save"
 #alias tmr="./~/._myHome/shScripts/tmux-session-save restore"
 
-# Seting wallaper
-alias setbg="plasma-apply-wallpaperimage"
+# Setting wallpaper
 alias pic="dolphin ~/Pictures/fav-imgs/"
 alias picd="cd ~/Pictures/fav-imgs/"
 
@@ -83,7 +83,6 @@ alias picd="cd ~/Pictures/fav-imgs/"
 alias doc="cd ~/Documents"
 alias note="nvim ~/Documents/notes/mainNote.md"
 alias noted="cd ~/Documents/notes"
-alias inscript="cd ~/Documents/install-scripts/"
 
 #******** School winter 2024 alieas
 alias winter24="cd ~/Documents/_winter-2024-school-docs/"
