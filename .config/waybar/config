@@ -46,8 +46,8 @@
         "capslock": true,
         "format": "{name} {icon}",
         "format-icons": {
-            "locked": "",
-            "unlocked": ""
+            "locked": "unLocked",
+            "unlocked": "locked"
         }
     },
     "sway/mode": {
@@ -56,7 +56,7 @@
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
-        "format-icons": ["", ""],
+        "format-icons": ["", "scratch"],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
@@ -67,7 +67,7 @@
         "unknown-tag": "N/A",
         "interval": 2,
         "consume-icons": {
-            "on": " "
+            "on": "cut"
         },
         "random-icons": {
             "off": "<span color=\"#f53c3c\"></span> ",
