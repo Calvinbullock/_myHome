@@ -1,13 +1,53 @@
+/*
+*
+* Catppuccin Mocha palette
+* Maintainer: rubyowo
+*
+*/
+
+:root {
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+        
+    --text: #cdd6f4;
+    --subtext0: #a6adc8;
+    --subtext1: #bac2de;
+        
+    --surface0: #313244;
+    --surface1: #45475a;
+    --surface2: #585b70;
+
+    --overlay0: #6c7086;
+    --overlay1: #7f849c;
+    --overlay2: #9399b2;
+
+    --blue: #89b4fa;
+    --lavender: #b4befe;
+    --sapphire: #74c7ec;
+    --sky: #89dceb;
+    --teal: #94e2d5;
+    --green: #a6e3a1;
+    --yellow: #f9e2af;
+    --peach: #fab387;
+    --maroon: #eba0ac;
+    --red: #f38ba8;
+    --mauve: #cba6f7;
+    --pink: #f5c2e7;
+    --flamingo: #f2cdcd;
+    --rosewater: #f5e0dc;
+}
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family:FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 12px;
 }
 
 window#waybar {
     background-color: rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    color: var(--base);
     transition-property: background-color;
     transition-duration: .5s;
     margin: 5px;
@@ -134,43 +174,45 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: var(--base);
+    color: var(--rosewater);
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: var(--lavender);
 }
 
 #disk {
-    background-color: #964B00;
+    background-color: var(--teal);
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: var(--blue);
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: var(--red);
+    color: var(--text);
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: var(--base);
+    color: var(--sapphire);
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: var(--base);
+    color: var(--maroon);
 }
 
 #wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
+    background-color: var(--base);
+    color: var(--peach);
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    background-color: var(--red);
+    color: var(--text);
 }
 
 #custom-media {
@@ -188,7 +230,8 @@ label:focus {
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    background-color: var(--red);
+    color: var(--text);
 }
 
 #tray {
