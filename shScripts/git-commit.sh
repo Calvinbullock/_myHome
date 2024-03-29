@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 # This script will take one or two messages and send them to a git commit command.
-#   Makes my commits faster and pushes right after for easy
+#   An attempt to make committing slightly quicker
 
 # Convert std in to commit message variables
 file="$1"               # The file you wish to commit
