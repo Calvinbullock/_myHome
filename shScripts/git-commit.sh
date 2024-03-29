@@ -26,6 +26,7 @@ gitCommit() {
 # Preform commit
 gitCommit "$file" "$commit_msg1" "$commit_msg2"
 
+echo
 git push
 
 # -- Don't know if I want to use this or not yet...
