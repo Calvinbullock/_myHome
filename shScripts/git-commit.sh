@@ -26,6 +26,8 @@ gitCommit() {
 # Preform commit
 gitCommit "$file" "$commit_msg1" "$commit_msg2"
 
+git push
+
 # -- Don't know if I want to use this or not yet...
 # Push confirmation (optional)
 #read -p "Push changes to remote repository? (y/n): " answer
