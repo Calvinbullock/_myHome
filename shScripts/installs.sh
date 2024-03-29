@@ -61,6 +61,10 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     rm "$HOME/.zshrc"
     ln -s "$HOME/._myHome/.zshrc" "$HOME/.zshrc"
     
+    # give two scripts execution permissions
+    chmod +x "$HOME/._myHome/shScripts/git-commit.sh"
+    chmod +x "$HOME/._myHome/shScripts/tmux-start.sh"
+
     rm "$HOME/.tmux.conf"
     ln -s "$HOME/._myHome/.config/tmux" "$HOME/.config/tmux"
 
