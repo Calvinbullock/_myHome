@@ -67,3 +67,7 @@ Notable alias
     - `tm` - ` tmux new -s`
 
 ## Sway WM - NOT DONE
+- .config/
+    - sway
+    - waybar
+    - wofi
