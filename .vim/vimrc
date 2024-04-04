@@ -11,8 +11,7 @@
 "call pathogen#infect()
 
 " Enable vim-monokai
-"colorscheme monokai
-
+"highlight LineNr ctermfg=pink guifg=pink
 
 " ------------------------------------- +
 " Formatting:				|
@@ -44,11 +43,15 @@ hi SpellBad gui=undercurl
 " ------------------------------------- +
 " Cursor:     				|
 " ------------------------------------- +
+" Tmux cursor block line change -- NOT WORKING...
+"let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+"let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 " Changes the cursor shape between line (insert) bar normal
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 " speeds up cursor change
 set ttimeout
 set ttimeoutlen=1
@@ -72,14 +75,17 @@ let mapleader = " "
 noremap x "_x
 noremap X "_x
 
-" space f enters file explorer mode
+" "space f" enters file explorer mode
 :map <Space>f :Ex<enter>
 
-" sapce sf enters file search
+" "space sf" enters file search
 :map <Space>sf :find 
 
-" quick buffer switch
-:map <Space>b :b 
+" Map save to "space w"
+:nnoremap <Space>w :w<CR>
+
+" Recent buffer switching/search
+:map <Space><Space> :b 
 
 " Appends typed cahricters to line start
 :map  / :s/^/
@@ -90,6 +96,7 @@ noremap X "_x
 " ------------------------------------- +
 " FINDING FILES:			|
 " ------------------------------------- +
+" USE "space+s+f"
 
 "Search down into sub folders
 " provide tab completion for all file related tasks
