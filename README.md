@@ -33,6 +33,7 @@ A minimal zsh set up.
 - vi mode enabled, with bar vs block cursor for insert vs normal modes
 - custom prompt with git statues (vanilla bash scripting)
 - auto complete with vi keys navigation
+- git branch and status in prompt
 
 ## Bashrc
 This is where my custom bash prompt lives. It is based off of my-extravagant-zsh-prompt
