@@ -1,4 +1,4 @@
-# This repo holds the .files for my tmux, nvim, vim and bashrc
+# This repo holds the .files for my tmux, nvim, vim bashrc and more
 
 ## Set Up.
 Clone this repo into your home directory, then:
@@ -71,3 +71,4 @@ Notable alias
     - sway
     - waybar
     - wofi
+
