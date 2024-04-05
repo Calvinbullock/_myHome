@@ -101,6 +101,6 @@ fi
 
 echo
 echo "** Manuel install needed **"
-echo "MineCraft, Steam, Nvim, Virtbox, Brave, Chrome, vs-Code, Discord"
+echo "MineCraft, Steam, Virtbox, Nvim, Brave, Chrome, vs-Code, Discord"
 echo
 echo "Done"
