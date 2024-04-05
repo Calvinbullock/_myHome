@@ -42,6 +42,7 @@ alias gco="git checkout"
 alias gd="git diff"
 alias gst="git status"
 alias ga="git add"
+alias gap="git add -p"
 alias gcm="~/._myHome/shScripts/./git-commit.sh"
 
 # NEOVIM

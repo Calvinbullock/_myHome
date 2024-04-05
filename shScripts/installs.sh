@@ -35,7 +35,7 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 echo
-echo "apt install zsh, vim, btop, ncdu, alacritty, tmux, ranger, lm-sensers, btop"
+echo "apt install zsh, vim, btop, ncdu, alacritty, tmux, ranger, and lm-sensers."
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install vim -y
@@ -47,11 +47,10 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install alacritty -y
     sudo apt install tmux -y
     sudo apt install ranger -y
-    sudo apt install btop -y
 fi
 
 echo
-echo "sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop. Change sh to zsh"
+echo "sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop, zsh. Change shell to zsh."
 read -p "Do you want link configs? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # Set up my dev repo
