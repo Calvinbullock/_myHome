@@ -14,7 +14,7 @@ Install and set up my apps and configs, apt, flatpaks, snaps.
 A light install only using apt and many fewer pakages and config linking.
 
 ## tmux-session-save.sh
-A script from []() meant to easy save tmux sessions with basic bash.
+A script from [this user](https://github.com/mislav/dotfiles/blob/d2af5900fce38238d1202aa43e7332b20add6205/bin/tmux-session) meant to easy save tmux sessions with basic bash.
 
 ## tmux-start.sh
 A script I wrote to open basic tmux sessions in configurable directories. Meant to help me quickly open my school/work sessions.
