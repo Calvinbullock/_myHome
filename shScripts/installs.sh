@@ -28,14 +28,15 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 echo
-echo "install nvim snap"
+echo "install nvim and brave snap"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo snap install neovim
+    sudo snap install brave
 fi
 
 echo
-echo "apt install zsh, vim, btop, ncdu, alacritty, tmux, ranger, and lm-sensers."
+echo "apt install zsh, vim, btop, ncdu, alacritty, tmux, ranger, steam, and lm-sensers."
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install vim -y
@@ -47,6 +48,7 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install alacritty -y
     sudo apt install tmux -y
     sudo apt install ranger -y
+    sudo apt install steam -y
 fi
 
 echo
@@ -100,6 +102,7 @@ fi
 
 echo
 echo "** Manuel install needed **"
-echo "MineCraft, Steam, Virtbox, Nvim, Brave, Chrome, vs-Code, Discord"
+echo "MineCraft, Virtbox, Chrome, vs-Code, Discord"
+echo "Nvim, Brave - If the snaps options was not used"
 echo
-echo "Done"
+echo "Done, feel free to reboot, Have fun!"
