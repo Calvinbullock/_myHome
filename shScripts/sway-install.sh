@@ -12,7 +12,7 @@ mkdir ~/Screenshots/
 sudo apt install -y sway waybar swaylock swayidle swaybg
 
 # Terminals
-sudo apt install -y kitty tilix
+sudo apt install -y alacritty
 
 # grim (screenshots in Wayland) and slurp (select a region in wayland) - kinda like scrot
 sudo apt install -y grim slurp
@@ -27,7 +27,7 @@ sudo systemctl enable acpid
 sudo apt install -y thunar thunar-archive-plugin thunar-volman file-roller
 
 # Browser Installation (eg. chromium)
-sudo apt install -y firefox-esr 
+#sudo apt install -y firefox
 
 # dunst or mako
 sudo apt install -y dunst unzip xdotool libnotify-dev
@@ -36,11 +36,10 @@ sudo apt install -y dunst unzip xdotool libnotify-dev
 sudo apt install -y pipewire pavucontrol pamixer
 
 # Multimedia
-sudo apt install -y mpv mpv-mpris nvtop pamixer ffmpeg qimgv gimp obs-studio mkvtoolnix-gui redshift eog brightnessctl
+#sudo apt install -y mpv mpv-mpris nvtop pamixer ffmpeg qimgv gimp obs-studio mkvtoolnix-gui redshift eog brightnessctl
 
 # nwg-look takes the place of lxappearance in x11 
-# 
-bash ~/bookworm-scripts/resources/nwg-look
+#bash ~/bookworm-scripts/resources/nwg-look
 
 # text editor
 # sudo apt install -y l3afpad 
@@ -50,14 +49,14 @@ bash ~/bookworm-scripts/resources/nwg-look
 # EXA installation
 # replace ls command in .bashrc file with line below
 # alias ls='exa -al --long --header --color=always --group-directories-first' 
-sudo apt install -y exa
+#sudo apt install -y exa
 
 # Printing and bluetooth (if needed)
-# sudo apt install -y cups system-config-printer simple-scan
-# sudo apt install -y bluez blueman
+sudo apt install -y cups system-config-printer simple-scan
+sudo apt install -y bluez blueman
 
-# sudo systemctl enable cups
-# sudo systemctl enable bluetooth
+sudo systemctl enable cups
+sudo systemctl enable bluetooth
 
 # PDF 
 sudo apt install -y evince pdfarranger
