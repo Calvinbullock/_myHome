@@ -36,9 +36,10 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 echo
-echo "apt install zsh, vim, btop, ncdu, alacritty, tmux, ranger, steam, and lm-sensers."
+echo "apt install zsh, vim, btop, neofetch, ncdu, alacritty, tmux, ranger, steam, and lm-sensers."
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
+    sudo apt install neofetch -y
     sudo apt install vim -y
     sudo apt install btop -y
     sudo apt install zsh -y
@@ -79,7 +80,6 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     rm -r "$HOME/.config/btop"
     ln -s "$HOME/._myHome/.config/btop" "$HOME/.config/btop"
 
-    sudo chsh -s /bin/zsh 
 fi
 
 echo
@@ -102,7 +102,10 @@ fi
 
 echo
 echo "** Manuel install needed **"
-echo "MineCraft, Virtbox, Chrome, vs-Code, Discord"
-echo "Nvim, Brave - If the snaps options was not used"
+echo "MineCraft, Virtbox, Chrome, vs-Code, Discord,"
+echo "Nvim, Brave - If the snaps options was not used."
+echo
+echo "Run next command if you want to use zsh as defult shell."
+echo "sudo chsh _USER_ -s /bin/zsh "
 echo
 echo "Done, feel free to reboot, Have fun!"

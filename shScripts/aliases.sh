@@ -88,6 +88,7 @@ alias picd="cd ~/Pictures/fav-imgs/"
 alias doc="cd ~/Documents"
 alias note="nvim ~/Documents/notes/mainNote.md"
 alias noted="cd ~/Documents/notes"
+alias ani="nvim ~/Documents/notes/anime.md"
 
 #******** School winter 2024 alieas
 alias winter24="cd ~/Documents/_winter-2024-school-docs/"

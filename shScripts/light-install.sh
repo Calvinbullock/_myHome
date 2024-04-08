@@ -41,4 +41,8 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
     sudo chsh -s /bin/zsh 
 fi
-
+echo
+echo "Run next command if you want to use zsh as defult shell."
+echo "sudo chsh _USER_ -s /bin/zsh "
+echo
+echo "Done, feel free to reboot, Have fun!"

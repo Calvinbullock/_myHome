@@ -32,8 +32,7 @@ newTmuxSesstion () {
 
 # all my sessions
 newTmuxSesstion "me" "$HOME/._myHome"
-newTmuxSesstion "pac" "$HOME/Documents/_winter-2024/cse-251/week14/prove"
+newTmuxSesstion "go" "$HOME/Documents/battleship"
+
 newTmuxSesstion "dat" "$HOME/Documents/_winter-2024/dataStruc/final-project"
-newTmuxSesstion "zom" "$HOME/Documents/_winter-2024/appliedPrograming/ZombieSeige"
-newTmuxSesstion "mod" "$HOME/Documents/_winter-2024/modularDesign"
 
