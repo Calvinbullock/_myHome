@@ -8,7 +8,7 @@ alias alia="nvim ~/._myHome/shScripts/aliases.sh"
 alias alac="nvim ~/._myHome/.config/alacritty/alacritty.yml"
 alias home="cd ~/._myHome"
 
-# Shellrc's
+# Shell-rc's
 alias bashrc="nvim ~/._myHome/.bashrc"
 alias bso="source ~/._myHome/.bashrc"
 alias zrc="nvim ~/._myHome/.zshrc"
@@ -63,7 +63,7 @@ alias temps="watch sensors"
 alias vimd="cd ~/.vim/"
 alias vimrc="vim ~/.vim/vimrc"
 
-# Universial directory movement
+# Universal directory movement
 alias ..="cd .."
 alias ...="cd ../.."
 
@@ -90,13 +90,6 @@ alias note="nvim ~/Documents/notes/mainNote.md"
 alias noted="cd ~/Documents/notes"
 alias ani="nvim ~/Documents/notes/anime.md"
 
-#******** School winter 2024 alieas
+#******** School winter 2024 aliases
 alias winter24="cd ~/Documents/_winter-2024-school-docs/"
-alias data="cd ~/Documents/_winter-2024/dataStruc/"
-alias ap="cd ~/Documents/_winter-2024/appliedPrograming/"
-alias pac="cd ~/Documents/_winter-2024/cse-251/"
-alias mod="cd ~/Documents/_winter-2024/modularDesign/"
-alias pacvenv="source ~/Documents/_winter-2024/cse-251/.PACvenv/bin/activate"
-alias djvenv="source ~/Documents/_winter-2024/appliedPrograming/.venv/bin/activate"
-alias lsnote="nvim ~/Documents/_winter-2024/lifeCycles/lifeCyclesNotes.md"
 
