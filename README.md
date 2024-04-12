@@ -20,6 +20,9 @@ Clone this repo into your home directory, then:
     - $ ln -s target/location link/location
 
 ## NeoVim
+[Nvim release page](https://github.com/neovim/neovim/releases/)
+[Nvim build page](https://github.com/neovim/neovim/blob/master/BUILD.md)
+
 My neo vim config
 
 I have changed a lot to make this more mine, but I started here:
