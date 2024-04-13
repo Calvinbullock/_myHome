@@ -3,27 +3,30 @@
 ## Set Up.
 Clone this repo into your home directory, then:
 
-#### op 1
+#### op 1 - install script
 - run the install script in ._myHome/shScripts/install.sh
 - `chmod +x install.sh` - This will set install.sh to be executable
 - `./install.sh`        - This will run the script
 - **This script is only compatible with apt based distros**
 
-#### op 2
+#### op 2 - pick and choose
 - Manuel sim-links what you like from:
     - vim
     - bashrc
     - zshrc
     - .config/...
 
-- sym-link command:
-    - $ ln -s target/location link/location
+- sym-link command: `ln -s target/location link/location`
+
+#### op 3 - light install script
+- a smaller lighter install script
+- run the install script in ._myHome/shScripts/light-install.sh
+- `chmod +x light-install.sh` - This will set install.sh to be executable
+- `./light-install.sh`        - This will run the script
+
+---
 
 ## NeoVim
-[Nvim release page](https://github.com/neovim/neovim/releases/)
-
-[Nvim build page](https://github.com/neovim/neovim/blob/master/BUILD.md)
-
 My neo vim config
 
 I have changed a lot to make this more mine, but I started here:
@@ -31,6 +34,10 @@ I have changed a lot to make this more mine, but I started here:
 - The 0 to LSP : Neovim RC From Scratch - [by the ThePrimeagen](https://www.youtube.com/watch?v=w7i4amO_zaE&t=9s)
 - NeoVim for noobs [typeScript](https://github.com/cpow/neovim-for-newbs/tree/main)
     - Everything under lua dir is from neovim for noobs and not curently in use.
+
+[Nvim release page](https://github.com/neovim/neovim/releases/)
+
+[Nvim build page](https://github.com/neovim/neovim/blob/master/BUILD.md)
 
 ## zshrc
 A minimal zsh set up. 
