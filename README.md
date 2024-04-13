@@ -21,6 +21,7 @@ Clone this repo into your home directory, then:
 
 ## NeoVim
 [Nvim release page](https://github.com/neovim/neovim/releases/)
+
 [Nvim build page](https://github.com/neovim/neovim/blob/master/BUILD.md)
 
 My neo vim config
