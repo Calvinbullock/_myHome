@@ -34,5 +34,3 @@ newTmuxSesstion () {
 newTmuxSesstion "me" "$HOME/._myHome"
 newTmuxSesstion "go" "$HOME/Documents/battleship"
 
-newTmuxSesstion "dat" "$HOME/Documents/_winter-2024/dataStruc/final-project"
-
