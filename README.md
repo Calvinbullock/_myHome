@@ -4,9 +4,9 @@
 Clone this repo into your home directory, then:
 
 #### op 1
-- run the install script in shScripts/install.sh
+- run the install script in ._myHome/shScripts/install.sh
 - `chmod +x install.sh` - This will set install.sh to be executable
-- `./install.sh`        - This will run the command 
+- `./install.sh`        - This will run the script
 - **This script is only compatible with apt based distros**
 
 #### op 2
