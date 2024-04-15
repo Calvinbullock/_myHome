@@ -68,6 +68,9 @@ set scrolloff=6
 " Key Remaps: 				|
 " ------------------------------------- +
 
+" set "jk" to esc insert mode
+inoremap jk <Esc>
+
 " Set leader key to space
 let mapleader = " "
 
