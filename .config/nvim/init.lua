@@ -262,7 +262,7 @@ end
 LineNumberColors()
 
 -- set "kj" to act like escape in insert mode
-vim.keymap.set("i", "kj", "<esc>")
+vim.keymap.set("i", "jk", "<esc>")
 
 -- sets " F" to open the netrw (default file view) in root directory.
 vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
