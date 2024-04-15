@@ -242,20 +242,21 @@ require('lazy').setup({
 -- =====================================================
 -- See `:help vim.o`
 
--- Spelling settings
+-- Spell check settings
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
 
 -- Remap save 
 vim.cmd[[nnoremap <leader>w :w<cr>]]
 
--- Line num change
+-- Line num colors
 function LineNumberColors()
-    --vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='gray', bold=false })
     vim.api.nvim_set_hl(0, 'LineNr', { fg='#faa7e7', bold=false })
-    --vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='gray', bold=false })
 end
 LineNumberColors()
+
+-- set "kj" to act like escape in insert mode
+vim.keymap.set("i", "kj", "<esc>")
 
 -- sets " F" to open the netrw (default file view) in root directory.
 vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
