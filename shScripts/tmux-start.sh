@@ -32,5 +32,5 @@ newTmuxSesstion () {
 
 # all my sessions
 newTmuxSesstion "me" "$HOME/._myHome"
-newTmuxSesstion "go" "$HOME/Documents/battleship"
+newTmuxSesstion "go" "$HOME/Documents/flip"
 
