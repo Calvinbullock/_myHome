@@ -1,12 +1,15 @@
 #!/bin/bash
-# A script to install and set up my programs and configs, at least the ones that are available in a pkg manager.
+# A script to install and set up my programs and configs, at least the ones that are available in a pkg manager or script-able.
 
 # update mirrors and system
 echo "update with apt"
 sudo apt update && sudo apt upgrade
 
+# ####### ################ ####### #
 # ####### Package installs ####### #
+# ####### ################ ####### #
 
+# flatpak repo installs =======================
 echo
 echo "install and set up flatpak / flathub"
 read -p "Do you want to install listed items? (yes/no) " yn
@@ -15,26 +18,36 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install flatpak
     sudo "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
 fi
-
+ 
+# flatpak installs ============================
 echo
-#echo "flatpak install krita, flatseal, discord, upscaler"
-echo "flatpak install flatseal, upscaler"
+echo "flatpak install krita, flatseal, upscaler"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo flatpak install com.github.tchx84.Flatseal
     sudo flatpak install io.gitlab.theevilskeleton.Upscaler
-    # sudo flatpak install org.kde.krita
+    sudo flatpak install org.kde.krita
     # sudo flatpak install com.discordapp.Discord
 fi
 
+# nvim from source installs =====================
 echo
-echo "install nvim and brave snap"
+echo "install nvim from source"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
-    sudo snap install neovim
+    chmod +x $HOME/._myHome/shScripts/neovim.sh
+    source $HOME/._myHome/shScripts/neovim.sh
+fi
+
+# snaps installs ================================
+echo
+echo "install brave snap"
+read -p "Do you want to install listed items? (yes/no) " yn
+if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo snap install brave
 fi
 
+# apt installs =====================
 echo
 echo "apt install zsh, vim, btop, neofetch, ncdu, alacritty, tmux, ranger, steam, and lm-sensers."
 read -p "Do you want to install listed items? (yes/no) " yn
@@ -52,6 +65,7 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install steam -y
 fi
 
+# config links =====================
 echo
 echo "sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop, zsh. Change shell to zsh."
 read -p "Do you want link configs? (yes/no) " yn
@@ -82,6 +96,7 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
 fi
 
+# sway configs ==================== not done
 echo
 echo "Sway, rofi, and waybar, install and set up."
 read -p "Do you want to set up sway as you Window Manager?" yn
