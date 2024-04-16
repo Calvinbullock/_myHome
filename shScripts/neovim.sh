@@ -1,4 +1,6 @@
 #!/bin/bash
+#Source: https://github.com/drewgrif/bookworm-scripts/blob/main/neovim.sh
+
 #Build prerequisites
 sudo apt install ninja-build gettext cmake unzip curl
 
