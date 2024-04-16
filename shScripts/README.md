@@ -20,4 +20,4 @@ A script from [this user](https://github.com/mislav/dotfiles/blob/d2af5900fce382
 A script I wrote to open basic tmux sessions in configurable directories. Meant to help me quickly open my school/work sessions.
 
 ## neovim.sh
-A script to auto mate neovim build from source - find scripted steps [here]9https://github.com/neovim/neovim/blob/master/BUILD.md)
+A script to auto mate neovim build from source - find scripted steps [here](https://github.com/neovim/neovim/blob/master/BUILD.md)
