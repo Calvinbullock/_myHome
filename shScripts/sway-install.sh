@@ -6,7 +6,7 @@ sudo apt install -y build-essential cmake cmake-extras curl gettext libnotify-bi
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
-mkdir ~/Screenshots/
+#mkdir ~/Screenshots/
 
 # Sway installation for Debian Bookworm
 sudo apt install -y sway waybar swaylock swayidle swaybg
@@ -36,51 +36,51 @@ sudo apt install -y dunst unzip xdotool libnotify-dev
 sudo apt install -y pipewire pavucontrol pamixer
 
 # Multimedia
-#sudo apt install -y mpv mpv-mpris nvtop pamixer ffmpeg qimgv gimp obs-studio mkvtoolnix-gui redshift eog brightnessctl
+#sudo apt install -y mpv mpv-mpris nvtop pamixer ffmpeg qimgv gimp obs-studio mkvtoolnix-gui redshift eog 
+sudo apt install -y brightnessctl
 
 # nwg-look takes the place of lxappearance in x11 
 #bash ~/bookworm-scripts/resources/nwg-look
 
 # text editor
-# sudo apt install -y l3afpad 
-# sudo apt install -y geany geany-plugin-addons geany-plugin-git-changebar geany-plugin-overview geany-plugin-spellcheck geany-plugin-treebrowser geany-plugin-vimode
-# sudo apt install -y gedit
+ sudo apt install -y vim
 
 # EXA installation
 # replace ls command in .bashrc file with line below
 # alias ls='exa -al --long --header --color=always --group-directories-first' 
 #sudo apt install -y exa
 
-# Printing and bluetooth (if needed)
-sudo apt install -y cups system-config-printer simple-scan
-sudo apt install -y bluez blueman
+# Printing (if needed)
+#sudo apt install -y cups system-config-printer simple-scan
+#sudo systemctl enable cups
 
-sudo systemctl enable cups
+# bluetooth (if needed)
+sudo apt install -y bluez blueman
 sudo systemctl enable bluetooth
 
 # PDF 
-sudo apt install -y evince pdfarranger
+#sudo apt install -y evince pdfarranger
+#sudo apt install -y okular
 
 # Others
 sudo apt install -y figlet galculator cpu-x udns-utils whois curl tree neofetch
 
 # Fonts and icons for now
 sudo apt install -y fonts-recommended fonts-ubuntu fonts-font-awesome fonts-terminus papirus-icon-theme
-bash ~/bookworm-scripts/resources/nerdfonts.sh
+#bash ~/bookworm-scripts/resources/nerdfonts.sh
 
 # Install SDDM Console Display Manager
-# sudo apt install --no-install-recommends -y sddm
-# sudo systemctl enable sddm
+sudo apt install --no-install-recommends -y sddm
+sudo systemctl enable sddm
 
 # Install the Ly Console Display Manager
-bash ~/bookworm-scripts/ly.sh
+#bash ~/bookworm-scripts/ly.sh
 
 # wofi - confusingly similar to rofi
 # sudo apt install wofi
-bash ~/bookworm-scripts/resources/rofi-wayland
+#bash ~/bookworm-scripts/resources/rofi-wayland
 
-\cp ~/bookworm-scripts/resources/.bashrc ~
-
+#\cp ~/bookworm-scripts/resources/.bashrc ~
 
 sudo apt autoremove
 
