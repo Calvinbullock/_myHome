@@ -4,6 +4,8 @@
 #Build prerequisites
 sudo apt install ninja-build gettext cmake unzip curl
 
+cd $HOME/documents/build
+
 # clone
 git clone https://github.com/neovim/neovim
 cd neovim
