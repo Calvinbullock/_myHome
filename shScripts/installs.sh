@@ -47,23 +47,19 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo snap install brave
 fi
 
-# apt installs =====================
-echo
+# apt installs ===================== basic terminal utilis
 echo "apt install zsh, vim, btop, neofetch, ncdu, alacritty, tmux, ranger, steam, and lm-sensers."
-read -p "Do you want to install listed items? (yes/no) " yn
-if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
-    sudo apt install neofetch -y
-    sudo apt install vim -y
-    sudo apt install btop -y
-    sudo apt install zsh -y
-    sudo apt install ncdu -y
-    # sudo apt install htop -y
-    sudo apt install lm-sensors -y
-    sudo apt install alacritty -y
-    sudo apt install tmux -y
-    sudo apt install ranger -y
-    sudo apt install steam -y
-fi
+sudo apt install neofetch -y
+sudo apt install vim -y
+sudo apt install btop -y
+sudo apt install zsh -y
+sudo apt install ncdu -y
+# sudo apt install htop -y
+sudo apt install lm-sensors -y
+sudo apt install alacritty -y
+sudo apt install tmux -y
+sudo apt install ranger -y
+sudo apt install steam -y
 
 # config links =====================
 echo
