@@ -1,7 +1,7 @@
 #!/bin/bash
 #Source: https://github.com/drewgrif/bookworm-scripts/blob/main/neovim.sh
 
-#Build prerequisites
+#Build prerequisites - NOTE may need to be update
 sudo apt-get install ninja-build gettext cmake unzip curl build-essential
 
 # Make Documents/build then cd into it (mkdir -p checks if dir already exists)
