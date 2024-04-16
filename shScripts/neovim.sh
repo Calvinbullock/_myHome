@@ -8,9 +8,6 @@ sudo apt-get install ninja-build gettext cmake unzip curl build-essential
 mkdir -p "$HOME/Documents/build"
 cd "$HOME/Documents/build"
 
-# Build location
-cd $HOME/documents/build
-
 # clone
 git clone https://github.com/neovim/neovim
 cd neovim
