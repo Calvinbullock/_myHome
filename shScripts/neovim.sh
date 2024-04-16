@@ -1,5 +1,7 @@
 #!/bin/bash
-#Source: https://github.com/drewgrif/bookworm-scripts/blob/main/neovim.sh
+
+#Prerequisites: https://github.com/neovim/neovim/blob/master/BUILD.md#build-prerequisites
+echo "may need to update prerequisites pakages."
 
 #Build prerequisites - NOTE may need to be update
 sudo apt-get install ninja-build gettext cmake unzip curl build-essential
@@ -8,7 +10,7 @@ sudo apt-get install ninja-build gettext cmake unzip curl build-essential
 mkdir -p "$HOME/Documents/build"
 cd "$HOME/Documents/build"
 
-# clone
+# clone / build
 git clone https://github.com/neovim/neovim
 cd neovim
 git checkout stable
