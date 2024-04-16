@@ -4,6 +4,11 @@
 #Build prerequisites
 sudo apt-get install ninja-build gettext cmake unzip curl build-essential
 
+# Make Documents/build then cd into it (mkdir -p checks if dir already exists)
+mkdir -p "$HOME/Documents/build"
+cd "$HOME/Documents/build"
+
+# Build location
 cd $HOME/documents/build
 
 # clone
