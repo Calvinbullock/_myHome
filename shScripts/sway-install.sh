@@ -70,6 +70,7 @@ sudo apt install -y fonts-recommended fonts-ubuntu fonts-font-awesome fonts-term
 #bash ~/bookworm-scripts/resources/nerdfonts.sh
 
 # Install SDDM Console Display Manager
+#sudo apt install --no-install-recommends -y sddm
 sudo apt install -y sddm
 sudo systemctl enable sddm
 
