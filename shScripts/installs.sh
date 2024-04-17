@@ -35,8 +35,8 @@ echo
 echo "install nvim from source"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
-    chmod +x $HOME/._myHome/shScripts/neovim.sh
-    source $HOME/._myHome/shScripts/neovim.sh
+    chmod +x $HOME/_myHome/shScripts/neovim.sh
+    source $HOME/_myHome/shScripts/neovim.sh
 fi
 
 # snaps installs ================================
@@ -67,28 +67,33 @@ echo "sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop, zsh. Change
 read -p "Do you want link configs? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # Set up my dev repo
+    
+    # give useful scripts execution permissions
+    chmod +x "$HOME/_myHome/shScripts/tmux-start.sh"
+
     rm "$HOME/.bashrc"
-    ln -s "$HOME/._myHome/.bashrc" "$HOME/.bashrc"
+    ln -s "$HOME/_myHome/.bashrc" "$HOME/.bashrc"
 
     rm "$HOME/.zshrc"
-    ln -s "$HOME/._myHome/.zshrc" "$HOME/.zshrc"
+    ln -s "$HOME/_myHome/.zshrc" "$HOME/.zshrc"
     
-    # give two scripts execution permissions
-    chmod +x "$HOME/._myHome/shScripts/git-commit.sh"
-    chmod +x "$HOME/._myHome/shScripts/tmux-start.sh"
-
-    rm "$HOME/.tmux.conf"
-    ln -s "$HOME/._myHome/.config/tmux" "$HOME/.config/tmux"
-
-    ln -s "$HOME/._myHome/.config/alacritty" "$HOME/.config/alacritty"
-    ln -s "$HOME/._myHome/.config/nvim" "$HOME/.config/nvim"
-    ln -s "$HOME/._myHome/.config/ranger" "$HOME/.config/ranger"
-
     rm -r "$HOME/.vim"
-    ln -s "$HOME/._myHome/.vim" "$HOME/.vim"
+    ln -s "$HOME/_myHome/.vim" "$HOME/.vim"
     
+    rm "$HOME/.tmux.conf"
+    ln -s "$HOME/_myHome/.config/tmux" "$HOME/.config/tmux"
+
+    rm -r "$HOME/.config/alacritty"
+    ln -s "$HOME/_myHome/.config/alacritty" "$HOME/.config/alacritty"
+    
+    rm -r "$HOME/.config/nvim"
+    ln -s "$HOME/_myHome/.config/nvim" "$HOME/.config/nvim"
+    
+    rm -r "$HOME/.config/ranger"
+    ln -s "$HOME/_myHome/.config/ranger" "$HOME/.config/ranger"
+
     rm -r "$HOME/.config/btop"
-    ln -s "$HOME/._myHome/.config/btop" "$HOME/.config/btop"
+    ln -s "$HOME/_myHome/.config/btop" "$HOME/.config/btop"
 
 fi
 
@@ -102,13 +107,13 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
     # set up sway config links
     rm -r "$HOME/.config/sway"
-    ln -s "$HOME/._myHome/.config/sway" "$HOME/.config/sway"
+    ln -s "$HOME/_myHome/.config/sway" "$HOME/.config/sway"
 
     rm -r "$HOME/.config/waybar"
-    ln -s "$HOME/._myHome/.config/waybar" "$HOME/.config/waybar"
+    ln -s "$HOME/_myHome/.config/waybar" "$HOME/.config/waybar"
 
     # No default config for rofi
-    ln -s "$HOME/._myHome/.config/rofi" "$HOME/.config/rofi"
+    ln -s "$HOME/_myHome/.config/rofi" "$HOME/.config/rofi"
 fi
 
 echo

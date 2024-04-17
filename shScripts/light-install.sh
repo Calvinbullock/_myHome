@@ -23,21 +23,21 @@ read -p "Do you want link configs? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # Set up my dev repo
     rm "$HOME/.bashrc"
-    ln -s "$HOME/._myHome/.bashrc" "$HOME/.bashrc"
+    ln -s "$HOME/_myHome/.bashrc" "$HOME/.bashrc"
 
     rm "$HOME/.zshrc"
-    ln -s "$HOME/._myHome/.zshrc" "$HOME/.zshrc"
+    ln -s "$HOME/_myHome/.zshrc" "$HOME/.zshrc"
     
     rm "$HOME/.tmux.conf"
-    ln -s "$HOME/._myHome/.config/tmux" "$HOME/.config/tmux"
+    ln -s "$HOME/_myHome/.config/tmux" "$HOME/.config/tmux"
 
-    ln -s "$HOME/._myHome/.config/ranger" "$HOME/.config/ranger"
+    ln -s "$HOME/_myHome/.config/ranger" "$HOME/.config/ranger"
 
     rm -r "$HOME/.vim"
-    ln -s "$HOME/._myHome/.vim" "$HOME/.vim"
+    ln -s "$HOME/_myHome/.vim" "$HOME/.vim"
     
     rm -r "$HOME/.config/btop"
-    ln -s "$HOME/._myHome/.config/btop" "$HOME/.config/btop"
+    ln -s "$HOME/_myHome/.config/btop" "$HOME/.config/btop"
 
     sudo chsh -s /bin/zsh 
 fi

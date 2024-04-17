@@ -4,7 +4,7 @@
 Clone this repo into your home directory, then:
 
 #### op 1 - install script
-- run the install script in ._myHome/shScripts/install.sh
+- run the install script in _myHome/shScripts/install.sh
 - `chmod +x install.sh` - This will set install.sh to be executable
 - `./install.sh`        - This will run the script
 - **This script is only compatible with apt based distros**
@@ -20,7 +20,7 @@ Clone this repo into your home directory, then:
 
 #### op 3 - light install script
 - a smaller lighter install script
-- run the install script in ._myHome/shScripts/light-install.sh
+- run the install script in _myHome/shScripts/light-install.sh
 - `chmod +x light-install.sh` - This will set install.sh to be executable
 - `./light-install.sh`        - This will run the script
 

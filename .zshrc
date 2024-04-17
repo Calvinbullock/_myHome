@@ -107,7 +107,7 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 zstyle :compinstall filename '/home/calvin/.zshrc'
 
 # alias file
-[ -f "$HOME/._myHome/shScripts/aliases.sh" ] && source "$HOME/._myHome/shScripts/aliases.sh"
+[ -f "$HOME/_myHome/shScripts/aliases.sh" ] && source "$HOME/_myHome/shScripts/aliases.sh"
 
 
 autoload -Uz compinit
