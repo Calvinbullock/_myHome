@@ -67,6 +67,7 @@ alias vimrc="vim ~/.vim/vimrc"
 # Universal directory movement
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
 
 # Tmux
 alias tmuxrc="nvim ~/.config/tmux/tmux.conf"
