@@ -1,6 +1,8 @@
 # neovim readme
+Some may need node instaled
+`sudo apt-get install node`
 
-## lsp used
+## lsp/linters of choice
 - clangd        (c++, c)
 - emmet-ls      (html, css)
 - shellcheck    (bash)
