@@ -98,7 +98,7 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 # stop some background services
-sudo systemctl start cups.service
+sudo systemctl disable cups.service
 
 # sway configs ==================== not done
 echo
