@@ -97,6 +97,9 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
 fi
 
+# stop some background services
+sudo systemctl start cups.service
+
 # sway configs ==================== not done
 echo
 echo "Sway, rofi, and waybar, install and set up."
