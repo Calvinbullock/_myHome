@@ -128,4 +128,5 @@ echo
 printf "\e[1;32mRun next command if you want to use zsh as defult shell.\e[0m"
 printf "\e[1;32mSudo chsh _USER_ -s /bin/zsh.\e[0m"
 echo
+printf "\e[1;32mDon't forget to set up a fire-wall!!\e[0m\n"
 printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
