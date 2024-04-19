@@ -19,8 +19,10 @@ alias swapd="cd ~/local/state/nvim/swap && ll"
 alias E="exit"
 alias c="clear"
 alias l="clear"
+alias reboot="sudo reboot"
 
 # Some more ls aliases
+#alias ls='ls -aFh --color=always' # add colors and file type extensions
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -59,6 +61,7 @@ alias ran="ranger"
 alias dol="dolphin"
 alias py="python3"
 alias temps="watch sensors"
+alias logd="cd /var/log"
 
 # Vim
 alias vimd="cd ~/.vim/"
