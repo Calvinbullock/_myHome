@@ -2,7 +2,7 @@
 
 # Custom system update alias
 alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap refresh"
-alias apt="sudo apt"
+alias sapt="sudo apt"
 
 # MyHome alias
 alias alia="nvim ~/_myHome/shScripts/aliases.sh"
@@ -50,8 +50,9 @@ alias gcm="~/_myHome/shScripts/./git-commit.sh"
 #git ls-files --other 
 
 # NEOVIM
-alias nim="nvim"
+alias fn='nvim $(fzf)'
 alias n="nvim"
+alias nim="nvim"
 alias nimd="cd ~/.config/nvim"
 alias nimrc="nvim ~/.config/nvim/init.lua"
 
