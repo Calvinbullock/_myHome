@@ -2,6 +2,7 @@
 
 # Custom system update alias
 alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap refresh"
+alias apt="sudo apt"
 
 # MyHome alias
 alias alia="nvim ~/_myHome/shScripts/aliases.sh"
