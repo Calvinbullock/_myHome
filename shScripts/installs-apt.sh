@@ -61,6 +61,7 @@ sudo apt install tmux -y
 sudo apt install ranger -y
 sudo apt install steam -y
 sudo apt install fzf -y
+sudo apt install tldr -y
 
 # config links =====================
 echo
