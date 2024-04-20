@@ -122,6 +122,9 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     ln -s "$HOME/_myHome/.config/rofi" "$HOME/.config/rofi"
 fi
 
+# autoclean up after updates and installing everything
+sudo apt autoclean
+
 echo
 printf "\e[1;32m** Manuel install needed **\e[0m\n"
 printf "\e[1;32mMineCraft, Virtbox, Chrome, vs-Code, Discord.\e[0m\n"
