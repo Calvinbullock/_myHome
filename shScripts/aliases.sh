@@ -50,7 +50,7 @@ alias gcm="~/_myHome/shScripts/./git-commit.sh"
 #git ls-files --other 
 
 # NEOVIM
-alias fn='nvim $(fzf)'
+alias nf='nvim $(fzf)'
 alias n="nvim"
 alias nim="nvim"
 alias nimd="cd ~/.config/nvim"
