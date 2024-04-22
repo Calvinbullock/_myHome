@@ -1,5 +1,5 @@
 # neovim readme
-Some may need node instaled
+Some lsp's/linters may need node instaled
 `sudo apt-get install node`
 
 ## lsp/linters of choice
