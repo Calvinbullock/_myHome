@@ -1,46 +1,18 @@
 
 -- ==================================================== --
---			 TODO List			-- 
+--              			 TODO List			                  -- 
 -- ==================================================== --
---
--- 1 - LSP is not where I want it to be for c++ / c 
--- 	-- works by hiting ctrl + n insted of as i type, only suggest var names
---
--- 2 - need to better understand this config / add better guide comments 
---
--- 3 - line 48 might be redundent - leader key maping
---
--- 4 - set a keybind to turn spell check on and off
---
--- 5 - Brake init.lua up into smaller files, exstentions each in there own.
---
--- 6 - Set macros for indentation, full doc formating, line commenting
+
+-- TODO need to better understand this config / add better guide comments 
+
+-- line 48 might be redundent - leader key maping
+
+-- set a keybind to turn spell check on and off
+-- Brake init.lua up into smaller files, exstentions each in there own.
+
+-- Set macros for indentation, full doc formating, line commenting
 
 -- ==================================================== --
---		 Note from Jumpstart Dev 		--
--- ==================================================== --
---[[
-
-- Lua Help:
-- https://learnxinyminutes.com/docs/lua/
-
-And then you can explore or search through `:help lua-guide`
-- https://neovim.io/doc/user/lua-guide.html
-
-Kickstart Guide:
-
-I have left several `:help X` comments throughout the init.lua
-You should run that command and read that help section for more information.
-
-In addition, I have some `NOTE:` items throughout the file.
-These are for you, the reader to help understand what is happening. Feel free to delete
-them once you know what you're doing, but they should serve as a guide for when you
-are first encountering a few different constructs in your nvim config.
-
-I hope you enjoy your Neovim journey,
-- TJ
---]]
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -114,7 +86,8 @@ require('lazy').setup({
 	},
 
 	-- Useful plugin to show you pending keybinds.
-	--{ 'folke/which-key.nvim', opts = {} },
+--[[ 	{ 'folke/which-key.nvim', opts = {} }, ]]
+
 	{
 		-- Adds git related signs to the gutter, as well as utilities for managing changes
 		'lewis6991/gitsigns.nvim',
@@ -159,7 +132,6 @@ require('lazy').setup({
       vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
       vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
       vim.g.highlight_Normal = { ctermbg='NONE', guibg='NONE'}
-      --vim.api.nvim_set_hl(0, "LineNumber", { guifg = "#ffffff" }) -- Replace with your desired white hex code
     end
   },
 
@@ -177,17 +149,19 @@ require('lazy').setup({
 			},
 		},
 	},
-
-	--[[{
-		-- Add indentation guides even on blank lines
-		'lukas-reineke/indent-blankline.nvim',
-		-- Enable `lukas-reineke/indent-blankline.nvim`
-		-- See `:help indent_blankline.txt`
-		opts = {
-			char = '┊',
-			show_trailing_blankline_indent = false,
-		},
-	},]]
+  -- ------ NOTE this is an unused plugin ------  --
+	-- {
+	-- 	-- Add indentation guides even on blank lines
+	-- 	'lukas-reineke/indent-blankline.nvim',
+	-- 	-- Enable `lukas-reineke/indent-blankline.nvim`
+	-- 	-- See `:help indent_blankline.txt`
+	--
+ --    main = "ibl",
+	-- 	opts = {
+	-- 		-- char = '┊',
+	-- 		-- show_trailing_blankline_indent = false,
+	-- 	},
+	-- },
 
 	-- "gc" to comment visual regions/lines
 	{ 'numToStr/Comment.nvim', opts = {} },
@@ -272,38 +246,13 @@ vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
 -- set netrw to tree list by default.
 vim.cmd("let g:netrw_liststyle = 3")
 
---[ SEARCHING FILES
--- NOW WE CAN:
---    Hit tab to :find by partial match
---    Use * to make it fuzzy
---    THINGS TO CONSIDER:
---    :b lets you autocomplete any open buffer
---
--- Search down into sub folders
---    provide tab completion for all file related tasks
-vim.opt.path:append('**')
-
--- Display all matching files when we tab complete
-vim.opt.wildmenu = true
-
-vim.api.nvim_set_keymap("n", "<Space>F", ":find ", {
-	noremap = true, silent = true
-})
--- End file search]
-
 -- sets "(leader) p" to paste over a higlighted text with out 
 --      overwitng the buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- maps :find and :b
---vim.api.nvim_set_keymap("n", "<Space>b", ":b ", {
---	noremap = true, silent = true
---})
-
 -- sets "(leader) y" to interface with system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>y", [["+Y]])
---clipboard=unnamedplus
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -426,8 +375,6 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]resume' })
-
-
 
 -- ==================================================== --
 --		 [[ Configure Treesitter ]]		--
@@ -614,7 +561,7 @@ cmp.setup {
   completion = {
     completeopt = 'menu,menuone,noinsert',
   },
-  mapping = cmp.mapping.preset.insert {
+  mapping = cmp.mapping.preset.insert { -- NOTE not sure what this does yet....
     ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-p>'] = cmp.mapping.select_prev_item(),
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
