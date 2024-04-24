@@ -33,3 +33,7 @@ are first encountering a few different constructs in your nvim config.
 I hope you enjoy your Neovim journey,
 - TJ
 
+### Setting up Project Specific Settings
+- put a `.exrc` file in your project root
+    - a `.exrc` file is written in vim script
+    - ex `setlocal shiftwidth=3`
