@@ -4,9 +4,12 @@ Some lsp's/linters may need node instaled
 
 ## lsp/linters of choice
 - clangd        (c++, c)
-- emmet-ls      (html, css)
 - shellcheck    (bash)
 - omnisharp     (C#)
+- webdev
+    - typescript-language-server tsserver (keywords: typescript, javascript)
+    - emmet-ls      (HTMl)
+    - css-lsp
 - go
     - gopls
     - golangci-lint
