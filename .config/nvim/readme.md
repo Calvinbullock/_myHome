@@ -6,7 +6,7 @@ Some lsp's/linters may need node instaled
 - clangd        (c++, c)
 - shellcheck    (bash)
 - omnisharp     (C#)
-- webdev
+- webdev **(need node.js / npm||pnpm)**
     - typescript-language-server tsserver (keywords: typescript, javascript)
     - emmet-ls      (HTMl)
     - css-lsp
