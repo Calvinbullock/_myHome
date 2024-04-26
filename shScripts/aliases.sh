@@ -4,7 +4,7 @@
 alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap refresh"
 alias sapt="sudo apt"
 
-# MyHome alias
+# _MyHome alias
 alias alia="nvim ~/_myHome/shScripts/aliases.sh"
 alias alac="nvim ~/_myHome/.config/alacritty/alacritty.yml"
 alias home="cd ~/_myHome"
@@ -14,7 +14,7 @@ alias bashrc="nvim ~/_myHome/.bashrc"
 alias bso="source ~/_myHome/.bashrc"
 alias zrc="nvim ~/_myHome/.zshrc"
 alias zso="source ~/_myHome/.zshrc"
-alias swapd="cd ~/local/state/nvim/swap && ll"
+alias swapd="cd ~/local/state/nvim/swap && ls -la" # BROKEN
 
 # shell 
 alias E="exit"
@@ -22,12 +22,12 @@ alias c="clear"
 alias l="clear"
 alias reboot="sudo reboot"
 
-# Some more ls aliases
-#alias ls='ls -aFh --color=always' # add colors and file type extensions
+# ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias ls='ls --color=auto'
+#alias ls='ls -aFh --color=always' # add colors and file type extensions
 #alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
 
@@ -69,7 +69,7 @@ alias logd="cd /var/log"
 alias vimd="cd ~/.vim/"
 alias vimrc="vim ~/.vim/vimrc"
 
-# Universal directory movement
+# File management / Movement
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -90,11 +90,11 @@ alias tset="~/_myHome/shScripts/./tmux-start.sh"
 #alias tms="./~/_myHome/shScripts/tmux-session-save save"
 #alias tmr="./~/_myHome/shScripts/tmux-session-save restore"
 
-# Setting wallpaper
+# Setting wallpaper -- Not quite ready
 alias pic="dolphin ~/Pictures/fav-imgs/"
 alias picd="cd ~/Pictures/fav-imgs/"
 
-# Document folder aliaes
+# Document folder aliases
 alias doc="cd ~/Documents"
 alias note="nvim ~/Documents/notes/mainNote.md"
 alias noted="cd ~/Documents/notes"
