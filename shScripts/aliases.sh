@@ -73,6 +73,9 @@ alias vimrc="vim ~/.vim/vimrc"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias rm="rm -v"
+alias cp="cp -vi"
+alias mv="mv -vi"
 
 # Tmux
 alias tmuxrc="nvim ~/.config/tmux/tmux.conf"
@@ -98,5 +101,6 @@ alias noted="cd ~/Documents/notes"
 alias ani="nvim ~/Documents/notes/anime.md"
 
 #******** School winter 2024 aliases
+alias pp="pnpm"
 alias winter24="cd ~/Documents/_winter-2024-school-docs/"
 
