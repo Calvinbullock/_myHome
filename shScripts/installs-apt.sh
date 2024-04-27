@@ -21,13 +21,14 @@ fi
  
 # flatpak installs ============================
 echo
-echo "flatpak install krita, flatseal, upscaler"
+echo "flatpak install krita, flatseal, upscaler, Brave"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
-    sudo flatpak install com.github.tchx84.Flatseal
-    sudo flatpak install io.gitlab.theevilskeleton.Upscaler
-    sudo flatpak install org.kde.krita
-    # sudo flatpak install com.discordapp.Discord
+    flatpak install com.github.tchx84.Flatseal
+    flatpak install io.gitlab.theevilskeleton.Upscaler
+    flatpak install org.kde.krita
+    flatpak install flathub com.brave.Browser
+    # flatpak install com.discordapp.Discord
 fi
 
 # nvim from source installs =====================
@@ -37,14 +38,6 @@ read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     chmod +x $HOME/_myHome/shScripts/neovim.sh
     source $HOME/_myHome/shScripts/neovim.sh
-fi
-
-# snaps installs ================================
-echo
-echo "install brave snap"
-read -p "Do you want to install listed items? (yes/no) " yn
-if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
-    sudo snap install brave
 fi
 
 # apt installs ===================== basic terminal utilis / apps
@@ -126,7 +119,6 @@ sudo apt autoclean
 echo
 printf "\e[1;32m** Manuel install needed **\e[0m\n"
 printf "\e[1;32mMineCraft, Virtbox, Chrome, vs-Code, Discord.\e[0m\n"
-printf "\e[1;32mBrave - If the snaps options was not used.\e[0m\n"
 echo
 printf "\e[1;32mRun next command if you want to use zsh as defult shell.\e[0m\n"
 printf "\e[1;32mSudo chsh _USER_ -s /bin/zsh.\e[0m\n"
