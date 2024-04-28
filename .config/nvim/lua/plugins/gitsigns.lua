@@ -2,19 +2,18 @@ return {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     config = function ()
-        require("lualine").setup({
+        require('gitsigns').setup{
+            -- See `:help gitsigns.txt`
+            signs = {
+                add = { text = '+' },
+                change = { text = '~' },
+                delete = { text = '_' },
+                topdelete = { text = '‾' },
+                changedelete = { text = '~' },
+            },
             opts = {
-                -- See `:help gitsigns.txt`
-                signs = {
-                    add = { text = '+' },
-                    change = { text = '~' },
-                    delete = { text = '_' },
-                    topdelete = { text = '‾' },
-                    changedelete = { text = '~' },
-                },
                 on_attach = function(bufnr)
                     vim.keymap.set('n', '<leader>hp', require('gitsigns').preview_hunk, { buffer = bufnr, desc = 'Preview git hunk' })
-
                     -- don't override the built-in and fugitive keymaps
                     local gs = package.loaded.gitsigns
                     vim.keymap.set({'n', 'v'}, ']c', function()
@@ -28,8 +27,8 @@ return {
                         return '<Ignore>'
                     end, {expr=true, buffer = bufnr, desc = "Jump to previous hunk"})
                 end,
-            },
-        })
-    end
+            }
+        }
+    end,
 }
 
