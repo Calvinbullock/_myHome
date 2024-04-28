@@ -6,8 +6,9 @@ typscraft set up that I am refranceing while I build my own modular set up (dele
 - TC-lua/.
 - TC-init.lua
 
-A copy of my current init.lua that is slowly being dismantled and moved into the modular set up.
-- temp-init.lua
+my work in progress modulization
+- wip-init.lua 
+- lua/...
 
 ## lsp/linters of choice
 **Some lsp's/linters may need node instaled**
