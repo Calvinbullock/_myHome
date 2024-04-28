@@ -1,52 +1,78 @@
+-- =====================================================
+--					[[ Keymaps ]]					  --
+-- =====================================================
 
-vim.g.mapleader = " "
+-- Disable arrow keys in normal mode
+-- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+-- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+-- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+-- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
--- Transparent Background ??
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+-- Spell check settings
+vim.opt.spell = true
+vim.opt.spelllang = 'en_us'
+
+-- Remap save 
+vim.cmd[[nnoremap <leader>w :w<cr>]]
+
+-- Line num colors
+function LineNumberColors()
+    vim.api.nvim_set_hl(0, 'LineNr', { fg='#faa7e7', bold=false })
+end
+LineNumberColors()
+
+-- set "kj" to act like escape in insert mode
+vim.keymap.set("i", "jk", "<esc>")
+
+-- sets " F" to open the netrw (default file view) in root directory.
+vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
+	noremap = true, silent = true
+})
+
+-- set netrw to tree list by default.
+vim.cmd("let g:netrw_liststyle = 3")
+
+-- sets "(leader) p" to paste over a higlighted text with out 
+--      overwitng the buffer
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- sets "(leader) y" to interface with system clipboard
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>y", [["+Y]])
+
+
+-- =====================================================
+--				[[ Setting options ]]				  --
+-- =====================================================
+
+-- See `:help vim.o`
+
+vim.opt.nu = true
+vim.opt.relativenumber = true
+
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
+
+vim.opt.wrap = false
+vim.opt.scrolloff = 8
+vim.opt.smartindent = true
+vim.opt.isfname:append("@-@")
+
+
+-- Set highlight on search
+vim.o.hlsearch = false
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+-- Enable mouse mode
+vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
 --    Remove this option if you want your OS clipboard to remain independent.
 --    See `:help 'clipboard'`
 vim.o.clipboard = 'unnamedplus'
-
-vim.opt.nu = true
-vim.opt.relativenumber = true
-
--- Make line numbers default
---* vim.wo.number = true
-
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.scrolloff = 8
-
-vim.opt.smartindent = true
-vim.opt.wrap = false
-vim.opt.updatetime = 50
--- Decrease update time
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
-
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-
--- Set highlight on search
-vim.o.hlsearch = false
-
-vim.opt.termguicolors = true
-vim.opt.colorcolumn = "80"
--- NOTE: You should make sure your terminal supports this
-vim.o.termguicolors = true
-
--- Keep signcolumn on by default
-vim.wo.signcolumn = 'yes'
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
-
--- Enable mouse mode
-vim.o.mouse = 'a'
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -58,74 +84,19 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- Keep signcolumn on by default
+vim.wo.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
+
+-- Decrease update time
+vim.opt.updatetime = 50
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
+
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
---[ SEARCHING FOLDERS
--- This can:
---    Hit tab to :find by partial match
---    Use * to make it fuzzy
---    THINGS TO CONSIDER:
---    :b lets you autocomplete any open buffer
+-- NOTE: You should make sure your terminal supports this
+vim.o.termguicolors = true
+vim.opt.termguicolors = true
 
--- Search down into sub folders
---    provide tab completion for all file related tasks
-vim.opt.path:append('**')
-
--- Display all matching files when tab complete is used
-vim.opt.wildmenu = true
-
--- map :find and :b commands
-vim.api.nvim_set_keymap("n", "<Space>b", ":b ", {
-	noremap = true, silent = true
-})
-vim.api.nvim_set_keymap("n", "<Space>f", ":find ", {
-	noremap = true, silent = true
-})
--- End Folder search]
-
--- ===================================================== --
---					 [[ Basic Keymaps ]]				 --
--- ===================================================== --
-
--- sets "(leader) p" to paste over a higlighted text with out 
---      overwitng the buffer
-vim.keymap.set("x", "<leader>p", [["_dP]])
-
--- sets "F" to open the vim fileNav in current directory
-vim.api.nvim_set_keymap("n", "<Space>F", ":Ex<CR>", {
-	noremap = true, silent = true
-})
-
--- sets "(leader) y" to interface with system clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>y", [["+Y]])
-
--- ---------------- Not My Key Maps -------------------- --
---				AKA not sure what they do				 --
-
--- Keymaps for better default experience
---    See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
--- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
--- [[ Highlight on yank ]]
---    See `:help vim.highlight.on_yank()`
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-	group = highlight_group,
-	pattern = '*',
-})
-
--- Navigate vim panes better
---vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
---vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
---vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
---vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
---vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
