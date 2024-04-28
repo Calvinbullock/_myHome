@@ -1,4 +1,5 @@
 # neovim readme
+Notes and useful tips for my nvim usage and configuration.
 
 ## Future plans For Config
 - keybind to turn spell check on and off (might not need this any more)
@@ -6,15 +7,19 @@
 - Set macros for indentation, full doc formatting, line commenting
 - finish breaking up config
 
+## Dependancies!!
+Used in telescope for file finding among other things.
+`sudo apt install fzf`
+
+Some lsp's/linters may need node installed.
+`sudo apt-get install node`
+
 ## Setting up Project Specific Settings
 - put a `.exrc` file in your project root
     - a `.exrc` file is written in vim script
     - ex `setlocal shiftwidth=3`
 
 ## lsp/linters of choice
-**Some lsp's/linters may need node instaled**
-`sudo apt-get install node`
-
 - clangd        (c++, c)
 - shellcheck    (bash)
 - omnisharp     (C#)
