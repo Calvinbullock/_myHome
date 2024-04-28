@@ -1,10 +1,15 @@
 # neovim readme
-My neovim config, its a bit messy right now but currently the only file that is actually being used it `init.lua`. Everything else is in the transition phase and can be ignored.
 
-## Messy Files -- Work in progress
-my work in progress modulization
-- wip-init.lua 
-- lua/...
+## Future plans For Config
+- keybind to turn spell check on and off (might not need this any more)
+- keybind for wrap
+- Set macros for indentation, full doc formatting, line commenting
+- finish breaking up config
+
+## Setting up Project Specific Settings
+- put a `.exrc` file in your project root
+    - a `.exrc` file is written in vim script
+    - ex `setlocal shiftwidth=3`
 
 ## lsp/linters of choice
 **Some lsp's/linters may need node instaled**
@@ -31,7 +36,7 @@ my work in progress modulization
 And then you can explore or search through `:help lua-guide`
 - https://neovim.io/doc/user/lua-guide.html
 
-### Kickstart Guide:
+#### Kickstart Guide:
 I have left several `:help X` comments throughout the init.lua
 You should run that command and read that help section for more information.
 
@@ -42,8 +47,3 @@ are first encountering a few different constructs in your nvim config.
 
 I hope you enjoy your Neovim journey,
 - TJ
-
-### Setting up Project Specific Settings
-- put a `.exrc` file in your project root
-    - a `.exrc` file is written in vim script
-    - ex `setlocal shiftwidth=3`
