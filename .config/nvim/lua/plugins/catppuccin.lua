@@ -12,7 +12,7 @@ return {
       vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
       vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
 
-      -- Line num colors
+      -- Line num re-color 
       function LineNumberColors()
         vim.api.nvim_set_hl(0, 'LineNr', { fg='#faa7e7', bold=false })
       end
