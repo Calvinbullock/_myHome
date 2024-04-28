@@ -2,10 +2,6 @@
 My neovim config, its a bit messy right now but currently the only file that is actually being used it `init.lua`. Everything else is in the transition phase and can be ignored.
 
 ## Messy Files -- Work in progress
-typscraft set up that I am refranceing while I build my own modular set up (delete when done).
-- TC-lua/.
-- TC-init.lua
-
 my work in progress modulization
 - wip-init.lua 
 - lua/...

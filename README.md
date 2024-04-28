@@ -29,11 +29,10 @@ Clone this repo into your home directory, then:
 ## NeoVim
 My neo vim config
 
-I have changed a lot to make this more mine, but I started here:
+I have changed a lot to make this more mine, but I started here in this order:
 - Effective Neovim: Instant IDE - [by TJ DeVries](https://www.youtube.com/watch?v=stqUbv-5u2s)
 - The 0 to LSP : Neovim RC From Scratch - [by the ThePrimeagen](https://www.youtube.com/watch?v=w7i4amO_zaE&t=9s)
 - NeoVim for noobs [typeScript](https://github.com/cpow/neovim-for-newbs/tree/main)
-    - Everything under lua dir is from neovim for noobs and not curently in use.
 
 [Nvim release page](https://github.com/neovim/neovim/releases/)
 
