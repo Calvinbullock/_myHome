@@ -1,4 +1,19 @@
 
+-- ==================================================== --
+--              			 TODO List			                  -- 
+-- ==================================================== --
+
+-- TODO need to better understand this config / add better guide comments 
+
+-- line 48 might be redundent - leader key maping
+
+-- set a keybind to turn spell check on and off
+-- Brake init.lua up into smaller files, exstentions each in there own.
+
+-- Set macros for indentation, full doc formating, line commenting
+
+-- ==================================================== --
+--
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
