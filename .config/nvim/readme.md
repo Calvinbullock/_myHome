@@ -1,8 +1,18 @@
 # neovim readme
-Some lsp's/linters may need node instaled
-`sudo apt-get install node`
+My neovim config, its a bit messy right now but currently the only file that is actually being used it `init.lua`. Everything else is in the transition phase and can be ignored.
+
+## Messy Files -- Work in progress
+typscraft set up that I am refranceing while I build my own modular set up (delete when done).
+- TC-lua/.
+- TC-init.lua
+
+A copy of my current init.lua that is slowly being dismantled and moved into the modular set up.
+- temp-init.lua
 
 ## lsp/linters of choice
+**Some lsp's/linters may need node instaled**
+`sudo apt-get install node`
+
 - clangd        (c++, c)
 - shellcheck    (bash)
 - omnisharp     (C#)
