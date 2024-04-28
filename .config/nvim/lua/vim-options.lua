@@ -26,12 +26,6 @@ vim.opt.spelllang = 'en_us'
 -- Remap save 
 vim.cmd[[nnoremap <leader>w :w<cr>]]
 
--- Line num colors
-function LineNumberColors()
-    vim.api.nvim_set_hl(0, 'LineNr', { fg='#faa7e7', bold=false })
-end
-LineNumberColors()
-
 -- set "kj" to act like escape in insert mode
 vim.keymap.set("i", "jk", "<esc>")
 
