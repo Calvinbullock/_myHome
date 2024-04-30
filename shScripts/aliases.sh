@@ -55,7 +55,7 @@ alias n.="nvim ."
 alias n="nvim"
 alias nim="nvim"
 alias nimd="cd ~/.config/nvim"
-alias nimrc="nvim ~/.config/nvim/init.lua"
+alias nimrc="nvim ~/.config/nvim/."
 
 # Ranger
 alias ran="ranger"
