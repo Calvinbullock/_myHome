@@ -36,4 +36,5 @@ newTmuxSesstion "me" "$HOME/_myHome"
 newTmuxSesstion "dyn" "$HOME/Documents/_spr2024/dynamicWeb"
 newTmuxSesstion "cap" "$HOME/Documents/_spr2024/encapDes"
 newTmuxSesstion "cap" "$HOME/Documents/_spr2024/backEnd"
+newTmuxSesstion "tes" "$HOME/Documents/_spr2024/softwareTesting"
 
