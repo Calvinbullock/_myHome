@@ -103,5 +103,6 @@ alias ani="nvim ~/Documents/notes/anime.md"
 
 #******** School winter 2024 aliases
 alias pp="pnpm"
+alias clf="clang-format -i "
 alias winter24="cd ~/Documents/_winter-2024-school-docs/"
 
