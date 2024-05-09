@@ -12,7 +12,6 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 -- }
 
-
 -- Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
@@ -24,10 +23,10 @@ vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
 
 -- Remap save 
-vim.cmd[[nnoremap <leader>w :w<cr>]]
+vim.cmd[[nnoremap <leader>w :wa<cr>]]
 
 -- set "kj" to act like escape in insert mode
-vim.keymap.set("i", "jk", "<esc>")
+--vim.keymap.set("i", "jk", "<esc>")
 
 -- sets " F" to open the netrw (default file view) in root directory.
 vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
