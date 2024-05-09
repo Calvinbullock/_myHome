@@ -60,6 +60,25 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 --				[[ Setting options ]]				  --
 -- =====================================================
 
+-- set comment highlighting for following patterns
+vim.fn.matchadd("DiagnosticSignInfo", "\\(TODO\\)")
+vim.fn.matchadd("DiagnosticHint", "\\(NOTE\\)")
+vim.fn.matchadd("DiagnosticFloatingError", "\\(BUG\\)")
+vim.fn.matchadd("DiagnosticWarn", "\\(WARNING\\)")
+vim.fn.matchadd("DiagnosticWarn", "\\(WARN\\)")
+
+--[[
+vim.fn.matchadd("DiagnosticWarn", "\\(HACK:\\)")
+vim.fn.matchadd("Identifier", "\\(PERF:\\)")
+vim.fn.matchadd("Identifier", "\\(PERFORMANCE:\\)")
+vim.fn.matchadd("Identifier", "\\(OPTIM:\\)")
+vim.fn.matchadd("Identifier", "\\(OPTIMIZE:\\)")
+vim.fn.matchadd("Identifier", "\\(TEST:\\)")
+vim.fn.matchadd("Identifier", "\\(TESTING:\\)")
+vim.fn.matchadd("Identifier", "\\(PASSED:\\)")
+vim.fn.matchadd("Identifier", "\\(FAILED:\\)")
+]]
+
 -- See `:help vim.o`
 
 vim.opt.nu = true
