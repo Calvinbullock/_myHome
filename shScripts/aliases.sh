@@ -14,7 +14,8 @@ alias bashrc="nvim ~/_myHome/.bashrc"
 alias bso="source ~/_myHome/.bashrc"
 alias zrc="nvim ~/_myHome/.zshrc"
 alias zso="source ~/_myHome/.zshrc"
-alias swapd="cd ~/local/state/nvim/swap && ls -la" # BROKEN
+alias swapd="cd ~/.local/state/nvim/swap && ls -la"
+
 
 # shell 
 alias E="exit"
