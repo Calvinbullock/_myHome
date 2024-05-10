@@ -3,11 +3,9 @@
 -- =====================================================
 
 -- NOTE not sure what these do yet {
--- Keymaps for better default experience
---    See `:help vim.keymap.set()`
+    -- Keymaps for better default experience
+    -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
--- Remap for dealing with word wrap -- not sure what this does yet
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 -- }
@@ -37,7 +35,7 @@ vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
 vim.cmd("let g:netrw_liststyle = 3")
 
 -- sets "(leader) p" to paste over a higlighted text with out 
---      overwitng the buffer
+    --  overwitng the buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- sets "(leader) y" to interface with system clipboard
@@ -45,7 +43,7 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>y", [["+Y]])
 
 -- [[ Highlight on yank ]]
---    See `:help vim.highlight.on_yank()`
+    -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
 	callback = function()
@@ -104,8 +102,8 @@ vim.opt.incsearch = true
 vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
---    Remove this option if you want your OS clipboard to remain independent.
---    See `:help 'clipboard'`
+	-- Remove this option if you want your OS clipboard to remain independent.
+	-- See `:help 'clipboard'`
 vim.o.clipboard = 'unnamedplus'
 
 -- Enable break indent
