@@ -16,10 +16,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
--- change ZZ exit behavior
-vim.api.nvim_set_keymap("n", "ZZ", "", {
-	noremap = true, silent = true
-})
+-- Disable ZZ exit behavior
+vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 
 -- Spell check settings
 vim.opt.spell = true
