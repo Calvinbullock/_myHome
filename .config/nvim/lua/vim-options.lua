@@ -75,7 +75,6 @@ vim.fn.matchadd("NoteHint", "\\( NOTE \\)")
 vim.fn.matchadd("BugHint", "\\( BUG \\)")
 vim.fn.matchadd("WarnHint", "\\( WARN \\)")
 
-
 -- Spell check settings
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
