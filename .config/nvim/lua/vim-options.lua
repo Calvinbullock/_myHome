@@ -62,26 +62,17 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- =====================================================
 
 -- set comment highlighting for following patterns
-vim.fn.matchadd("DiagnosticSignInfo", "\\(TODO\\)")
-vim.fn.matchadd("DiagnosticHint", "\\(NOTE\\)")
-vim.fn.matchadd("DiagnosticFloatingError", "\\(BUG\\)")
-vim.fn.matchadd("DiagnosticWarn", "\\(WARNING\\)")
-vim.fn.matchadd("DiagnosticWarn", "\\(WARN\\)")
+vim.api.nvim_set_hl(0, 'TdoHint', { fg = "#0B0B0B", bg = "#89dceb" })
+vim.api.nvim_set_hl(0, 'NoteHint', { fg = "#0B0B0B", bg = "#faa7e7" })
+vim.api.nvim_set_hl(0, 'BugHint', { fg = "#0B0B0B", bg = "#B03060" })
+vim.api.nvim_set_hl(0, 'WarnHint', { fg = "#0B0B0B", bg = "#E17862" })
 
---[[
-vim.fn.matchadd("DiagnosticWarn", "\\(HACK:\\)")
-vim.fn.matchadd("Identifier", "\\(PERF:\\)")
-vim.fn.matchadd("Identifier", "\\(PERFORMANCE:\\)")
-vim.fn.matchadd("Identifier", "\\(OPTIM:\\)")
-vim.fn.matchadd("Identifier", "\\(OPTIMIZE:\\)")
-vim.fn.matchadd("Identifier", "\\(TEST:\\)")
-vim.fn.matchadd("Identifier", "\\(TESTING:\\)")
-vim.fn.matchadd("Identifier", "\\(PASSED:\\)")
-vim.fn.matchadd("Identifier", "\\(FAILED:\\)")
-]]
+vim.fn.matchadd("TdoHint", "\\( TODO \\)")
+vim.fn.matchadd("NoteHint", "\\( NOTE \\)")
+vim.fn.matchadd("BugHint", "\\( BUG \\)")
+vim.fn.matchadd("WarnHint", "\\( WARN \\)")
 
 -- See `:help vim.o`
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
