@@ -2,7 +2,7 @@
 --			[[ Keymaps ]]		      --
 -- =====================================================
 
--- NOTE not sure what these do yet {
+-- NOTE  not sure what these do yet {
     -- Keymaps for better default experience
     -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
