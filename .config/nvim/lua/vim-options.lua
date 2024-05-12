@@ -22,14 +22,10 @@ vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 -- c++ clang formating cmd
 vim.keymap.set('n', '<space>fo', '<cmd>!clang-format -i %<CR>')
 
--- Spell check settings
-vim.opt.spell = true
-vim.opt.spelllang = 'en_us'
-
 -- Remap save 
 vim.cmd[[nnoremap <leader>w :wa<cr>]]
 
--- set "kj" to act like escape in insert mode
+-- NOTE  set "kj" to act like escape in insert mode
 --vim.keymap.set("i", "jk", "<esc>")
 
 -- sets " F" to open the netrw (default file view) in root directory.
@@ -43,6 +39,9 @@ vim.cmd("let g:netrw_liststyle = 3")
 -- sets "(leader) p" to paste over a higlighted text with out 
     --  overwitng the buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- TODO  delete to the black hole register
+--vim.keymap.set("x", "<leader>d", "d['_d']")
 
 -- sets "(leader) y" to interface with system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
@@ -64,16 +63,22 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 --				[[ Setting options ]]				  --
 -- =====================================================
 
--- set comment highlighting for following patterns
+-- Create highlight groups for comment patterns
 vim.api.nvim_set_hl(0, 'TdoHint', { fg = "#0B0B0B", bg = "#89dceb" })
 vim.api.nvim_set_hl(0, 'NoteHint', { fg = "#0B0B0B", bg = "#faa7e7" })
 vim.api.nvim_set_hl(0, 'BugHint', { fg = "#0B0B0B", bg = "#B03060" })
 vim.api.nvim_set_hl(0, 'WarnHint', { fg = "#0B0B0B", bg = "#E17862" })
 
+-- set comment highlighting for following patterns
 vim.fn.matchadd("TdoHint", "\\( TODO \\)")
 vim.fn.matchadd("NoteHint", "\\( NOTE \\)")
 vim.fn.matchadd("BugHint", "\\( BUG \\)")
 vim.fn.matchadd("WarnHint", "\\( WARN \\)")
+
+
+-- Spell check settings
+vim.opt.spell = true
+vim.opt.spelllang = 'en_us'
 
 -- See `:help vim.o`
 vim.opt.nu = true
@@ -89,7 +94,6 @@ vim.opt.scrolloff = 8
 vim.opt.smartindent = true
 vim.opt.isfname:append("@-@")
 
-
 -- Set highlight on search
 vim.o.hlsearch = false
 vim.opt.hlsearch = false
@@ -99,8 +103,6 @@ vim.opt.incsearch = true
 vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
-	-- Remove this option if you want your OS clipboard to remain independent.
-	-- See `:help 'clipboard'`
 vim.o.clipboard = 'unnamedplus'
 
 -- Enable break indent
