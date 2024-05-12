@@ -19,6 +19,9 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Disable ZZ exit behavior
 vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 
+-- c++ clang formating cmd
+vim.keymap.set('n', '<space>fo', '<cmd>!clang-format -i %<CR>')
+
 -- Spell check settings
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
