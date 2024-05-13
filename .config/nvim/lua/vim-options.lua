@@ -20,7 +20,10 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 
 -- c++ clang formating cmd
-vim.keymap.set('n', '<space>fo', '<cmd>!clang-format -i %<CR>')
+vim.keymap.set('n', '<leader>fo', '<cmd>!clang-format -i %<CR>')
+
+-- searche the current word and replace with a new word in the entire file
+vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Map file save keybind
 vim.cmd[[nnoremap <leader>w :wa<cr>]]
@@ -29,9 +32,7 @@ vim.cmd[[nnoremap <leader>w :wa<cr>]]
 --vim.keymap.set("i", "jk", "<esc>")
 
 -- sets " F" to open the netrw (default file view) in root directory.
-vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
-	noremap = true, silent = true
-})
+vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {noremap = true, silent = true})
 
 -- set netrw to tree list by default.
 vim.cmd("let g:netrw_liststyle = 3")
@@ -40,8 +41,8 @@ vim.cmd("let g:netrw_liststyle = 3")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- delete will dump to the void instead of yanking to the register
-vim.keymap.set("n", "<space>d", '"_d')
-vim.keymap.set("v", "<space>d", '"_d')
+vim.keymap.set("n", "<leader>d", '"_d')
+vim.keymap.set("v", "<leader>d", '"_d')
 
 -- sets "(leader) y" to interface with system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
@@ -89,7 +90,10 @@ vim.opt.expandtab = true
 
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
+vim.opt.autoindent = true
 vim.opt.smartindent = true
+
+-- support @ in filenames
 vim.opt.isfname:append("@-@")
 
 -- Set highlight on search
