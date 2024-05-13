@@ -22,10 +22,10 @@ vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 -- c++ clang formating cmd
 vim.keymap.set('n', '<space>fo', '<cmd>!clang-format -i %<CR>')
 
--- Remap save 
+-- Map file save keybind
 vim.cmd[[nnoremap <leader>w :wa<cr>]]
 
--- NOTE  set "kj" to act like escape in insert mode
+-- set "kj" to act like escape in insert mode
 --vim.keymap.set("i", "jk", "<esc>")
 
 -- sets " F" to open the netrw (default file view) in root directory.
@@ -36,12 +36,12 @@ vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {
 -- set netrw to tree list by default.
 vim.cmd("let g:netrw_liststyle = 3")
 
--- sets "(leader) p" to paste over a higlighted text with out 
-    --  overwitng the buffer
+-- sets paste to paste over higlighted text with out overwritng the register
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- TODO  delete to the black hole register
---vim.keymap.set("x", "<leader>d", "d['_d']")
+-- delete will dump to the void instead of yanking to the register
+vim.keymap.set("n", "<space>d", '"_d')
+vim.keymap.set("v", "<space>d", '"_d')
 
 -- sets "(leader) y" to interface with system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
@@ -57,7 +57,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 	group = highlight_group,
 	pattern = '*',
 })
-
 
 -- =====================================================
 --				[[ Setting options ]]				  --
