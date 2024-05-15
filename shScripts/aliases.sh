@@ -16,7 +16,6 @@ alias zrc="nvim ~/_myHome/.zshrc"
 alias zso="source ~/_myHome/.zshrc"
 alias swapd="cd ~/.local/state/nvim/swap && ls -la"
 
-
 # shell 
 alias E="exit"
 alias c="clear"
@@ -50,13 +49,14 @@ alias gap="git add -p"
 alias gcm="~/_myHome/shScripts/./git-commit.sh"
 #git ls-files --other 
 
-# NEOVIM
+# NEOVIM || NVIM
 alias nf='nvim $(fzf)'
 alias n.="nvim ."
 alias n="nvim"
 alias nim="nvim"
 alias nimd="cd ~/.config/nvim"
 alias nimrc="nvim ~/.config/nvim/."
+alias nnote="nvim ~/.config/nvim/readme.md"
 
 # Ranger
 alias ran="ranger"
