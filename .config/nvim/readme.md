@@ -5,17 +5,20 @@ Notes and useful tips for my nvim usage and configuration.
 - keybind to turn spell check on and off (might not need this any more)
 - keybind for wrap
 - Set macros for indentation, full doc formatting, line commenting
-- finish breaking up config
+-  TODO  add keybinds for fugitive.vim
+    - `:G        = <space>g`
+    - `:G commit = <space>gc`
 
 ## Dependancies!!
 Used in telescope for file finding among other things.
-`sudo apt install fzf`
+`sudo apt install fzf` - if on debian based linux
 
 Some lsp's/linters may need node installed.
-`sudo apt-get install node`
+`sudo apt-get install node` - if on debian based linux
 
 ## Setting up Project Specific Settings
 - put a `.exrc` file in your project root
+    - **USE WITH CAUTION** off by defualt 
     - a `.exrc` file is written in vim script
     - ex `setlocal shiftwidth=3`
 
@@ -34,21 +37,10 @@ Some lsp's/linters may need node installed.
     - mypy
     - jedi-language-server
 
-## Note from Jumpstart Dev
+## Note from kickstart Dev
 - Lua Help:
 - https://learnxinyminutes.com/docs/lua/
 
 And then you can explore or search through `:help lua-guide`
 - https://neovim.io/doc/user/lua-guide.html
 
-#### Kickstart Guide:
-I have left several `:help X` comments throughout the init.lua
-You should run that command and read that help section for more information.
-
-In addition, I have some `NOTE:` items throughout the file.
-These are for you, the reader to help understand what is happening. Feel free to delete
-them once you know what you're doing, but they should serve as a guide for when you
-are first encountering a few different constructs in your nvim config.
-
-I hope you enjoy your Neovim journey,
-- TJ
