@@ -22,7 +22,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 
 -- c++ clang formating cmd
-vim.keymap.set('n', '<leader>fo', '<cmd>!clang-format -i %<CR>')
+vim.keymap.set('n', '<leader>fo', ':w<CR><cmd>!clang-format -i %<CR>')
 
 -- searche the current word and replace with a new word in the entire file
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -34,7 +34,7 @@ vim.cmd[[nnoremap <leader>w :wa<cr>]]
 --vim.keymap.set("i", "jk", "<esc>")
 
 -- sets " F" to open the netrw (default file view) in root directory.
-vim.api.nvim_set_keymap("n", "<Space>f", ":Ex<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>f", ":Ex<CR>", {noremap = true, silent = true})
 
 -- set netrw to tree list by default.
 vim.cmd("let g:netrw_liststyle = 3")
@@ -60,6 +60,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 	group = highlight_group,
 	pattern = '*',
 })
+
+-- reload current nvim file
+--vim.api.nvim_set_keymap("n", "<leader>s", ":source %<cr>", {noremap = true, silent = true})
 
 -- =====================================================
 --				[[ Setting options ]]				  --
