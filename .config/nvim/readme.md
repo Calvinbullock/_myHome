@@ -5,9 +5,6 @@ Notes and useful tips for my nvim usage and configuration.
 - keybind to turn spell check on and off (might not need this any more)
 - keybind for wrap
 - Set macros for indentation, full doc formatting, line commenting
--  TODO  add keybinds for fugitive.vim
-    - `:G        = <space>g`
-    - `:G commit = <space>gc`
 
 ## Dependancies!!
 Used in telescope for file finding among other things.
