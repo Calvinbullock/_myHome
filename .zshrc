@@ -63,6 +63,7 @@ bindkey '^R' history-incremental-pattern-search-backward
 bindkey '^j' history-search-backward
 bindkey '^k' history-search-forward
 
+
 ########################################################
 # Auto completion
 ########################################################
