@@ -58,6 +58,10 @@ setopt hist_find_no_dups
 # Enable searching through history
 bindkey '^R' history-incremental-pattern-search-backward
 
+# move through history, will match prefex
+#   EX: `$ echo` -- search will only match cmds starting with echo
+bindkey '^j' history-search-backward
+bindkey '^k' history-search-forward
 
 ########################################################
 # Auto completion
