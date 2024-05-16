@@ -1,8 +1,6 @@
-
-# set default shell editor
-export EDITOR="nvim"
-
+########################################################
 # Enable colors and change prompt:
+########################################################
 autoload -U colors && colors
 
 setopt PROMPT_SUBST
@@ -44,25 +42,36 @@ PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]
 # 2 line minimal prompt with barArrow
 #PS1='${NEWLINE}%{$fg[white]%}┌──%{$fg[green]%}[ %~ ] %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%{$fg[white]%}└─%(?.%{$fg[green]%}>.%{$fg[red]%}>)%{$reset_color%} '
 
-# history
+
+########################################################
+# cmd history
+########################################################
 HISTSIZE=5000
 SAVEHIST=5000
 HISTFILE=~/.histfile
 
+setopt appendhistory
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
 # Enable searching through history
 bindkey '^R' history-incremental-pattern-search-backward
 
-# alert off
-unsetopt beep
 
+########################################################
 # Auto completion
+########################################################
 setopt auto_pushd
 autoload -U compinit && compinit -u
 zstyle ':completion:*' menu select
+
 # Auto complete with case insenstivity
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-# Auto compete for hidden files
+
+# Auto complete opt
 zmodload zsh/complist
+autoload -Uz compinit
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
@@ -76,7 +85,10 @@ bindkey -M menuselect 'down' vi-down-line-or-history
 bindkey -M menuselect 'up' vi-up-line-or-history
 bindkey -M menuselect 'right' vi-forward-char
 
+
+########################################################
 # vi mode
+########################################################
 export KEYTIMEOUT=1
 bindkey -v
 bindkey "^?" backward-delete-char # fixes vi mode bug
@@ -102,14 +114,18 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
+
+########################################################
+# other config opts
+########################################################
 zstyle :compinstall filename '/home/calvin/.zshrc'
 
 # alias file
 [ -f "$HOME/_myHome/shScripts/aliases.sh" ] && source "$HOME/_myHome/shScripts/aliases.sh"
 
+# set default shell editor
+export EDITOR="nvim"
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+# alert off
+unsetopt beep
+
