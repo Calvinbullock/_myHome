@@ -20,7 +20,7 @@ alias swapd="cd ~/.local/state/nvim/swap && ls -la"
 alias E="exit"
 alias c="clear"
 alias l="clear"
-alias reboot="sudo reboot"
+alias rebe="sudo reboot"
 
 # ls aliases
 alias ll='ls -alF'

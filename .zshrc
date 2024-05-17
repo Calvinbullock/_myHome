@@ -134,3 +134,7 @@ export EDITOR="nvim"
 # alert off
 unsetopt beep
 
+# fzf intagrations 
+#   WARN  not working yet
+# eval "$(fzf --zsh)"
+
