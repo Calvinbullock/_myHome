@@ -4,7 +4,7 @@
 # TODO makes panes and windows in sessions more configurable
 
 # Create a new tmux session with two panes
-newTmuxSesstion () {
+newTmuxSesstion_twoPanes() {
     # function paramiters
     local sessionName="$1"      # name of the new tmux session
     local sessionDir="$2"       # path to the directory you want tmux to start in
@@ -31,10 +31,10 @@ newTmuxSesstion () {
 }
 
 # all my sessions
-newTmuxSesstion "me" "$HOME/_myHome"
+newTmuxSesstion_twoPanes "me" "$HOME/_myHome"
 #newTmuxSesstion "go" "$HOME/Documents/flip"
-newTmuxSesstion "dyn" "$HOME/Documents/_spr2024/dynamicWeb"
-newTmuxSesstion "cap" "$HOME/Documents/_spr2024/encapDes"
-newTmuxSesstion "bak" "$HOME/Documents/_spr2024/backEndDev"
-newTmuxSesstion "tes" "$HOME/Documents/_spr2024/softwareTesting"
+newTmuxSesstion_twoPanes "dyn" "$HOME/Documents/_spr2024/dynamicWeb"
+newTmuxSesstion_twoPanes "cap" "$HOME/Documents/_spr2024/encapDes"
+newTmuxSesstion_twoPanes "bak" "$HOME/Documents/_spr2024/backEndDev"
+newTmuxSesstion_twoPanes "tes" "$HOME/Documents/_spr2024/softwareTesting"
 
