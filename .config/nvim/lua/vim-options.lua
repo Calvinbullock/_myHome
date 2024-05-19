@@ -27,7 +27,7 @@ vim.keymap.set('n', '<leader>fo', ':w<CR><cmd>!clang-format -i %<CR>')
 -- formatting whole buffer
 vim.keymap.set('n', '<leader>fm', 'gg=G')
 
--- searche the current word and replace with a new word in the entire file
+-- search the current word and replace with a new word in the entire file
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Map file save keybind
@@ -45,13 +45,13 @@ vim.cmd("let g:netrw_liststyle = 3")
 -- sets paste to paste over higlighted text with out overwritng the register
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- delete will dump to the void instead of yanking to the register
+-- <leader>d... will dump to the void instead of yanking to the register
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("v", "<leader>d", '"_d')
 
--- sets "(leader) y" to interface with system clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>y", [["+Y]])
+-- sets "<leader>y" to interface with system clipboard
+--vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+--vim.keymap.set("n", "<leader>y", [["+Y]])
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -64,7 +64,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     pattern = '*',
 })
 
--- reload current nvim file
+-- reload current nvim config
 --vim.api.nvim_set_keymap("n", "<leader>s", ":source %<cr>", {noremap = true, silent = true})
 
 -- =====================================================
