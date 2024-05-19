@@ -3,14 +3,7 @@
 -- =====================================================
 
 -- WARN  USE WITH CAUTION
-vim.opt.exrc = false
-
--- NOTE  not sure what these do yet
-    -- Keymaps for better default experience
-    -- See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- vim.opt.exrc = true
 
 -- Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
@@ -18,11 +11,21 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
+-- NOTE  not sure what these do yet
+--      Keymaps for better default experience
+--      See `:help vim.keymap.set()`
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
 -- Disable ZZ exit behavior
 vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 
 -- c++ clang formating cmd
 vim.keymap.set('n', '<leader>fo', ':w<CR><cmd>!clang-format -i %<CR>')
+
+-- formatting whole buffer
+vim.keymap.set('n', '<leader>fm', 'gg=G')
 
 -- searche the current word and replace with a new word in the entire file
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -51,14 +54,14 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>y", [["+Y]])
 
 -- [[ Highlight on yank ]]
-    -- See `:help vim.highlight.on_yank()`
+-- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-	group = highlight_group,
-	pattern = '*',
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+    group = highlight_group,
+    pattern = '*',
 })
 
 -- reload current nvim file
@@ -94,7 +97,7 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 vim.opt.wrap = false
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 15
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
