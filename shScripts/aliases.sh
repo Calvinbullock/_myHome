@@ -75,7 +75,7 @@ alias vimrc="vim ~/.vim/vimrc"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias rm="rm -v"
+alias rm="rm -vi"
 alias cp="cp -vi"
 alias mv="mv -vi"
 
