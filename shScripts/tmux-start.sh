@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # A script to open N tmux sessions you want in any directory you like.
-# TODO makes panes and windows in sessions more configurable
+#       Makes panes and windows in sessions more configurable
 
 # Create a new tmux session with two panes
 newTmuxSesstion_twoPanes() {
@@ -30,9 +30,13 @@ newTmuxSesstion_twoPanes() {
     return 0
 }
 
+# TODO  set this up
+#newTmuxSesstion_fourPanes
+
 # all my sessions
 newTmuxSesstion_twoPanes "me" "$HOME/_myHome"
-#newTmuxSesstion "go" "$HOME/Documents/flip"
+newTmuxSesstion_twoPanes "go" "$HOME/Documents/battleShip"
+#newTmuxSesstion_twoPanes "go" "$HOME/Documents/flip"
 newTmuxSesstion_twoPanes "dyn" "$HOME/Documents/_spr2024/dynamicWeb"
 newTmuxSesstion_twoPanes "cap" "$HOME/Documents/_spr2024/encapDes"
 newTmuxSesstion_twoPanes "bak" "$HOME/Documents/_spr2024/backEndDev"
