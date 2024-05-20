@@ -25,7 +25,7 @@ vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 vim.keymap.set('n', '<leader>fo', ':w<CR><cmd>!clang-format -i %<CR>')
 
 -- formatting whole buffer
-vim.keymap.set('n', '<leader>fm', 'gg=G')
+vim.keymap.set('n', '<leader>fm', 'gg=G<C-o>:w<CR>')
 
 -- search the current word and replace with a new word in the entire file
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
