@@ -5,11 +5,6 @@
 -- WARN  USE WITH CAUTION
 -- vim.opt.exrc = true
 
--- Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- NOTE  not sure what these do yet
 --      Keymaps for better default experience
@@ -36,14 +31,8 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- Map file save keybind
 vim.cmd[[nnoremap <leader>w :wa<cr>]]
 
--- set "kj" to act like escape in insert mode
---vim.keymap.set("i", "jk", "<esc>")
-
 -- sets " F" to open the netrw (default file view) in root directory.
 vim.api.nvim_set_keymap("n", "<leader>f", ":Ex<CR>", {noremap = true, silent = true})
-
--- set netrw to tree list by default.
-vim.cmd("let g:netrw_liststyle = 3")
 
 -- sets paste to paste over higlighted text with out overwritng the register
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -52,12 +41,8 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("v", "<leader>d", '"_d')
 
--- sets "<leader>y" to interface with system clipboard
---vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
---vim.keymap.set("n", "<leader>y", [["+Y]])
-
 -- [[ Highlight on yank ]]
--- See `:help vim.highlight.on_yank()`
+--   See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()
@@ -67,8 +52,29 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     pattern = '*',
 })
 
+--  Use CTRL+<hjkl> to switch between windows
+--    See `:help wincmd` for a list of all window commands
+--    WARN  conflicts with auto complete bindings in nvim-cmp plugin
+-- vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+-- vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+-- vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+-- vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- set "kj" to act like escape in insert mode
+--vim.keymap.set("i", "jk", "<esc>")
+
+-- sets "<leader>y" to interface with system clipboard
+--vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+--vim.keymap.set("n", "<leader>y", [["+Y]])
+
 -- reload current nvim config
 --vim.api.nvim_set_keymap("n", "<leader>s", ":source %<cr>", {noremap = true, silent = true})
+
+-- Disable arrow keys in normal mode
+-- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+-- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+-- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+-- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- =====================================================
 --				[[ Setting options ]]				  --
@@ -85,6 +91,9 @@ vim.fn.matchadd("TdoHint", "\\( TODO \\)")
 vim.fn.matchadd("NoteHint", "\\( NOTE \\)")
 vim.fn.matchadd("BugHint", "\\( BUG \\)")
 vim.fn.matchadd("WarnHint", "\\( WARN \\)")
+
+-- set netrw to tree list by default.
+vim.cmd("let g:netrw_liststyle = 3")
 
 -- Spell check settings
 vim.opt.spell = true
