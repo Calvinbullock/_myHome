@@ -3,8 +3,7 @@
 -- =====================================================
 
 -- WARN  USE WITH CAUTION
--- vim.opt.exrc = true
-
+vim.opt.exrc = false
 
 -- NOTE  not sure what these do yet
 --      Keymaps for better default experience
@@ -23,7 +22,7 @@ vim.keymap.set('n', '<leader>fo', ':w<CR><cmd>!clang-format -i %<CR>')
 vim.keymap.set('n', '<leader>fm', 'gg=G<C-o>:w<CR>')
 
 -- kill current buffer
-vim.keymap.set('n', '<leader>db', ':bdelete')
+vim.keymap.set('n', '<leader>db', ':bdelete<CR>')
 
 -- search the current word and replace with a new word in the entire file
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
