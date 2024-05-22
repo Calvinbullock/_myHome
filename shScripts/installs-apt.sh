@@ -2,7 +2,7 @@
 # A script to install and set up my programs and configs, at least the ones that are available in a pkg manager or script-able.
 
 # update mirrors and system
-echo "update with apt"
+printf "\e[1;32m** [update with apt] **\e[0m\n"
 sudo apt update && sudo apt upgrade
 
 # ####### ################ ####### #
@@ -11,7 +11,7 @@ sudo apt update && sudo apt upgrade
 
 # flatpak repo installs =======================
 echo
-echo "install and set up flatpak / flathub"
+printf "\e[1;32m** [install and set up flatpak / flathub] **\e[0m\n"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # -- Install flatpak and add flathub -- #
@@ -21,7 +21,7 @@ fi
  
 # flatpak installs ============================
 echo
-echo "flatpak install krita, flatseal, upscaler, Brave"
+printf "\e[1;32m** [flatpak install krita, flatseal, upscaler, Brave] **\e[0m\n"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     flatpak install com.github.tchx84.Flatseal
@@ -33,7 +33,7 @@ fi
 
 # nvim from source installs =====================
 echo
-echo "install nvim from source"
+printf "\e[1;32m** [install nvim from source] **\e[0m\n"
 read -p "Do you want to install listed items? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     chmod +x $HOME/_myHome/shScripts/neovim.sh
@@ -43,7 +43,7 @@ fi
 # apt installs ===================== basic terminal utilis / apps
 echo "apt install zsh, vim, btop, neofetch, ncdu, alacritty, tmux, ranger, steam, and lm-sensers."
 sudo apt install neofetch -y
-sudo apt install vim -y
+#sudo apt install vim -y
 sudo apt install btop -y
 sudo apt install zsh -y
 sudo apt install ncdu -y
@@ -60,7 +60,7 @@ sudo apt install steam -y
 
 # config links =====================
 echo
-echo "sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop, zsh. Change shell to zsh."
+printf "\e[1;32m** [sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop, zsh. Change shell to zsh.] **\e[0m\n"
 read -p "Do you want link configs? (yes/no) " yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # Set up my dev repo
@@ -74,8 +74,8 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
     rm "$HOME/.zshrc"
     ln -s "$HOME/_myHome/.zshrc" "$HOME/.zshrc"
     
-    rm -r "$HOME/.vim"
-    ln -s "$HOME/_myHome/.vim" "$HOME/.vim"
+    #rm -r "$HOME/.vim"
+    #ln -s "$HOME/_myHome/.vim" "$HOME/.vim"
     
     rm "$HOME/.tmux.conf"
     ln -s "$HOME/_myHome/.config/tmux" "$HOME/.config/tmux"
@@ -96,7 +96,8 @@ fi
 
 # sway configs ==================== not done
 echo
-echo "Sway, rofi, and waybar, install and set up."
+printf "\e[1;32m**  [Sway, rofi, and waybar, install and set up] **\e[0m\n"
+printf "\e[1;32m**  [NOT IN WORKING ORDER] **\e[0m\n"
 read -p "Do you want to set up sway as you Window Manager?" yn
 if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
