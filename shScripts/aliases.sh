@@ -54,9 +54,9 @@ alias nf='nvim $(fzf)'
 alias n.="nvim ."
 alias n="nvim"
 alias nim="nvim"
-alias nimd="cd ~/.config/nvim"
-alias nimrc="nvim ~/.config/nvim/."
-alias nnote="nvim ~/.config/nvim/readme.md"
+alias nimd="cd ~/_myHome/.config/nvim"
+alias nimrc="nvim ~/_myHome/.config/nvim/."
+alias nnote="nvim ~/_myHome/.config/nvim/readme.md"
 
 # Ranger
 alias ran="ranger"
