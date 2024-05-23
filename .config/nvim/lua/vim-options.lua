@@ -15,6 +15,9 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Disable ZZ exit behavior
 vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 
+-- jump to bash pass through
+vim.keymap.set('n', '<leader>1', ':!')
+
 -- c++ clang formating cmd
 vim.keymap.set('n', '<leader>fo', ':w<CR><cmd>!clang-format -i %<CR>')
 
@@ -90,6 +93,9 @@ vim.fn.matchadd("TdoHint", "\\( TODO \\)")
 vim.fn.matchadd("NoteHint", "\\( NOTE \\)")
 vim.fn.matchadd("BugHint", "\\( BUG \\)")
 vim.fn.matchadd("WarnHint", "\\( WARN \\)")
+
+-- set the vim shell pass through to bash
+vim.opt.shellcmdflag = '-ic'
 
 -- set netrw to tree list by default.
 vim.cmd("let g:netrw_liststyle = 3")
