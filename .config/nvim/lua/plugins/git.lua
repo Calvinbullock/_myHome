@@ -27,7 +27,7 @@ return {
                     end, {expr=true, buffer = bufnr, desc = "Jump to previous hunk"})
                 end,
             }
-            vim.keymap.set('n', '<leader>gh', ':Gitsigns preview_hunk<CR>', {})
+            vim.keymap.set('n', '<leader>gp', ':Gitsigns preview_hunk<CR>', {})
             vim.keymap.set('n', '<leader>gb', ':Gitsigns toggle_current_line_blame<CR>', {})
             vim.keymap.set('n', '<leader>gs', ':Gitsigns stage_hunk <CR>', {})
             vim.keymap.set('n', '<leader>gu', ':Gitsigns undo_stage_hunk<CR>', {})
@@ -39,7 +39,6 @@ return {
         config = function()
             vim.keymap.set('n', '<leader>gg', ':Git<CR>')
             vim.keymap.set('n', '<leader>gc', ':Git commit -m "')
-            vim.keymap.set('n', '<leader>gp', ':Git push<CR>')
         end
     }
 }
