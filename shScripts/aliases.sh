@@ -40,6 +40,7 @@ alias egrep='egrep --color=auto'
 alias gc="git commit"
 alias gr="git restore"
 alias gps="git push"
+alias grb="git pull --rebase"
 alias gpl="git pull"
 alias gco="git checkout"
 alias gd="git diff"
