@@ -15,7 +15,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Disable ZZ exit behavior
 vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 
--- jump to bash pass through
+-- pass through to shell
 vim.keymap.set('n', '<leader>1', ':!')
 
 -- formatting whole buffer
@@ -27,11 +27,11 @@ vim.keymap.set('n', '<leader>db', ':bdelete<CR>')
 -- search the current word and replace with a new word in the entire file
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- Map file save keybind
+-- file save keybind
 vim.cmd[[nnoremap <leader>w :wa<cr>]]
 
 -- sets " F" to open the netrw (default file view) in root directory.
-vim.api.nvim_set_keymap("n", "<leader>f", ":Ex<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>fe", ":Ex<CR>", {noremap = true, silent = true})
 
 -- sets paste to paste over higlighted text with out overwritng the register
 vim.keymap.set("x", "<leader>p", [["_dP]])
