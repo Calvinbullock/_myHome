@@ -18,9 +18,6 @@ vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 -- jump to bash pass through
 vim.keymap.set('n', '<leader>1', ':!')
 
--- c++ clang formatting cmd
-vim.keymap.set('n', '<leader>fo', ':w<CR><cmd>!clang-format -i %<CR>')
-
 -- formatting whole buffer
 vim.keymap.set('n', '<leader>fm', 'gg=G<C-o>:w<CR>')
 
