@@ -60,8 +60,8 @@ bindkey '^R' history-incremental-pattern-search-backward
 
 # move through history, will match prefex
 #   EX: `$ echo` -- search will only match cmds starting with echo
-bindkey '^j' history-search-backward
-bindkey '^k' history-search-forward
+bindkey '^k' history-search-backward
+bindkey '^j' history-search-forward
 
 
 ########################################################
