@@ -62,6 +62,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- set "kj" to act like escape in insert mode
 --vim.keymap.set("i", "jk", "<esc>")
 
+-- NOTE  this is already implemented with options
 -- sets "<leader>y" to interface with system clipboard
 --vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 --vim.keymap.set("n", "<leader>y", [["+Y]])
