@@ -28,7 +28,7 @@ vim.keymap.set('n', '<leader>db', ':bdelete<CR>')
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- file save keybind
-vim.cmd[[nnoremap <leader>w :wa<cr>]]
+vim.keymap.set("n", "<leader>w", ":w<CR>")
 
 -- sets " F" to open the netrw (default file view) in root directory.
 vim.api.nvim_set_keymap("n", "<leader>fe", ":Ex<CR>", {noremap = true, silent = true})
