@@ -2,9 +2,9 @@
 Notes and useful tips for my nvim usage and configuration.
 
 ## Future plans For Config
-- keybind to turn spell check on and off (might not need this any more)
 - keybind for wrap
-- Set macros for indentation, full doc formatting, line commenting
+- Set permenent macros for indentation
+- set a comment highlight for question?
 
 ## Dependancies!!
 Used in telescope for file finding among other things.
