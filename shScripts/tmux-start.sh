@@ -35,7 +35,7 @@ newTmuxSesstion_twoPanes() {
 
 # all my sessions
 newTmuxSesstion_twoPanes "me" "$HOME/_myHome"
-newTmuxSesstion_twoPanes "go" "$HOME/Documents/battleShip"
+newTmuxSesstion_twoPanes "go" "$HOME/Documents/battleship"
 #newTmuxSesstion_twoPanes "go" "$HOME/Documents/flip"
 newTmuxSesstion_twoPanes "dyn" "$HOME/Documents/_spr2024/dynamicWeb"
 newTmuxSesstion_twoPanes "cap" "$HOME/Documents/_spr2024/encapDes"
