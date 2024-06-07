@@ -1,3 +1,10 @@
+--[[ =============================================================== 
+
+  THIS IS MY OLD FILE THAT IS A SLIGHTLY SLIMMED DOWN VERSION OF 
+  TJs KICKSTART NVIM FROM 2023. 
+
+  THIS ONE FILE WILL GET YOU A FULL NVIM SETUP.
+=============================================================== --]]
 
 -- ==================================================== --
 --              			 TODO List			                  -- 
