@@ -35,11 +35,12 @@ newTmuxSesstion_twoPanes() {
 
 # all my sessions
 newTmuxSesstion_twoPanes "me" "$HOME/_myHome"
-#newTmuxSesstion_twoPanes "go" "$HOME/Documents/battleship"
+newTmuxSesstion_twoPanes "nel" "$HOME/Documents/new-life"
+#newTmuxSesstion_twoPanes "bat" "$HOME/Documents/battleship"
 #newTmuxSesstion_twoPanes "go" "$HOME/Documents/flip"
 
 newTmuxSesstion_twoPanes "dyn" "$HOME/Documents/_spr2024/dynamicWeb"
 newTmuxSesstion_twoPanes "cap" "$HOME/Documents/_spr2024/encapDes"
 newTmuxSesstion_twoPanes "bak" "$HOME/Documents/_spr2024/backEndDev"
-#newTmuxSesstion_twoPanes "tes" "$HOME/Documents/_spr2024/softwareTesting"
+newTmuxSesstion_twoPanes "tes" "$HOME/Documents/_spr2024/softwareTesting"
 
