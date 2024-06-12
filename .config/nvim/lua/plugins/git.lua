@@ -21,7 +21,7 @@ return {
                         return '<Ignore>'
                     end, {expr=true, buffer = bufnr, desc = "Jump to next hunk"})
                     vim.keymap.set({'n', 'v'}, '[g', function()
-                        if vim.wo.diff then return '[g' end
+                        if vim.wo.diff then return ']g' end
                         vim.schedule(function() gs.prev_hunk() end)
                         return '<Ignore>'
                     end, {expr=true, buffer = bufnr, desc = "Jump to previous hunk"})
