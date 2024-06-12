@@ -105,8 +105,12 @@ vim.fn.matchadd("BugHint",  "\\(BUG\\)")
 -- set the vim shell pass through to bash
 vim.opt.shellcmdflag = '-ic'
 
--- set netrw to tree list by default.
-vim.cmd("let g:netrw_liststyle = 3")
+-- Disable netrw banner and set list style to tree(3)
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
+
+-- netrw Disable highlighting, set read-only, etc.
+vim.g.netrw_bufsettings = 'nonu nornu noma ro nobl'
 
 -- Spell check settings
 vim.opt.spell = true
@@ -165,4 +169,53 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE  You should make sure your terminal supports this
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
+
+-- =====================================================
+--              [[ netrw functions ]]
+-- src: https://www.reddit.com/r/neovim/comments/1dc78r4/custom_netrw_workflow_settings_maps_etc/
+-- =====================================================
+
+-- Function to toggle the netrw file browser
+function ToggleNetRW()
+    -- Check if the current filetype is netrw
+    if vim.bo.filetype == 'netrw' then
+        vim.api.nvim_command('bdel') -- Close buffer
+    else
+        -- Open the default explorer window using the Ex command
+        vim.api.nvim_command('Ex')
+    end
+end
+
+-- Create a command named ToggleNetRW that calls the ToggleNetRW function
+vim.api.nvim_command('command! ToggleNetRW lua ToggleNetRW()')
+
+-- Create an autocommand group named netrw
+vim.api.nvim_create_augroup('netrw', { clear = true })
+
+-- Autocommand triggered when filetype changes to netrw
+vim.api.nvim_create_autocmd('FileType', {
+    group = 'netrw',
+    pattern = 'netrw',
+    callback = function()
+
+        -- Set buffer type to nofile (not a regular file)
+        vim.api.nvim_command('setlocal buftype=nofile')
+        -- Hide buffer when it loses focus
+        vim.api.nvim_command('setlocal bufhidden=wipe')
+
+        -- Key mappings in normal mode:
+        --  - Toggle netrw with <C-C>
+        vim.keymap.set('n', '<C-C>', '<CMD>ToggleNetRW<CR>', { noremap = true, silent = true, buffer = true })
+        --  - Same as <C-C>
+        vim.keymap.set('n', '<esc>', '<CMD>ToggleNetRW<CR>', { noremap = true, silent = true, buffer = true })
+        --  - Open current directory in explorer with 'e'
+        vim.keymap.set('n', 'e', '<CMD>Ex ~<CR>', { remap = true, silent = true, buffer = true })
+        --  - Open current working directory in explorer with 'w'
+        vim.keymap.set('n', 'w', '<CMD>Ex ' .. vim.fn.getcwd() .. '<CR>', { remap = true, silent = true, buffer = true })
+        --  - Go to parent directory with backspace
+        vim.keymap.set('n', '<BS>', '-', { remap = true, silent = true, buffer = true })
+        --  - Refresh netrw with 'r'
+        vim.keymap.set('n', 'r', 'R', { remap = true, silent = true, buffer = true })
+    end
+})
 
