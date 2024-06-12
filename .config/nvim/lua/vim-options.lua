@@ -1,5 +1,5 @@
 -- =====================================================
---      			  [[ Keymaps ]]     		      --
+--      			  [[ Keymaps ]]     		      
 -- =====================================================
 
 -- WARN  USE WITH CAUTION
@@ -33,7 +33,7 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 -- sets " F" to open the netrw (default file view) in root directory.
 vim.api.nvim_set_keymap("n", "<leader>fe", ":Ex<CR>", {noremap = true, silent = true})
 
--- sets paste to paste over higlighted text with out overwritng the register
+-- sets paste to paste over highlighted text with out over writing the register
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- <leader>d... will dump to the void instead of yanking to the register
@@ -80,7 +80,7 @@ vim.keymap.set('n', '<C-K>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- =====================================================
---				[[ Setting options ]]				  --
+--				[[ Setting options ]]				  
 -- =====================================================
 
 -- Create highlight groups for comment patterns
@@ -96,9 +96,11 @@ vim.fn.matchadd("BugHint",  "\\( BUG \\)")
 vim.fn.matchadd("WarnHint", "\\( WARN \\)")
 
 vim.fn.matchadd("TdoHint",  "\\(TODO\\)")
+vim.fn.matchadd("WarnHint", "\\(WARN \\)")
+--[[
 vim.fn.matchadd("NoteHint", "\\(NOTE\\)")
 vim.fn.matchadd("BugHint",  "\\(BUG\\)")
-vim.fn.matchadd("WarnHint", "\\(WARN\\)")
+]]
 
 -- set the vim shell pass through to bash
 vim.opt.shellcmdflag = '-ic'
