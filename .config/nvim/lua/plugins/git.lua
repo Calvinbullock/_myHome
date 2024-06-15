@@ -39,8 +39,8 @@ return {
         config = function()
             vim.keymap.set('n', '<leader>gg', ':Git<CR>')
             vim.keymap.set('n', '<leader>gc', ':Git commit -m "')
-            vim.keymap.set('n', '<leader>gps', ':Git push')
-            vim.keymap.set('n', '<leader>gpl', ':Git pull')
+            vim.keymap.set('n', '<leader>gps', ':Git push<CR>')
+            vim.keymap.set('n', '<leader>gpl', ':Git pull<CR>')
         end
     }
 }
