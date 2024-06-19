@@ -6,7 +6,7 @@
 # MUST have fzf installed
 
 # Get a list of tmux sessions names
-tmux_sessions="$(tmux list-sessions | cut -d: -f1)"
+tmux_sessions=$(tmux list-sessions | cut -d: -f1)
 
 # Use fzf for fuzzy search
 chosen_session=$(echo "$tmux_sessions" | fzf)

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Author: Calvin Bullock
+#
 # A script to open N tmux sessions you want in any directory you like.
 #       Makes panes and windows in sessions more configurable
 
@@ -42,6 +44,6 @@ newTmuxSesstion_twoPanes "nel" "$HOME/Documents/new-life"
 newTmuxSesstion_twoPanes "dyn" "$HOME/Documents/_spr2024/dynamicWeb"
 newTmuxSesstion_twoPanes "cap" "$HOME/Documents/_spr2024/encapDes"
 newTmuxSesstion_twoPanes "bak" "$HOME/Documents/_spr2024/backEndDev"
-newTmuxSesstion_twoPanes "tes" "$HOME/Documents/_spr2024/softwareTesting"
+#newTmuxSesstion_twoPanes "tes" "$HOME/Documents/_spr2024/softwareTesting"
 newTmuxSesstion_twoPanes "arc" "$HOME/Documents/_spr2024/ArcDes"
 
