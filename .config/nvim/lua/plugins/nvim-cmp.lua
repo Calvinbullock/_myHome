@@ -30,8 +30,6 @@ return {
                 completeopt = 'menu,menuone,noinsert',
             },
             mapping = cmp.mapping.preset.insert { -- NOTE not sure what this does yet....
-                ['<C-j>'] = cmp.mapping.select_next_item(),
-                ['<C-k>'] = cmp.mapping.select_prev_item(),
                 ['<C-d>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
                 ['<C-Space>'] = cmp.mapping.complete {},
@@ -43,10 +41,14 @@ return {
                 },
                 ]]
 
+                -- Uused hjkl in completion mapping
+                -- ['<C-j>'] = cmp.mapping.select_next_item(),
+                -- ['<C-k>'] = cmp.mapping.select_prev_item(),
+                -- ['<C-h>'] = cmp.mapping.confirm { select = true },
+                -- ['<C-l>'] = cmp.mapping.confirm { select = true },
+
                 -- sets code completions to confirmation
                 ['<C-y>'] = cmp.mapping.confirm { select = true },
-                ['<C-h>'] = cmp.mapping.confirm { select = true },
-                ['<C-l>'] = cmp.mapping.confirm { select = true },
 
                 ['<Tab>'] = cmp.mapping(function(fallback)
                     if cmp.visible() then
