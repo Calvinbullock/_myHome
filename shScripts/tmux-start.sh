@@ -22,7 +22,7 @@ newTmuxSesstion_twoPanes() {
                         
     # Create tmux session / set up 2nd pane
     tmux new -d -s $sessionName || tmux attach -t $sessionName
-    tmux split-window -h -p 20
+    tmux split-window -h -l 20%
 
     # if a preCMD is given run it in pane 1 (my panes are set to start at 1 not 0)
     if [[ ! -z "$preCMD" ]]; then
