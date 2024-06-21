@@ -6,7 +6,7 @@ alias sapt="sudo apt"
 
 # _MyHome alias
 alias alia="nvim ~/_myHome/shScripts/aliases.sh"
-alias alac="nvim ~/_myHome/.config/alacritty/alacritty.yml"
+alias alac="nvim ~/_myHome/.config/alacritty/alacritty.toml"
 alias home="cd ~/_myHome"
 
 # Shell-rc's
