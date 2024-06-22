@@ -9,8 +9,8 @@ TERM = "xterm-256color"
 [window]
 decorations = "none"
 dynamic_padding = false
-opacity = 0.80
-#opacity = 0.87
+#opacity = 0.80
+opacity = 0.87
 startup_mode = "Maximized"
 title = "Alacritty"
 
@@ -27,6 +27,7 @@ y = 6
 #    Color Scheme
 # ===========================================
 
+# Current Catppucen-mocha
 [colors]
 draw_bold_text_with_bright_colors = true
 
