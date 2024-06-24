@@ -76,6 +76,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias rm="rm -vi"
+alias rmr="rm -vir"
 alias cp="cp -vi"
 alias mv="mv -vi"
 
