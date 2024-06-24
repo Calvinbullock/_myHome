@@ -38,7 +38,7 @@ I have changed a lot to make this more mine, but I started here in this order:
 
 [Nvim build page](https://github.com/neovim/neovim/blob/master/BUILD.md)
 
-My [build script](./shScripts/neovim.sh), to build nvim from source.
+My [script](./shScripts/neovim.sh), to build nvim from source.
 
 ## zshrc
 A minimal zsh set up. 
