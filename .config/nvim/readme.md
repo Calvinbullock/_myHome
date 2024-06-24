@@ -41,3 +41,5 @@ Some lsp's/linters may need node installed.
 And then you can explore or search through `:help lua-guide`
 - https://neovim.io/doc/user/lua-guide.html
 
+### I use this for live serving html/css/js
+`python3 -m http.server`
