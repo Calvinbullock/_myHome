@@ -49,7 +49,7 @@ A minimal zsh set up.
 
 ## Bashrc
 This is where my custom bash prompt lives. It is based off of my-extravagant-zsh-prompt
-after the redditer user linked below modifyed it for bash. I have made a lot of customizations
+after the redditer user linked below modified it for bash. I have made a lot of customizations
 to fit my needs and likes.
 - custom prompt with git statues 
 
