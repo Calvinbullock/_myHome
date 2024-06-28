@@ -64,6 +64,7 @@ alias ran="ranger"
 # Other
 alias dol="dolphin"
 alias py="python3"
+alias pyserve="python3 -m http.server"
 alias temps="watch sensors"
 alias logd="cd /var/log"
 

@@ -9,9 +9,9 @@ TERM = "xterm-256color"
 [window]
 decorations = "none"
 dynamic_padding = false
-#opacity = 0.99 # opaque
 #opacity = 0.80
-opacity = 0.87
+opacity = 0.87 # norm
+#opacity = 0.99 # opaque
 startup_mode = "Maximized"
 title = "Alacritty"
 
