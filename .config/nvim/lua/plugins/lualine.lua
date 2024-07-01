@@ -6,8 +6,17 @@ return {
             options = {
                 icons_enabled = false,
                 theme = "catppuccin",
-                --component_separators = '|',
+                component_separators = '',
                 section_separators = '',
+            },
+            sections = {
+                -- lualine_a = {'mode'},
+                lualine_b = {'diff', 'diagnostics', 'selectioncount'},
+                lualine_c = {'filename'},
+                -- lualine_x = {'encoding', 'fileformat'}, -- not that needed day to day
+                lualine_x = {''},
+                -- lualine_y = {''},
+                -- lualine_z = {''},
             },
         })
     end,
