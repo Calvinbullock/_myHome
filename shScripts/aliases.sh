@@ -62,7 +62,7 @@ alias nnote="nvim ~/_myHome/.config/nvim/readme.md"
 alias ran="ranger"
 
 # Other
-alias dol="dolphin"
+alias dol="dolphin" # **KDE** only
 alias py="python3"
 alias pyserve="python3 -m http.server"
 alias temps="watch sensors"
@@ -94,17 +94,21 @@ alias tset="~/_myHome/shScripts/./tmux-start.sh"
 #alias tms="./~/_myHome/shScripts/tmux-session-save save"
 #alias tmr="./~/_myHome/shScripts/tmux-session-save restore"
 
-# Setting wallpaper -- Not quite ready
-alias pic="dolphin ~/Pictures/fav-imgs/"
-alias picd="cd ~/Pictures/fav-imgs/"
-
 # Document folder aliases
 alias doc="cd ~/Documents"
 alias note="nvim ~/Documents/notes/mainNote.md"
 alias noted="cd ~/Documents/notes"
 alias ani="nvim ~/Documents/notes/anime.md"
 
-#******** School winter 2024 aliases
+# =================================================
+# Setting wallpaper on **KDE** -- Not quite ready
+# =================================================
+alias pic="dolphin ~/Pictures/fav-imgs/"
+alias picd="cd ~/Pictures/fav-imgs/"
+
+# =================================================
+# NOTE  School winter 2024 aliases
+# =================================================
 alias pp="pnpm"
 alias clf="clang-format -i "
 alias winter24="cd ~/Documents/_winter-2024-school-docs/"
