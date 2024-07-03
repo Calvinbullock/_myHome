@@ -3,25 +3,25 @@
 
 # prompt and collect user choices
 echo
-printf "\e[1;32m** [install and set up flatpak / flathub] **\e[0m\n"
 read -p "Do you want to install listed items? (yes/no) " setupFlathub
+printf "\e[1;32m** [install and set up flatpak / flathub] **\e[0m\n"
 
 echo
-printf "\e[1;32m** [flatpak install krita, flatseal, upscaler, Brave] **\e[0m\n"
 read -p "Do you want to install listed items? (yes/no) " installFlatpakPkgs
+printf "\e[1;32m** [flatpak install krita, flatseal, upscaler, Brave] **\e[0m\n"
 
 echo
-printf "\e[1;32m** [install nvim from source] **\e[0m\n"
 read -p "Do you want to install listed items? (yes/no) " buildNvim
+printf "\e[1;32m** [install nvim from source] **\e[0m\n"
 
 echo
-printf "\e[1;32m** [sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop, zsh. Change shell to zsh.] **\e[0m\n"
 read -p "Do you want link configs? (yes/no) " linkConfigs
+printf "\e[1;32m** [sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop, zsh. Change shell to zsh.] **\e[0m\n"
 
 echo
+read -p "Do you want to set up sway as you Window Manager? " setupSway
 printf "\e[1;32m**  [Sway, rofi, and waybar, install and set up] **\e[0m\n"
 printf "\e[1;32m**  [NOT IN WORKING ORDER] **\e[0m\n"
-read -p "Do you want to set up sway as you Window Manager?" setupSway
 
 # update mirrors and system
 printf "\e[1;32m** [update with apt] **\e[0m\n"
