@@ -6,7 +6,7 @@
 #       Makes panes and windows in sessions more configurable
 
 # Create a new tmux session with two panes
-newTmuxSesstion_twoPanes() {
+newTmuxSession_twoPanes() {
     # function paramiters
     local sessionName="$1"      # name of the new tmux session
     local sessionDir="$2"       # path to the directory you want tmux to start in
@@ -32,18 +32,44 @@ newTmuxSesstion_twoPanes() {
     return 0
 }
 
-# TODO  set this up
-#newTmuxSesstion_fourPanes
+# WARN  in beta not working yet
+# Create a new tmux session with three panes
+newTmuxSession_ThreePanes() {
+    # function paramiters
+    local sessionName="$1"      # name of the new tmux session
+    local sessionDir="$2"       # path to the directory you want tmux to start in
+    local preCMD="$3"           # command to run in main pane
+
+    # Check if directory  along $path exists then change to that directory
+    if [[ ! -d "$sessionDir" ]]; then
+        echo "Error: Directory '$sessionDir' does not exist."
+        return 1  # Return non-zero code to indicate error
+    else
+        cd "$sessionDir"
+    fi
+                        
+    # Create tmux session / set up 2nd pane
+    tmux new -d -s $sessionName || tmux attach -t $sessionName
+    tmux split-window -h -l 20%
+
+    # split 2nd window vertically
+    tmux select-pane -t 2
+    tmux split-window -v -l 50%
+    return 0
+}
 
 # all my sessions
-newTmuxSesstion_twoPanes "me" "$HOME/_myHome"
-newTmuxSesstion_twoPanes "nel" "$HOME/Documents/new-life"
-#newTmuxSesstion_twoPanes "bat" "$HOME/Documents/battleship"
-#newTmuxSesstion_twoPanes "go" "$HOME/Documents/flip"
+newTmuxSession_twoPanes "me" "$HOME/_myHome"
+newTmuxSession_twoPanes "nel" "$HOME/Documents/new-life"
+#newTmuxSession_twoPanes "bat" "$HOME/Documents/battleship"
+#newTmuxSession_twoPanes "go" "$HOME/Documents/flip"
 
-newTmuxSesstion_twoPanes "dyn" "$HOME/Documents/_spr2024/dynamicWeb"
-newTmuxSesstion_twoPanes "cap" "$HOME/Documents/_spr2024/encapDes"
-newTmuxSesstion_twoPanes "bak" "$HOME/Documents/_spr2024/backEndDev"
-#newTmuxSesstion_twoPanes "tes" "$HOME/Documents/_spr2024/softwareTesting"
-#newTmuxSesstion_twoPanes "arc" "$HOME/Documents/_spr2024/ArcDes"
+newTmuxSession_twoPanes "dyn" "$HOME/Documents/_spr2024/dynamicWeb"
+newTmuxSession_twoPanes "cap" "$HOME/Documents/_spr2024/encapDes"
+newTmuxSession_twoPanes "bak" "$HOME/Documents/_spr2024/backEndDev"
+#newTmuxSession_twoPanes "tes" "$HOME/Documents/_spr2024/softwareTesting"
+#newTmuxSession_twoPanes "arc" "$HOME/Documents/_spr2024/ArcDes"
+
+# WARN  in beta
+# newTmuxSession_ThreePanes "temp" "$HOME/Documents/_spr2024/backEndDev"
 
