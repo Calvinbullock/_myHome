@@ -1,6 +1,28 @@
 #!/bin/bash
 # A script to install and set up my programs and configs, at least the ones that are available in a pkg manager or script-able.
 
+# prompt and collect user choices
+echo
+printf "\e[1;32m** [install and set up flatpak / flathub] **\e[0m\n"
+read -p "Do you want to install listed items? (yes/no) " setupFlathub
+
+echo
+printf "\e[1;32m** [flatpak install krita, flatseal, upscaler, Brave] **\e[0m\n"
+read -p "Do you want to install listed items? (yes/no) " installFlatpakPkgs
+
+echo
+printf "\e[1;32m** [install nvim from source] **\e[0m\n"
+read -p "Do you want to install listed items? (yes/no) " buildNvim
+
+echo
+printf "\e[1;32m** [sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop, zsh. Change shell to zsh.] **\e[0m\n"
+read -p "Do you want link configs? (yes/no) " linkConfigs
+
+echo
+printf "\e[1;32m**  [Sway, rofi, and waybar, install and set up] **\e[0m\n"
+printf "\e[1;32m**  [NOT IN WORKING ORDER] **\e[0m\n"
+read -p "Do you want to set up sway as you Window Manager?" setupSway
+
 # update mirrors and system
 printf "\e[1;32m** [update with apt] **\e[0m\n"
 sudo apt update && sudo apt upgrade
@@ -10,20 +32,14 @@ sudo apt update && sudo apt upgrade
 # ####### ################ ####### #
 
 # flatpak repo installs =======================
-echo
-printf "\e[1;32m** [install and set up flatpak / flathub] **\e[0m\n"
-read -p "Do you want to install listed items? (yes/no) " yn
-if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
+if [[ $setupFlathub =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # -- Install flatpak and add flathub -- #
     sudo apt install flatpak
     sudo "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
 fi
  
 # flatpak installs ============================
-echo
-printf "\e[1;32m** [flatpak install krita, flatseal, upscaler, Brave] **\e[0m\n"
-read -p "Do you want to install listed items? (yes/no) " yn
-if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
+if [[ $installFlatPakPkgs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     flatpak install com.github.tchx84.Flatseal
     flatpak install io.gitlab.theevilskeleton.Upscaler
     flatpak install org.kde.krita
@@ -32,10 +48,7 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 # nvim from source installs =====================
-echo
-printf "\e[1;32m** [install nvim from source] **\e[0m\n"
-read -p "Do you want to install listed items? (yes/no) " yn
-if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
+if [[ $buildNvim =~ ^[Yy]([Ee][Ss])?$ ]]; then
     chmod +x $HOME/_myHome/shScripts/neovim.sh
     source $HOME/_myHome/shScripts/neovim.sh
 fi
@@ -59,10 +72,7 @@ sudo apt install alacritty -y
 sudo apt install steam -y
 
 # config links =====================
-echo
-printf "\e[1;32m** [sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop, zsh. Change shell to zsh.] **\e[0m\n"
-read -p "Do you want link configs? (yes/no) " yn
-if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
+if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # Set up my dev repo
     
     # give useful scripts execution permissions
@@ -94,12 +104,8 @@ if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
 fi
 
-# sway configs ==================== not done
-echo
-printf "\e[1;32m**  [Sway, rofi, and waybar, install and set up] **\e[0m\n"
-printf "\e[1;32m**  [NOT IN WORKING ORDER] **\e[0m\n"
-read -p "Do you want to set up sway as you Window Manager?" yn
-if [[ $yn =~ ^[Yy]([Ee][Ss])?$ ]]; then
+# sway configs ====================  WARN  not done
+if [[ $setupSway =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
     sudo sudo apt install sway waybar brightnessctl pulseaudio-utils wofi -y
 
@@ -119,11 +125,11 @@ sudo apt autoclean
 
 echo
 printf "\e[1;32m** Manuel install needed **\e[0m\n"
-printf "\e[1;32mMineCraft, Virtbox, Chrome, vs-Code, Discord.\e[0m\n"
+printf "\e[1;32m  MineCraft, Virtbox, Chrome, vs-Code, Discord.\e[0m\n"
 echo
-printf "\e[1;32mRun next command if you want to use zsh as defult shell.\e[0m\n"
-printf "\e[1;32mSudo chsh _USER_ -s /bin/zsh.\e[0m\n"
+printf "\e[1;32m  Run next command if you want to use zsh as defult shell.\e[0m\n"
+printf "\e[1;32m  Sudo chsh _USER_ -s /bin/zsh.\e[0m\n"
 echo
-printf "\e[1;32mDon't forget to set up a fire-wall!!\e[0m\n"
-printf "\e[1;32mYou can now reboot! Thanks you.\e[0m\n"
+printf "\e[1;32m  Don't forget to set up a fire-wall!!\e[0m\n"
+printf "\e[1;32m  You can now reboot! Thanks you.\e[0m\n"
 echo
