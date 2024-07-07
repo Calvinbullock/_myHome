@@ -15,6 +15,7 @@ alias bso="source ~/_myHome/.bashrc"
 alias zrc="nvim ~/_myHome/.zshrc"
 alias zso="source ~/_myHome/.zshrc"
 alias swapd="cd ~/.local/state/nvim/swap && ls -la"
+alias harpoond="cd ~/.local/share/nvim/harpoon && ls -la"
 
 # shell 
 alias E="exit"
