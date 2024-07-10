@@ -19,4 +19,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require("options")
 require("keybinds")
+require("netrw-conf")
 require("lazy").setup("plugins")
