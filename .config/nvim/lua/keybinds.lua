@@ -22,6 +22,10 @@ vim.keymap.set('n', '<leader>fm', 'gg=G<C-o>:w<CR>')
 -- kill current buffer
 vim.keymap.set('n', '<leader>db', ':bdelete<CR>')
 
+-- next / prev buffers
+vim.keymap.set("n", "[b", ":bnext<CR>")
+vim.keymap.set("n", "]b", ":bprev<CR>")
+
 -- search the current word and replace with a new word in the entire file
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
