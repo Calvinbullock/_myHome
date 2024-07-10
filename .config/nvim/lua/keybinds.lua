@@ -10,9 +10,6 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- Disable ZZ exit behavior
-vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
-
 -- pass through to shell
 vim.keymap.set('n', '<leader>1', ':!')
 
@@ -32,6 +29,9 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- file save keybind
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 
+-- Disable ZZ exit behavior
+vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
+
 -- sets " F" to open the netrw (default file view) in root directory.
 vim.api.nvim_set_keymap("n", "<leader>fe", ":Ex<CR>", {noremap = true, silent = true})
 
@@ -41,10 +41,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- <leader>d... will dump to the void instead of yanking to the register
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("v", "<leader>d", '"_d')
-
--- next / prev buffers
-vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
-vim.keymap.set("n", "<leader>bp", ":bprev<CR>")
 
 -- [[ Highlight on yank ]]
 --   See `:help vim.highlight.on_yank()`
