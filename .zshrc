@@ -30,16 +30,20 @@ parse_git_branch() {
 # \n was not working in the prompt so I had to make a variable
 NEWLINE=$'\n'
 
-# two line prompt
+# 2 line prompt
+# user, machine, path, git -- prompt
 #PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}in %{$fg[green]%}%~ %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty) ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
 
-# 3 line prompt
-PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty) ${NEWLINE}%{$fg[grey]%}in %{$fg[green]%}[ %~ ] ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+# 2 Line prompt
+# path, git -- prompt
+PS1='${NEWLINE}% %{$fg[grey]%}in %{$fg[green]%}[ %~ ] %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
 
-# 2 line minimal prompt
-#PS1='${NEWLINE}%{$fg[magenta]%}[ %~ ] %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+# 3 line prompt
+# user, machine, git -- path -- prompt
+#PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty) ${NEWLINE}%{$fg[grey]%}in %{$fg[green]%}[ %~ ] ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
  
 # 2 line minimal prompt with barArrow
+# path, git -- prompt
 #PS1='${NEWLINE}%{$fg[white]%}┌──%{$fg[green]%}[ %~ ] %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%{$fg[white]%}└─%(?.%{$fg[green]%}>.%{$fg[red]%}>)%{$reset_color%} '
 
 
