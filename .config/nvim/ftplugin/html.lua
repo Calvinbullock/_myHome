@@ -16,3 +16,9 @@ local htmlTemplate = [[
 vim.keymap.set("n", "<leader>t", function()
     vim.api.nvim_insert(vim.api.nvim_buf_get_curpos(0)[1], htmlTemplate)
 end, {noremap = true})
+
+--[[
+vim.api.nvim_set_keymap('i', '<buffer>', {
+  iabbrev = {! = htmlTemplate},
+}, {})
+]]
