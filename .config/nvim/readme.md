@@ -20,19 +20,22 @@ Some lsp's/linters may need node installed.
     - ex `setlocal shiftwidth=3`
 
 ## lsp/linters of choice
-- clangd        (c++, c)
-- shellcheck    (bash)
-- omnisharp     (C#)
-- webdev **(need node.js / npm||pnpm)**
-    - typescript-language-server tsserver (keywords: typescript, javascript)
-    - emmet-ls      (HTMl)
-    - css-lsp
-- go
+- clangd                (c++, c)
+- bash-language-server  (bash)
+- omnisharp             (C#)
+
+- go-lang
     - gopls
     - golangci-lint
+
 - pythons
     - mypy
     - jedi-language-server
+
+- webdev *(need node.js / npm||pnpm)*
+    - typescript-language-server tsserver (keywords: typescript, javascript)
+    - emmet-ls          (HTMl snippets)
+    - css-lsp
 
 ## Note from kickstart Dev
 - Lua Help:
