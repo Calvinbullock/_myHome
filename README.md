@@ -45,7 +45,8 @@ My tmux config is simple and light with vim like binds.
 
 shmux - a session script by [typecrafts](https://github.com/typecraft-dev/shmux).
 
-I have my own original version [here](./shScripts/tmux-start.sh), but shmux is much more complete and usable. However mine served me well before for about 6 months until I found shmux.
+I have my own original version [here](./shScripts/tmux-start.sh), but shmux is much more complete and usable. 
+Mine did serve me well, for about 6 months, until I found shmux.
 
 ## zshrc
 A minimal zsh set up. 
