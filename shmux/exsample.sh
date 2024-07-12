@@ -9,10 +9,10 @@ new_session
 
 # then, layout your session
 rename_window "code"
+run_command "nvim ."
 split_horizontal 50%
 set_current_pane 2 # split on the right 
 split_vertical 50%
-#run_command "nvim"
 
 new_window "servers"
 
@@ -20,4 +20,4 @@ new_window "servers"
 select_window "code"
 
 # then, attach to your session!
-attach_to_session
+#attach_to_session

@@ -1,4 +1,5 @@
 
 # Runs all the session scripts in one go
 
-. ./exsample.sh
+. ./general.sh
+. ./new-life.sh
