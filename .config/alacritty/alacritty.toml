@@ -11,7 +11,7 @@ decorations = "none"
 dynamic_padding = false
 opacity = 0.83
 #opacity = 0.87 # norm
-#opacity = 0.99 # opaque
+#opacity = 0.999 # opaque
 startup_mode = "Maximized"
 title = "Alacritty"
 
