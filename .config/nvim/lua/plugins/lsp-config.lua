@@ -9,9 +9,6 @@ return {
         -- Useful status updates for LSP - the update little window on the bottom right
         -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
         { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
-
-        -- basically nvim configuration lsp
-        "folke/lazydev.nvim",
     },
     config = function ()
         -- [[ Configure LSP ]]
@@ -89,9 +86,6 @@ return {
         vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
         vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
         vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-
-        -- Setup neovim lua configuration
-        require('lazydev').setup()
 
         -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
         local capabilities = vim.lsp.protocol.make_client_capabilities()
