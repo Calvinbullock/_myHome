@@ -3,7 +3,7 @@
 --				[[ Setting options ]]				  
 -- =====================================================
 
--- WARN  USE WITH CAUTION
+-- WARN: USE WITH CAUTION
 vim.opt.exrc = false
 
 -- Create highlight groups for comment patterns
@@ -18,8 +18,13 @@ vim.fn.matchadd("NoteHint", "\\( NOTE \\)")
 vim.fn.matchadd("BugHint",  "\\( BUG \\)")
 vim.fn.matchadd("WarnHint", "\\( WARN \\)")
 
+vim.fn.matchadd("TdoHint",  "\\( TODO:\\)")
+vim.fn.matchadd("NoteHint", "\\( NOTE:\\)")
+vim.fn.matchadd("BugHint",  "\\( BUG:\\)")
+vim.fn.matchadd("WarnHint", "\\( WARN:\\)")
+
 vim.fn.matchadd("TdoHint",  "\\(TODO\\)")
-vim.fn.matchadd("WarnHint", "\\(WARN \\)")
+vim.fn.matchadd("WarnHint", "\\(WARN\\)")
 --[[
 vim.fn.matchadd("NoteHint", "\\(NOTE\\)")
 vim.fn.matchadd("BugHint",  "\\(BUG\\)")
