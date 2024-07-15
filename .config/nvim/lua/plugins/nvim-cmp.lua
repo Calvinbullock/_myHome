@@ -13,10 +13,9 @@ return {
         'rafamadriz/friendly-snippets',
     },
     config = function ()
-        -- [[ Configure nvim-cmp ]]
-        -- See `:help cmp`                                            <
         local cmp = require 'cmp'
         local luasnip = require 'luasnip'
+
         require('luasnip.loaders.from_vscode').lazy_load()
         luasnip.config.setup {}
 
@@ -29,45 +28,20 @@ return {
             completion = {
                 completeopt = 'menu,menuone,noinsert',
             },
-            mapping = cmp.mapping.preset.insert { -- NOTE not sure what this does yet....
+            mapping = cmp.mapping.preset.insert {
+
+                -- default complete scrolling is <c-n> & <c-p>
+                ['<C-y>'] = cmp.mapping.confirm { select = true },
+
                 ['<C-d>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
                 ['<C-Space>'] = cmp.mapping.complete {},
-
-                --[[--this sets code completion to enter:
-                ['<CR>'] = cmp.mapping.confirm {
-                    behavior = cmp.ConfirmBehavior.Replace,
-                    select = true,
-                },
-                ]]
 
                 -- Uused hjkl in completion mapping
                 -- ['<C-j>'] = cmp.mapping.select_next_item(),
                 -- ['<C-k>'] = cmp.mapping.select_prev_item(),
                 -- ['<C-h>'] = cmp.mapping.confirm { select = true },
                 -- ['<C-l>'] = cmp.mapping.confirm { select = true },
-
-                -- sets code completions to confirmation
-                ['<C-y>'] = cmp.mapping.confirm { select = true },
-
-                ['<Tab>'] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        cmp.select_next_item()
-                    elseif luasnip.expand_or_locally_jumpable() then
-                        luasnip.expand_or_jump()
-                    else
-                        fallback()
-                    end
-                end, { 'i', 's' }),
-                ['<S-Tab>'] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        cmp.select_prev_item()
-                    elseif luasnip.locally_jumpable(-1) then
-                        luasnip.jump(-1)
-                    else
-                        fallback()
-                    end
-                end, { 'i', 's' }),
             },
             sources = {
                 { name = 'nvim_lsp' },
