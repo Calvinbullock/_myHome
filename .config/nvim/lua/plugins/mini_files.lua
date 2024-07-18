@@ -7,7 +7,7 @@ return {
                 preview = true,
             },
         })
-        vim.keymap.set('n', "<leader>fx", require('mini.files').open, {})
+        vim.keymap.set('n', "<leader>fe", require('mini.files').open, {})
     end,
 }
 

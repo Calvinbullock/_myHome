@@ -33,7 +33,7 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 
 -- sets " F" to open the netrw (default file view) in root directory.
-vim.api.nvim_set_keymap("n", "<leader>fe", ":Ex<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>fx", ":Ex<CR>", {noremap = true, silent = true})
 
 -- sets paste to paste over highlighted text with out over writing the register
 vim.keymap.set("x", "<leader>p", [["_dP]])
