@@ -1,8 +1,10 @@
 # My bash aliases
 
-# Custom system update alias
+# Custom APT update alias
 alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap refresh"
-alias sapt="sudo apt"
+
+# Custom DNF update alias
+#alias upd="sudo dnf update --refresh && sudo dnf upgrade && flatpak update"
 
 # _MyHome alias
 alias alia="nvim ~/_myHome/shScripts/aliases.sh"
