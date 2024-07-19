@@ -27,9 +27,13 @@ include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
+# __WALLPAPERS__
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill # DEFAULT wallpaper
+#
 output * bg ~/Pictures/fav-imgs/Pixiv-根暗_Neko-Rain-upscaled.png fill
+#output * bg ~/Pictures/fav-imgs/Char-CarTrip_DANGERDROP-PIXIV_waifu2x-2.png fill
+#output * bg ~/Pictures/fav-imgs/Pixiv-碧狗_Blue-Flowers_upscaled.png fill
 #
 # Example configuration:
 #
