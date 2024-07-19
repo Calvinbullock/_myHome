@@ -7,12 +7,15 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Alt
+set $mod Mod1
+set $super Mod4
+
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
@@ -25,7 +28,8 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill # DEFAULT wallpaper
+output * bg ~/Pictures/fav-imgs/Pixiv-根暗_Neko-Rain-upscaled.png fill
 #
 # Example configuration:
 #
@@ -60,6 +64,11 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+# Use capslock key as secondary escape
+input "type:keyboard" {
+  xkb_options caps:escape
+}
+
 ### Key bindings
 #
 # Basics:
@@ -71,7 +80,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $super+m exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -216,4 +225,22 @@ bar {
     }
 }
 
+bindsym $mod+g border toggle
+
+# screenshot shortcuts
+# Current Workspace
+bindsym Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') && notify-send "grim - Screenshot taken"
+# Selected Region
+bindsym Shift+Print exec grim -g "$(slurp)" && notify-send "grim - Screenshot taken"
+# Current Window
+bindsym $mod+Print exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" && notify-send "grim - Screenshot taken of window"
+
+titlebar_border_thickness 0
+titlebar_padding 4 1
+
+gaps inner 4
+
 include /etc/sway/config.d/*
+
+
+
