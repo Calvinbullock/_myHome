@@ -49,8 +49,8 @@ fi
 
 # nvim from source installs =====================
 if [[ $buildNvim =~ ^[Yy]([Ee][Ss])?$ ]]; then
-    chmod +x $HOME/_myHome/shScripts/neovim.sh
-    source $HOME/_myHome/shScripts/neovim.sh
+    chmod +x $HOME/_myHome/shScripts/deb-scripts/neovim.sh
+    source $HOME/_myHome/shScripts/deb-scripts/neovim.sh
 fi
 
 # apt installs ===================== basic terminal utilis / apps
