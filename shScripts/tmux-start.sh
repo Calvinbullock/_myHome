@@ -89,12 +89,6 @@ newTmuxSession_twoPanes "nel" "$HOME/Documents/new-life"
 #newTmuxSession_twoPanes "bat" "$HOME/Documents/battleship"
 #newTmuxSession_twoPanes "go" "$HOME/Documents/flip"
 
-newTmuxSession_twoPanes "dyn" "$HOME/Documents/_spr2024/dynamicWeb"
-newTmuxSession_twoPanes "cap" "$HOME/Documents/_spr2024/encapDes"
-newTmuxSession_twoPanes "bak" "$HOME/Documents/_spr2024/backEndDev"
-#newTmuxSession_twoPanes "tes" "$HOME/Documents/_spr2024/softwareTesting"
-#newTmuxSession_twoPanes "arc" "$HOME/Documents/_spr2024/ArcDes"
-
 # WARN  in beta
 # newTmuxSession_ThreePanes "temp" "$HOME/Documents/_spr2024/backEndDev"
 
