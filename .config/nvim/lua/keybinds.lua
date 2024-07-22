@@ -32,7 +32,7 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 -- Disable ZZ exit behavior
 vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
 
--- sets " F" to open the netrw (default file view) in root directory.
+-- sets keybind to open netrw (default file view)
 vim.api.nvim_set_keymap("n", "<leader>fx", ":Ex<CR>", {noremap = true, silent = true})
 
 -- sets paste to paste over highlighted text with out over writing the register
