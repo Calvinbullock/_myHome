@@ -129,7 +129,7 @@ printf "\e[1;32m** Manuel install needed **\e[0m\n"
 printf "\e[1;32m  MineCraft, Virtbox, Chrome, vs-Code, Discord.\e[0m\n"
 echo
 printf "\e[1;32m  Run next command if you want to use zsh as defult shell.\e[0m\n"
-printf "\e[1;32m  Sudo chsh _USER_ -s /bin/zsh.\e[0m\n"
+printf "\e[1;32m  sudo chsh _USER_ -s /bin/zsh.\e[0m\n"
 echo
 printf "\e[1;32m  Don't forget to set up a fire-wall!!\e[0m\n"
 printf "\e[1;32m  You can now reboot! Thanks you.\e[0m\n"
