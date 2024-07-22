@@ -61,7 +61,8 @@ sudo apt install btop -y
 sudo apt install zsh -y
 sudo apt install ncdu -y
 # sudo apt install htop -y
-# sudo apt install lm-sensors -y
+sudo apt install lm-sensors -y
+#sudo apt install nvme-cli -y
 sudo apt install tmux -y
 sudo apt install ranger -y
 sudo apt install fzf -y
