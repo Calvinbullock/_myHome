@@ -43,7 +43,7 @@ PS1='${NEWLINE}% %{$fg[grey]%}in %{$fg[green]%}[ %~ ] %{$fg[grey]%}on %{$fg[blue
 #PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty) ${NEWLINE}%{$fg[grey]%}in %{$fg[green]%}[ %~ ] ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
  
 # 2 line minimal prompt with barArrow
-# path, git -- prompt
+# arrow path, git -- arrow prompt
 #PS1='${NEWLINE}%{$fg[white]%}┌──%{$fg[green]%}[ %~ ] %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%{$fg[white]%}└─%(?.%{$fg[green]%}>.%{$fg[red]%}>)%{$reset_color%} '
 
 
