@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 # this is the DSL for our tmux plugin
 
