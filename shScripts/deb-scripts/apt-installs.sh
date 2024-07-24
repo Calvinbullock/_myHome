@@ -69,6 +69,7 @@ sudo apt install fzf -y
 sudo apt install tldr -y
 
 # apps
+sudo apt install kitty -y
 sudo apt install alacritty -y
 sudo apt install steam -y
 
@@ -93,6 +94,9 @@ if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
     rm -r "$HOME/.config/alacritty"
     ln -s "$HOME/_myHome/.config/alacritty" "$HOME/.config/alacritty"
+
+    rm -r "$HOME/.config/kitty"
+    ln -s "$HOME/_myHome/.config/kitty" "$HOME/.config/kitty"
     
     rm -r "$HOME/.config/nvim"
     ln -s "$HOME/_myHome/.config/nvim" "$HOME/.config/nvim"
@@ -121,7 +125,7 @@ if [[ $setupSway =~ ^[Yy]([Ee][Ss])?$ ]]; then
     ln -s "$HOME/_myHome/.config/rofi" "$HOME/.config/rofi"
 fi
 
-# autoclean up after updates and installing everything
+# Auto-clean up after updates and installing everything
 sudo apt autoclean
 
 echo
@@ -129,8 +133,9 @@ printf "\e[1;32m** Manuel install needed **\e[0m\n"
 printf "\e[1;32m  MineCraft, Virtbox, Chrome, vs-Code, Discord.\e[0m\n"
 echo
 printf "\e[1;32m  Run next command if you want to use zsh as defult shell.\e[0m\n"
-printf "\e[1;32m  sudo chsh _USER_ -s /bin/zsh.\e[0m\n"
+printf "\e[1;32m  Sudo chsh _USER_ -s /bin/zsh.\e[0m\n"
 echo
 printf "\e[1;32m  Don't forget to set up a fire-wall!!\e[0m\n"
 printf "\e[1;32m  You can now reboot! Thanks you.\e[0m\n"
 echo
+
