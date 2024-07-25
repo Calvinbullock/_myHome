@@ -1,198 +1,65 @@
-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    // "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media", "custom/dailyverse"],
-    "modules-center": ["clock"],
-    "modules-right": ["tray", "mpd", "idle_inhibitor", "pulseaudio", "bluetooth", "network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2"],
-    // Modules configuration
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{icon}",
-        "format-icons": {
-            "1": "一",
-            "2": "二",
-            "3": "三",
-            "4": "四",
-            "5": "五",
-            "6": "六",
-            "7": "七",
-            "8": "八",
-            "9": "九",
-            "10": "〇"
-        },
-        "persistent_workspaces": {
-          "1": [],
-          "2": [],
-          "3": [],
-          "4": [],
-          "5": [],
-          "6": [],
-          "7": [],
-          "8": [],
-          "9": [],
-          "10": []
-        }
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock", "idle_inhibitor"],
+    /* "modules-right": ["tray", "custom/scratchpad-indicator", "pulseaudio", "custom/power"], */
+    "modules-right": ["tray", "custom/scratchpad-indicator", "pulseaudio", "custom/power"],
 
-    },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "unLocked",
-            "unlocked": "locked"
-        }
-    },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", "scratch"],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": "cut"
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) 💻",
+        "format-ethernet": "{ifname} 🖥️",
+        "format-disconnected": "🚫", 
+        "max-length": 50,
+        "on-click": "kitty -e 'nmtui'"
     },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
+            "activated": "☕",
+            "deactivated": "🧊"
+        },
+		"on-click": "bash /home/dg/.local/bin/toggleRemote"
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 15,
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "format": "{:%d %b %I:%M %p}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "cpu": {
-        "format": "{usage}%",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󱐋",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
-    "bluetooth": {
-      "format": "  {status} ",
-      "format-connected": " {device_alias}",
-      "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-      // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
-      "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} 󱂇",
-        "tooltip-format": "{ifname} via {gwaddr}",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        // "format-alt": "{:%Y-%m-%d}"
+		"on-click": "gnome-calendar"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon} ",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "󰝟 {format_source}",
+        "format-muted": "0% {icon} ",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "󰋋",
-            "hands-free": "",
-            "headset": "",
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["🔇", "🔈", "🔉", "🔊"]
         },
         "on-click": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{icon} {}",
+	"custom/power": {
+		"format": "🏮",
+		"on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Logout' 'swaymsg exit' -b 'Restart' 'shutdown -r now' -b 'Shutdown'  'shutdown -h now' --background=#005566 --button-background=#009999 --button-border=#002b33 --border-bottom=#002b33"
+	},
+    "custom/scratchpad-indicator": {
+        "format-text": "{}hi",
         "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
-    "custom/dailyverse": {
-        "format": "Come, Follow Me: {}",
-        "exec": "~/bin/daily-verse cfm",
-        "interval": 4,
+        "interval": 3,
+        "exec": "~/.local/bin/scratchpad-indicator 2> /dev/null",
+        "exec-if": "exit 0",
+        "on-click": "swaymsg 'scratchpad show'",
+        "on-click-right": "swaymsg 'move scratchpad'"
     }
 }
