@@ -50,7 +50,7 @@ alias gd="git diff"
 alias gst="git status"
 alias ga="git add"
 alias gap="git add -p"
-alias gcm="~/_myHome/shScripts/./git-commit.sh"
+alias gcm="~/_myHome/shScripts/tools./git-commit.sh"
 #git ls-files --other 
 
 # NEOVIM || NVIM
@@ -93,10 +93,9 @@ alias tk="tmux kill-session -t"
 alias tn="tmux new -s"
 alias rnw="tmux rename-window"
 alias tso="tmux source-file ~/.config/tmux/tmux.conf"
-alias tset="~/_myHome/shScripts/./tmux-start.sh"
+
+alias tset="~/_myHome/shScripts/tools./tmux-start.sh"
 alias shmux="~/_myHome/shmux/./shmux-start.sh"
-#alias tms="./~/_myHome/shScripts/tmux-session-save save"
-#alias tmr="./~/_myHome/shScripts/tmux-session-save restore"
 
 # Document folder aliases
 alias doc="cd ~/Documents"
