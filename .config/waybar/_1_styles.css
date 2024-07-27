@@ -1,3 +1,9 @@
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+}
+
 * {
     border: none;
     font-family: Font Awesome, Roboto, Arial, sans-serif;
