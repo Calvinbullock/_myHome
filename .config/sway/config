@@ -37,7 +37,31 @@ include /etc/sway/config-vars.d/*
     #output * bg ~/Pictures/fav-imgs/Pixiv-根暗_Neko-Rain-upscaled.png fill
     #output * bg ~/Pictures/fav-imgs/Char-CarTrip_DANGERDROP-PIXIV_waifu2x-2.png fill
     #output * bg ~/Pictures/fav-imgs/Pixiv-碧狗_Blue-Flowers_upscaled.png fill
-    output * bg ~/Pictures/fav-imgs/Pixiv-Dity-Pretty_Subway-Vibe-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Pixiv-Dity-Pretty_Subway-Vibe-upscaled.png fill
+
+    #output * bg ~/Pictures/fav-imgs/bg_Wallheaven_train_horizen.jpg fill
+    #output * bg ~/Pictures/fav-imgs/Catppuccin-Ascii-cat-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Char_night_crane.png fill
+    #output * bg ~/Pictures/fav-imgs/Char-Pink-Splash.png fill
+    #output * bg ~/Pictures/fav-imgs/EightySix_Memory.jpg fill
+    #output * bg ~/Pictures/fav-imgs/iterm-hacker-waifu-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Linux-pengi.jpg fill
+    #output * bg ~/Pictures/fav-imgs/Miku-Cyber-Screens.jpg fill
+    #output * bg ~/Pictures/fav-imgs/Miku_deepsee_floating.png fill
+    #output * bg ~/Pictures/fav-imgs/Miku_gift.png fill
+    #output * bg ~/Pictures/fav-imgs/Miku_Night-exspanse_pixiv-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Miku-Shadow-Ink_Pixiv-奇诺777_upscaled.png fill
+    output * bg ~/Pictures/fav-imgs/Pixiv-DANGERDROP_Daily-Mail-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Pixiv-LeIsT0_Pink-Girl-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Pixiv-RisLA_Miku-City-Ledge-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Pixiv-RisLA_Miku-Cyber-City-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Pixiv-RisLA_Miku-Pink-Tint-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Pixiv-Useless_Gup-StuG-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Pixiv-ど〜ら_Eurupe-walk_upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Pixiv-奇诺777_Holo-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Pixiv-奇诺777_Miku-Cyber-Punk-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/Pixiv-根暗_Colour-Smoke-upscaled.png fill
+    #output * bg ~/Pictures/fav-imgs/PIxiv-根暗_Violet-RoofTops-upscaled.png fill
     
     #__Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
     # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill # DEFAULT wallpaper
