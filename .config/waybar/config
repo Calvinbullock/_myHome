@@ -5,9 +5,11 @@
     // "width": 1280, // Waybar width
     //"spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
+
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "idle_inhibitor"],
     "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "cpu", "memory", "temperature", "network", "pulseaudio", "tray", "battery", "clock"],
+    "modules-right": ["cpu", "memory", "temperature", "network", "pulseaudio", "tray", "battery", "clock"],
+
     //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "battery#bat2", "clock", "tray"],
     //"modules-right": ["mpd", "idle_inhibitor", "temperature", "cpu", "memory","network", "pulseaudio", "backlight", "keyboard-state", "battery", "battery#bat2", "tray", "clock"],
 
@@ -48,7 +50,7 @@
         "tooltip-format": "{app}: {title}"
     },
     "mpd": {
-//        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        //"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format": "  {title} - {artist} {stateIcon} [{elapsedTime:%M:%S}/{totalTime:%M:%S}] {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}[{songPosition}/{queueLength}] [{volume}%]",
         "format-disconnected": " Disconnected",
         "format-stopped": " {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
@@ -58,7 +60,7 @@
             "on": " "
         },
         "random-icons": {
-//            "off": "<span color=\"#f53c3c\"></span> ",
+            //"off": "<span color=\"#f53c3c\"></span> ",
             "on": " "
         },
         "repeat-icons": {
@@ -96,7 +98,7 @@
         //"format-alt": "{:%Y-%m-%d}"
         //"format": "{:L%Y-%m-%d<small>[%a]</small> <tt><small>%p</small></tt>%I:%M}"
         //"format": "{:%Y-%m-%d %H:%M}"
-        "format": "{:%a %b %d, %Y %I:%M}"
+        "format": "{:%a %b %d, %I:%M}"
     },
     "cpu": {
         "format": "CPU {usage}%",
@@ -151,7 +153,7 @@
         "format-bluetooth": "🦷 {icon} {volume}% {format_source}",
         "format-bluetooth-muted": "🦷 🔇 {icon} {format_source}",
         "format-muted": "🔇  {format_source}",
-        "format-source": "🎤 {volume}%",
+        //"format-source": "🎤 {volume}%",
         "format-source-muted": "🔇",
         "format-icons": {
 //            "headphone": "🎧",
