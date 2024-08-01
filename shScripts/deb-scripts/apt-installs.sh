@@ -21,7 +21,7 @@ printf "\e[1;32m** [sym link configs, tmux, nvim, alacritty, ranger, bashrc, bto
 echo
 read -p "Do you want to set up sway as you Window Manager? " setupSway
 printf "\e[1;32m**  [Sway, rofi, and waybar, install and set up] **\e[0m\n"
-printf "\e[1;32m**  [NOT IN WORKING ORDER] **\e[0m\n"
+printf "\e[1;32m**  [IN MOSTLY WORKING ORDER] **\e[0m\n"
 
 # update mirrors and system
 printf "\e[1;32m** [update with apt] **\e[0m\n"
@@ -112,7 +112,7 @@ fi
 # sway configs ====================  WARN  not done
 if [[ $setupSway =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
-    sudo sudo apt install sway waybar brightnessctl pulseaudio-utils wofi -y
+    sudo sudo apt install sway waybar brightnessctl pulseaudio-utils rofi -y
 
     # set up sway config links
     rm -r "$HOME/.config/sway"
