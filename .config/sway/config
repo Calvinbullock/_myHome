@@ -1,11 +1,11 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
+
 # Read `man 5 sway` for a complete reference.
 
-### Variables
+# ============================================================================ #
+#- Variables
 #
+# ============================================================================ #
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod1
 set $super Mod4
@@ -25,27 +25,37 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
-### Output configuration
+
+# ============================================================================ #
+#- Output configuration
 #
-#__WALLPAPERS__
+# ============================================================================ #
+
+# =========== #
+# WALLPAPERS: #
+# =========== #
 #output * bg ~/Pictures/fav-imgs/Pixiv-根暗_Neko-Rain-upscaled.png fill
 #output * bg ~/Pictures/fav-imgs/Char-CarTrip_DANGERDROP-PIXIV_waifu2x-2.png fill
 #output * bg ~/Pictures/fav-imgs/Pixiv-碧狗_Blue-Flowers_upscaled.png fill
 output * bg ~/Pictures/fav-imgs/Pixiv-Dity-Pretty_Subway-Vibe-upscaled.png fill
-#
+
 #__Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill # DEFAULT wallpaper
-#
-#
-# Example configuration:
+
+# ======== #
+# Display: #
+# ======== #
+### Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-### Idle configuration
-#
-# Example configuration:
+# =================== #
+# Idle configuration: #
+# =================== #
+
+### Example configuration:
 #
 # exec swayidle -w \
 #          timeout 300 'swaylock -f -c 000000' \
@@ -56,7 +66,23 @@ output * bg ~/Pictures/fav-imgs/Pixiv-Dity-Pretty_Subway-Vibe-upscaled.png fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
-### Input configuration
+# ================ #
+# Boarders config: #
+# ================ #
+    bindsym $mod+g border toggle
+    #window title off
+    
+    titlebar_border_thickness 0
+    titlebar_padding 4 1
+    
+    default_border pixel 3
+    gaps inner 4
+
+
+# ============================================================================ #
+#- Input configuration
+#
+# ============================================================================ #
 #
 # Example configuration:
 #
@@ -75,10 +101,15 @@ input "type:keyboard" {
   xkb_options caps:escape
 }
 
-### Key bindings
+
+# ============================================================================ #
+#- Key bindings
 #
-# Basics:
-#
+# ============================================================================ #
+
+# ======= #
+# Basics: #
+# ======= #
     # Start a terminal
     bindsym $mod+t exec $term
 
@@ -100,9 +131,22 @@ input "type:keyboard" {
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-#
-# Moving around:
-#
+
+# ===================== #
+# screenshot shortcuts: #
+# ===================== #
+ 
+    # Current Workspace
+    bindsym Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') && notify-send "grim - Screenshot taken"
+    # Selected Region
+    bindsym Shift+Print exec grim -g "$(slurp)" && notify-send "grim - Screenshot taken"
+    # Current Window
+    bindsym $mod+Print exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" && notify-send "grim - Screenshot taken of window"
+
+# ============== #
+# Moving around: #
+# ============== #
+
     # Move your focus around
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
@@ -124,9 +168,14 @@ input "type:keyboard" {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-#
-# Workspaces:
-#
+
+    # alt tab
+    bindsym Mod1+Tab workspace next_on_output
+
+# =========== #
+# Workspaces: #
+# =========== #
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -151,9 +200,11 @@ input "type:keyboard" {
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-#
-# Layout stuff:
-#
+
+# ============= #
+# Layout stuff: #
+# ============= #
+
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
@@ -176,9 +227,11 @@ input "type:keyboard" {
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
-#
-# Scratchpad:
-#
+
+# =========== #
+# Scratchpad: #
+# =========== #
+
     # Sway has a "scratchpad", which is a bag of holding for windows.
     # You can send windows there and get them back later.
 
@@ -188,14 +241,12 @@ input "type:keyboard" {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
-#
-# Resizing containers:
-#
+
+# ==================== #
+# Resizing containers: #
+# ==================== #
+
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
     bindsym $left resize shrink width 10px
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
@@ -213,9 +264,12 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+
+# ============================================================================ #
+#- Status Bar:
 #
-# Status Bar:
-#
+# ============================================================================ #
+
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     swaybar_command waybar
@@ -232,21 +286,6 @@ bar {
     #     inactive_workspace #32323200 #32323200 #5c5c5c
     # }
 }
-
-bindsym $mod+g border toggle
-
-# screenshot shortcuts
-# Current Workspace
-bindsym Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') && notify-send "grim - Screenshot taken"
-# Selected Region
-bindsym Shift+Print exec grim -g "$(slurp)" && notify-send "grim - Screenshot taken"
-# Current Window
-bindsym $mod+Print exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" && notify-send "grim - Screenshot taken of window"
-
-titlebar_border_thickness 0
-titlebar_padding 4 1
-
-gaps inner 4
 
 include /etc/sway/config.d/*
 
