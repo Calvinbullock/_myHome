@@ -64,7 +64,7 @@ alias nnote="nvim ~/_myHome/.config/nvim/readme.md"
 # Ranger
 alias ran="ranger"
 
-# Other
+# Other/Misc
 alias dol="dolphin" # **KDE** only
 alias py="python3"
 alias pyserve="python3 -m http.server"
