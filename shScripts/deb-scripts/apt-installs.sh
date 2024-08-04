@@ -70,6 +70,7 @@ sudo apt install tmux -y
 sudo apt install ranger -y
 sudo apt install fzf -y
 sudo apt install tldr -y
+sudo apt install bat -y
 
 # apps
 sudo apt install kitty -y
