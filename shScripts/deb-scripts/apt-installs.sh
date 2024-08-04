@@ -1,6 +1,9 @@
 #!/bin/bash
 # A script to install and set up my programs and configs, at least the ones that are available in a pkg manager or script-able.
 
+# exit script if a command fails
+set -e
+
 # prompt and collect user choices
 echo
 read -p "Do you want to install listed items? (yes/no) " setupFlathub
