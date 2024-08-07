@@ -56,7 +56,7 @@ if [[ $buildNvim =~ ^[Yy]([Ee][Ss])?$ ]]; then
     source $HOME/_myHome/shScripts/deb-scripts/neovim.sh
 fi
 
-# apt installs ===================== basic terminal utilis / apps
+# apt installs ===================== basic terminal utilis / tools / apps
 echo "apt install zsh, vim, btop, neofetch, ncdu, alacritty, tmux, ranger, steam, and lm-sensers."
 sudo apt install neofetch -y
 #sudo apt install vim -y
@@ -68,9 +68,11 @@ sudo apt install lm-sensors -y
 #sudo apt install nvme-cli -y
 sudo apt install tmux -y
 sudo apt install ranger -y
-sudo apt install fzf -y
 sudo apt install tldr -y
-sudo apt install bat -y
+
+sudo apt install ripgrep -y
+sudo apt install fzf -y
+#sudo apt install bat -y
 
 # apps
 sudo apt install kitty -y
