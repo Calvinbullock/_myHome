@@ -11,7 +11,7 @@ printf "\e[1;32m** [install and set up flatpak / flathub] **\e[0m\n"
 
 echo
 read -p "Do you want to install listed items? (yes/no) " installFlatpakPkgs
-printf "\e[1;32m** [flatpak install krita, flatseal, upscaler, Brave] **\e[0m\n"
+printf "\e[1;32m** [flatpak install krita, flatseal, upscaler] **\e[0m\n"
 
 echo
 read -p "Do you want to install listed items? (yes/no) " buildNvim
@@ -46,7 +46,7 @@ if [[ $installFlatPakPkgs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     flatpak install com.github.tchx84.Flatseal
     flatpak install io.gitlab.theevilskeleton.Upscaler
     flatpak install org.kde.krita
-    flatpak install flathub com.brave.Browser
+    #flatpak install flathub com.brave.Browser
     # flatpak install com.discordapp.Discord
 fi
 
