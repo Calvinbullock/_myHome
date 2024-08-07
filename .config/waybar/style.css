@@ -24,6 +24,7 @@ window#waybar.hidden {
 }
 
 #workspaces {
+    background-color: rgba(30, 30, 46, 0.84);
 }
 
 #window {

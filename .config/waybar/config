@@ -8,7 +8,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "idle_inhibitor"],
     "modules-center": ["sway/window"],
-    "modules-right": ["cpu", "memory", "temperature", "network", "pulseaudio", "tray", "battery", "clock"],
+    "modules-right": ["cpu", "memory", "network", "pulseaudio", "tray", "battery", "clock"],
 
     //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "battery#bat2", "clock", "tray"],
     //"modules-right": ["mpd", "idle_inhibitor", "temperature", "cpu", "memory","network", "pulseaudio", "backlight", "keyboard-state", "battery", "battery#bat2", "tray", "clock"],
@@ -141,7 +141,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ᯤ",
-        "format-ethernet": "ᯤ {ifname}",
+        "format-ethernet": "🖥️ {ifname}",
         "tooltip-format": "ᯤ {ifname} via {gwaddr}",
         "format-linked": "ᯤ {ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠ {ifname}",
