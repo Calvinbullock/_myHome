@@ -4,8 +4,8 @@ return {
     config = function ()
         require('mini.files').setup({
             mappings = {
-                synchronize = "s",
-                go_in_plus = "<CR>",
+                synchronize = "s",   -- default '='
+                go_in_plus = "<CR>", -- default 'L' 
             },
             windows = {
                 preview = true,
