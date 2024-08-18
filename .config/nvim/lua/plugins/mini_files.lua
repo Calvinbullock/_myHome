@@ -3,6 +3,10 @@ return {
     version = '*',
     config = function ()
         require('mini.files').setup({
+            mappings = {
+                synchronize = "s",
+                go_in_plus = "<CR>",
+            },
             windows = {
                 preview = true,
             },
