@@ -19,6 +19,9 @@ Some lsp's/linters may need node installed.
     - a `.exrc` file is written in vim script
     - ex `setlocal shiftwidth=3`
 
+- language specifics
+    - use `after/ftplugin` this will load ftpugins after the other configs.
+
 ## lsp/linters of choice
 - clangd                (c++, c)
 - bash-language-server  (bash)
@@ -37,6 +40,12 @@ Some lsp's/linters may need node installed.
     - emmet-ls          (HTMl snippets)
     - css-lsp
 
+## Less Used Keybinds
+- `ctrl + x + f` for file path completion in vim (default)
+
+### I use this for live serving html/css/js
+`python3 -m http.server`
+
 ## Note from kickstart Dev
 - Lua Help:
 - https://learnxinyminutes.com/docs/lua/
@@ -44,5 +53,3 @@ Some lsp's/linters may need node installed.
 And then you can explore or search through `:help lua-guide`
 - https://neovim.io/doc/user/lua-guide.html
 
-### I use this for live serving html/css/js
-`python3 -m http.server`
