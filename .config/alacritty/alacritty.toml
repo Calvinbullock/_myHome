@@ -7,11 +7,13 @@
 TERM = "xterm-256color"
 
 [window]
+#opacity = 0.83
+#opacity = 0.87 # norm -- In Use
+opacity = 0.92 # almost opaque
+#opacity = 0.999 # opaque
+
 decorations = "none"
 dynamic_padding = false
-opacity = 0.83
-#opacity = 0.87 # norm
-#opacity = 0.999 # opaque
 startup_mode = "Maximized"
 title = "Alacritty"
 
