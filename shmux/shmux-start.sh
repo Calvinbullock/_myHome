@@ -8,3 +8,4 @@ path="$HOME/_myHome/shmux/layouts/"
 
 source "$path/general.sh"
 source "$path/new-life.sh"
+source "$path/sand.sh"
