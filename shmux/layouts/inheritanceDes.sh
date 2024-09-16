@@ -1,11 +1,11 @@
+
 #!/bin/bash
 
 source $HOME/_myHome/shmux/./functions.sh
-#source ./functions.sh
 
 # Set up your project with a root dir, and name
-project_root ~/Documents/new-life
-session_name "nel"
+project_root ~/Documents/_Fall-2024/inheritanceDes/
+session_name "inhe"
 
 # first, create your session
 new_session
@@ -13,6 +13,8 @@ new_session
 # then, layout your session
 rename_window "code"
 split_horizontal 80%
+set_current_pane 2 # split on the right 
+run_command "nvim ."
 
 # at the end, select the window you want first
 select_window "code"

@@ -13,6 +13,7 @@ new_session
 rename_window "code"
 split_horizontal 80%
 set_current_pane 2 # split on the right 
+run_command "nvim ."
 
 # at the end, select the window you want first
 select_window "code"
