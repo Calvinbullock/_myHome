@@ -24,6 +24,7 @@ alias E="exit"
 alias c="clear"
 alias l="clear"
 alias reboot="sudo reboot"
+alias loginG="loginctl unlock-session"
 
 # ls aliases
 alias ll='ls -alF'
@@ -115,5 +116,5 @@ alias picd="cd ~/Pictures/fav-imgs/"
 # =================================================
 alias pp="pnpm"
 alias clf="clang-format -i "
-alias winter24="cd ~/Documents/_winter-2024-school-docs/"
+alias school="cd ~/Documents/_Fall-2024/"
 
