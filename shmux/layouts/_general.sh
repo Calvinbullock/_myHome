@@ -11,3 +11,5 @@ new_session
 
 # then, layout your session
 rename_window "code"
+
+echo "me - Setup"

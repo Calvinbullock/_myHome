@@ -12,6 +12,7 @@ new_session
 # then, layout your session
 rename_window "code"
 run_command "nvim ."
+set_current_pane 1
 split_horizontal 50%
 set_current_pane 2 # split on the right 
 split_vertical 50%
@@ -23,3 +24,4 @@ select_window "code"
 
 # then, attach to your session!
 #attach_to_session
+echo "test - Setup"
