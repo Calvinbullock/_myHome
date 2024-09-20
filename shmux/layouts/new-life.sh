@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source $HOME/_myHome/shmux/./functions.sh
-#source ./functions.sh
 
 # Set up your project with a root dir, and name
 project_root ~/Documents/new-life
@@ -13,9 +12,6 @@ new_session
 # then, layout your session
 rename_window "code"
 split_horizontal 80%
-
-# at the end, select the window you want first
-select_window "code"
 
 # then, attach to your session!
 #attach_to_session

@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source $HOME/_myHome/shmux/./functions.sh
-#source ./functions.sh
 
 # Set up your project with a root dir, and name
 project_root ~/_myHome
