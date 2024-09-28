@@ -142,3 +142,7 @@ unsetopt beep
 #   WARN  not working yet
 # eval "$(fzf --zsh)"
 
+# zoxide intagrations 
+eval "$(zoxide init zsh)"
+
+
