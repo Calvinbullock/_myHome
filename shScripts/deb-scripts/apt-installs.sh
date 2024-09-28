@@ -62,6 +62,7 @@ sudo apt install neofetch -y
 #sudo apt install vim -y
 sudo apt install btop -y
 sudo apt install zsh -y
+sudo apt install zoxide -y
 sudo apt install ncdu -y
 # sudo apt install htop -y
 sudo apt install lm-sensors -y
