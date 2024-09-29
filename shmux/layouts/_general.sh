@@ -10,6 +10,6 @@ session_name "me"
 new_session
 
 # then, layout your session
-rename_window "code"
+rename_window "main"
 
 echo "me - Setup"

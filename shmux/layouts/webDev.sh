@@ -12,8 +12,13 @@ new_session
 # then, layout your session
 rename_window "code"
 set_current_pane 1
+run_command "cd CSE330-group3/"
 split_horizontal 80%
 set_current_pane 2
+set_current_pane 1
+split_vertical 30%
+
+new_window "notes"
 
 # at the end, select the window you want first
 select_window "code"
