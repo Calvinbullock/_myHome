@@ -8,10 +8,11 @@ Notes and useful tips for my nvim usage and configuration.
 
 ## Dependancies!!
 Used in telescope for file finding among other things.
-`sudo apt install fzf` - if on debian based linux
+- `sudo apt install fzf` - if on debian based linux
+- `sudo apt install ripgrep` - if on debian based linux
 
 Some lsp's/linters may need node installed.
-`sudo apt-get install node` - if on debian based linux
+- `sudo apt-get install node` - if on debian based linux
 
 ## Setting up Project Specific Settings
 - put a `.exrc` file in your project root
@@ -21,6 +22,8 @@ Some lsp's/linters may need node installed.
 
 - language specifics
     - use `after/ftplugin` this will load ftpugins after the other configs.
+    - make a file in after/ftplugin named after the file extension you are setting up 
+        - EX: "textfile", "cpp". "html"
 
 ## lsp/linters of choice
 - clangd                (c++, c)
@@ -39,6 +42,9 @@ Some lsp's/linters may need node installed.
     - typescript-language-server tsserver (keywords: typescript, javascript)
     - emmet-ls          (HTMl snippets)
     - css-lsp
+
+## vim defualt Keybinds
+- `z= --- this will use built in spell correction`
 
 ## Less Used Keybinds
 - `ctrl + x + f` for file path completion in vim (default)
