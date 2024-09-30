@@ -3,7 +3,7 @@
 source $HOME/_myHome/shmux/./functions.sh
 
 # Set up your project with a root dir, and name
-project_root ~/Documents/_Fall-2024/webDev/
+project_root ~/Documents/_Fall-2024/webDev/CSE330-group3/
 session_name "webDev"
 
 # first, create your session
