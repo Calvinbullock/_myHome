@@ -62,12 +62,23 @@ return {
         --  If you want to override the default filetypes that your language server will attach to you can
         --  define the property 'filetypes' to the map in question.
         local servers = {
+            ---- other
+            gopls = {},
             clangd = {'cpp', 'h'},
-            html = { filetypes = { 'html', 'twig', 'hbs', 'ejs'} },
-            -- gopls = {},
-            -- pyright = {},
+            bashls = {},
             -- rust_analyzer = {},
+
+            ---- Web
+            html = { filetypes = { 'html', 'twig', 'javascriptreact', 'typescript', 'javascript'} },
+            cssls = {},
+            ts_ls = {},
+            emmet_ls = {},
+            -- emmet_ls = { filetypes = {'jsx', 'html'} },
             -- tsserver = {},
+
+            ---- python
+            jedi_language_server = {},
+            -- pyright = {},
 
             lua_ls = {
                 Lua = {
