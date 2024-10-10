@@ -48,6 +48,7 @@ Some lsp's/linters may need node installed.
 
 ## Less Used Keybinds
 - `ctrl + x + f` for file path completion in vim (default)
+- `shift + v + j` this will remove newlines and bring that content onto the line your cursor is on
 
 ### I use this for live serving html/css/js
 `python3 -m http.server`
