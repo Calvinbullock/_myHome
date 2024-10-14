@@ -37,9 +37,9 @@ sudo apt update && sudo apt upgrade
 # flatpak repo installs =======================
 if [[ $setupFlathub =~ ^[Yy]([Ee][Ss])?$ ]]; then
     echo ""
-    echo "====================================="
-    echo "Installing flathub repo"
-    echo "====================================="
+    printf "\e[1;32m** {=====================================} **\e[0m\n"
+    printf "\e[1;32m**        {Installing flathub repo}        **\e[0m\n"
+    printf "\e[1;32m** {=====================================} **\e[0m\n"
     sudo apt install flatpak
     sudo "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
 fi
@@ -47,9 +47,9 @@ fi
 # flatpak installs ============================
 if [[ $installFlatPakPkgs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     echo ""
-    echo "====================================="
-    echo "Installing flatpak apps"
-    echo "====================================="
+    printf "\e[1;32m** {=====================================} **\e[0m\n"
+    printf "\e[1;32m**       {Installing flatpak apps}        **\e[0m\n"
+    printf "\e[1;32m** {=====================================} **\e[0m\n"
     flatpak install com.github.tchx84.Flatseal
     flatpak install io.gitlab.theevilskeleton.Upscaler
     flatpak install org.kde.krita
@@ -60,18 +60,18 @@ fi
 # nvim from source installs =====================
 if [[ $buildNvim =~ ^[Yy]([Ee][Ss])?$ ]]; then
     echo ""
-    echo "====================================="
-    echo "Installing / bulindung nvim"
-    echo "====================================="
+    printf "\e[1;32m** {=====================================} **\e[0m\n"
+    printf "\e[1;32m**      {Installing / building nvim}       **\e[0m\n"
+    printf "\e[1;32m** {=====================================} **\e[0m\n"
     chmod +x $HOME/_myHome/shScripts/deb-scripts/neovim.sh
     source $HOME/_myHome/shScripts/deb-scripts/neovim.sh
 fi
 
 # apt installs ===================== basic terminal utilis / tools / apps
 echo ""
-echo "====================================="
-echo "installing apt pkgs..."
-echo "====================================="
+printf "\e[1;32m** {=====================================} **\e[0m\n"
+printf "\e[1;32m**         {installing apt pkgs...}        **\e[0m\n"
+printf "\e[1;32m** {=====================================} **\e[0m\n"
 
 # -- tools I keep every day use  
 sudo apt install zoxide -y
@@ -106,9 +106,9 @@ sudo apt install neofetch -y
 # config links =====================
 if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     echo ""
-    echo "====================================="
-    echo "setting up .configs..."
-    echo "====================================="
+    printf "\e[1;32m** {=====================================} **\e[0m\n"
+    printf "\e[1;32m** {installing apt pkgs...} **\e[0m\n"
+    printf "\e[1;32m** {=====================================} **\e[0m\n"
     # Set up my dev repo
     
     # give useful scripts execution permissions
@@ -147,7 +147,7 @@ fi
 if [[ $setupSway =~ ^[Yy]([Ee][Ss])?$ ]]; then
     echo ""
     echo "====================================="
-    echo "setting up sway .configs..."
+    printf "\e[1;32m** {setting up sway .configs...} **\e[0m\n"
     echo "====================================="
 
     sudo sudo apt install sway waybar brightnessctl pulseaudio-utils rofi -y
