@@ -73,6 +73,7 @@ alias pyserve="python3 -m http.server"
 alias temps="watch sensors"
 alias logd="cd /var/log"
 alias bat="batcat"
+alias cat="batcat"
 
 # Vim
 alias vimd="cd ~/.vim/"
