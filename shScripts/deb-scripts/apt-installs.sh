@@ -27,7 +27,7 @@ printf "\e[1;32m**  [Sway, rofi, and waybar, install and set up] **\e[0m\n"
 printf "\e[1;32m**  [IN MOSTLY WORKING ORDER] **\e[0m\n"
 
 # update mirrors and system
-printf "\e[1;32m** [update with apt] **\e[0m\n"
+printf "\e[1;32m** [updateing with apt] **\e[0m\n"
 sudo apt update && sudo apt upgrade
 
 # ####### ################ ####### #
@@ -36,13 +36,20 @@ sudo apt update && sudo apt upgrade
 
 # flatpak repo installs =======================
 if [[ $setupFlathub =~ ^[Yy]([Ee][Ss])?$ ]]; then
-    # -- Install flatpak and add flathub -- #
+    echo ""
+    echo "====================================="
+    echo "Installing flathub repo"
+    echo "====================================="
     sudo apt install flatpak
     sudo "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
 fi
  
 # flatpak installs ============================
 if [[ $installFlatPakPkgs =~ ^[Yy]([Ee][Ss])?$ ]]; then
+    echo ""
+    echo "====================================="
+    echo "Installing flatpak apps"
+    echo "====================================="
     flatpak install com.github.tchx84.Flatseal
     flatpak install io.gitlab.theevilskeleton.Upscaler
     flatpak install org.kde.krita
@@ -52,38 +59,56 @@ fi
 
 # nvim from source installs =====================
 if [[ $buildNvim =~ ^[Yy]([Ee][Ss])?$ ]]; then
+    echo ""
+    echo "====================================="
+    echo "Installing / bulindung nvim"
+    echo "====================================="
     chmod +x $HOME/_myHome/shScripts/deb-scripts/neovim.sh
     source $HOME/_myHome/shScripts/deb-scripts/neovim.sh
 fi
 
 # apt installs ===================== basic terminal utilis / tools / apps
-echo "apt install zsh, vim, btop, neofetch, ncdu, alacritty, tmux, ranger, steam, and lm-sensers."
-sudo apt install neofetch -y
-#sudo apt install vim -y
-#sudo apt install gdb -y
-#sudo apt install cgdb -y
-sudo apt install btop -y
-sudo apt install zsh -y
+echo ""
+echo "====================================="
+echo "installing apt pkgs..."
+echo "====================================="
+
+# -- tools I keep every day use  
 sudo apt install zoxide -y
-sudo apt install ncdu -y
-# sudo apt install htop -y
-sudo apt install lm-sensors -y
-#sudo apt install nvme-cli -y
+sudo apt install zsh -y
 sudo apt install tmux -y
 sudo apt install ranger -y
 sudo apt install tldr -y
-
-sudo apt install ripgrep -y
-sudo apt install fzf -y
 sudo apt install bat -y
 
-# apps
+# -- apps
 sudo apt install kitty -y
 sudo apt install alacritty -y
 sudo apt install steam -y
 
+# -- nvim plugin dependencies
+sudo apt install fzf -y
+sudo apt install ripgrep -y
+
+# -- other programming tools
+#sudo apt install vim -y
+#sudo apt install gdb -y
+#sudo apt install cgdb -y
+
+# -- other cli tools
+sudo apt install ncdu -y
+sudo apt install btop -y
+sudo apt install lm-sensors -y
+sudo apt install neofetch -y
+#sudo apt install nvme-cli -y
+#sudo apt install htop -y
+
 # config links =====================
 if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
+    echo ""
+    echo "====================================="
+    echo "setting up .configs..."
+    echo "====================================="
     # Set up my dev repo
     
     # give useful scripts execution permissions
@@ -120,6 +145,10 @@ fi
 
 # sway configs ====================  WARN  not done
 if [[ $setupSway =~ ^[Yy]([Ee][Ss])?$ ]]; then
+    echo ""
+    echo "====================================="
+    echo "setting up sway .configs..."
+    echo "====================================="
 
     sudo sudo apt install sway waybar brightnessctl pulseaudio-utils rofi -y
 
