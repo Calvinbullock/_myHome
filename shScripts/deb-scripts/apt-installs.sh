@@ -47,7 +47,7 @@ if [[ $installFlatPakPkgs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     flatpak install io.gitlab.theevilskeleton.Upscaler
     flatpak install org.kde.krita
     #flatpak install flathub com.brave.Browser
-    # flatpak install com.discordapp.Discord
+    flatpak install com.discordapp.Discord
 fi
 
 # nvim from source installs =====================
@@ -60,6 +60,8 @@ fi
 echo "apt install zsh, vim, btop, neofetch, ncdu, alacritty, tmux, ranger, steam, and lm-sensers."
 sudo apt install neofetch -y
 #sudo apt install vim -y
+#sudo apt install gdb -y
+#sudo apt install cgdb -y
 sudo apt install btop -y
 sudo apt install zsh -y
 sudo apt install zoxide -y
@@ -73,7 +75,7 @@ sudo apt install tldr -y
 
 sudo apt install ripgrep -y
 sudo apt install fzf -y
-#sudo apt install bat -y
+sudo apt install bat -y
 
 # apps
 sudo apt install kitty -y
