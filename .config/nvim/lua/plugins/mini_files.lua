@@ -9,6 +9,8 @@ return {
             },
             windows = {
                 preview = true,
+                -- Width of preview window
+                width_preview = 50,
             },
         })
         vim.keymap.set('n', "<leader>fe", require('mini.files').open, {})
