@@ -74,6 +74,7 @@ alias temps="watch sensors"
 alias logd="cd /var/log"
 alias bat="batcat"
 alias cat="batcat"
+alias diff="diff -y --color=always"
 
 # Vim
 alias vimd="cd ~/.vim/"
