@@ -12,7 +12,7 @@ return {
             sections = {
                 -- lualine_a = {'mode'},
                 lualine_b = {'diff', 'diagnostics', 'selectioncount'},
-                lualine_c = {'filename'},
+                lualine_c = {{'filename', file_status = true, path = 1}},
                 -- lualine_x = {'encoding', 'fileformat'}, -- not that needed day to day
                 lualine_x = {''},
                 -- lualine_y = {''},
