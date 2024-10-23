@@ -69,7 +69,7 @@ return {
             -- rust_analyzer = {},
 
             ---- Web
-            html = { filetypes = { 'html', 'twig', 'javascriptreact', 'typescript', 'javascript'} },
+            -- html = { filetypes = { 'html', 'twig', 'javascriptreact', 'typescript', 'javascript'} },
             cssls = {},
             ts_ls = {},
             emmet_ls = {},
