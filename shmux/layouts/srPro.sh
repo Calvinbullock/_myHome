@@ -17,6 +17,8 @@ set_current_pane 2
 set_current_pane 1
 split_vertical 30%
 
+#new_window "notes"
+
 # at the end, select the window you want first
 select_window "code"
 
