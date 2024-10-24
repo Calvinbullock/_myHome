@@ -29,19 +29,12 @@ return {
                 completeopt = 'menu,menuone,noinsert',
             },
             mapping = cmp.mapping.preset.insert {
-
                 -- default complete scrolling is <c-n> & <c-p>
                 ['<C-y>'] = cmp.mapping.confirm { select = true },
 
                 ['<C-d>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
                 ['<C-Space>'] = cmp.mapping.complete {},
-
-                -- Uused hjkl in completion mapping
-                -- ['<C-j>'] = cmp.mapping.select_next_item(),
-                -- ['<C-k>'] = cmp.mapping.select_prev_item(),
-                -- ['<C-h>'] = cmp.mapping.confirm { select = true },
-                -- ['<C-l>'] = cmp.mapping.confirm { select = true },
             },
             sources = {
                 { name = 'nvim_lsp' },
