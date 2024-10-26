@@ -37,7 +37,7 @@ return {
         -- wrapper for git
         'tpope/vim-fugitive',
         config = function()
-            vim.keymap.set('n', '<leader>gg', ':Git<CR>')
+            vim.keymap.set('n', '<leader>g', ':Git<CR> :resize 100%<CR>')
             vim.keymap.set('n', '<leader>gc', ':Git commit -m "')
             vim.keymap.set('n', '<leader>gps', ':Git push<CR>')
             vim.keymap.set('n', '<leader>gpl', ':Git pull<CR>')
