@@ -6,41 +6,28 @@
 -- NOTE  not sure what these do yet
 --      Keymaps for better default experience
 --      See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>',      { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- pass through to shell
-vim.keymap.set('n', '<leader>1', ':!')
-
--- formatting whole buffer
-vim.keymap.set('n', '<leader>fm', 'gg=G<C-o>:w<CR>')
-
--- kill current buffer
-vim.keymap.set('n', '<leader>db', ':bdelete<CR>')
-
 -- next / prev buffers
-vim.keymap.set("n", "[b", ":bnext<CR>")
-vim.keymap.set("n", "]b", ":bprev<CR>")
+vim.keymap.set("n", "[b", ":bnext<CR>", {desc = 'next buffer' })
+vim.keymap.set("n", "]b", ":bprev<CR>", {desc = 'prev buffer' })
 
--- search the current word and replace with a new word in the entire file
-vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- buffer manipulation
+vim.keymap.set("n", "<leader>w", ":w<CR>",                                               {desc = 'save buffer'})
+vim.keymap.set('n', '<leader>db', ':bdelete<CR>',                                        {desc = 'kill current buffer'})
+vim.keymap.set('n', '<leader>fm', 'gg=G<C-o>:w<CR>',                                     {desc = 'formatting whole buffer'})
+vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>',                    {desc = 'disbale ZZ exit'})
+vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {desc = 'search-repace word (regex)'})
 
--- file save keybind
-vim.keymap.set("n", "<leader>w", ":w<CR>")
+-- misc
+vim.api.nvim_set_keymap("n", "<leader>fx", ":Ex<CR>",             {desc = 'open netrw', noremap = true, silent = true})
+vim.keymap.set('n', '<leader>nu', '<cmd>set relativenumber!<CR>', {desc = 'toggle relative line num'})
 
--- Disable ZZ exit behavior
-vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>')
-
--- sets keybind to open netrw (default file view)
-vim.api.nvim_set_keymap("n", "<leader>fx", ":Ex<CR>", {noremap = true, silent = true})
-
--- sets paste to paste over highlighted text with out over writing the register
-vim.keymap.set("x", "<leader>p", [["_dP]])
-
--- <leader>d... will dump to the void instead of yanking to the register
-vim.keymap.set("n", "<leader>d", '"_d')
-vim.keymap.set("v", "<leader>d", '"_d')
+-- yank / paste
+vim.keymap.set("x", "p", [["_dP]],                                {desc = 'p pasts with out yanking'})
+vim.keymap.set({"n", "v"}, "<leader>d", '"_d',                    {desc = 'dump to void on delete (no yank)'})
 
 -- [[ Highlight on yank ]]
 --   See `:help vim.highlight.on_yank()`
@@ -55,7 +42,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 --  Use CTRL+<HJKL> to switch between windows
 --    See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-H>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-H>', '<C-w><C-h>', { desc = 'Move focus to the left window'  })
 vim.keymap.set('n', '<C-L>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-J>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-K>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
@@ -67,9 +54,6 @@ vim.keymap.set('n', '<C-K>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- sets "<leader>y" to interface with system clipboard
 --vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 --vim.keymap.set("n", "<leader>y", [["+Y]])
-
--- reload current nvim config
---vim.api.nvim_set_keymap("n", "<leader>s", ":source %<cr>", {noremap = true, silent = true})
 
 -- Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
