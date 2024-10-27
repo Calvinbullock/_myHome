@@ -12,21 +12,6 @@ vim.api.nvim_set_hl(0, 'NoteHint', { fg = "#0B0B0B", bg = "#faa7e7" })
 vim.api.nvim_set_hl(0, 'BugHint', { fg = "#0B0B0B", bg = "#B03060" })
 vim.api.nvim_set_hl(0, 'WarnHint', { fg = "#0B0B0B", bg = "#E17862" })
 
--- set comment highlighting for following patterns
---[[
-// spaces - no Collin
-vim.fn.matchadd("TdoHint",  "\\( TODO \\)")
-vim.fn.matchadd("NoteHint", "\\( NOTE \\)")
-vim.fn.matchadd("BugHint",  "\\( BUG \\)")
-vim.fn.matchadd("WarnHint", "\\( WARN \\)")
-
-// no spaces
-vim.fn.matchadd("TdoHint",  "\\(TODO\\)")
-vim.fn.matchadd("WarnHint", "\\(WARN\\)")
-vim.fn.matchadd("NoteHint", "\\(NOTE\\)")
-vim.fn.matchadd("BugHint",  "\\(BUG\\)")
---]]
-
 vim.fn.matchadd("TdoHint",  "\\( TODO:\\)")
 vim.fn.matchadd("NoteHint", "\\( NOTE:\\)")
 vim.fn.matchadd("BugHint",  "\\( BUG:\\)")
