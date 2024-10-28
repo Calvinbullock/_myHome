@@ -36,8 +36,15 @@ NEWLINE=$'\n'
 
 # 2 Line prompt
 # path, git -- prompt
-PS1='${NEWLINE}% %{$fg[grey]%}in %{$fg[green]%}[ %~ ] %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+#PS1='${NEWLINE}% %{$fg[grey]%}in %{$fg[green]%}[ %~ ] %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+
+# 2 Line prompt
+# short path, git -- prompt
 #PS1='${NEWLINE}% %{$fg[grey]%}in %{$fg[green]%}[ %2~ ] %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+
+# 3 Line prompt
+# path -- git -- prompt
+PS1='${NEWLINE}% %{$fg[grey]%}in %{$fg[green]%}[ %~ ] ${NEWLINE}%{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
 
 # 3 line prompt
 # user, machine, git -- path -- prompt
