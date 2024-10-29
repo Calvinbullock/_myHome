@@ -23,7 +23,7 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- misc
 vim.api.nvim_set_keymap("n", "<leader>fx", ":Ex<CR>",             {desc = 'open netrw', noremap = true, silent = true})
-vim.keymap.set('n', '<leader>no', '<cmd>set relativenumber!<CR>', {desc = 'toggle relative line num'})
+vim.keymap.set('n', '<leader>nr', '<cmd>set relativenumber!<CR>', {desc = 'toggle relative line num'})
 
 -- yank / paste
 vim.keymap.set("x", "p", [["_dP]],                                {desc = 'p pasts with out yanking'})
