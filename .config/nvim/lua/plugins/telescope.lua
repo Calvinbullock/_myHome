@@ -8,6 +8,12 @@ return {
                 find_files = {
                     hidden = true,
                 },
+                current_buffer_fuzzy_find = {
+                    theme = "dropdown",
+                },
+                live_grep = {
+                    theme = "dropdown",
+                },
             },
         })
         local builtin = require("telescope.builtin")
