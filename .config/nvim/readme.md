@@ -49,6 +49,15 @@ Some lsp's/linters may need node installed.
 ## Less Used Keybinds
 - `ctrl + x + f` for file path completion in vim (default)
 - `shift + v + j` this will remove newlines and bring that content onto the line your cursor is on
+- folds
+    - `zc` collapse a fold 
+    - 'zo' open a fold
+    ```lua
+    -- fold settings I use
+    vim.o.foldmethod = 'expr'
+    vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+    vim.o.foldlevelstart = 99
+    ```
 
 ### I use this for live serving html/css/js
 `python3 -m http.server`

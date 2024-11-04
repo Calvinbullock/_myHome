@@ -44,6 +44,11 @@ vim.opt.wrap = false
 vim.opt.linebreak = false
 --vim.opt.textwidth = 80
 
+-- fold settings -- zo (opens a fold) -- zc (close a fold)
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.o.foldlevelstart = 99
+
 vim.opt.scrolloff = 15
 vim.opt.autoindent = true
 vim.opt.smartindent = true
