@@ -5,11 +5,10 @@ return {
         require('mini.files').setup({
             mappings = {
                 synchronize = "s",   -- default '='
-                go_in_plus = "<CR>", -- default 'L' 
+                go_in_plus = "<CR>", -- default 'L'
             },
             windows = {
                 preview = true,
-                -- Width of preview window
                 width_preview = 50,
             },
         })
