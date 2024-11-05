@@ -58,6 +58,7 @@ Some lsp's/linters may need node installed.
     vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
     vim.o.foldlevelstart = 99
     ```
+- 'sift + <>' will indent or outdent (chain able with nums)
 
 ### I use this for live serving html/css/js
 `python3 -m http.server`
