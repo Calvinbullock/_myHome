@@ -46,6 +46,18 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     pattern = '*',
 })
 
+-- remove trailing white spaces on save
+vim.api.nvim_create_autocmd('BufWritePre', {
+    pattern = '*',
+    callback = function ()
+        -- save cursor pos
+        local cursor_pos = vim.api.nvim_win_get_cursor(0)
+        vim.cmd([[%s/\s\+$//e]]) -- remove trailing white space
+        -- restore the cursor pos
+        vim.api.nvim_win_set_cursor(0, cursor_pos)
+    end,
+})
+
 --  Use CTRL+<HJKL> to switch between windows
 --    See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<C-H>', '<C-w><C-h>', { desc = 'Move focus to the left window'  })
