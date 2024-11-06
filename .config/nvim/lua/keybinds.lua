@@ -4,15 +4,14 @@
 --      			  [[ Keymaps ]]
 -- =====================================================
 
--- NOTE  not sure what these do yet
+-- NOTE:  not sure what these do yet
 --      Keymaps for better default experience
 --      See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>',      { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- use gh to move to the beginning of the line in normal mode
--- use gl to move to the end of the line in normal mode
+-- end / start of line keybinds
 vim.keymap.set({ "n", "v" }, "gh", "^", { desc = 'go to the beginning line' })
 vim.keymap.set({ "n", "v" }, "gl", "$", { desc = 'go to the end of the line' })
 
@@ -33,8 +32,8 @@ vim.api.nvim_set_keymap("n", "<leader>fx", ":Ex<CR>",             {desc = 'open 
 vim.keymap.set('n', '<leader>nr', '<cmd>set relativenumber!<CR>', {desc = 'toggle relative line num'})
 
 -- yank / paste
-vim.keymap.set("x", "p", [["_dP]],                                {desc = 'p pasts with out yanking'})
-vim.keymap.set({"n", "v"}, "<leader>d", '"_d',                    {desc = 'dump to void on delete (no yank)'})
+vim.keymap.set("x", "p", [["_dP]],             {desc = 'p pasts with out yanking'})
+vim.keymap.set({"n", "v"}, "<leader>d", '"_d', {desc = 'dump to void on delete (no yank)'})
 
 -- [[ Highlight on yank ]]
 --   See `:help vim.highlight.on_yank()`
@@ -58,7 +57,7 @@ vim.keymap.set('n', '<C-K>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 --vim.keymap.set("i", "jk", "<esc>")
 
 -- NOTE  this is already implemented with options
--- sets "<leader>y" to interface with system clipboard
+--  sets "<leader>y" to interface with system clipboard
 --vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 --vim.keymap.set("n", "<leader>y", [["+Y]])
 
