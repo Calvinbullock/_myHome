@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 return {
     'neovim/nvim-lspconfig',
     dependencies = {

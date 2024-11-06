@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 return {
     "catppuccin/nvim",
     lazy = false,
@@ -16,7 +18,7 @@ return {
         })
         vim.cmd.colorscheme "catppuccin"
 
-        -- Line numbers re-color 
+        -- Line numbers re-color
         function LineNumberColors()
             vim.api.nvim_set_hl(0, 'LineNr', { fg='#faa7e7', bold=false })
         end
