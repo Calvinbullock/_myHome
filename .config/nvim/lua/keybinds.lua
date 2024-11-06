@@ -1,7 +1,7 @@
 ---@diagnostic disable: undefined-global
 
 -- =====================================================
---      			  [[ Keymaps ]]     		      
+--      			  [[ Keymaps ]]
 -- =====================================================
 
 -- NOTE  not sure what these do yet
@@ -11,9 +11,15 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>',      { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- use gh to move to the beginning of the line in normal mode
+-- use gl to move to the end of the line in normal mode
+vim.keymap.set({ "n", "v" }, "gh", "^", { desc = 'go to the beginning line' })
+vim.keymap.set({ "n", "v" }, "gl", "$", { desc = 'go to the end of the line' })
+
 -- next / prev buffers
 vim.keymap.set("n", "[b", ":bnext<CR>", {desc = 'next buffer' })
 vim.keymap.set("n", "]b", ":bprev<CR>", {desc = 'prev buffer' })
+--vim.keymap.set("n", "<leader>a", "C-^", {desc = 'alt file' })
 
 -- buffer manipulation
 vim.keymap.set("n", "<leader>w", ":w<CR>",                                               {desc = 'save buffer'})
