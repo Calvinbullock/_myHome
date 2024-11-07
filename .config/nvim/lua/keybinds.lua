@@ -23,8 +23,9 @@ vim.keymap.set("n", "]b", ":bprev<CR>", {desc = 'prev buffer' })
 -- buffer manipulation
 vim.keymap.set("n", "<leader>w", ":w<CR>",                                               {desc = 'save buffer'})
 vim.keymap.set('n', '<leader>db', ':bdelete<CR>',                                        {desc = 'kill current buffer'})
-vim.keymap.set('n', '==', 'gg=G<C-o>:w<CR>',                                     {desc = 'formatting whole buffer'})
-vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>',                    {desc = 'disbale ZZ exit'})
+vim.keymap.set('n', '<leader>=', 'gg=G<C-o>:w<CR>',                                      {desc = 'formatting whole buffer'})
+vim.keymap.set('n', '<leader>x', ':q<CR>',                                               {desc = 'quite with out save'})
+--vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>',                    {desc = 'disbale ZZ exit'})
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {desc = 'search-repace word (regex)'})
 
 -- misc
