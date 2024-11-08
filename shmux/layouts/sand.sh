@@ -12,7 +12,7 @@ new_session
 # then, layout your session
 rename_window "code"
 set_current_pane 1
-split_horizontal 85%
+split_horizontal 90%
 set_current_pane 2
 
 # at the end, select the window you want first

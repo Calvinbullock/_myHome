@@ -13,7 +13,7 @@ new_session
 rename_window "code"
 set_current_pane 1
 run_command "cd CSE330-group3/"
-split_horizontal 85%
+split_horizontal 90%
 set_current_pane 2
 set_current_pane 1
 split_vertical 30%
