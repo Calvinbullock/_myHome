@@ -44,12 +44,14 @@ NEWLINE=$'\n'
 
 # 3 Line prompt
 # path -- git -- prompt
-PS1='${NEWLINE}% %{$fg[grey]%}in %{$fg[green]%}[ %~ ]${NEWLINE}%{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+#PS1='${NEWLINE}% %{$fg[grey]%}in %{$fg[green]%}[ %~ ]${NEWLINE}%{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
+
+PS1='${NEWLINE}% %{$fg[grey]%}in %{$fg[green]%}[ %~ ]${NEWLINE}%{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%(?.%{$fg[green]%} ❯.%{$fg[red]%} ❯)%{$reset_color%} '
 
 # 3 line prompt
 # user, machine, git -- path -- prompt
 #PS1='${NEWLINE}%B%{$fg[magenta]%}%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%M %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty) ${NEWLINE}%{$fg[grey]%}in %{$fg[green]%}[ %~ ] ${NEWLINE}%(?.%{$fg[green]%}->.%{$fg[red]%}->)%{$reset_color%} '
- 
+
 # 2 line minimal prompt with barArrow
 # arrow path, git -- arrow prompt
 #PS1='${NEWLINE}%{$fg[white]%}┌──%{$fg[green]%}[ %~ ] %{$fg[grey]%}on %{$fg[blue]%}$(parse_git_branch)$(parse_git_dirty)${NEWLINE}%{$fg[white]%}└─%(?.%{$fg[green]%}>.%{$fg[red]%}>)%{$reset_color%} '
@@ -146,11 +148,11 @@ export EDITOR="nvim"
 # alert off
 unsetopt beep
 
-# fzf intagrations 
+# fzf intagrations
 #   WARN  not working yet
 # eval "$(fzf --zsh)"
 
-# zoxide intagrations 
+# zoxide intagrations
 eval "$(zoxide init zsh)"
 
 
