@@ -1,13 +1,16 @@
 ---@diagnostic disable: undefined-global
 
 -- =====================================================
---              [[ netrw functions ]]
+--              [[ netrw functions / opts ]]
 -- src: https://www.reddit.com/r/neovim/comments/1dc78r4/custom_netrw_workflow_settings_maps_etc/
 -- =====================================================
 
 -- Disable netrw banner and set list style to tree(3)
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
+
+-- netrw Disable highlighting, set read-only, etc.
+vim.g.netrw_bufsettings = 'nonu nornu noma ro nobl'
 
 -- Function to toggle the netrw file browser
 function ToggleNetRW()

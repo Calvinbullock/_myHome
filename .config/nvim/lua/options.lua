@@ -21,9 +21,6 @@ vim.fn.matchadd("WarnHint", "\\( WARN:\\)")
 -- set the vim shell pass through to bash
 vim.opt.shellcmdflag = '-ic'
 
--- netrw Disable highlighting, set read-only, etc.
-vim.g.netrw_bufsettings = 'nonu nornu noma ro nobl'
-
 -- Spell check settings
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
