@@ -35,7 +35,7 @@ vim.opt.shiftwidth = 4
 
 -- line wrap / break
 vim.opt.wrap = false
-vim.opt.linebreak = false
+vim.opt.linebreak = true
 --vim.opt.textwidth = 80
 
 -- Other
