@@ -4,6 +4,7 @@ return {
     config = function ()
         require('mini.files').setup({
             mappings = {
+                close       = '<esc>',
                 synchronize = "s",   -- default '='
                 go_in_plus = "<CR>", -- default 'L'
             },
