@@ -33,7 +33,7 @@ vim.api.nvim_set_keymap("n", "<leader>fx", ":Ex<CR>",             {desc = 'open 
 vim.keymap.set('n', '<leader>nr', '<cmd>set relativenumber!<CR>', {desc = 'toggle relative line num'})
 
 -- splits
-vim.keymap.set('n', '<leader>h', '<cmd>split<return>',  {desc = 'horizontal split'})
+vim.keymap.set('n', '<leader>b', '<cmd>split<return>',  {desc = 'horizontal split'})
 vim.keymap.set('n', '<leader>v', '<cmd>vsplit<return>', {desc = 'vertical split' })
 -- vim.keymap.set('n', '<leader>', '<cmd>vertical resize -2<return>',   { desc = 'decrease rows in the current window' })
 -- vim.keymap.set('n', '<leader>', '<cmd>vertical resize +2<return>',   { desc = 'increase rows in the current window' })
