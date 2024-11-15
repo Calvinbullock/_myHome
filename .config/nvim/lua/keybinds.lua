@@ -32,6 +32,14 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.api.nvim_set_keymap("n", "<leader>fx", ":Ex<CR>",             {desc = 'open netrw', noremap = true, silent = true})
 vim.keymap.set('n', '<leader>nr', '<cmd>set relativenumber!<CR>', {desc = 'toggle relative line num'})
 
+-- splits
+vim.keymap.set('n', '<leader>h', '<cmd>split<return>',  {desc = 'horizontal split'})
+vim.keymap.set('n', '<leader>v', '<cmd>vsplit<return>', {desc = 'vertical split' })
+-- vim.keymap.set('n', '<leader>', '<cmd>vertical resize -2<return>',   { desc = 'decrease rows in the current window' })
+-- vim.keymap.set('n', '<leader>', '<cmd>vertical resize +2<return>',   { desc = 'increase rows in the current window' })
+-- vim.keymap.set('n', '<leader>', '<cmd>horizontal resize -2<return>', { desc = 'decrease columns in the current window' })
+-- vim.keymap.set('n', '<leader>', '<cmd>horizontal resize +2<return>', { desc = 'increase columns in the current window' })
+
 -- yank / paste
 vim.keymap.set("x", "p", [["_dP]],             {desc = 'p pasts with out yanking'})
 vim.keymap.set({"n", "v"}, "<leader>d", '"_d', {desc = 'dump to void on delete (no yank)'})
