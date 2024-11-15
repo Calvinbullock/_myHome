@@ -11,12 +11,11 @@ return {
             },
             sections = {
                 -- lualine_a = {'mode'},
-                lualine_b = {'branch', 'diff', 'diagnostics', 'selectioncount'},
-                lualine_c = {{'filename', file_status = true, path = 1}},
-                -- lualine_x = {'encoding', 'fileformat'}, -- not that needed day to day
-                lualine_x = {''},
-                -- lualine_y = {''},
-                -- lualine_z = {''},
+                lualine_b = {'diff', 'diagnostics', 'selectioncount', {'filename', file_status = true, path = 1}},
+                lualine_c = {''},
+                lualine_x = {''}, -- {'encoding', 'fileformat'}
+                lualine_y = {'branch', 'progress'},
+                lualine_z = {'location'}
             },
         })
     end,
