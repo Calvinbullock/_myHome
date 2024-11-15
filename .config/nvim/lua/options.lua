@@ -31,6 +31,7 @@ vim.g.netrw_bufsettings = 'nonu nornu noma ro nobl'
 -- Spell check settings
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
+--vim.opt.spelloptions = 'camel'
 
 -- See `:help vim.o`
 vim.opt.nu = true
