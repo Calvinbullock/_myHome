@@ -35,6 +35,7 @@ vim.keymap.set('n', '<leader>nr', '<cmd>set relativenumber!<CR>', {desc = 'toggl
 -- splits
 vim.keymap.set('n', '<leader>b', '<cmd>split<return>',  {desc = 'horizontal split'})
 vim.keymap.set('n', '<leader>v', '<cmd>vsplit<return>', {desc = 'vertical split' })
+-- NOTE: no keybinds yet
 -- vim.keymap.set('n', '<leader>', '<cmd>vertical resize -2<return>',   { desc = 'decrease rows in the current window' })
 -- vim.keymap.set('n', '<leader>', '<cmd>vertical resize +2<return>',   { desc = 'increase rows in the current window' })
 -- vim.keymap.set('n', '<leader>', '<cmd>horizontal resize -2<return>', { desc = 'decrease columns in the current window' })
