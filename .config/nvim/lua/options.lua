@@ -48,6 +48,7 @@ vim.opt.linebreak = false
 --vim.opt.textwidth = 80
 
 vim.opt.scrolloff = 15
+vim.opt.cmdheight = 0
 
 vim.opt.autoindent = true
 vim.opt.smartindent = true
