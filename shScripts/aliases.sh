@@ -22,7 +22,7 @@ alias zrc="nvim ~/_myHome/.zshrc"
 alias zso="source ~/_myHome/.zshrc"
 alias swapd="cd ~/.local/state/nvim/swap && ls -la" # where unwritten (n)vim buffers are saved
 
-# shell 
+# shell
 alias E="exit"
 alias c="clear"
 alias reboot="sudo reboot"
@@ -41,10 +41,9 @@ alias l='ls -CF'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias rm="rm -vi"
-alias rmr="rm -vir"
-alias cp="cp -vi"
-alias mv="mv -vi"
+alias rmr="rm -vr"
+alias cp="cp -v"
+alias mv="mv -v"
 
 # Grep
 alias grep='grep --color=auto'
@@ -74,7 +73,7 @@ alias gst="git status"
 alias ga="git add"
 alias git-upstream="git push --set-upstream origin"
 #alias gcm="~/_myHome/shScripts/tools./git-commit.sh"
-#git ls-files --other 
+#git ls-files --other
 #alias gap="git add -p"
 #alias gr="git restore"
 
