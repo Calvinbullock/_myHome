@@ -18,9 +18,6 @@ vim.fn.matchadd("NoteHint", "\\( NOTE:\\)")
 vim.fn.matchadd("BugHint",  "\\( BUG:\\)")
 vim.fn.matchadd("WarnHint", "\\( WARN:\\)")
 
--- set the vim shell pass through to bash
-vim.opt.shellcmdflag = '-ic'
-
 -- Spell check settings
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
@@ -30,46 +27,40 @@ vim.opt.spelllang = 'en_us'
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
--- Other
+-- tabs
 vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
 
+-- line wrap / break
 vim.opt.wrap = false
 vim.opt.linebreak = false
 --vim.opt.textwidth = 80
 
+-- Other
 vim.opt.scrolloff = 15
-vim.opt.cmdheight = 0
+--vim.opt.cmdheight = 0                   -- cmd line only shows when typing a cmd
+vim.opt.isfname:append("@-@")           -- support @ in filenames
+vim.o.mouse = 'a'                       -- Enable mouse mode
+vim.o.clipboard = 'unnamedplus'         -- Sync clipboard between OS and Neovim.
+vim.o.undofile = true                   -- Save undo history
+vim.o.completeopt = 'menuone,noselect'  -- Set completeopt to have a better completion experience
 
+-- indention
 vim.opt.autoindent = true
 vim.opt.smartindent = true
+vim.o.breakindent = true        -- sets wrap indent on to match line indention
 
 -- fold settings -- zo (opens a fold) -- zc (close a fold)
 vim.o.foldmethod = 'expr'
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.o.foldlevelstart = 99
 
--- support @ in filenames
-vim.opt.isfname:append("@-@")
-
--- Set highlight on search
+-- highlight on search
 vim.o.hlsearch = false
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-
--- Enable mouse mode
-vim.o.mouse = 'a'
-
--- Sync clipboard between OS and Neovim.
-vim.o.clipboard = 'unnamedplus'
-
--- Enable break indent
-vim.o.breakindent = true
-
--- Save undo history
-vim.o.undofile = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true
@@ -84,9 +75,7 @@ vim.opt.updatetime = 50
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 
--- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
-
--- NOTE  You should make sure your terminal supports this
+-- Colors
+--      NOTE  You should make sure your terminal supports this
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
