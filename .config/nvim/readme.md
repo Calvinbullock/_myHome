@@ -2,27 +2,25 @@
 Notes and useful tips for my nvim usage and configuration.
 
 ## Future plans For Config
-- keybind for wrap
-- Set permenent macros for indentation
-- set a comment highlight for question?
+- fix comment highlights with split
 
 ## Dependancies!!
 Used in telescope for file finding among other things.
-- `sudo apt install fzf` - if on debian based linux
-- `sudo apt install ripgrep` - if on debian based linux
+- `sudo apt install fzf` - if on Debian based linux
+- `sudo apt install ripgrep` - if on Debian based Linux
 
 Some lsp's/linters may need node installed.
-- `sudo apt-get install node` - if on debian based linux
+- `sudo apt-get install node` - if on Debian based Linux
 
 ## Setting up Project Specific Settings
 - put a `.exrc` file in your project root
-    - **USE WITH CAUTION** off by defualt 
+    - **USE WITH CAUTION** I have it off by default
     - a `.exrc` file is written in vim script
     - ex `setlocal shiftwidth=3`
 
 - language specifics
     - use `after/ftplugin` this will load ftpugins after the other configs.
-    - make a file in after/ftplugin named after the file extension you are setting up 
+    - make a file in after/ftplugin named after the file extension you are setting up
         - EX: "textfile", "cpp". "html"
 
 ## lsp/linters of choice
@@ -43,24 +41,22 @@ Some lsp's/linters may need node installed.
     - emmet-ls          (HTMl snippets)
     - css-lsp
 
-## vim defualt Keybinds
-- `z= --- this will use built in spell correction`
-
-## Less Used Keybinds
+## Cool Keybinds
+- `z=` --- this will use built in spell correction
 - `ctrl + x + f` for file path completion in vim (default)
 - `shift + v + j` this will remove newlines and bring that content onto the line your cursor is on
 - folds
-    - `zc` collapse a fold 
-    - 'zo' open a fold
+    - `zc` collapse a fold
+    - `zo` open a fold
     ```lua
     -- fold settings I use
     vim.o.foldmethod = 'expr'
     vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
     vim.o.foldlevelstart = 99
     ```
-- 'sift + <>' will indent or outdent (chain able with nums)
+- `sift + <>` will indent or outdent (chain-able with nums)
 
-### I use this for live serving html/css/js
+#### I use this for live serving html/css/js
 `python3 -m http.server`
 
 ## Note from kickstart Dev
