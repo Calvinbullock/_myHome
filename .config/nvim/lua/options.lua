@@ -21,10 +21,6 @@ vim.fn.matchadd("WarnHint", "\\( WARN:\\)")
 -- set the vim shell pass through to bash
 vim.opt.shellcmdflag = '-ic'
 
--- Disable netrw banner and set list style to tree(3)
-vim.g.netrw_banner = 0
-vim.g.netrw_liststyle = 3
-
 -- netrw Disable highlighting, set read-only, etc.
 vim.g.netrw_bufsettings = 'nonu nornu noma ro nobl'
 
