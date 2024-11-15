@@ -19,6 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("options")
 require("keybinds")
-require("netrw-conf")
+require("netrwconf")
 require("autocmd")
 require("lazy").setup("plugins")
