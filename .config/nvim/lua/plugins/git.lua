@@ -6,7 +6,13 @@ return {
         'lewis6991/gitsigns.nvim',
         config = function ()
             require('gitsigns').setup{
-                -- See `:help gitsigns.txt`
+
+                current_line_blame = true,
+                current_line_blame_formatter = '<author>, <author_time:%d-%m-%y> - <summary>',
+                current_line_blame_opts = {
+                    delay = 200,
+                },
+
                 signs = {
                     add = { text = '+' },
                     change = { text = '~' },
@@ -14,6 +20,7 @@ return {
                     topdelete = { text = '‾' },
                     changedelete = { text = '~' },
                 },
+
                 on_attach = function(bufnr)
                     -- don't override the built-in and fugitive keymaps
                     local gs = package.loaded.gitsigns
