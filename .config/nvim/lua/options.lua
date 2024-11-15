@@ -7,17 +7,6 @@
 -- WARN: USE WITH CAUTION
 vim.opt.exrc = false
 
--- Create highlight groups for comment patterns
-vim.api.nvim_set_hl(0, 'TdoHint', { fg = "#0B0B0B", bg = "#89dceb" })
-vim.api.nvim_set_hl(0, 'NoteHint', { fg = "#0B0B0B", bg = "#faa7e7" })
-vim.api.nvim_set_hl(0, 'BugHint', { fg = "#0B0B0B", bg = "#B03060" })
-vim.api.nvim_set_hl(0, 'WarnHint', { fg = "#0B0B0B", bg = "#E17862" })
-
-vim.fn.matchadd("TdoHint",  "\\( TODO:\\)")
-vim.fn.matchadd("NoteHint", "\\( NOTE:\\)")
-vim.fn.matchadd("BugHint",  "\\( BUG:\\)")
-vim.fn.matchadd("WarnHint", "\\( WARN:\\)")
-
 -- Spell check settings
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
@@ -41,6 +30,7 @@ vim.opt.linebreak = true
 -- Other
 vim.opt.scrolloff = 15
 --vim.opt.cmdheight = 0                   -- cmd line only shows when typing a cmd
+vim.opt.swapfile = false                -- Disable swapfile
 vim.opt.isfname:append("@-@")           -- support @ in filenames
 vim.o.mouse = 'a'                       -- Enable mouse mode
 vim.o.clipboard = 'unnamedplus'         -- Sync clipboard between OS and Neovim.
