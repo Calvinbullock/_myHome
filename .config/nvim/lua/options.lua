@@ -33,10 +33,11 @@ vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
 --vim.opt.spelloptions = 'camel'
 
--- See `:help vim.o`
+-- line nums
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- Other
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
@@ -46,14 +47,15 @@ vim.opt.wrap = false
 vim.opt.linebreak = false
 --vim.opt.textwidth = 80
 
+vim.opt.scrolloff = 15
+
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+
 -- fold settings -- zo (opens a fold) -- zc (close a fold)
 vim.o.foldmethod = 'expr'
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.o.foldlevelstart = 99
-
-vim.opt.scrolloff = 15
-vim.opt.autoindent = true
-vim.opt.smartindent = true
 
 -- support @ in filenames
 vim.opt.isfname:append("@-@")
