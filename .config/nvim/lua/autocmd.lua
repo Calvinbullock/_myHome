@@ -38,6 +38,7 @@ vim.api.nvim_set_hl(0, 'WarnHint', { fg = "#0B0B0B", bg = "#E17862" })
 vim.api.nvim_create_autocmd({'BufEnter', 'BufWritePre'}, {
     callback = function()
         vim.fn.matchadd("TdoHint", "\\( TODO:\\)")
+        vim.fn.matchadd("TdoHint", "\\(TODO:\\)")
         vim.fn.matchadd("NoteHint", "\\( NOTE:\\)")
         vim.fn.matchadd("BugHint", "\\( BUG:\\)")
         vim.fn.matchadd("WarnHint", "\\( WARN:\\)")
