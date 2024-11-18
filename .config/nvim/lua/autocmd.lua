@@ -5,8 +5,10 @@
 --      		  [[ Auto Commands ]]
 -- =====================================================
 
--- Highlight on yank
---   See `:help vim.highlight.on_yank()`
+-- ===========================================
+--  HIGHLIGHT ON YANK
+--      See `:help vim.highlight.on_yank()`
+-- ==========================================
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()
@@ -16,7 +18,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     pattern = '*',
 })
 
--- remove trailing white spaces on save
+-- ===========================================
+--  ON SAVE
+--      remove trailing white spaces on save
+-- ==========================================
 vim.api.nvim_create_autocmd('BufWritePre', {
     pattern = '*',
     callback = function ()
@@ -28,13 +33,17 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     end,
 })
 
+-- [[
 -- Create highlight groups for comment patterns
 vim.api.nvim_set_hl(0, 'TdoHint', { fg = "#0B0B0B", bg = "#89dceb" })
 vim.api.nvim_set_hl(0, 'NoteHint', { fg = "#0B0B0B", bg = "#faa7e7" })
 vim.api.nvim_set_hl(0, 'BugHint', { fg = "#0B0B0B", bg = "#B03060" })
 vim.api.nvim_set_hl(0, 'WarnHint', { fg = "#0B0B0B", bg = "#E17862" })
 
--- highlight on buf-enter or buf-save
+-- ===========================================
+--  HIGHLIGHT ON SAVE / BUFFER ENTER
+--      highlight on buf-enter or buf-save
+-- ==========================================
 vim.api.nvim_create_autocmd({'BufEnter', 'BufWritePre'}, {
     callback = function()
         vim.fn.matchadd("TdoHint", "\\( TODO:\\)")
@@ -44,3 +53,4 @@ vim.api.nvim_create_autocmd({'BufEnter', 'BufWritePre'}, {
         vim.fn.matchadd("WarnHint", "\\( WARN:\\)")
     end
 })
+-- ]]
