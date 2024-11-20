@@ -15,7 +15,7 @@ set_current_pane 1
 split_horizontal 90%
 set_current_pane 2
 set_current_pane 1
-split_vertical 30%
+split_vertical 70%
 
 #new_window "notes"
 

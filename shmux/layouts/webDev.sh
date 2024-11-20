@@ -3,7 +3,7 @@
 source $HOME/_myHome/shmux/./functions.sh
 
 # Set up your project with a root dir, and name
-project_root ~/Documents/_Fall-2024/webDev/CSE330-group3/
+project_root ~/Documents/_Fall-2024/webDev/
 session_name "webDev"
 
 # first, create your session
@@ -16,7 +16,7 @@ run_command "cd CSE330-group3/"
 split_horizontal 90%
 set_current_pane 2
 set_current_pane 1
-split_vertical 30%
+split_vertical 70%
 
 new_window "notes"
 
