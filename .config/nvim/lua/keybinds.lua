@@ -25,6 +25,7 @@ vim.keymap.set("n", "<leader>w", ":w<CR>",          {desc = 'save buffer'})
 vim.keymap.set('n', '<leader>db', ':bdelete<CR>',   {desc = 'kill current buffer'})
 vim.keymap.set('n', '<leader>=', 'gg=G<C-o>:w<CR>', {desc = 'formatting whole buffer'})
 vim.keymap.set('n', '<leader>x', ':q<CR>',          {desc = 'quite with out save'})
+vim.keymap.set('n', '<leader>a', '<C-^>',           {desc = 'swap to alternate file'})
 --vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>',                    {desc = 'disbale ZZ exit'})
 
 -- misc
