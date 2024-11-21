@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 return {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
@@ -16,9 +18,11 @@ return {
         local cmp = require 'cmp'
         local luasnip = require 'luasnip'
 
+        -- luasnip setup
         require('luasnip.loaders.from_vscode').lazy_load()
         luasnip.config.setup {}
 
+        -- cmp setup
         cmp.setup {
             snippet = {
                 expand = function(args)
@@ -44,6 +48,23 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
                 { name = 'path' },
+            },
+            formatting = {
+                fields = { 'abbr', 'kind', 'menu' },
+                format = function(entry, vim_item)
+                    local maxwidth = 50
+                    local ellipsis_char = '…'
+                    if vim.fn.strchars(vim_item.abbr) > maxwidth then
+                        vim_item.abbr = vim.fn.strcharpart(vim_item.abbr, 0, maxwidth) .. ellipsis_char
+                    end
+                    vim_item.menu = ({
+                        nvim_lsp = 'LSP',
+                        luasnip = 'Snip',
+                        buffer = 'Buf',
+                        path = 'Path',
+                    })[entry.source.name]
+                    return vim_item
+                end,
             },
         }
     end
