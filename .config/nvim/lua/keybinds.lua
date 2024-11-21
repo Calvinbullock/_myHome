@@ -12,8 +12,13 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- end / start of line keybinds
-vim.keymap.set({ "n", "v" }, "gh", "^", { desc = 'go to the beginning line' })
-vim.keymap.set({ "n", "v" }, "gl", "$", { desc = 'go to the end of the line' })
+vim.keymap.set({ "n", "x", "o"}, "gh", "^", { desc = 'go to the beginning line' })
+vim.keymap.set({ "n", "x", "o"}, "gl", "$", { desc = 'go to the end of the line' })
+-- jank way to use the keybind above with y and d
+--vim.keymap.set({ "n", "v" }, "gld", "d$", { desc = 'Delete to end of line' })
+--vim.keymap.set({ "n", "v" }, "ghd", "d^", { desc = 'Delete to beginning of line' })
+--vim.keymap.set({ "n", "v" }, "gly", "y$", { desc = 'Yank to end of line' })
+--vim.keymap.set({ "n", "v" }, "ghy", "y^", { desc = 'Yank to beginning of line' })
 
 -- next / prev buffers
 vim.keymap.set("n", "[b", ":bnext<CR>", {desc = 'next buffer' })
