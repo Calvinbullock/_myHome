@@ -16,6 +16,9 @@ return {
                 live_grep = {
                     theme = "dropdown",
                 },
+                lsp_references = {
+                    theme = "dropdown",
+                },
             },
         })
         local builtin = require("telescope.builtin")
