@@ -18,7 +18,6 @@ vim.keymap.set({ "n", "x", "o"}, "gl", "$", { desc = 'go to the end of the line'
 -- next / prev buffers
 vim.keymap.set("n", "[b", ":bnext<CR>", {desc = 'next buffer' })
 vim.keymap.set("n", "]b", ":bprev<CR>", {desc = 'prev buffer' })
---vim.keymap.set("n", "<leader>a", "C-^", {desc = 'alt file' })
 
 -- buffer manipulation
 vim.keymap.set("n", "<leader>w", ":w<CR>",          {desc = 'save buffer'})
@@ -29,7 +28,8 @@ vim.keymap.set('n', '<leader>a', '<C-^>',           {desc = 'swap to alternate f
 --vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>',                    {desc = 'disbale ZZ exit'})
 
 -- misc
-vim.api.nvim_set_keymap("n", "<leader>fx", ":Ex<CR>",             {desc = 'open netrw', noremap = true, silent = true})
+vim.keymap.set("n", "<leader>fx", ":Ex<CR>",                      {desc = 'open netrw', noremap = true, silent = true})
+vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float,      {desc = 'open diagnostic float'})
 vim.keymap.set('n', '<leader>nr', '<cmd>set relativenumber!<CR>', {desc = 'toggle relative line num'})
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {desc = 'search-repace word (regex)'})
 
@@ -46,7 +46,7 @@ vim.keymap.set('n', '<leader>v', '<cmd>vsplit<return>', {desc = 'vertical split'
 vim.keymap.set("x", "p", [["_dP]],             {desc = 'p pasts with out yanking'})
 vim.keymap.set({"n", "v"}, "<leader>d", '"_d', {desc = 'dump to void on delete (no yank)'})
 
---  Use CTRL+<HJKL> to switch between windows
+-- switch between windows / panes
 --    See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<C-H>', '<C-w><C-h>', { desc = 'Move focus to the left window'  })
 vim.keymap.set('n', '<C-L>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
