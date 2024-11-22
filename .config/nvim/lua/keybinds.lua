@@ -15,17 +15,12 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set({ "n", "x", "o"}, "gh", "^", { desc = 'go to the beginning line' })
 vim.keymap.set({ "n", "x", "o"}, "gl", "$", { desc = 'go to the end of the line' })
 
--- next / prev buffers
-vim.keymap.set("n", "[b", ":bnext<CR>", {desc = 'next buffer' })
-vim.keymap.set("n", "]b", ":bprev<CR>", {desc = 'prev buffer' })
-
 -- buffer manipulation
 vim.keymap.set("n", "<leader>w", ":w<CR>",          {desc = 'save buffer'})
 vim.keymap.set('n', '<leader>db', ':bdelete<CR>',   {desc = 'kill current buffer'})
 vim.keymap.set('n', '<leader>=', 'gg=G<C-o>:w<CR>', {desc = 'formatting whole buffer'})
 vim.keymap.set('n', '<leader>x', ':q<CR>',          {desc = 'quite with out save'})
 vim.keymap.set('n', '<leader>a', '<C-^>',           {desc = 'swap to alternate file'})
---vim.keymap.set('n', 'ZZ', '<cmd>echo "Use :wq to save and quit"<CR>',                    {desc = 'disbale ZZ exit'})
 
 -- misc
 vim.keymap.set("n", "<leader>fx", ":Ex<CR>",                      {desc = 'open netrw', noremap = true, silent = true})
@@ -42,8 +37,9 @@ vim.keymap.set('n', '<leader>v', '<cmd>vsplit<return>', {desc = 'vertical split'
 -- vim.keymap.set('n', '<leader>', '<cmd>horizontal resize +2<return>', { desc = 'increase columns in the current window' })
 
 -- yank / paste
-vim.keymap.set("x", "p", [["_dP]],             {desc = 'p pasts with out yanking'})
-vim.keymap.set({"n", "v"}, "<leader>d", '"_d', {desc = 'dump to void on delete (no yank)'})
+vim.keymap.set("x",        "p", [["_dP]],      {desc = 'p pasts with out yanking'})
+vim.keymap.set({"n", "v"}, "<leader>x", '"_x', {desc = 'dump to void on delete (no yank)'})
+vim.keymap.set({"n", "v"}, "<leader>d", '"_d', {desc = 'dump to void on delete (no yank)'}) -- BUG: needs an extra d press...
 
 -- switch between windows / panes
 --    See `:help wincmd` for a list of all window commands
