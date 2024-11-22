@@ -19,7 +19,7 @@ vim.keymap.set({ "n", "x", "o"}, "gl", "$", { desc = 'go to the end of the line'
 vim.keymap.set("n", "<leader>w", ":w<CR>",          {desc = 'save buffer'})
 vim.keymap.set('n', '<leader>db', ':bdelete<CR>',   {desc = 'kill current buffer'})
 vim.keymap.set('n', '<leader>=', 'gg=G<C-o>:w<CR>', {desc = 'formatting whole buffer'})
-vim.keymap.set('n', '<leader>x', ':q<CR>',          {desc = 'quite with out save'})
+vim.keymap.set('n', '<leader>q', ':q<CR>',          {desc = 'quite with out save'})
 vim.keymap.set('n', '<leader>a', '<C-^>',           {desc = 'swap to alternate file'})
 
 -- misc
