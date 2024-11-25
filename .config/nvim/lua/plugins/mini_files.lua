@@ -13,7 +13,7 @@ return {
                 width_preview = 50,
             },
         })
-        vim.keymap.set('n', "<leader>fe", require('mini.files').open, {})
+        vim.keymap.set('n', "<leader>fe", require('mini.files').open, { desc = 'open milin file exsplore' })
     end,
 }
 
