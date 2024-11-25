@@ -6,6 +6,17 @@
 -- =====================================================
 
 -- ===========================================
+--  SAVE ON INSERT MODE EXIT
+--      Basically auto save
+-- ==========================================
+vim.api.nvim_create_autocmd('InsertLeave', {
+    pattern = '*',
+    callback = function()
+        vim.cmd('w')
+    end,
+})
+
+-- ===========================================
 --  HIGHLIGHT ON YANK
 --      See `:help vim.highlight.on_yank()`
 -- ==========================================
