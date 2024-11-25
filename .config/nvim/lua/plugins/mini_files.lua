@@ -15,7 +15,7 @@ return {
                 width_preview = 50,
             },
         })
-        vim.keymap.set('n', "<leader>fe", require('mini.files').open, { desc = 'open mini file exsplorer' })
+        vim.keymap.set('n', "<leader>fe", require('mini.files').open, { desc = 'open mini [f]ile [e]xsplorer' })
     end,
 }
 
