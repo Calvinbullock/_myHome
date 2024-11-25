@@ -19,7 +19,7 @@ vim.keymap.set({ "n", "x", "o"}, "gl", "$", { desc = 'go to the end of the line'
 vim.keymap.set("n", "<leader>w", ":w<CR>",          {desc = 'save buffer'})
 vim.keymap.set('n', '<leader>db', ':bdelete<CR>',   {desc = 'kill current buffer'})
 vim.keymap.set('n', '<leader>=', 'gg=G<C-o>:w<CR>', {desc = 'formatting whole buffer'})
-vim.keymap.set('n', '<leader>q', ':q<CR>',          {desc = 'quite with out save'})
+vim.keymap.set('n', '<leader>c', ':q<CR>',          {desc = 'quite with out save'})
 vim.keymap.set('n', '<leader>a', '<C-^>',           {desc = 'swap to alternate file'})
 
 -- misc
@@ -38,8 +38,8 @@ vim.keymap.set('n', '<leader>v', '<cmd>vsplit<return>', {desc = 'vertical split'
 
 -- yank / paste
 vim.keymap.set("x",        "p", [["_dP]],      {desc = 'p pasts with out yanking'})
-vim.keymap.set({"n", "v"}, "<leader>x", '"_x', {desc = 'dump to void on delete (no yank)'})
-vim.keymap.set({"n", "v"}, "<leader>d", '"_d', {desc = 'dump to void on delete (no yank)'}) -- BUG: needs an extra d press...
+vim.keymap.set({"n", "v", "o"}, "<leader>x", '"_x', {desc = 'dump to void on delete (no yank)'})
+vim.keymap.set({"n", "v"}, "<leader>d", '"_d', {desc = 'dump to void on delete (no yank)'})
 
 -- switch between windows / panes
 --    See `:help wincmd` for a list of all window commands
