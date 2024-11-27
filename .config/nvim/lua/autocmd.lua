@@ -13,10 +13,21 @@ vim.api.nvim_create_augroup('autosave', { clear = true })
 -- ===========================================
 --  AUTO SAVE
 -- ==========================================
-vim.api.nvim_create_autocmd('InsertLeave', {
+vim.api.nvim_create_autocmd({ 'BufLeave', 'CursorHold' }, {
+    group = autosave,
+    desc = 'auto-save',
     pattern = '*',
-    callback = function()
-        vim.cmd('w')
+    callback = function(ctx)
+        if
+            vim.bo[ctx.buf].modified
+            and vim.bo[ctx.buf].modifiable
+            and vim.bo[ctx.buf].buftype == '' -- normal buffer
+            and vim.api.nvim_buf_get_name(ctx.buf) ~= '' -- buffer is named
+            and vim.uv.fs_stat(vim.api.nvim_buf_get_name(ctx.buf)) -- buffer has an existing file backing it
+        then
+            vim.cmd.update()
+            vim.defer_fn(function() vim.api.nvim_echo({ { '' } }, false, {}) end, 2000)
+        end
     end,
 })
 
