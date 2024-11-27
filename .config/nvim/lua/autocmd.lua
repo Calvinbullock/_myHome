@@ -14,34 +14,34 @@ vim.api.nvim_create_augroup('bufEnter',      { clear = true })
 -- ===========================================
 --  C++ Header / Source File Toggle
 -- ==========================================
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = "*",
+vim.api.nvim_create_autocmd("Filetype", {
+    pattern = { 'cpp', 'h'},
     group = "bufEnter",
     callback = function()
         vim.api.nvim_buf_create_user_command(0, 'HeaderToSource', function()
-            local new_filename = ""
+            local newFilePath = ""
 
-            -- get current filename
-            local current_buf = vim.api.nvim_get_current_buf()
-            local filename = vim.api.nvim_buf_get_name(current_buf)
+            -- get current file path
+            local currentBuf = vim.api.nvim_get_current_buf()
+            local fileNamePath = vim.api.nvim_buf_get_name(currentBuf)
 
             -- get file extension
-            local filetype = filename:match("%.([^%.]+)$")
+            local fileExtenstion = fileNamePath:match("%.([^%.]+)$")
 
             -- check and toggle header / source extension
-            if filetype == "cpp"
-            then
-                new_filename = filename:sub(1, -4)
-                new_filename = new_filename .. "h"
-            elseif filetype == "h"
-            then
-                new_filename = filename:sub(1, -2)
-                new_filename = new_filename .. "cpp"
-            else
-                print('[Not a ".h" / ".cpp" buffer]')
+            if fileExtenstion == "cpp" then
+                newFilePath = fileNamePath:sub(1, -4)
+                newFilePath = newFilePath .. "h"
+
+            elseif fileExtenstion == "h" then
+                newFilePath = fileNamePath:sub(1, -2)
+                newFilePath = newFilePath .. "cpp"
             end
 
-            vim.cmd("edit " .. new_filename)
+            -- Use only the file name not the file path for find?
+            --local new_file_name = new_file_path:match("[^/]+$")
+
+            vim.cmd("find" .. newFilePath)
         end, { desc = 'switch from ".h" to ".cpp" and back' })
     end,
 })
