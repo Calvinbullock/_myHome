@@ -5,9 +5,13 @@
 --      		  [[ Auto Commands ]]
 -- =====================================================
 
+-- autocmd groups
+vim.api.nvim_create_augroup('BufWritePre', { clear = true })
+vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_augroup('autosave', { clear = true })
+
 -- ===========================================
---  SAVE ON INSERT MODE EXIT
---      Basically auto save
+--  AUTO SAVE
 -- ==========================================
 vim.api.nvim_create_autocmd('InsertLeave', {
     pattern = '*',
@@ -20,13 +24,12 @@ vim.api.nvim_create_autocmd('InsertLeave', {
 --  HIGHLIGHT ON YANK
 --      See `:help vim.highlight.on_yank()`
 -- ==========================================
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
+    group = YankHighlight,
+    pattern = '*',
     callback = function()
         vim.highlight.on_yank()
     end,
-    group = highlight_group,
-    pattern = '*',
 })
 
 -- ===========================================
@@ -34,6 +37,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 --      remove trailing white spaces on save
 -- ==========================================
 vim.api.nvim_create_autocmd('BufWritePre', {
+    group = BufWritePre,
     pattern = '*',
     callback = function ()
         -- save cursor pos
@@ -56,6 +60,8 @@ vim.api.nvim_set_hl(0, 'WarnHint', { fg = "#0B0B0B", bg = "#E17862" })
 --      highlight on buf-enter or buf-save
 -- ==========================================
 vim.api.nvim_create_autocmd({'BufEnter', 'BufWritePre'}, {
+    group = BufWritePre,
+    pattern = '*',
     callback = function()
         vim.fn.matchadd("TdoHint", "\\( TODO:\\)")
         vim.fn.matchadd("TdoHint", "\\(TODO:\\)")
