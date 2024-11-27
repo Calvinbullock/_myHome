@@ -21,6 +21,7 @@ vim.keymap.set('n', '<leader>db', ':bdelete<CR>',   {desc = 'kill current buffer
 vim.keymap.set('n', '<leader>=', 'gg=G<C-o>:w<CR>', {desc = 'formatting whole buffer'})
 vim.keymap.set('n', '<leader>c', ':q<CR>',          {desc = 'quite with out save'})
 vim.keymap.set('n', '<leader>a', '<C-^>',           {desc = 'swap to alternate file'})
+vim.keymap.set('n', '<leader>hs', '<cmd>HeaderToSource<CR>', {desc = 'swap between c++ [h]eader / [s]ource'})
 
 -- misc
 vim.keymap.set("n", "<leader>fx", ":Ex<CR>",                      {desc = 'open netrw', noremap = true, silent = true})

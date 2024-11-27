@@ -6,9 +6,45 @@
 -- =====================================================
 
 -- autocmd groups
-vim.api.nvim_create_augroup('BufWritePre', { clear = true })
+vim.api.nvim_create_augroup('BufWritePre',   { clear = true })
 vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_augroup('autosave', { clear = true })
+vim.api.nvim_create_augroup('autosave',      { clear = true })
+vim.api.nvim_create_augroup('bufEnter',      { clear = true })
+
+-- ===========================================
+--  C++ Header / Source File Toggle
+-- ==========================================
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "*",
+    group = "bufEnter",
+    callback = function()
+        vim.api.nvim_buf_create_user_command(0, 'HeaderToSource', function()
+            local new_filename = ""
+
+            -- get current filename
+            local current_buf = vim.api.nvim_get_current_buf()
+            local filename = vim.api.nvim_buf_get_name(current_buf)
+
+            -- get file extension
+            local filetype = filename:match("%.([^%.]+)$")
+
+            -- check and toggle header / source extension
+            if filetype == "cpp"
+            then
+                new_filename = filename:sub(1, -4)
+                new_filename = new_filename .. "h"
+            elseif filetype == "h"
+            then
+                new_filename = filename:sub(1, -2)
+                new_filename = new_filename .. "cpp"
+            else
+                print('[Not a ".h" / ".cpp" buffer]')
+            end
+
+            vim.cmd("edit " .. new_filename)
+        end, { desc = 'switch from ".h" to ".cpp" and back' })
+    end,
+})
 
 -- ===========================================
 --  AUTO SAVE
