@@ -11,7 +11,11 @@ local iNode = ls.insert_node
 
 -- std::cout snippet
 ls.add_snippets("cpp", {
-    snip("cout", { tNode('std::cout << "" << std::endl;') })
+    snip("co", {
+        tNode('std::cout << '),
+        iNode(1),
+        tNode(' << std::endl;'),
+    })
 })
 
 -- -- class snippet
