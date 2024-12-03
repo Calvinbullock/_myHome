@@ -3,6 +3,7 @@ Notes and useful tips for my nvim usage and configuration.
 
 ## Future plans For Config
 - fix comment highlights with split
+- project wide error / warning list
 
 ## Dependancies!!
 Used in telescope for file finding among other things.
@@ -28,15 +29,15 @@ Some lsp's/linters may need node installed.
 - bash-language-server  (bash)
 - omnisharp             (C#)
 
-- go-lang
+- go-lang:
     - gopls
     - golangci-lint
 
-- pythons
+- python:
     - mypy
     - jedi-language-server
 
-- webdev *(need node.js / npm||pnpm)*
+- webdev **(need node.js / npm||pnpm)**:
     - typescript-language-server tsserver (keywords: typescript, javascript)
     - emmet-ls          (HTMl snippets)
     - css-lsp
@@ -45,7 +46,7 @@ Some lsp's/linters may need node installed.
 - `z=` --- this will use built in spell correction
 - `ctrl + x + f` for file path completion in vim (default)
 - `shift + v + j` this will remove newlines and bring that content onto the line your cursor is on
-- folds
+- folds:
     - `zc` collapse a fold
     - `zo` open a fold
     ```lua
