@@ -63,6 +63,13 @@ vim.api.nvim_create_autocmd({ 'BufLeave', 'CursorHold' }, {
         then
             vim.cmd.update()
             vim.defer_fn(function() vim.api.nvim_echo({ { '' } }, false, {}) end, 2000)
+
+            -- CLEAR WHITE SPACE
+            -- save cursor pos
+            local cursor_pos = vim.api.nvim_win_get_cursor(0)
+            vim.cmd([[%s/\s\+$//e]]) -- remove trailing white space
+            -- restore the cursor pos
+            vim.api.nvim_win_set_cursor(0, cursor_pos)
         end
     end,
 })
