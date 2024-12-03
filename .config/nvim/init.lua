@@ -22,3 +22,6 @@ require("keybinds")
 require("netrwconf")
 require("autocmd")
 require("lazy").setup("plugins")
+
+-- has to go below the plugins setup
+require("snips")
