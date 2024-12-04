@@ -43,14 +43,19 @@ return {
         end,
     },
     {
-        -- wrapper for git
-        'tpope/vim-fugitive',
+        "NeogitOrg/neogit",
+        dependencies = {
+            "nvim-lua/plenary.nvim",         -- required
+            --"sindrets/diffview.nvim",        -- optional - Diff integration
+
+            "nvim-telescope/telescope.nvim", -- optional
+        },
         config = function()
-            vim.keymap.set('n', '<leader>g', ':Git<CR> :resize 100%<CR>')
-            vim.keymap.set('n', '<leader>gc', ':Git commit -m "')
-            vim.keymap.set('n', '<leader>gps', ':Git push<CR>')
-            vim.keymap.set('n', '<leader>gpl', ':Git pull<CR>')
+            vim.keymap.set('n', '<leader>gg', ':Neogit<CR>')
+            vim.keymap.set('n', '<leader>gc', ':Neogit commit<CR>')
+            vim.keymap.set('n', '<leader>gP', ':Neogit push<cr>')
+            vim.keymap.set('n', '<leader>gp', ':Neogit pull<cr>')
         end
-    }
+    },
 }
 
