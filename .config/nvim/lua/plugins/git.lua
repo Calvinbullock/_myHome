@@ -39,7 +39,7 @@ return {
             vim.keymap.set('n', '<leader>gh', ':Gitsigns preview_hunk<CR>',              { desc = '[G]itsigns Preview [H]unk'})
             vim.keymap.set('n', '<leader>gs', ':Gitsigns stage_hunk <CR>',               { desc = '[G]itsigns [S]tage Hunk'})
             vim.keymap.set('n', '<leader>gu', ':Gitsigns undo_stage_hunk<CR>',           { desc = '[G]itsigns [U]ndo Stage Hunk'})
-            vim.keymap.set('n', '<leader>gr', ':Gitsigns reset_hunk<CR>',                { desc = '[G]itsigns [R]eset Hunk'})
+            vim.keymap.set('n', '<leader>gR', ':Gitsigns reset_hunk<CR>',                { desc = '[G]itsigns [R]eset Hunk'})
             vim.keymap.set('n', '<leader>gb', ':Gitsigns toggle_current_line_blame<CR>', { desc = '[G]itsigns Line [B]lame'})
             vim.keymap.set('n', '<leader>gD', ':Gitsigns diffthis<CR>',                  { desc = '[G]itsigns [D]iff This'})
         end,
