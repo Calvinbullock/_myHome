@@ -11,6 +11,7 @@ source "$path/p_general.sh"
 source "$path/p_qouteCli.sh"
 source "$path/p_sand.sh"
 source "$path/p_wiki.sh"
+source "$path/p_note.sh"
 #source "$path/new-life.sh"
 
 # s = school
