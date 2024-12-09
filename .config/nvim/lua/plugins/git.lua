@@ -48,8 +48,8 @@ return {
         'tpope/vim-fugitive',
         config = function()
             vim.keymap.set('n', '<leader>gg', ':Git<CR> :resize 100%<CR>', { desc = '[G]it Status' })
-            vim.keymap.set('n', '<leader>gc', ':Git commit -m "',          { desc = '[G]it [C]ommit cmd' })
-            vim.keymap.set('n', '<leader>gC', ':Git commit<CR>',           { desc = '[G]it [C]ommit buffer' })
+            vim.keymap.set('n', '<leader>gC', ':Git commit -m "',          { desc = '[G]it [C]ommit cmd' })
+            vim.keymap.set('n', '<leader>gc', ':Git commit<CR>',           { desc = '[G]it [C]ommit buffer' })
             vim.keymap.set('n', '<leader>gP', ':Git push<CR>',             { desc = '[G]it [P]ush<CR>' })
             vim.keymap.set('n', '<leader>gp', ':Git pull<CR>',             { desc = '[G]it [P]ull<CR>' })
             vim.keymap.set('n', '<leader>gd', ':Gvdiffsplit<CR>',          { desc = '[G]it [D]iff Split'})
