@@ -3,7 +3,7 @@
 source $HOME/_myHome/shmux/./functions.sh
 
 # Set up your project with a root dir, and name
-project_root ~
+project_root ~/Documents/notes/
 session_name "note"
 
 # first, create your session
