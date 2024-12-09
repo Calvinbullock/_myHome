@@ -11,7 +11,7 @@ return {
             },
             sections = {
                 -- lualine_a = {'mode'},
-                lualine_b = {'diff', 'diagnostics', 'selectioncount', {'filename', file_status = true, path = 1}},
+                lualine_b = {'selectioncount', {'filename', file_status = true, path = 1}, 'diff', 'diagnostics'},
                 lualine_c = {''},
                 lualine_x = {''}, -- {'encoding', 'fileformat'}
                 lualine_y = {'branch', 'progress'},
