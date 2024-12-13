@@ -13,6 +13,7 @@ alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap re
 # _MyHome path alias
 alias alia="nvim ~/_myHome/shScripts/aliases.sh"
 alias alac="nvim ~/_myHome/.config/alacritty/alacritty.toml"
+alias kit="nvim ~/_myHome/.config/kitty/kitty.conf"
 alias home="cd ~/_myHome"
 
 # Shell-rc's
