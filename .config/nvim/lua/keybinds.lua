@@ -28,6 +28,10 @@ vim.keymap.set("n", "<leader>fx", ":Ex<CR>",                      {desc = 'open 
 vim.keymap.set('n', '<leader>nr', '<cmd>set relativenumber!<CR>', {desc = 'toggle relative line num'})
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {desc = 'search-repace word (regex)'})
 
+-- quick fix
+vim.keymap.set("n", "[q", "<cmd>cnext<CR>", {desc = 'Quickfix next item'})
+vim.keymap.set("n", "]q", "<cmd>cprev<CR>", {desc = 'Quickfix prev item'})
+
 -- splits
 vim.keymap.set('n', '<leader>b', '<cmd>split<return>',  {desc = 'horizontal split'})
 vim.keymap.set('n', '<leader>v', '<cmd>vsplit<return>', {desc = 'vertical split' })
