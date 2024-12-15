@@ -31,6 +31,7 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- quick fix
 vim.keymap.set("n", "[q", "<cmd>cnext<CR>", {desc = 'Quickfix next item'})
 vim.keymap.set("n", "]q", "<cmd>cprev<CR>", {desc = 'Quickfix prev item'})
+vim.keymap.set("n", "<leader>dg", "<cmd>lua vim.diagnostic.setqflist()<CR>", {desc = 'Global Diagnostic Quickfix List'})
 
 -- splits
 vim.keymap.set('n', '<leader>b', '<cmd>split<return>',  {desc = 'horizontal split'})
