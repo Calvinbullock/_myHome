@@ -36,11 +36,11 @@ vim.keymap.set("n", "<leader>dg", "<cmd>lua vim.diagnostic.setqflist()<CR>", {de
 -- splits
 vim.keymap.set('n', '<leader>b', '<cmd>split<return>',  {desc = 'horizontal split'})
 vim.keymap.set('n', '<leader>v', '<cmd>vsplit<return>', {desc = 'vertical split' })
--- NOTE: no keybinds yet
--- vim.keymap.set('n', '<leader>', '<cmd>vertical resize -2<return>',   { desc = 'decrease rows in the current window' })
--- vim.keymap.set('n', '<leader>', '<cmd>vertical resize +2<return>',   { desc = 'increase rows in the current window' })
--- vim.keymap.set('n', '<leader>', '<cmd>horizontal resize -2<return>', { desc = 'decrease columns in the current window' })
--- vim.keymap.set('n', '<leader>', '<cmd>horizontal resize +2<return>', { desc = 'increase columns in the current window' })
+-- split sizing
+vim.keymap.set('n', '<leader>vh', '<cmd>vertical resize -5<return>',   { desc = 'decrease rows in the current window' })
+vim.keymap.set('n', '<leader>vl', '<cmd>vertical resize +5<return>',   { desc = 'increase rows in the current window' })
+vim.keymap.set('n', '<leader>bk', '<cmd>horizontal resize -2<return>', { desc = 'decrease columns in the current window' })
+vim.keymap.set('n', '<leader>bj', '<cmd>horizontal resize +2<return>', { desc = 'increase columns in the current window' })
 
 -- yank / paste
 vim.keymap.set("x",        "p", [["_dP]],      {desc = 'p pasts with out yanking'})
