@@ -56,7 +56,8 @@ Some lsp's/linters may need node installed.
     vim.o.foldlevelstart = 99
     ```
 - `sift + <>` will indent or outdent (chain-able with nums)
-- `ctrl q` - when using a telescope fzf find you can `ctrl q` to move it to a jump list in a buffer split
+- `ctrl + q` when using a telescope fzf find you can `ctrl q` to move it to a jump list in a buffer split
+- `shift + p` this will paste behind the first char 0 at line start
 
 #### I use this for live serving html/css/js
 `python3 -m http.server`
