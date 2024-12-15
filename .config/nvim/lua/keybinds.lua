@@ -34,6 +34,7 @@ vim.keymap.set("n", "]q", "<cmd>cprev<CR>", {desc = 'Quickfix prev item'})
 vim.keymap.set("n", "<leader>dg", "<cmd>lua vim.diagnostic.setqflist()<CR>", {desc = 'Global Diagnostic Quickfix List'})
 
 -- splits
+--    See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<leader>b', '<cmd>split<return>',  {desc = 'horizontal split'})
 vim.keymap.set('n', '<leader>v', '<cmd>vsplit<return>', {desc = 'vertical split' })
 -- split sizing
@@ -41,18 +42,16 @@ vim.keymap.set('n', '<leader>vh', '<cmd>vertical resize -5<return>',   { desc = 
 vim.keymap.set('n', '<leader>vl', '<cmd>vertical resize +5<return>',   { desc = 'increase rows in the current window' })
 vim.keymap.set('n', '<leader>bk', '<cmd>horizontal resize -2<return>', { desc = 'decrease columns in the current window' })
 vim.keymap.set('n', '<leader>bj', '<cmd>horizontal resize +2<return>', { desc = 'increase columns in the current window' })
+-- switch between splits
+vim.keymap.set('n', '<C-H>', '<C-w><C-h>', { desc = 'Move focus to the left window'  })
+vim.keymap.set('n', '<C-L>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-J>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-K>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- yank / paste
 vim.keymap.set("x",        "p", [["_dP]],      {desc = 'p pasts with out yanking'})
 vim.keymap.set({"n", "v", "o"}, "<leader>x", '"_x', {desc = 'dump to void on delete (no yank)'})
 vim.keymap.set({"n", "v"}, "<leader>d", '"_d', {desc = 'dump to void on delete (no yank)'})
-
--- switch between windows / panes
---    See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-H>', '<C-w><C-h>', { desc = 'Move focus to the left window'  })
-vim.keymap.set('n', '<C-L>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-J>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-K>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- set "kj" to act like escape in insert mode
 --vim.keymap.set("i", "jk", "<esc>")
