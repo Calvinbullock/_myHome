@@ -12,6 +12,19 @@ vim.api.nvim_create_augroup('autosave',      { clear = true })
 vim.api.nvim_create_augroup('bufEnter',      { clear = true })
 
 -- ===========================================
+--  Wq = wq -- alias for save and quit
+-- ==========================================
+vim.api.nvim_create_autocmd("bufEnter", {
+    pattern = '*',
+    group = "bufEnter",
+    callback = function()
+        vim.api.nvim_buf_create_user_command(0, 'Wq', function()
+            vim.cmd([[wq]])
+        end, { desc = 'switch from ".h" to ".cpp" and back' })
+    end,
+})
+
+-- ===========================================
 --  C++ Header / Source File Toggle
 -- ==========================================
 vim.api.nvim_create_autocmd("Filetype", {
