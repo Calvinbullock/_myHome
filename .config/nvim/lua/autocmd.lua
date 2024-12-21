@@ -63,9 +63,9 @@ vim.api.nvim_create_autocmd("Filetype", {
 --  AUTO SAVE
 -- ==========================================
 vim.api.nvim_create_autocmd({ 'BufLeave', 'CursorHold' }, {
-    group = autosave,
+    group = 'autosave',
     desc = 'auto-save',
-    pattern = '*',
+    pattern = { '*', '-.lua'},
     callback = function(ctx)
         if
             vim.bo[ctx.buf].modified
