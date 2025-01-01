@@ -9,6 +9,7 @@ local iNode = ls.insert_node
 -- C++ snippets
 -- ========================================================
 
+-- C++
 -- std::cout snippet
 ls.add_snippets("cpp", {
     snip("co", {
@@ -18,11 +19,29 @@ ls.add_snippets("cpp", {
     })
 })
 
--- -- class snippet
--- ls.add_snippets("cpp", {
---     snip("class", {
---         tNode('class className\n{\npublic:\nclassName() {}\nprivate:\n};')
---     })
--- })
-
+-- C++
+-- Define a C++ class snippet
+--  TODO: add auto match for class name typing and default
+--        constructor / de-constructor
+ls.add_snippets("cpp", {
+    snip("clas", {
+        tNode({
+            "#pragma once",
+            "",
+            "/*",
+            " TODO: Add class description",
+            "*/",
+            "class "
+        }),
+        iNode(1), -- Class name
+        tNode("{"),
+        tNode({"", "", "public:", "//", "// Constructors"}),
+        --iNode(1), -- Class name
+        tNode({"", "", "//", "// Getters / Setters"}),
+        iNode(2), -- Public methods/variables
+        tNode({"", "", "private:"}),
+        iNode(3), -- Private methods/variables
+        tNode({"", "};"}),
+    })
+})
 
