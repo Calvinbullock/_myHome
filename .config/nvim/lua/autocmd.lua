@@ -118,7 +118,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 -- [[
 -- Create highlight groups for comment patterns
 vim.api.nvim_set_hl(0, 'TdoHint', { fg = "#0B0B0B", bg = "#89dceb" })
-vim.api.nvim_set_hl(0, 'NoteHint', { fg = "#0B0B0B", bg = "#faa7e7" })
+vim.api.nvim_set_hl(0, 'NoteHint', { fg = "#faa7e7", bg = "none" })
 vim.api.nvim_set_hl(0, 'BugHint', { fg = "#0B0B0B", bg = "#B03060" })
 vim.api.nvim_set_hl(0, 'WarnHint', { fg = "#0B0B0B", bg = "#E17862" })
 
