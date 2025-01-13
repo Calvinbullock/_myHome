@@ -3,8 +3,8 @@
 source $HOME/_myHome/shmux/./functions.sh
 
 # Set up your project with a root dir, and name
-project_root ~/Documents/_Fall-2024/inheritanceDes/
-session_name "inhe"
+project_root ~/Documents/_Wint-2025/dataStructures/
+session_name "dataStr"
 
 # first, create your session
 new_session
@@ -20,4 +20,4 @@ select_window "code"
 # then, attach to your session!
 #attach_to_session
 
-echo "inhe - Setup"
+echo "dataStr - Setup"
