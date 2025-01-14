@@ -18,5 +18,5 @@ source "$path/p_new-life.sh"
 # s = school
 source "$path/s_DataStrucs.sh"
 source "$path/s_DesignPatterns.sh"
+source "$path/s_webServe.sh"
 #source "$path/s_srPro.sh"
-#source "$path/s_webDev.sh"
