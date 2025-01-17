@@ -121,8 +121,8 @@ alias noted="cd ~/Documents/notes"
 alias notef='cd ~/Documents/notes/ && nvim $(fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}" --preview-window right:65%) && cd -'
 
 # Quick access notes / files
-alias note="nvim ~/Documents/notes/mainNote.md"
-alias ani="nvim ~/Documents/notes/anime.md"
+alias note="nvim ~/Documents/notes/_mainNote.md"
+alias ani="nvim ~/Documents/notes/_anime.md"
 
 # ============================================================================ #
 #                       School winter 2024 aliases
