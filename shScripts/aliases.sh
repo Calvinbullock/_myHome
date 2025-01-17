@@ -53,6 +53,7 @@ alias egrep='egrep --color=auto'
 
 # common cmds
 alias bat="batcat"
+alias cat-og="/usr/bin/cat"
 alias cat="batcat"
 alias diff="diff -y --color=always"
 
@@ -79,7 +80,7 @@ alias git-upstream="git push --set-upstream origin"
 #alias gr="git restore"
 
 # NEOVIM / NVIM
-alias nf='nvim $(fzf)'
+alias nf='nvim $(fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}" --preview-window right:65%)'
 alias n.="nvim ."
 alias n="nvim"
 alias nim="nvim"
@@ -117,6 +118,7 @@ alias ran="ranger"
 alias doc="cd ~/Documents"
 alias wiki="cd ~/Documents/wiki"
 alias noted="cd ~/Documents/notes"
+alias notef='cd ~/Documents/notes/ && nvim $(fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}" --preview-window right:65%) && cd -'
 
 # Quick access notes / files
 alias note="nvim ~/Documents/notes/mainNote.md"
