@@ -118,7 +118,8 @@ alias ran="ranger"
 alias doc="cd ~/Documents"
 alias wiki="cd ~/Documents/wiki"
 alias noted="cd ~/Documents/notes"
-alias notef='cd ~/Documents/notes/ && nvim $(fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}" --preview-window right:65%) && cd -'
+alias notef='find $HOME/Documents/notes/ -type f | fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}" --preview-window right:65% --bind="enter:become(nvim {})"'
+alias wikif='find $HOME/Documents/wiki/ -type f | fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}" --preview-window right:65% --bind="enter:become(nvim {})"'
 
 # Quick access notes / files
 alias note="nvim ~/Documents/notes/_mainNote.md"
