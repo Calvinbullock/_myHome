@@ -43,7 +43,7 @@ if [[ $setupFlathub =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install flatpak
     sudo "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
 fi
- 
+
 # flatpak installs ============================
 if [[ $installFlatPakPkgs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     echo ""
@@ -73,7 +73,7 @@ printf "\e[1;32m** {=====================================} **\e[0m\n"
 printf "\e[1;32m**         {installing apt pkgs...}        **\e[0m\n"
 printf "\e[1;32m** {=====================================} **\e[0m\n"
 
-# -- tools I keep every day use  
+# -- tools I keep every day use
 sudo apt install zoxide -y
 sudo apt install zsh -y
 sudo apt install tmux -y
@@ -110,7 +110,7 @@ if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     printf "\e[1;32m** {installing apt pkgs...} **\e[0m\n"
     printf "\e[1;32m** {=====================================} **\e[0m\n"
     # Set up my dev repo
-    
+
     # give useful scripts execution permissions
     chmod +x "$HOME/_myHome/shScripts/tmux-start.sh"
 
@@ -119,10 +119,10 @@ if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
     rm "$HOME/.zshrc"
     ln -s "$HOME/_myHome/.zshrc" "$HOME/.zshrc"
-    
+
     #rm -r "$HOME/.vim"
     #ln -s "$HOME/_myHome/.vim" "$HOME/.vim"
-    
+
     rm "$HOME/.tmux.conf"
     ln -s "$HOME/_myHome/.config/tmux" "$HOME/.config/tmux"
 
@@ -131,10 +131,10 @@ if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
     rm -r "$HOME/.config/kitty"
     ln -s "$HOME/_myHome/.config/kitty" "$HOME/.config/kitty"
-    
+
     rm -r "$HOME/.config/nvim"
     ln -s "$HOME/_myHome/.config/nvim" "$HOME/.config/nvim"
-    
+
     rm -r "$HOME/.config/ranger"
     ln -s "$HOME/_myHome/.config/ranger" "$HOME/.config/ranger"
 
