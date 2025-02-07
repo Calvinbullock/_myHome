@@ -16,8 +16,7 @@ vim.keymap.set({ "n", "x", "o"}, "gh", "^", { desc = 'go to the beginning line' 
 vim.keymap.set({ "n", "x", "o"}, "gl", "$", { desc = 'go to the end of the line' })
 
 -- buffer manipulation
-vim.keymap.set("n", "<leader>w", ":w<CR>",          {desc = 'save buffer'})
-vim.keymap.set('n', '<leader>db', ':bdelete<CR>',   {desc = 'kill current buffer'})
+vim.keymap.set("n", "<leader>w", ":w<CR>",          {desc = 'save buffer'}) -- NOTE: might delete (don't use this much)...
 vim.keymap.set('n', '<leader>=', 'gg=G<C-o>:w<CR>', {desc = 'formatting whole buffer'})
 vim.keymap.set('n', '<leader>c', ':q<CR>',          {desc = 'quite with out save'})
 vim.keymap.set('n', '<leader>a', '<C-^>',           {desc = 'swap to alternate file'})
@@ -49,9 +48,9 @@ vim.keymap.set('n', '<C-J>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-K>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- yank / paste
-vim.keymap.set("x",        "p", [["_dP]],      {desc = 'p pasts with out yanking'})
-vim.keymap.set({"n", "v", "o"}, "<leader>x", '"_x', {desc = 'dump to void on delete (no yank)'})
-vim.keymap.set({"n", "v"}, "<leader>d", '"_d', {desc = 'dump to void on delete (no yank)'})
+vim.keymap.set("x",        "p", [["_dP]],           {desc = 'sets p pasts with out yanking'})
+vim.keymap.set({"n", "v", "o"}, "<leader>x", '"_x', {desc = 'dump to void on cut (no yank)'})
+vim.keymap.set({"n", "v"}, "<leader>d", '"_d',      {desc = 'dump to void on delete (no yank)'})
 
 -- set "kj" to act like escape in insert mode
 --vim.keymap.set("i", "jk", "<esc>")
