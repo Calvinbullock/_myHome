@@ -8,8 +8,13 @@ session_name "me"
 
 # first, create your session
 new_session
+rename_window "main"
+
+#new_window "SQL"
+#new_window "PWSH"
+#new_window "SSH"
 
 # then, layout your session
-rename_window "main"
+select_window "main"
 
 echo "me - Setup"
