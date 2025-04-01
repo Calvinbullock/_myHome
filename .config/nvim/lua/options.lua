@@ -7,6 +7,14 @@
 -- WARN: USE WITH CAUTION
 vim.opt.exrc = false
 
+-- diagnostics conf
+vim.diagnostic.config {
+    virtual_text = true,
+    virtual_lines = {
+        current_line = true,
+    },
+}
+
 -- Spell check settings
 vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
