@@ -8,12 +8,15 @@
 vim.opt.exrc = false
 
 -- diagnostics conf
-vim.diagnostic.config {
+vim.diagnostic.config({
     virtual_text = true,
     virtual_lines = {
         current_line = true,
+        severity = {
+            min = vim.diagnostic.severity.ERROR,
+        },
     },
-}
+})
 
 -- Spell check settings
 vim.opt.spell = true
