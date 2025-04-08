@@ -77,12 +77,12 @@ vim.api.nvim_create_autocmd({ 'BufLeave', 'CursorHold' }, {
             vim.cmd.update()
             vim.defer_fn(function() vim.api.nvim_echo({ { '' } }, false, {}) end, 2000)
 
-            -- CLEAR WHITE SPACE
-            -- save cursor pos
-            local cursor_pos = vim.api.nvim_win_get_cursor(0)
-            vim.cmd([[%s/\s\+$//e]]) -- remove trailing white space
-            -- restore the cursor pos
-            vim.api.nvim_win_set_cursor(0, cursor_pos)
+            -- CLEAR WHITE SPACE -- 900ms pause
+            vim.defer_fn(function()
+                local cursor_pos = vim.api.nvim_win_get_cursor(0) -- save cursor pos
+                vim.cmd([[%s/\s\+$//e]])                   -- remove trailing white space
+                vim.api.nvim_win_set_cursor(0, cursor_pos) -- restore the cursor pos
+            end, 900)
         end
     end,
 })
@@ -100,23 +100,24 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- ===========================================
---  ON SAVE
---      remove trailing white spaces on save
+--  clean white space -- ON SAVE
+--      Remove trailing white spaces on save.
+--      NOTE: dose not work with auto save
+--          autocmd.
 -- ==========================================
-vim.api.nvim_create_autocmd('BufWritePre', {
-    group = BufWritePre,
-    pattern = '*',
-    callback = function ()
-        -- save cursor pos
-        local cursor_pos = vim.api.nvim_win_get_cursor(0)
-        vim.cmd([[%s/\s\+$//e]]) -- remove trailing white space
-        -- restore the cursor pos
-        vim.api.nvim_win_set_cursor(0, cursor_pos)
-    end,
-})
+-- vim.api.nvim_create_autocmd('BufWritePre', {
+--     group = BufWritePre,
+--     pattern = '*',
+--     callback = function ()
+--         local cursor_pos = vim.api.nvim_win_get_cursor(0) -- save cursor pos
+--         vim.cmd([[%s/\s\+$//e]])                          -- remove trailing white space
+--         vim.api.nvim_win_set_cursor(0, cursor_pos)        -- restore the cursor pos
+--     end,
+-- })
 
--- [[
+-- ===========================================
 -- Create highlight groups for comment patterns
+-- ===========================================
 vim.api.nvim_set_hl(0, 'TdoHint', { fg = "#0B0B0B", bg = "#89dceb" })
 vim.api.nvim_set_hl(0, 'NoteHint', { fg = "#faa7e7", bg = "none" })
 vim.api.nvim_set_hl(0, 'BugHint', { fg = "#0B0B0B", bg = "#B03060" })
