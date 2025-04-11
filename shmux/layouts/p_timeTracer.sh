@@ -3,7 +3,7 @@
 source $HOME/_myHome/shmux/./functions.sh
 
 # Set up your project with a root dir, and name
-project_root ~/Documents/backBurner/timetracer/
+project_root ~/Dev/timetracer/
 session_name "timeTracer"
 
 # first, create your session
