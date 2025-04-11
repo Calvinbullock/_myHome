@@ -17,6 +17,3 @@ source "$path/p_new-life.sh"
 source "$path/p_timeTracer.sh"
 
 # s = school
-source "$path/s_DataStrucs.sh"
-source "$path/s_DesignPatterns.sh"
-source "$path/s_webServ.sh"
