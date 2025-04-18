@@ -77,12 +77,12 @@ vim.api.nvim_create_autocmd({ 'BufLeave', 'CursorHold' }, {
             vim.cmd.update()
             vim.defer_fn(function() vim.api.nvim_echo({ { '' } }, false, {}) end, 2000)
 
-            -- CLEAR WHITE SPACE -- 900ms pause
-            vim.defer_fn(function()
-                local cursor_pos = vim.api.nvim_win_get_cursor(0) -- save cursor pos
-                vim.cmd([[%s/\s\+$//e]])                   -- remove trailing white space
-                vim.api.nvim_win_set_cursor(0, cursor_pos) -- restore the cursor pos
-            end, 900)
+            -- -- CLEAR WHITE SPACE -- 900ms pause
+            -- vim.defer_fn(function()
+            --     local cursor_pos = vim.api.nvim_win_get_cursor(0) -- save cursor pos
+            --     vim.cmd([[%s/\s\+$//e]])                   -- remove trailing white space
+            --     vim.api.nvim_win_set_cursor(0, cursor_pos) -- restore the cursor pos
+            -- end, 900)
         end
     end,
 })
@@ -105,15 +105,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 --      NOTE: dose not work with auto save
 --          autocmd.
 -- ==========================================
--- vim.api.nvim_create_autocmd('BufWritePre', {
---     group = BufWritePre,
---     pattern = '*',
---     callback = function ()
---         local cursor_pos = vim.api.nvim_win_get_cursor(0) -- save cursor pos
---         vim.cmd([[%s/\s\+$//e]])                          -- remove trailing white space
---         vim.api.nvim_win_set_cursor(0, cursor_pos)        -- restore the cursor pos
---     end,
--- })
+vim.api.nvim_create_autocmd('BufWritePre', {
+    group = BufWritePre,
+    pattern = '*',
+    callback = function ()
+        local cursor_pos = vim.api.nvim_win_get_cursor(0) -- save cursor pos
+        vim.cmd([[%s/\s\+$//e]])                          -- remove trailing white space
+        vim.api.nvim_win_set_cursor(0, cursor_pos)        -- restore the cursor pos
+    end,
+})
 
 -- ===========================================
 -- Create highlight groups for comment patterns
