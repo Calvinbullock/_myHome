@@ -4,7 +4,7 @@ source $HOME/_myHome/shmux/./functions.sh
 
 # Set up your project with a root dir, and name
 project_root ~/Dev/timetracer/
-session_name "timeTracer"
+session_name "tt"
 
 # first, create your session
 new_session
