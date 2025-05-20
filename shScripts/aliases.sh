@@ -82,6 +82,12 @@ alias git-upstream="git push --set-upstream origin"
 #alias gap="git add -p"
 #alias gr="git restore"
 
+# git work flow
+# new branch off main
+alias newDev="git checkout main; git pull; git checkout -b"
+alias newdev="git checkout main; git pull; git checkout -b"
+alias commit="git commit -m 'to squish'; git push"
+
 # NEOVIM / NVIM
 alias nf='nvim $(fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}" --preview-window right:65%)'
 alias n.="nvim ."
