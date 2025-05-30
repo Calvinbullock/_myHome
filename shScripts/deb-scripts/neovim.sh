@@ -14,5 +14,11 @@ cd "$HOME/Documents/build"
 git clone https://github.com/neovim/neovim
 cd neovim
 git checkout stable
-make CMAKE_BUILD_TYPE=RelWithDebInfo
-cd build && cpack -G DEB && sudo dpkg -i nvim-linux86_64.deb
+
+# build for install into $HOME/.local/bin (local user install)
+make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=$HOME/.local
+make install
+
+# build as a .deb (system wide install)
+#make CMAKE_BUILD_TYPE=RelWithDebInfo
+#cd build && cpack -G DEB && sudo dpkg -i nvim-linux86_64.deb
