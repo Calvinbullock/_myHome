@@ -81,19 +81,23 @@ return {
         -- Ensure the servers above are installed
         local mason_lspconfig = require 'mason-lspconfig'
 
+        -- set up the lsp conf
         mason_lspconfig.setup {
             ensure_installed = vim.tbl_keys(servers),
         }
-
-        mason_lspconfig.setup_handlers {
-            function(server_name)
+        mason_lspconfig.setup({
+            -- This is the new way to provide a default setup function for lspconfig.
+            -- It will be called for all servers that mason-lspconfig manages.
+            lspconfig_setup = function(server_name)
                 require('lspconfig')[server_name].setup {
                     capabilities = capabilities,
                     on_attach = on_attach,
-                    settings = servers[server_name],
+                    -- Use the server-specific settings defined in your 'servers' table
+                    settings = (servers[server_name] or {}).settings,
                     filetypes = (servers[server_name] or {}).filetypes,
                 }
             end
-        }
+        })
+
     end
 }
