@@ -155,4 +155,5 @@ unsetopt beep
 # zoxide intagrations
 eval "$(zoxide init zsh)"
 
-
+# add to my path
+export PATH="$HOME/.local/bin:$PATH"
