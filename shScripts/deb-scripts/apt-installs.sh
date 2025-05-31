@@ -18,7 +18,7 @@ printf "\e[1;32m** [install nvim from source] **\e[0m\n"
 read -p "Do you want to install listed items? (yes/no) " buildNvim
 
 echo
-printf "\e[1;32m** [steam, vim, neofetch, npm, etc ] **\e[0m\n"
+printf "\e[1;32m** [apt install apps: steam, vim, neofetch, npm, etc ] **\e[0m\n"
 read -p "Do you want to install listed items? (yes/no) " installDebs
 
 echo
