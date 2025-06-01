@@ -7,39 +7,29 @@ return {
         { 'williamboman/mason-lspconfig.nvim'       },
     },
     config = function ()
+        -- code actions keymap
+        vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename,         { desc = '[R]e[n]ame' })
+        vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action,    { desc = '[C]ode [A]ction' })
+        vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, { desc = 'Type [D]efinition' })
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition,             { desc = '[G]oto [D]efinition' })
+        vim.keymap.set('n', 'gD', vim.lsp.buf.declaration,            { desc = '[G]oto [D]eclaration' })
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover,                   { desc = 'Hover Documentation' }) -- See `:help K` for why this keymap
+
+        -- telescope functions keymap
+        vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references,                        { desc = '[G]oto [R]eferences' })
+        vim.keymap.set('n', 'gI', require('telescope.builtin').lsp_implementations,                   { desc = '[G]oto [I]mplementation' })
+        vim.keymap.set('n', '<leader>ds', require('telescope.builtin').lsp_document_symbols,          { desc = '[D]ocument [S]ymbols' })
+        vim.keymap.set('n', '<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, { desc = '[W]orkspace [S]ymbols' })
+
+        -- Diagnostic keymaps
+        vim.keymap.set('n', ']d', vim.diagnostic.goto_prev,          { desc = 'Go to previous diagnostic message' })
+        vim.keymap.set('n', '[d', vim.diagnostic.goto_next,          { desc = 'Go to next diagnostic message' })
+        vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+        vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
         -- [[ Configure LSP ]]
         --  This function gets run when an LSP connects to a particular buffer.
         local on_attach = function(_, bufnr)
-            -- a function that lets us more easily define mappings specific
-            --      for LSP related items. It sets the mode, buffer and description for us each time.
-            local nmap = function(keys, func, desc)
-                if desc then
-                    desc = 'LSP: ' .. desc
-                end
-
-                vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
-            end
-
-            -- code actions
-            nmap('<leader>rn', vim.lsp.buf.rename,          '[R]e[n]ame')
-            nmap('<leader>ca', vim.lsp.buf.code_action,     '[C]ode [A]ction')
-            nmap('<leader>D', vim.lsp.buf.type_definition,  'Type [D]efinition')
-            nmap('gd', vim.lsp.buf.definition,              '[G]oto [D]efinition')
-            nmap('gD', vim.lsp.buf.declaration,             '[G]oto [D]eclaration')
-            nmap('K', vim.lsp.buf.hover,                    'Hover Documentation') -- See `:help K` for why this keymap
-
-            -- telescope functions
-            nmap('gr', require('telescope.builtin').lsp_references,                        '[G]oto [R]eferences')
-            nmap('gI', require('telescope.builtin').lsp_implementations,                   '[G]oto [I]mplementation')
-            nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols,          '[D]ocument [S]ymbols')
-            nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-
-            -- Diagnostic keymaps
-            vim.keymap.set('n', ']d', vim.diagnostic.goto_prev,          { desc = 'Go to previous diagnostic message' })
-            vim.keymap.set('n', '[d', vim.diagnostic.goto_next,          { desc = 'Go to next diagnostic message' })
-            vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-            vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-
             -- Create a command `:Format` local to the LSP buffer
             vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
                 vim.lsp.buf.format()
