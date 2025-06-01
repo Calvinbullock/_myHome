@@ -16,7 +16,8 @@ return {
         vim.keymap.set('n', 'K', vim.lsp.buf.hover,                   { desc = 'Hover Documentation' }) -- See `:help K` for why this keymap
 
         -- telescope functions keymap
-        vim.keymap.set('n', '<leader>gr', require('telescope.builtin').lsp_references,                        { desc = '[G]oto [R]eferences' })
+        vim.keymap.set('n', 'gr', vim.lsp.buf.references,                                             { desc = '[g]oto [r]eferences (jumplist)' })
+        vim.keymap.set('n', '<leader>gr', require('telescope.builtin').lsp_references,                { desc = '[g]oto [r]eferences (fzf)' })
         vim.keymap.set('n', 'gI', require('telescope.builtin').lsp_implementations,                   { desc = '[G]oto [I]mplementation' })
         vim.keymap.set('n', '<leader>ds', require('telescope.builtin').lsp_document_symbols,          { desc = '[D]ocument [S]ymbols' })
         vim.keymap.set('n', '<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, { desc = '[W]orkspace [S]ymbols' })
