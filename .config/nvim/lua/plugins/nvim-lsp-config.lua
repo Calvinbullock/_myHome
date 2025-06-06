@@ -13,7 +13,7 @@ return {
         vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, { desc = 'Type [D]efinition' })
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition,             { desc = '[G]oto [D]efinition' })
         vim.keymap.set('n', 'gD', vim.lsp.buf.declaration,            { desc = '[G]oto [D]eclaration' })
-        vim.keymap.set('n', 'K', vim.lsp.buf.hover,                   { desc = 'Hover Documentation' }) -- See `:help K` for why this keymap
+        vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover({border = "rounded"})<cr>', { desc = 'Hover Documentation' })
 
         -- telescope functions keymap
         vim.keymap.set('n', 'gr', vim.lsp.buf.references,                                             { desc = '[g]oto [r]eferences (jumplist)' })
