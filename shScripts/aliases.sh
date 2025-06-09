@@ -87,6 +87,7 @@ alias git-upstream="git push --set-upstream origin"
 alias newDev="git checkout main; git pull; git checkout -b"
 alias newdev="git checkout main; git pull; git checkout -b"
 alias commit="git commit -m 'to squish'; git push"
+alias coa='git add --all; git commit -m "to squish"; git push'
 
 # NEOVIM / NVIM
 alias nf='nvim $(fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}" --preview-window right:65%)'
@@ -119,6 +120,7 @@ alias shmux="~/_myHome/shmux/./shmux-start.sh"
 alias dol="dolphin" # **KDE** only
 alias temps="watch sensors"
 alias logd="cd /var/log"
+alias ncdu="ncdu --color=off"
 
 # RANGER
 alias ran="ranger"
@@ -128,7 +130,7 @@ alias doc="cd ~/Documents"
 alias wiki="cd ~/Documents/wiki"
 alias noted="cd ~/Documents/notes"
 alias notef='find $HOME/Documents/notes/ -type f | fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}" --preview-window right:65% --bind="enter:become(nvim {})"'
-alias wikif='find $HOME/Documents/wiki/ -type f | fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}" --preview-window right:65% --bind="enter:become(nvim {})"'
+alias wikif='find $HOME/Documents/wiki/ -path "$HOME/Documents/wiki/.git" -prune -o -type f -print | fzf --preview="batcat --color=always --style=numbers --line-range=:500 {}" --preview-window right:65% --bind="enter:become(nvim {})"'
 
 # Quick access notes / files
 alias note="nvim ~/Documents/notes/_mainNote.md"
