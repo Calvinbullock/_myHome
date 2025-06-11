@@ -45,12 +45,32 @@ return {
             -- rust_analyzer = {},
 
             ---- Web
-            -- html = { filetypes = { 'html', 'twig', 'javascriptreact', 'typescript', 'javascript'} },
             cssls = {},
             ts_ls = {},
-            emmet_ls = {},
-            -- emmet_ls = { filetypes = {'jsx', 'html'} },
-            -- tsserver = {},
+            emmet_ls = {
+                filetypes = {
+                    "css",
+                    "eruby",
+                    "html",
+                    "javascript",
+                    "javascriptreact",
+                    "less",
+                    "sass",
+                    "scss",
+                    "svelte",
+                    "pug",
+                    "typescriptreact",
+                    "vue"
+                },
+                init_options = {
+                    html = {
+                        options = {
+                            ["bem.enabled"] = true,
+                        },
+                    },
+                },
+            },
+            -- tsserver = {}, -- Keep using ts_ls from Mason.
 
             ---- python
             jedi_language_server = {},
@@ -67,7 +87,8 @@ return {
         -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
         local capabilities = vim.lsp.protocol.make_client_capabilities()
         capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-        --capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
+        -- Add snippet support to capabilities for emmet_ls
+        capabilities.textDocument.completion.completionItem.snippetSupport = true
 
         -- Ensure the servers above are installed
         local mason_lspconfig = require 'mason-lspconfig'
@@ -80,12 +101,15 @@ return {
             -- This is the new way to provide a default setup function for lspconfig.
             -- It will be called for all servers that mason-lspconfig manages.
             lspconfig_setup = function(server_name)
+                local server_config = servers[server_name] or {} -- Get the specific server config
+
                 require('lspconfig')[server_name].setup {
                     capabilities = capabilities,
                     on_attach = on_attach,
-                    -- Use the server-specific settings defined in your 'servers' table
-                    settings = (servers[server_name] or {}).settings,
-                    filetypes = (servers[server_name] or {}).filetypes,
+                    -- Merge the server-specific settings and filetypes
+                    settings = server_config.settings,
+                    filetypes = server_config.filetypes,
+                    init_options = server_config.init_options,
                 }
             end
         })

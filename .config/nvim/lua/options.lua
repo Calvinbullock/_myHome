@@ -49,6 +49,7 @@ vim.o.mouse = 'a'                       -- Enable mouse mode
 vim.o.clipboard = 'unnamedplus'         -- Sync clipboard between OS and Neovim.
 vim.o.undofile = true                   -- Save undo history
 vim.o.completeopt = 'menuone,noselect'  -- Set completeopt to have a better completion experience
+vim.o.winborder = "rounded"
 
 -- indention
 vim.opt.autoindent = true

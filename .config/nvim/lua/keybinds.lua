@@ -24,7 +24,7 @@ vim.keymap.set('n', '<leader>hs', '<cmd>HeaderToSource<CR>', {desc = 'swap betwe
 
 -- misc
 vim.keymap.set("n", "<leader>fx", ":Ex<CR>",                      {desc = 'open netrw', noremap = true, silent = true})
-vim.keymap.set('n', '<leader>nr', '<cmd>set relativenumber!<CR>', {desc = 'toggle relative line num'})
+vim.keymap.set('n', '<leader>ln', '<cmd>set relativenumber!<CR>', {desc = 'toggle relative line num'})
 vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {desc = 'search-repace word no confirm (regex)'})
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>]], {desc = 'search-repace word with confirm each (regex)'})
 
