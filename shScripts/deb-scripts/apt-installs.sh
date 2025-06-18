@@ -7,28 +7,32 @@
 # prompt and collect user choices
 echo
 printf "\e[1;32m** [install and set up flatpak / flathub] **\e[0m\n"
-read -p "Do you want to install listed items? (yes/no) " setupFlathub
+read -p "Do you want to install listed items? (yes/no | y/n) " setupFlathub
 
 echo
 printf "\e[1;32m** [flatpak install krita, flatseal, upscaler] **\e[0m\n"
-read -p "Do you want to install listed items? (yes/no) " installFlatpakPkgs
+read -p "Do you want to install listed items? (yes/no | y/n) " installFlatpakPkgs
 
 echo
 printf "\e[1;32m** [install nvim from source] **\e[0m\n"
-read -p "Do you want to install listed items? (yes/no) " buildNvim
+read -p "Do you want to install listed items? (yes/no | y/n) " buildNvim
+
+echo
+printf "\e[1;32m** [install Volta node.js manger] **\e[0m\n"
+read -p "Do you want to install listed items? (yes/no | y/n) " installVolta
 
 echo
 printf "\e[1;32m** [apt install apps: steam, vim, neofetch, npm, etc ] **\e[0m\n"
-read -p "Do you want to install listed items? (yes/no) " installDebs
+read -p "Do you want to install listed items? (yes/no | y/n) " installDebs
 
 echo
 printf "\e[1;32m** [sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop, zsh. Change shell to zsh.] **\e[0m\n"
-read -p "Do you want link configs? (yes/no) " linkConfigs
+read -p "Do you want link configs? (yes/no | y/n) " linkConfigs
 
 echo
 printf "\e[1;32m**  [Sway, rofi, and waybar, install and set up] **\e[0m\n"
 printf "\e[1;32m**  [IN MOSTLY WORKING ORDER] **\e[0m\n"
-read -p "Do you want to set up sway as you Window Manager? " setupSway
+read -p "Do you want to set up sway as you Window Manager (yes/no | y/n)? " setupSway
 
 # update mirrors and system
 printf "\e[1;32m** [updateing with apt] **\e[0m\n"
@@ -71,6 +75,15 @@ if [[ $buildNvim =~ ^[Yy]([Ee][Ss])?$ ]]; then
     source $HOME/_myHome/shScripts/deb-scripts/neovim.sh
 fi
 
+# install volta (node.js version manager) =====================
+if [[ $installVolta =~ ^[Yy]([Ee][Ss])?$ ]]; then
+    echo ""
+    printf "\e[1;32m** {=====================================} **\e[0m\n"
+    printf "\e[1;32m**            {Installing Volta}           **\e[0m\n"
+    printf "\e[1;32m** {=====================================} **\e[0m\n"
+    curl https://get.volta.sh | bash
+fi
+
 # apt installs ===================== basic terminal utilis / tools / apps
 if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     echo ""
@@ -98,7 +111,7 @@ if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # -- nvim plugin dependencies
     sudo apt install fzf -y
     sudo apt install ripgrep -y
-    sudo apt install npm
+    #sudo apt install npm -y
 
     printf "\e[1;32m** {other programing tools} **\e[0m\n"
     # -- other programming tools
