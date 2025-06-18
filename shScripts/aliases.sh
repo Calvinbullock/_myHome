@@ -1,7 +1,7 @@
 # My bash aliases
 
 # Custom APT update alias
-alias upd="sudo apt update && sudo apt upgrade && flatpak update && sudo snap refresh"
+alias upd="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update && flatpak remove --unused && sudo snap refresh"
 alias yoink="sudo apt install"
 alias yeet="sudo apt remove"
 alias yote="sudo apt purge"
@@ -55,9 +55,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # common cmds
-alias bat="batcat"
-alias cat-og="/usr/bin/cat"
-alias cat="batcat"
+alias bat="batcat --style=plain" --theme="base16"
 alias diff="diff -y --color=always"
 
 # ============================================================================ #
