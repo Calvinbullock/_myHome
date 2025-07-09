@@ -24,12 +24,10 @@ alias bashrc="nvim ~/_myHome/.bashrc"
 alias bso="source ~/_myHome/.bashrc"
 alias zrc="nvim ~/_myHome/.zshrc"
 alias zso="source ~/_myHome/.zshrc"
-alias swapd="cd ~/.local/state/nvim/swap && ls -la" # where unwritten (n)vim buffers are saved
 
 # shell
 alias E="exit"
 alias c="clear"
-alias reboot="sudo reboot"
 alias loginG="loginctl unlock-session"
 
 # ls aliases
@@ -45,7 +43,7 @@ alias l='ls -CF'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias rmr="rm -vr"
+alias rmr="rm -vrf"
 alias cp="cp -v"
 alias mv="mv -v"
 
@@ -119,6 +117,7 @@ alias dol="dolphin" # **KDE** only
 alias temps="watch sensors"
 alias logd="cd /var/log"
 alias ncdu="ncdu --color=off"
+alias pp="pnpm"
 
 # RANGER
 alias ran="ranger"
@@ -133,11 +132,3 @@ alias wikif='find $HOME/Documents/wiki/ -path "$HOME/Documents/wiki/.git" -prune
 # Quick access notes / files
 alias note="nvim ~/Documents/notes/_mainNote.md"
 alias ani="nvim ~/Documents/notes/_anime.md"
-
-# ============================================================================ #
-#                       School winter 2024 aliases
-# ============================================================================ #
-alias pp="pnpm"
-alias clf="clang-format -i "
-alias school="cd ~/Documents/_Fall-2024/"
-
