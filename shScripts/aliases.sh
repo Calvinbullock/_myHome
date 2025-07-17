@@ -3,8 +3,8 @@
 # Custom APT update alias
 alias upd="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update && flatpak remove --unused && sudo snap refresh"
 alias yoink="sudo apt install"
-alias yeet="sudo apt remove"
-alias yote="sudo apt purge"
+alias yeet="sudo apt purge"
+alias yote="sudo apt remove"
 
 # Custom DNF update alias
 #alias upd="sudo dnf update --refresh && sudo dnf upgrade && flatpak update"
