@@ -3,8 +3,8 @@
 source $HOME/_myHome/shmux/./functions.sh
 
 # Set up your project with a root dir, and name
-project_root ~/Dev/new-life
-session_name "nel"
+project_root ~/Dev/Re-Note-ed/
+session_name "noted"
 
 # first, create your session
 new_session
@@ -18,4 +18,4 @@ set_current_pane 2 # split on the right
 # then, attach to your session!
 #attach_to_session
 
-echo "nel - Setup"
+echo "noted - Setup"
