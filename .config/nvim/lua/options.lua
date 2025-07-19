@@ -45,6 +45,7 @@ vim.opt.scrolloff = 15
 --vim.opt.cmdheight = 0                   -- cmd line only shows when typing a cmd
 vim.opt.swapfile = false                -- Disable swapfile
 vim.opt.isfname:append("@-@")           -- support @ in filenames
+vim.opt.autoread = true                 -- Auto reload files changes from outside vim
 vim.o.mouse = 'a'                       -- Enable mouse mode
 vim.o.clipboard = 'unnamedplus'         -- Sync clipboard between OS and Neovim.
 vim.o.undofile = true                   -- Save undo history
