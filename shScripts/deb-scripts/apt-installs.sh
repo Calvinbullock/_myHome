@@ -112,6 +112,7 @@ if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install fzf -y
     sudo apt install ripgrep -y
     #sudo apt install npm -y
+    sudo apt install wl-clipboard
 
     printf "\e[1;32m** {other programing tools} **\e[0m\n"
     # -- other programming tools
