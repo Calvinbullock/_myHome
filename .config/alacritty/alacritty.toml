@@ -84,7 +84,8 @@ white = "#B5BFE2"
 yellow = "#E5C890"
 
 [colors.primary]
-background = "#303446"
+background = "#303446" # blueish bg
+#background = "#281823" # purple bg
 bright_foreground = "#C6D0F5"
 dim_foreground = "#C6D0F5"
 foreground = "#C6D0F5"
