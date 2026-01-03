@@ -56,7 +56,7 @@ fi
 if [[ $installFlatPakPkgs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     echo ""
     printf "\e[1;32m** {=====================================} **\e[0m\n"
-    printf "\e[1;32m**       {Installing flatpak apps}        **\e[0m\n"
+    printf "\e[1;32m**       {Installing flatpak apps}         **\e[0m\n"
     printf "\e[1;32m** {=====================================} **\e[0m\n"
     flatpak install com.github.tchx84.Flatseal
     flatpak install io.gitlab.theevilskeleton.Upscaler
@@ -197,6 +197,7 @@ fi
 
 # Auto-clean up after updates and installing everything
 printf "\e[1;32m** {Run autoclean} **\e[0m\n"
+sudo apt purge nano -y
 sudo apt autoclean
 
 echo
