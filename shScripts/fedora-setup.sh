@@ -53,8 +53,8 @@ if [[ $setupRPMFusion =~ ^[Yy]([Ee][Ss])?$ ]]; then
     printf "\e[1;32m** {  Enabling RPM Fusion & Codecs      } **\e[0m\n"
     printf "\e[1;32m** {=====================================} **\e[0m\n"
     # Install RPM Fusion Free and Nonfree
-    sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-    sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+    sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+    https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
     # Install multimedia codecs (Fedora's version of Ubuntu Restricted Extras)
     sudo dnf groupupdate core -y
@@ -69,7 +69,7 @@ if [[ $setupFlathub =~ ^[Yy]([Ee][Ss])?$ ]]; then
     printf "\e[1;32m**        {Installing flathub repo}        **\e[0m\n"
     printf "\e[1;32m** {=====================================} **\e[0m\n"
     sudo dnf install flatpak -y
-    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+    sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 fi
 
 # flatpak installs ============================
@@ -90,8 +90,8 @@ if [[ $buildNvim =~ ^[Yy]([Ee][Ss])?$ ]]; then
     printf "\e[1;32m** {=====================================} **\e[0m\n"
     printf "\e[1;32m**      {Installing / building nvim}       **\e[0m\n"
     printf "\e[1;32m** {=====================================} **\e[0m\n"
-    chmod +x $HOME/_myHome/shScripts/deb-scripts/neovim.sh
-    source $HOME/_myHome/shScripts/deb-scripts/neovim.sh
+    chmod +x /home/calvin/_myHome/shScripts/fedora-nvim.sh
+    source $HOME/_myHome/shScripts/fedora-nvim.sh
 fi
 
 # install volta (node.js version manager) =====================
@@ -121,10 +121,10 @@ if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
 
     printf "\e[1;32m** {other programing tools} **\e[0m\n"
     sudo dnf install vim -y
+    sudo dnf install golang -y
 
     printf "\e[1;32m** {other cli tools} **\e[0m\n"
-    sudo dnf install ncdu btop neofetch -y
-fi
+    sudo dnf install ncdu btop fastfetch -y fi
 
 # config links =====================
 if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
@@ -197,6 +197,7 @@ sudo dnf autoremove -y
 echo
 printf "\e[1;32m  If you want to use zsh as defult shell, run: \e[0m\n"
 printf "\e[1;32m  sudo chsh $USER -s /bin/zsh \e[0m\n"
+printf "\e[1;32m  REBOOT for this to take effect \e[0m\n"
 echo
 printf "\e[1;32m** Manuel install needed **\e[0m\n"
 printf "\e[1;32m  Brave MineCraft, Virtbox, Chrome, vs-Code, Discord.\e[0m\n"
