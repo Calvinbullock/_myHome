@@ -15,7 +15,7 @@ cd "$HOME/Documents/build"
 # clone / build
 printf "\e[1;32m** [Cloneing repo] **\e[0m\n"
 # Fedora usually has git, but dnf will skip if already installed
-sudo dnf install git -y 
+sudo dnf install git -y
 git clone https://github.com/neovim/neovim
 cd neovim
 git checkout stable
@@ -26,7 +26,7 @@ make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=$HOME/.local
 make install
 
 # build as a system-wide package (Fedora uses .rpm, not .deb)
-# NOTE: For Fedora, it is generally safer to stick to the 'make install' 
+# NOTE: For Fedora, it is generally safer to stick to the 'make install'
 # to $HOME/.local above rather than manually forcing an RPM build here.
 # make CMAKE_BUILD_TYPE=RelWithDebInfo
 # cd build && cpack -G RPM && sudo dnf install ./nvim-linux86_64.rpm
