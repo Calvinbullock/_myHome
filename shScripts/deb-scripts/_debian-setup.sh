@@ -17,9 +17,9 @@ echo
 printf "\e[1;32m** [install nvim from source] **\e[0m\n"
 read -p "Do you want to install listed items? (yes/no | y/n) " buildNvim
 
-echo
-printf "\e[1;32m** [install Volta node.js manger] **\e[0m\n"
-read -p "Do you want to install listed items? (yes/no | y/n) " installVolta
+# echo
+# printf "\e[1;32m** [install Volta node.js manger] **\e[0m\n"
+# read -p "Do you want to install listed items? (yes/no | y/n) " installVolta
 
 echo
 printf "\e[1;32m** [apt install apps: steam, vim, neofetch, npm, etc ] **\e[0m\n"
@@ -28,11 +28,6 @@ read -p "Do you want to install listed items? (yes/no | y/n) " installDebs
 echo
 printf "\e[1;32m** [sym link configs, tmux, nvim, alacritty, ranger, bashrc, btop, zsh. Change shell to zsh.] **\e[0m\n"
 read -p "Do you want link configs? (yes/no | y/n) " linkConfigs
-
-echo
-printf "\e[1;32m**  [Sway, rofi, and waybar, install and set up] **\e[0m\n"
-printf "\e[1;32m**  [IN MOSTLY WORKING ORDER] **\e[0m\n"
-read -p "Do you want to set up sway as you Window Manager (yes/no | y/n)? " setupSway
 
 # update mirrors and system
 printf "\e[1;32m** [updateing with apt] **\e[0m\n"
@@ -76,13 +71,13 @@ if [[ $buildNvim =~ ^[Yy]([Ee][Ss])?$ ]]; then
 fi
 
 # install volta (node.js version manager) =====================
-if [[ $installVolta =~ ^[Yy]([Ee][Ss])?$ ]]; then
-    echo ""
-    printf "\e[1;32m** {=====================================} **\e[0m\n"
-    printf "\e[1;32m**            {Installing Volta}           **\e[0m\n"
-    printf "\e[1;32m** {=====================================} **\e[0m\n"
-    curl https://get.volta.sh | bash
-fi
+# if [[ $installVolta =~ ^[Yy]([Ee][Ss])?$ ]]; then
+#     echo ""
+#     printf "\e[1;32m** {=====================================} **\e[0m\n"
+#     printf "\e[1;32m**            {Installing Volta}           **\e[0m\n"
+#     printf "\e[1;32m** {=====================================} **\e[0m\n"
+#     curl https://get.volta.sh | bash
+# fi
 
 # apt installs ===================== basic terminal utilis / tools / apps
 if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
@@ -113,6 +108,7 @@ if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install ripgrep -y
     #sudo apt install npm -y
     sudo apt install wl-clipboard
+    sudo apt install golang-go
 
     printf "\e[1;32m** {other programing tools} **\e[0m\n"
     # -- other programming tools
@@ -173,26 +169,6 @@ if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     rm -r "$HOME/.config/btop"
     ln -s "$HOME/_myHome/.config/btop" "$HOME/.config/btop"
     echo "btop conf linked"
-fi
-
-# sway configs ====================  WARN: not done
-if [[ $setupSway =~ ^[Yy]([Ee][Ss])?$ ]]; then
-    echo ""
-    printf "\e[1;32m** {=====================================} **\e[0m\n"
-    printf "\e[1;32m** {      setting up sway .configs...    } **\e[0m\n"
-    printf "\e[1;32m** {=====================================} **\e[0m\n"
-
-    sudo sudo apt install sway waybar brightnessctl pulseaudio-utils rofi -y
-
-    # set up sway config links
-    rm -r "$HOME/.config/sway"
-    ln -s "$HOME/_myHome/.config/sway" "$HOME/.config/sway"
-
-    rm -r "$HOME/.config/waybar"
-    ln -s "$HOME/_myHome/.config/waybar" "$HOME/.config/waybar"
-
-    # No default config for rofi
-    ln -s "$HOME/_myHome/.config/rofi" "$HOME/.config/rofi"
 fi
 
 # Auto-clean up after updates and installing everything
