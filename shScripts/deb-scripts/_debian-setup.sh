@@ -43,8 +43,8 @@ if [[ $setupFlathub =~ ^[Yy]([Ee][Ss])?$ ]]; then
     printf "\e[1;32m** {=====================================} **\e[0m\n"
     printf "\e[1;32m**        {Installing flathub repo}        **\e[0m\n"
     printf "\e[1;32m** {=====================================} **\e[0m\n"
-    sudo apt install flatpak
-    sudo "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
+    sudo apt install flatpak -y
+    sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 fi
 
 # flatpak installs ============================
@@ -56,7 +56,7 @@ if [[ $installFlatPakPkgs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     flatpak install com.github.tchx84.Flatseal
     flatpak install io.gitlab.theevilskeleton.Upscaler
     flatpak install org.kde.krita
-    #flatpak install flathub com.brave.Browser
+    flatpak install flathub com.brave.Browser
     flatpak install com.discordapp.Discord
 fi
 
@@ -99,7 +99,7 @@ if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     # -- apps
     #sudo apt install kitty -y
     sudo apt install alacritty -y
-    sudo apt install steam -y
+    #sudo apt install steam -y
     #sudo apt install krita -y
 
     printf "\e[1;32m** {nvim plugin deps / teminal tools} **\e[0m\n"
@@ -107,8 +107,9 @@ if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install fzf -y
     sudo apt install ripgrep -y
     #sudo apt install npm -y
-    sudo apt install wl-clipboard
-    sudo apt install golang-go
+    sudo apt install wl-clipboard -y
+    sudo apt install golang-go -y
+    sudo apt install python3-venv python3-pip -y
 
     printf "\e[1;32m** {other programing tools} **\e[0m\n"
     # -- other programming tools
@@ -121,7 +122,8 @@ if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install ncdu -y
     sudo apt install btop -y
     #sudo apt install lm-sensors -y
-    sudo apt install neofetch -y
+    #sudo apt install neofetch -y
+    sudo apt install fastfetch -y
     #sudo apt install nvme-cli -y
     #sudo apt install htop -y
 fi
@@ -181,7 +183,7 @@ printf "\e[1;32m  If you want to use zsh as defult shell, run: \e[0m\n"
 printf "\e[1;32m  Sudo chsh _USER_ -s /bin/zsh.\e[0m\n"
 echo
 printf "\e[1;32m** Manuel install needed **\e[0m\n"
-printf "\e[1;32m  Brave MineCraft, Virtbox, Chrome, vs-Code, Discord.\e[0m\n"
+printf "\e[1;32m  MineCraft, Virtbox, Chrome, vs-Code.\e[0m\n"
 echo
 printf "\e[1;32m  Don't forget to set up a fire-wall!!\e[0m\n"
 printf "\e[1;32m  You can now reboot! Thanks you.\e[0m\n"
