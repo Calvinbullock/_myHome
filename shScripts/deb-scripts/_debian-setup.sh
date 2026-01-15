@@ -6,14 +6,9 @@
 
 # prompt and collect user choices
 echo
-printf "\e[1;32m** [install and set up flatpak / flathub] **\e[0m\n"
+printf "\e[1;32m** [install and set up flatpaks / flathub] **\e[0m\n"
 read -p "Do you want to install listed items? (yes/no | y/n) " setupFlathub
 
-echo
-printf "\e[1;32m** [flatpak install krita, flatseal, upscaler] **\e[0m\n"
-read -p "Do you want to install listed items? (yes/no | y/n) " installFlatpakPkgs
-
-echo
 printf "\e[1;32m** [install nvim from source] **\e[0m\n"
 read -p "Do you want to install listed items? (yes/no | y/n) " buildNvim
 
@@ -33,6 +28,13 @@ read -p "Do you want link configs? (yes/no | y/n) " linkConfigs
 printf "\e[1;32m** [updateing with apt] **\e[0m\n"
 sudo apt update && sudo apt upgrade
 
+# 3rd party codecs Kubuntu
+sudo add-apt-repository multiverse
+sudo apt install kubuntu-restricted-extras
+
+# pop-Os
+#sudo apt install ubuntu-restricted-extras libavcodec-extra
+
 # ####### ################ ####### #
 # ####### Package installs ####### #
 # ####### ################ ####### #
@@ -45,10 +47,7 @@ if [[ $setupFlathub =~ ^[Yy]([Ee][Ss])?$ ]]; then
     printf "\e[1;32m** {=====================================} **\e[0m\n"
     sudo apt install flatpak -y
     sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-fi
 
-# flatpak installs ============================
-if [[ $installFlatPakPkgs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     echo ""
     printf "\e[1;32m** {=====================================} **\e[0m\n"
     printf "\e[1;32m**       {Installing flatpak apps}         **\e[0m\n"
