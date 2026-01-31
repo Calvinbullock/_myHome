@@ -4,7 +4,7 @@ source $HOME/_myHome/shmux/./functions.sh
 
 # Set up your project with a root dir, and name
 project_root ~/_myHome
-session_name "me2"
+session_name "game"
 
 # first, create your session
 new_session
@@ -16,5 +16,6 @@ rename_window "main"
 
 # then, layout your session
 select_window "main"
+run_command "btop"
 
-echo "me2 - Setup"
+echo "game - Setup"
