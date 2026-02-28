@@ -108,6 +108,7 @@ if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     #sudo apt install npm -y
     sudo apt install wl-clipboard -y
     sudo apt install golang-go -y
+    sudo apt install golang -y
     sudo apt install python3-venv python3-pip -y
 
     printf "\e[1;32m** {other programing tools} **\e[0m\n"
