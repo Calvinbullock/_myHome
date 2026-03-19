@@ -54,6 +54,7 @@ if [[ $setupFlathub =~ ^[Yy]([Ee][Ss])?$ ]]; then
     printf "\e[1;32m** {=====================================} **\e[0m\n"
     flatpak install com.github.tchx84.Flatseal
     flatpak install io.gitlab.theevilskeleton.Upscaler
+    flatpak install flathub org.tenacityaudio.Tenacity
     flatpak install org.kde.krita
     flatpak install flathub com.brave.Browser
     flatpak install com.discordapp.Discord
@@ -100,6 +101,7 @@ if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install alacritty -y
     #sudo apt install steam -y
     #sudo apt install krita -y
+    sudo apt install kdenlive
 
     printf "\e[1;32m** {nvim plugin deps / teminal tools} **\e[0m\n"
     # -- nvim plugin dependencies
