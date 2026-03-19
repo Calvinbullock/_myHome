@@ -128,6 +128,9 @@ if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     sudo apt install fastfetch -y
     #sudo apt install nvme-cli -y
     #sudo apt install htop -y
+
+    # system tools / pkgs
+    sudo apt install zram-config # set up zram
 fi
 
 # config links =====================
