@@ -4,6 +4,13 @@
 --      			  [[ Keymaps ]]
 -- =====================================================
 
+vim.cmd([[
+  cnoreabbrev W  w
+  cnoreabbrev Q  q!
+  cnoreabbrev Wq wq
+  cnoreabbrev WQ wq
+]])
+
 -- leader key set
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>',      { desc = 'space is only leader key', silent = true })
 

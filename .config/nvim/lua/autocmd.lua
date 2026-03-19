@@ -46,19 +46,6 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 })
 
 -- ===========================================
---  Wq = wq -- alias for save and quit
--- ==========================================
-vim.api.nvim_create_autocmd("bufEnter", {
-    pattern = '*',
-    group = "bufEnter",
-    callback = function()
-        vim.api.nvim_buf_create_user_command(0, 'Wq', function()
-            vim.cmd([[wq]])
-        end, { desc = 'switch from ".h" to ".cpp" and back' })
-    end,
-})
-
--- ===========================================
 --  AUTO SAVE
 -- ==========================================
 vim.api.nvim_create_autocmd({ 'BufLeave', 'CursorHold' }, {
