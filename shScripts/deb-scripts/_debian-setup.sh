@@ -53,11 +53,14 @@ if [[ $setupFlathub =~ ^[Yy]([Ee][Ss])?$ ]]; then
     printf "\e[1;32m**       {Installing flatpak apps}         **\e[0m\n"
     printf "\e[1;32m** {=====================================} **\e[0m\n"
     flatpak install com.github.tchx84.Flatseal
-    flatpak install io.gitlab.theevilskeleton.Upscaler
-    flatpak install flathub org.tenacityaudio.Tenacity
-    flatpak install org.kde.krita
     flatpak install flathub com.brave.Browser
     flatpak install com.discordapp.Discord
+
+    # Art / Production
+    flatpak install org.kde.krita
+    flatpak install io.gitlab.theevilskeleton.Upscaler
+    flatpak install flathub org.tenacityaudio.Tenacity
+    flatpak install flathub org.kde.kdenlive
 fi
 
 # nvim from source installs =====================
@@ -100,8 +103,6 @@ if [[ $installDebs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     #sudo apt install kitty -y
     sudo apt install alacritty -y
     #sudo apt install steam -y
-    #sudo apt install krita -y
-    sudo apt install kdenlive
 
     printf "\e[1;32m** {nvim plugin deps / teminal tools} **\e[0m\n"
     # -- nvim plugin dependencies
