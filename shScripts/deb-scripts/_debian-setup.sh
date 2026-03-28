@@ -177,6 +177,11 @@ if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     rm -r "$HOME/.config/btop"
     ln -s "$HOME/_myHome/.config/btop" "$HOME/.config/btop"
     echo "btop conf linked"
+
+    rm -rf "$HOME/.config/fastfetch"
+    ln -s "$HOME/_myHome/.config/fastfetch" "$HOME/.config/fastfetch"
+    echo "fastfetch conf linked"
+
 fi
 
 # Auto-clean up after updates and installing everything
