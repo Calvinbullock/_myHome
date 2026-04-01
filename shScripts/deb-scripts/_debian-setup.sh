@@ -182,6 +182,10 @@ if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     ln -s "$HOME/_myHome/.config/fastfetch" "$HOME/.config/fastfetch"
     echo "fastfetch conf linked"
 
+    rm -rf "$HOME/.config/bottom"
+    ln -s "$HOME/_myHome/.config/bottom" "$HOME/.config/bottom"
+    echo "bottom conf linked"
+
 fi
 
 # Auto-clean up after updates and installing everything
