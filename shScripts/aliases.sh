@@ -1,7 +1,7 @@
 # My bash aliases
 
 # Custom APT update alias
-alias upd="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update && flatpak remove --unused && sudo snap refresh"
+alias upd="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update && flatpak remove --unused"
 alias yoink="sudo apt install"
 alias yeet="sudo apt purge"
 alias yote="sudo apt remove"
@@ -55,6 +55,7 @@ alias egrep='egrep --color=auto'
 # common cmds
 alias bat="batcat --style=plain" --theme="base16"
 alias diff="diff -y --color=always"
+alias ff="fastfetch"
 
 # ============================================================================ #
 #                          less common but useful tools
@@ -132,3 +133,4 @@ alias wikif='find $HOME/Documents/wiki/ -path "$HOME/Documents/wiki/.git" -prune
 # Quick access notes / files
 alias note="nvim ~/Documents/notes/_mainNote.md"
 alias ani="nvim ~/Documents/notes/_anime.md"
+alias quoten="n ~/.config/quote-cli/default.json"
