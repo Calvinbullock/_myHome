@@ -41,36 +41,36 @@ return {
             ---- other
             gopls = {},
             clangd = {'cpp', 'h'},
-            bashls = {},
+            --bashls = {},
             -- rust_analyzer = {},
 
             ---- Web
-            cssls = {},
-            ts_ls = {},
-            html = {},
-            emmet_ls = {
-                filetypes = {
-                    "css",
-                    "eruby",
-                    "html",
-                    "javascript",
-                    "javascriptreact",
-                    "less",
-                    "sass",
-                    "scss",
-                    "svelte",
-                    "pug",
-                    "typescriptreact",
-                    "vue"
-                },
-                init_options = {
-                    html = {
-                        options = {
-                            ["bem.enabled"] = true,
-                        },
-                    },
-                },
-            },
+            --cssls = {},
+            --ts_ls = {},
+            --html = {},
+            --emmet_ls = {
+            --  filetypes = {
+            --      "css",
+            --      "eruby",
+            --      "html",
+            --      "javascript",
+            --      "javascriptreact",
+            --      "less",
+            --      "sass",
+            --      "scss",
+            --      "svelte",
+            --      "pug",
+            --      "typescriptreact",
+            --      "vue"
+            --  },
+            --  init_options = {
+            --      html = {
+            --          options = {
+            --              ["bem.enabled"] = true,
+            --          },
+            --      },
+            --  },
+            --},
             -- tsserver = {}, -- Keep using ts_ls from Mason.
 
             ---- python
