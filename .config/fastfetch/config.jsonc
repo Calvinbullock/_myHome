@@ -4,10 +4,10 @@
     "title",
     "separator",
     "os",
-    "kernel",
     "uptime",
     "packages",
     "break",
+    "kernel",
     "de",
     "wm",
     "terminal",
@@ -17,8 +17,6 @@
     "gpu",
     "memory",
     "disk",
-    "battery",
-    "poweradapter",
     "break",
     "colors"
   ]
