@@ -13,6 +13,7 @@
     "terminal",
     "terminalfont",
     "shell",
+    "break",
     "cpu",
     "gpu",
     "memory",
