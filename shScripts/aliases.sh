@@ -28,6 +28,7 @@ alias zso="source ~/_myHome/.zshrc"
 # shell
 alias E="exit"
 alias c="clear"
+alias C="clear && quotecli && fastfetch"
 alias loginG="loginctl unlock-session"
 
 # ls aliases
