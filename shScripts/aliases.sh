@@ -32,7 +32,7 @@ alias C="clear && quotecli && fastfetch"
 alias loginG="loginctl unlock-session"
 
 # ls aliases
-alias ls='ls --color=auto'
+alias ls='ls -alh --color=always --group-directories-first'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -135,3 +135,5 @@ alias wikif='find $HOME/Documents/wiki/ -path "$HOME/Documents/wiki/.git" -prune
 alias note="nvim ~/Documents/notes/_mainNote.md"
 alias ani="nvim ~/Documents/notes/_anime.md"
 alias quoten="n ~/.config/quote-cli/default.json"
+
+alias vid="flatpak run com.brave.Browser --incognito --user-data-dir=/tmp/brave-temp --disable-extensions"
