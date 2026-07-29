@@ -157,5 +157,6 @@ eval "$(zoxide init zsh)"
 
 # add to my path
 export PATH="$HOME/.local/bin:$PATH"
+source "$HOME/_myHome/shScripts/vid2wav.sh"
 
 quotecli
