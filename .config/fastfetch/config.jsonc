@@ -4,7 +4,6 @@
     "title",
     "separator",
     "os",
-    "uptime",
     "packages",
     "break",
     "kernel",
@@ -19,6 +18,9 @@
     "memory",
     "disk",
     "break",
-    "colors"
+    "colors",
+    "break",
+    "uptime",
+    "break",
   ]
 }
