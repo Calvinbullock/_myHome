@@ -135,5 +135,6 @@ alias wikif='find $HOME/Documents/wiki/ -path "$HOME/Documents/wiki/.git" -prune
 alias note="nvim ~/Documents/notes/_mainNote.md"
 alias ani="nvim ~/Documents/notes/_anime.md"
 alias quoten="n ~/.config/quote-cli/default.json"
+alias startup="~/_myHome/shScripts/autostart.sh"
 
 alias vid="flatpak run com.brave.Browser --incognito --user-data-dir=/tmp/brave-temp --disable-extensions"
