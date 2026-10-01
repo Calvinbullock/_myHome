@@ -186,6 +186,9 @@ if [[ $linkConfigs =~ ^[Yy]([Ee][Ss])?$ ]]; then
     ln -s "$HOME/_myHome/.config/bottom" "$HOME/.config/bottom"
     echo "bottom conf linked"
 
+    # WARN: untested...
+    ln -s "$HOME/_myHome/.config/quote-cli/" "$HOME/.config/quote-cli/"
+    echo "quote-cli conf linked"
 fi
 
 # Auto-clean up after updates and installing everything
